@@ -13,11 +13,11 @@ public class EightWayPlayer : KinematicBody2D
     public void GetInput()
     {   //prite = GetNode("sprite");
         velocity = new Vector2();
+		
         if (Input.IsActionPressed("right"))
         {   
             velocity.x += 1;
-			Rotation = 1.5708f;
-			
+			Rotation = 1.5708f;			
 			
         }
         if (Input.IsActionPressed("left"))
@@ -65,32 +65,9 @@ public class EightWayPlayer : KinematicBody2D
         	}
 			
         }
-//		else if (Input.IsActionPressed("right") && Input.IsActionPressed("up"))
-//        {   
-//
-//            velocity.x += 1;
-//			velocity.y -= 1;
-//
-//        }
-//        else if (Input.IsActionPressed("down") && Input.IsActionPressed("right"))
-//        {
-//
-//			velocity.y += 1;
-//			velocity.x += 1;
-//
-//        }
-//        else if (Input.IsActionPressed("down") && Input.IsActionPressed("left"))
-//        {
-//
-//			velocity.x -= 1;
-//			velocity.y += 1;
-//
-//        }
-//		else if (Input.IsActionPressed("up") && Input.IsActionPressed("left")){
-//		    velocity.x -= 1;
-//			velocity.y -= 1;
-//		}
+
         velocity = velocity.Normalized() * Speed;
+		LookAt(GetGlobalMousePosition());
     }
 
     public override void _PhysicsProcess(float delta)
