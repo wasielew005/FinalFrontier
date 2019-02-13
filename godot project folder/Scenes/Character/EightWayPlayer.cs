@@ -3,7 +3,7 @@ using System;
 
 public class EightWayPlayer : KinematicBody2D
 {
-    [Export] public int Speed = 50;
+    [Export] public int Speed = 250;
 
     Vector2 velocity = new Vector2();
 	
@@ -32,6 +32,7 @@ public class EightWayPlayer : KinematicBody2D
             
 			velocity.y += 1;
 			Rotation = 3.14159f;
+			
 			if (Input.IsActionPressed("right"))
         	{   
             	velocity.x += 1;
