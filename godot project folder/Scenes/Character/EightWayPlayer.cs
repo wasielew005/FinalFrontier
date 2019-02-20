@@ -170,7 +170,7 @@ public class EightWayPlayer : KinematicBody2D
         velocity = velocity.Normalized() * Speed;
 		pos.x = Position.x;
 		pos.y = Position.y - (2*Position.y);
-		Rotation = -1* GetGlobalMousePosition().AngleTo(Position);
+		//Rotation = -1* GetGlobalMousePosition().AngleTo(Position);
 		if(velocity.x == 0 && velocity.y == 0)
 		{
 			((Sprite)GetNode("sprite")).SetFrame(0);
