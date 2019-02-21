@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sheriffwalkingdemo-3.png.png-b720c4abefee2bb23fa61edfbbdb01d1.stex"
+path="res://.import/Sheriff_Idle_Upscaled.png-f4223d478eb3676e68c83c7be52f307f.stex"
 
 [deps]
 
-source_file="res://Assets/Sheriffwalkingdemo-3.png.png"
-dest_files=[ "res://.import/Sheriffwalkingdemo-3.png.png-b720c4abefee2bb23fa61edfbbdb01d1.stex" ]
+source_file="res://Assets/Sheriff_Idle_Upscaled.png"
+dest_files=[ "res://.import/Sheriff_Idle_Upscaled.png-f4223d478eb3676e68c83c7be52f307f.stex" ]
 
 [params]
 

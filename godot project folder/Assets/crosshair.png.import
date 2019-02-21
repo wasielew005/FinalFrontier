@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sheriffwalkingdemo.png-9c8b4285abcb133e935cce30d45b11d9.stex"
+path="res://.import/crosshair.png-7bed3294e640fe9ca357247b0602b756.stex"
 
 [deps]
 
-source_file="res://Assets/Sheriffwalkingdemo.png"
-dest_files=[ "res://.import/Sheriffwalkingdemo.png-9c8b4285abcb133e935cce30d45b11d9.stex" ]
+source_file="res://Assets/crosshair.png"
+dest_files=[ "res://.import/crosshair.png-7bed3294e640fe9ca357247b0602b756.stex" ]
 
 [params]
 

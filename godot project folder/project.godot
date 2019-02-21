@@ -14,6 +14,10 @@ config/name="Final Frontier"
 run/main_scene="res://Scenes/Character/player.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+mouse_cursor/custom_image="res://Assets/crosshair.png"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "vnen.tiled_importer" )
