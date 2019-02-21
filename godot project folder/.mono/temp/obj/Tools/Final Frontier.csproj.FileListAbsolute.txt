@@ -28,3 +28,9 @@ C:\Users\KylerandJamie\Desktop\FinalFrontier\godot project folder\.mono\temp\obj
 C:\Users\KylerandJamie\Desktop\FinalFrontier\godot project folder\.mono\temp\obj\Tools\Final Frontier.csproj.CoreCompileInputs.cache
 C:\Users\KylerandJamie\Desktop\FinalFrontier\godot project folder\.mono\temp\obj\Tools\Final Frontier.dll
 C:\Users\KylerandJamie\Desktop\FinalFrontier\godot project folder\.mono\temp\obj\Tools\Final Frontier.pdb
+C:\Users\Brett\Documents\FinalFrontier\FinalFrontier\godot project folder\.mono\temp\bin\Tools\Final Frontier.dll
+C:\Users\Brett\Documents\FinalFrontier\FinalFrontier\godot project folder\.mono\temp\bin\Tools\Final Frontier.pdb
+C:\Users\Brett\Documents\FinalFrontier\FinalFrontier\godot project folder\.mono\temp\obj\Tools\Final Frontier.csprojAssemblyReference.cache
+C:\Users\Brett\Documents\FinalFrontier\FinalFrontier\godot project folder\.mono\temp\obj\Tools\Final Frontier.csproj.CoreCompileInputs.cache
+C:\Users\Brett\Documents\FinalFrontier\FinalFrontier\godot project folder\.mono\temp\obj\Tools\Final Frontier.dll
+C:\Users\Brett\Documents\FinalFrontier\FinalFrontier\godot project folder\.mono\temp\obj\Tools\Final Frontier.pdb

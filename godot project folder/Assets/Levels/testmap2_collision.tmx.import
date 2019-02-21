@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/testmap2_collision.tmx-7a220131fdb1fd4eb89298325785f6b1.scn"
+
+[deps]
+
+source_file="res://Assets/Levels/testmap2_collision.tmx"
+dest_files=[ "res://.import/testmap2_collision.tmx-7a220131fdb1fd4eb89298325785f6b1.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""
