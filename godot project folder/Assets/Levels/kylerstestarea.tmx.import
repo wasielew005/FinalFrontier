@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/kylerstestarea.tmx-d10bf2608c62671d5196c296a770a4ee.scn"
+
+[deps]
+
+source_file="res://Assets/Levels/kylerstestarea.tmx"
+dest_files=[ "res://.import/kylerstestarea.tmx-d10bf2608c62671d5196c296a770a4ee.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""
