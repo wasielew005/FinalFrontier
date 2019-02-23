@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 6.61163, 9.29716 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 0.00435901, 0.568221 )
 rotation = 1.5708
@@ -37,7 +37,7 @@ position = Vector2( -0.537727, -0.179241 )
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 1, 1 )
+zoom = Vector2( 0.75, 0.75 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
