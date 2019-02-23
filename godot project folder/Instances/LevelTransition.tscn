@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ChangeLevel.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.83597, 10.3065 )
+
+[node name="Level Transition" type="Area2D"]
+
+position = Vector2( 930.022, -389.635 )
+scale = Vector2( 1, 1.48751 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+level_scene = "res://Assets/Levels/kylerstestarea.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 1.22742, 0.660767 )
+scale = Vector2( 3.3877, 3.14502 )
+shape = SubResource( 1 )
+
+
