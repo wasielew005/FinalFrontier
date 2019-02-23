@@ -7,7 +7,7 @@ public class ChangeLevel : Area2D
     // private int a = 2;
     // private string b = "textvar";
 public void OverlapsBody(EightWayPlayer body){
-GetTree().ChangeScene("res://Scenes/kylerstestarea.tscn");
+GetTree().ChangeScene("res://Assets/Levels/kylerstestarea.tscn");
 }
     public override void _Ready()
     {

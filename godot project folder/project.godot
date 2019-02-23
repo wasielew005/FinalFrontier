@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Final Frontier"
-run/main_scene="res://Scenes/Character/player.tscn"
+run/main_scene="res://Assets/Levels/Brett_LevelTest.tscn"
 config/icon="res://icon.png"
 
 [display]

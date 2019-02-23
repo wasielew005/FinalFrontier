@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Levels/testmap2_collision.tmx" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Character/Playeractual.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Character/ChangeLevel.gd" type="Script" id=3]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/ChangeLevel.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.83597, 10.3065 )
 
-[node name="Main" type="Node" index="0"]
+[node name="Test Level" type="Node" index="0"]
 
-[node name="TileMap" type="TileMap" parent="." index="0"]
+[node name="Map" type="TileMap" parent="." index="0"]
 
 editor/display_folded = true
 mode = 0
@@ -32,7 +32,7 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray(  )
 
-[node name="testmap2_collision" parent="TileMap" index="0" instance=ExtResource( 1 )]
+[node name="testmap2_collision" parent="Map" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( -666.516, -532.978 )
 
@@ -40,7 +40,7 @@ position = Vector2( -666.516, -532.978 )
 
 position = Vector2( 805.608, -387.449 )
 
-[node name="ChangeLevel" type="Area2D" parent="." index="2"]
+[node name="Level Transition" type="Area2D" parent="." index="2"]
 
 position = Vector2( 930.022, -389.635 )
 scale = Vector2( 1, 1.48751 )
@@ -53,7 +53,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeLevel" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Transition" index="0"]
 
 position = Vector2( 1.22742, 0.660767 )
 scale = Vector2( 3.3877, 3.14502 )
