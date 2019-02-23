@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8.83597, 10.3065 )
 
-[node name="Test Level" type="Node" index="0"]
+[node name="Test Level" type="Node"]
 
 [node name="Map" type="TileMap" parent="." index="0"]
 
@@ -39,6 +39,7 @@ position = Vector2( -666.516, -532.978 )
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( 805.608, -387.449 )
+speed = 200
 
 [node name="Level Transition" type="Area2D" parent="." index="2"]
 

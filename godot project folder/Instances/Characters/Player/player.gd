@@ -4,6 +4,21 @@ export (int) var speed = 200
 
 var velocity = Vector2()
 
+onready var basicshootcast = get_node("basicshootcast")
+
+signal hit
+
+func _ready():
+	set_process_input(true)
+
+func _input(event):
+	if event.is_action_pressed("left_click"):
+		shoot()
+
+func shoot():
+	if basicshootcast.is_colliding():
+		emit_signal("hit", basicshootcast.get_collision_point())
+		
 func get_input():
     look_at(get_global_mouse_position())
     velocity = Vector2()

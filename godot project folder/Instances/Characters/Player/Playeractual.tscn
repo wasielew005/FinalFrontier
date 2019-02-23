@@ -3,13 +3,12 @@
 [ext_resource path="res://Instances/Characters/Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sheriff_twohands.png" type="Texture" id=2]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 6.61163, 9.29716 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 position = Vector2( 0.00435901, 0.568221 )
 rotation = 1.5708
@@ -23,7 +22,7 @@ _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibi
 __meta__ = {
 "_edit_group_": true
 }
-Speed = 250
+speed = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -66,7 +65,7 @@ scale = Vector2( 0.067172, 0.066204 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="RayCast2D" type="RayCast2D" parent="." index="3"]
+[node name="basicshootcast" type="RayCast2D" parent="." index="3"]
 
 position = Vector2( 32, 0 )
 rotation = -1.5708
