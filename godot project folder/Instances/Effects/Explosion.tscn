@@ -67,10 +67,10 @@ _sections_unfolded = [ "Angular Velocity", "Color", "Gravity", "Initial Velocity
 
 [node name="Particles2D" type="Particles2D"]
 
-emitting = true
+emitting = false
 amount = 13
 lifetime = 0.7
-one_shot = false
+one_shot = true
 preprocess = 0.0
 speed_scale = 1.5
 explosiveness = 0.9
