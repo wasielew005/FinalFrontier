@@ -10,10 +10,17 @@ signal hit
 
 func _ready():
 	set_process_input(true)
+	
+	
 
 func _input(event):
 	if event.is_action_pressed("left_click"):
 		shoot()
+		
+		var sfxPlayer = AudioStreamPlayer.new()
+		self.add_child(sfxPlayer)
+		sfxPlayer.stream = load("res://Assets/SFX/Gun+Shot2.wav")
+		sfxPlayer.play()
 
 func shoot():
 	if basicshootcast.is_colliding():
