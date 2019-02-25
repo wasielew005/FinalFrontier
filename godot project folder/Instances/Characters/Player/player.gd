@@ -21,10 +21,15 @@ func _input(event):
 		shoot()
 		revolver_sound.play()
 
+#		var sfxPlayer = AudioStreamPlayer.new()
+#		self.add_child(sfxPlayer)
+#		sfxPlayer.stream = load("res://Assets/SFX/Gun+Shot2.wav")
+#		sfxPlayer.play()
+
 func shoot():
 	if basicshootcast.is_colliding():
 		emit_signal("hit", basicshootcast.get_collision_point())
-		
+
 func get_input():
     look_at(get_global_mouse_position())
     velocity = Vector2()
@@ -37,7 +42,6 @@ func get_input():
     if Input.is_action_pressed('up'):
         velocity.y -= 1
     velocity = velocity.normalized() * speed
-
 
 func _physics_process(delta):
     get_input()
