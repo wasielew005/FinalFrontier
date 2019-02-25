@@ -12,6 +12,7 @@ config_version=3
 
 config/name="Final Frontier"
 run/main_scene="res://Assets/Levels/Brett_LevelTest.tscn"
+boot_splash/image="res://Assets/bootsplash.png"
 config/icon="res://icon.png"
 
 [display]
