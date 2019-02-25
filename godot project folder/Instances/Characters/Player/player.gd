@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 export (int) var speed = 200
 
+var revolver_sound
+
 var velocity = Vector2()
 
 onready var basicshootcast = get_node("basicshootcast")
@@ -10,17 +12,14 @@ signal hit
 
 func _ready():
 	set_process_input(true)
+	revolver_sound = get_node("revolvershot")
 	
 	
 
 func _input(event):
 	if event.is_action_pressed("left_click"):
 		shoot()
-		
-		var sfxPlayer = AudioStreamPlayer.new()
-		self.add_child(sfxPlayer)
-		sfxPlayer.stream = load("res://Assets/SFX/Gun+Shot2.wav")
-		sfxPlayer.play()
+		revolver_sound.play()
 
 func shoot():
 	if basicshootcast.is_colliding():
