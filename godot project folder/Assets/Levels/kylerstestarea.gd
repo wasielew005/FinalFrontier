@@ -1,5 +1,7 @@
 extends Node2D
 
+
+
 var explosion = preload("res://Instances/Effects/Explosion.tscn")
 
 onready var player = get_node("Player")
