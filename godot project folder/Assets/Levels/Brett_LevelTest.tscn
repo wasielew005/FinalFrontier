@@ -6,7 +6,7 @@
 [ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Instances/GUI.tscn" type="PackedScene" id=5]
 
-[node name="Test Level" type="Node2D"]
+[node name="Test Level" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
