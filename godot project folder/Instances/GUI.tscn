@@ -1,7 +1,62 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Levels/Score.gd" type="Script" id=1]
 [ext_resource path="res://Instances/timekeeper.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 9
+use_mipmaps = false
+use_filter = false
+extra_spacing_char = 1
+extra_spacing_space = 11
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 9
+use_mipmaps = false
+use_filter = false
+extra_spacing_char = 2
+font_data = SubResource( 3 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=5]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 9
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 5 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=7]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 9
+use_mipmaps = false
+use_filter = false
+extra_spacing_char = 1
+font_data = SubResource( 7 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [node name="GUI" type="CanvasLayer" index="0"]
 
@@ -17,7 +72,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
+margin_right = 39.0
 margin_bottom = 14.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -25,13 +80,14 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Score:"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 1 )
-_sections_unfolded = [ "custom_colors" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 paddingLength = 6
 
 [node name="Value" type="Label" parent="Score" index="0"]
@@ -40,9 +96,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 39.0
-margin_top = 1.0
-margin_right = 79.0
+margin_left = 43.0
+margin_right = 83.0
 margin_bottom = 15.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -50,12 +105,13 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "0000"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors" ]
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="timekeeper" type="Label" parent="." index="1"]
 
@@ -63,18 +119,42 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 13.0
-margin_right = 70.0
-margin_bottom = 27.0
+margin_left = 183.0
+margin_right = 253.0
+margin_bottom = 15.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 2 )
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Time" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 148.0
+margin_right = 188.0
+margin_bottom = 15.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 8 )
+text = "Time:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 
