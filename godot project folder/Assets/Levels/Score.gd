@@ -3,7 +3,6 @@ extends Label
 export (int) var paddingLength = 6
 
 
-
 func _ready():
 	update()
 

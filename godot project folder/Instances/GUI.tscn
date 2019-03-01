@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Levels/Score.gd" type="Script" id=1]
 [ext_resource path="res://Instances/timekeeper.gd" type="Script" id=2]
@@ -31,6 +31,24 @@ extra_spacing_char = 2
 font_data = SubResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
+[sub_resource type="GDScript" id=9]
+
+script/source = "extends Label
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+	var Value = 0 
+
+
+#func _process(delta):
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
+"
+
 [sub_resource type="DynamicFontData" id=5]
 
 hinting = 2
@@ -58,7 +76,7 @@ extra_spacing_char = 1
 font_data = SubResource( 7 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="GUI" type="CanvasLayer" index="0"]
+[node name="GUI" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -111,6 +129,7 @@ text = "0000"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script = SubResource( 9 )
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="timekeeper" type="Label" parent="." index="1"]
