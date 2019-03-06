@@ -31,7 +31,7 @@ extra_spacing_char = 2
 font_data = SubResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="GDScript" id=9]
+[sub_resource type="GDScript" id=5]
 
 script/source = "extends Label
 
@@ -49,31 +49,31 @@ func _ready():
 #	pass
 "
 
-[sub_resource type="DynamicFontData" id=5]
+[sub_resource type="DynamicFontData" id=6]
 
 hinting = 2
 font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 
 size = 9
 use_mipmaps = false
 use_filter = false
-font_data = SubResource( 5 )
+font_data = SubResource( 6 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFontData" id=7]
+[sub_resource type="DynamicFontData" id=8]
 
 hinting = 2
 font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=9]
 
 size = 9
 use_mipmaps = false
 use_filter = false
 extra_spacing_char = 1
-font_data = SubResource( 7 )
+font_data = SubResource( 8 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [node name="GUI" type="CanvasLayer"]
@@ -129,7 +129,7 @@ text = "0000"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = SubResource( 9 )
+script = SubResource( 5 )
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="timekeeper" type="Label" parent="." index="1"]
@@ -147,7 +147,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -169,7 +169,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
 text = "Time:"
 percent_visible = 1.0
 lines_skipped = 0

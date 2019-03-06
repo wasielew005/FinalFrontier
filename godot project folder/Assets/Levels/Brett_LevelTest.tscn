@@ -5,7 +5,7 @@
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=4]
 
-[node name="Test Level" type="Node2D" index="0"]
+[node name="Test Level" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -35,7 +35,7 @@ position = Vector2( -666.516, -532.978 )
 
 [node name="Player" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 852.425, -396.227 )
+position = Vector2( 853.039, -396.227 )
 
 [node name="Level Transition" parent="." index="2" instance=ExtResource( 4 )]
 
