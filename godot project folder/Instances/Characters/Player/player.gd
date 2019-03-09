@@ -3,6 +3,9 @@ extends KinematicBody2D
 export (int) var speed = 200
 
 var revolver_sound
+var ammo_in_weapon = 6
+var spare_ammo = 20
+const AMMO_IN_MAG = 6
 
 var velocity = Vector2()
 
@@ -13,13 +16,14 @@ signal hit
 func _ready():
 	set_process_input(true)
 	revolver_sound = get_node("revolvershot")
-	
-	
 
+#Shooting
 func _input(event):
 	if event.is_action_pressed("left_click"):
-		shoot()
-		revolver_sound.play()
+		if ammo_in_weapon > 0:
+			shoot()
+			ammo_in_weapon -= 1
+			revolver_sound.play()
 
 #		var sfxPlayer = AudioStreamPlayer.new()
 #		self.add_child(sfxPlayer)
