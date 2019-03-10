@@ -6,6 +6,7 @@ var revolver_sound
 #var ammo_in_weapon = 6 now in global.gd in the scripts folder
 var spare_ammo = 20
 const AMMO_IN_MAG = 6
+var reloading = 0
 
 var velocity = Vector2()
 
@@ -16,25 +17,26 @@ onready var basicshootcast = get_node("basicshootcast")
 signal hit
 
 
-
-
-
-
-
-
 func _ready():
 	set_process_input(true)
 	revolver_sound = get_node("revolvershot")
 
+
 #Shooting
+
 func _input(event):
 	if event.is_action_pressed("left_click"):
 		if global.ammo_in_weapon > 0:
-			shoot()
-			global.ammo_in_weapon -= 1
-			revolver_sound.play()
+			if reloading == 0:
+				shoot()
+				global.ammo_in_weapon -= 1
+				revolver_sound.play()
+				$GUI/Ammo.update()
+				if global.ammo_in_weapon == 0:
+					reload()
 	if event.is_action_pressed("reload"):
-		global.ammo_in_weapon = 6
+		reload()
+		
 
 func shoot():
 	if basicshootcast.is_colliding():
@@ -44,6 +46,18 @@ func shoot():
 			$GUI/Score.adjust(100)
 		if collider.is_in_group("htargets"):
 			$GUI/Score.adjust(50)
+
+func reload():
+	reloading = 1
+	var t = Timer.new()
+	t.set_wait_time(1)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	global.ammo_in_weapon = 6
+	$GUI/Ammo.update()
+	reloading = 0
 
 func get_input():
     look_at(get_global_mouse_position())
