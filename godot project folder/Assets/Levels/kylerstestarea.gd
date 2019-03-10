@@ -12,5 +12,4 @@ func show_hit(hit_location):
 	add_child(smoke)
 	smoke.set_position(hit_location)
 	smoke.set_emitting(true)
-	#$GUI/Score.adjust(72.5)
-	
+	$GUI/Score.adjust(50)
