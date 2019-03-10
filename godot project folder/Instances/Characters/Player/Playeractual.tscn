@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 6.61163, 9.29716 )
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 position = Vector2( 0.00435901, 0.568221 )
 rotation = 1.5708

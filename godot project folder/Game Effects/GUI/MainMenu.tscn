@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Fonts/MainMenuTitleFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Assets/Fonts/MainMenuButtonFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Game Effects/GUI/New Game.gd" type="Script" id=3]
+[ext_resource path="res://Game Effects/GUI/Load Game.gd" type="Script" id=4]
 
-[node name="CanvasLayer" type="CanvasLayer" index="0"]
+[node name="CanvasLayer" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -131,6 +133,7 @@ group = null
 text = "New Game"
 flat = false
 align = 2
+script = ExtResource( 3 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags", "custom_constants", "custom_fonts" ]
 
 [node name="Load Game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" index="1"]
@@ -158,6 +161,7 @@ group = null
 text = "Load Game"
 flat = false
 align = 2
+script = ExtResource( 4 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags", "custom_fonts" ]
 
 [node name="Scores" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" index="2"]
@@ -240,5 +244,9 @@ text = "Quit"
 flat = false
 align = 2
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags", "custom_fonts" ]
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/New Game" to="MarginContainer/HBoxContainer/VBoxContainer/New Game" method="_on_New_Game_pressed"]
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Load Game" to="MarginContainer/HBoxContainer/VBoxContainer/Load Game" method="_on_Load_Game_pressed"]
 
 
