@@ -10,6 +10,8 @@ var millisec_now = 0
 #gun score tracker
 var value = 0
 
+#bullets
+var ammo_in_weapon = 6
 
 
 func _ready():

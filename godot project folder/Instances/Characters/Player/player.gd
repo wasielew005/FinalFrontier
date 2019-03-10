@@ -3,7 +3,7 @@ extends KinematicBody2D
 export (int) var speed = 200
 
 var revolver_sound
-var ammo_in_weapon = 6
+#var ammo_in_weapon = 6 now in global.gd in the scripts folder
 var spare_ammo = 20
 const AMMO_IN_MAG = 6
 
@@ -29,10 +29,12 @@ func _ready():
 #Shooting
 func _input(event):
 	if event.is_action_pressed("left_click"):
-		if ammo_in_weapon > 0:
+		if global.ammo_in_weapon > 0:
 			shoot()
-			ammo_in_weapon -= 1
+			global.ammo_in_weapon -= 1
 			revolver_sound.play()
+	if event.is_action_pressed("reload"):
+		global.ammo_in_weapon = 6
 
 func shoot():
 	if basicshootcast.is_colliding():
