@@ -5,10 +5,11 @@
 [ext_resource path="res://Assets/SFX/Gun+Shot2.wav" type="AudioStream" id=3]
 [ext_resource path="res://Instances/GUI.tscn" type="PackedScene" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 6.61163, 9.29716 )
+radius = 8.77178
+height = 0.356161
 
 [node name="Player" type="KinematicBody2D"]
 
@@ -28,7 +29,7 @@ speed = 200
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( 0.227539, 0.126282 )
+position = Vector2( 4, 0.126282 )
 scale = Vector2( 2.97825, 3.20387 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
