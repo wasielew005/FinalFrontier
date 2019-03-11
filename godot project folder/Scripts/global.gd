@@ -6,6 +6,8 @@ var time_now = 0
 var str_elapsed = ""
 var millisec_now = 0
 
+#Determines whether the character is reloading
+var reloading = 0
 
 #gun score tracker
 var value = 0

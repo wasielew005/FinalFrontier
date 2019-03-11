@@ -5,7 +5,6 @@ export (int) var speed = 200
 var revolver_sound
 var spare_ammo = 20
 const AMMO_IN_MAG = 6
-var reloading = 0
 
 var velocity = Vector2()
 
@@ -25,7 +24,7 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("left_click"):
 		if global.ammo_in_weapon > 0:
-			if reloading == 0:
+			if global.reloading == 0:
 				shoot()
 				global.ammo_in_weapon -= 1
 				revolver_sound.play()
@@ -47,7 +46,8 @@ func shoot():
 			$GUI/Score.adjust(50)
 
 func reload():
-	reloading = 1
+	global.reloading = 1
+	$GUI/Reloading.update()
 	var t = Timer.new()
 	t.set_wait_time(1)
 	t.set_one_shot(true)
@@ -56,7 +56,8 @@ func reload():
 	yield(t, "timeout")
 	global.ammo_in_weapon = 6
 	$GUI/Ammo.update()
-	reloading = 0
+	global.reloading = 0
+	$GUI/Reloading.update()
 
 func get_input():
     look_at(get_global_mouse_position())
