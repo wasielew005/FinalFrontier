@@ -14,6 +14,6 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-
+#quits the game when the quit button is pressed
 func _on_Quit_pressed():
 	get_tree().quit()
