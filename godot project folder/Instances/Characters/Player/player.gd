@@ -79,6 +79,7 @@ func shoot():
 #sets the ammo count to 6
 #tells the hud to show the reloading indicator
 #timer prevents the gun from instant reloading
+#the update() function for this block is in reloadinglabel.gd
 func reload():
 	global.reloading = 1
 	$GUI/Reloading.update()
