@@ -20,10 +20,18 @@ var value = 0
 #bullets
 var ammo_in_weapon = 6
 
-#starts the time counter. this needs to be changed so that it doesn't start in the menus
+var time_run = 0
+
+
+
 func _ready():
-    time_start = OS.get_unix_time()
-    set_process(true)
+	pass
+	
+#starts the beginning time
+func _get_time():
+    if time_run == 1:
+        time_start = OS.get_unix_time()
+        set_process(true)
 
 
  
