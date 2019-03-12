@@ -17,3 +17,4 @@ func _ready():
 
 func _on_Load_Game_pressed():
 	get_tree().change_scene("res://Assets/Levels/kylerstestarea.tscn")
+	global._get_time()

@@ -20,8 +20,14 @@ var value = 0
 #bullets
 var ammo_in_weapon = 6
 
-#starts the time counter. this needs to be changed so that it doesn't start in the menus
+
+
+
 func _ready():
+	pass
+	
+#sets the beginning time to be calculated in the timekeeper.gd script
+func _get_time():
     time_start = OS.get_unix_time()
     set_process(true)
 
