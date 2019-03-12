@@ -5,9 +5,9 @@
 [ext_resource path="res://Instances/verticaltarget.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Instances/horizontaltarget.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Instances/PlayerSpawner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=6]
 
-[node name="kylerstestarea" index="0" instance=ExtResource( 1 )]
+[node name="kylerstestarea" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
@@ -35,9 +35,8 @@ level_scene = "res://Assets/Levels/Brett_LevelTest.tscn"
 
 position = Vector2( 2900, 2330 )
 
-[node name="PlayerSpawner" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Player" parent="." index="5" instance=ExtResource( 6 )]
 
-position = Vector2( 2137.42, 2252.26 )
-spawn_position = Vector2( 0, 0 )
+position = Vector2( 2135.73, 2245.85 )
 
 

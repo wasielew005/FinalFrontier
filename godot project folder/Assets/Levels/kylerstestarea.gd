@@ -3,7 +3,7 @@ extends Node2D
 #preloads the animation to be played when a gunshot collides 
 #gets called in the show_hit function
 var explosion = preload("res://Instances/Effects/Explosion.tscn")
-onready var spawner = preload("res://Instances/PlayerSpawner.tscn")
+#onready var spawner = preload("res://Instances/PlayerSpawner.tscn")
 
 #calls the player node that gets used to connect the "hit" signal
 onready var player = get_node("Player")
