@@ -6,9 +6,9 @@ var revolver_sound
 var spare_ammo = 20
 const AMMO_IN_MAG = 6
 
+var state = "Dead"
+
 var velocity = Vector2()
-
-
 
 onready var basicshootcast = get_node("basicshootcast")
 

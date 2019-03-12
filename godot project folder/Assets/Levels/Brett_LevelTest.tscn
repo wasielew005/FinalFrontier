@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Levels/testmap2_collision.tmx" type="PackedScene" id=2]
-[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/PlayerSpawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Checkpoint.tscn" type="PackedScene" id=5]
 
-[node name="Test Level" type="Node2D"]
+[node name="Test Level" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -33,10 +34,18 @@ tile_data = PoolIntArray(  )
 
 position = Vector2( -666.516, -532.978 )
 
-[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Level Transition" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 853.039, -396.227 )
+[node name="PlayerSpawner" parent="." index="2" instance=ExtResource( 4 )]
 
-[node name="Level Transition" parent="." index="2" instance=ExtResource( 4 )]
+position = Vector2( 802.402, -393.302 )
+scale = Vector2( 0.644891, 0.644891 )
+_sections_unfolded = [ "Transform" ]
+spawn_position = Vector2( 0, 0 )
+
+[node name="Checkpoint" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 699.618, -394.312 )
+spawner = NodePath("../PlayerSpawner")
 
 
