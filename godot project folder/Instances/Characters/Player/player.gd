@@ -5,7 +5,10 @@ extends KinematicBody2D
 #this exports the variable speed, and takes in an int from the inspector window
 export (int) var speed = 200
 
+#revolver_sound is created to be assigned to the sound node later
 var revolver_sound
+
+#these two below are not currently used
 var spare_ammo = 20
 const AMMO_IN_MAG = 6
 
@@ -25,6 +28,7 @@ signal hit
 func _ready():
 	set_process_input(true)
 	#loads the sound for the gun to be used when the player clicks the shoot button
+	#assigns the node "revolvershot" which holds the sound effects to the var revolver_shot created above
 	revolver_sound = get_node("revolvershot")
 
 
@@ -63,8 +67,10 @@ func shoot():
 		#groups can be set to certain nodes nodes in the Node window under Groups
 		#the Node window uses the same window as the Inspector 
 		if collider.is_in_group("targets"):
+			#the verticle target in the level is assigned to the "targets" group
 			$GUI/Score.adjust(100)
 		if collider.is_in_group("htargets"):
+			#the horizontal target in the level is assigned to the "htargets" group
 			$GUI/Score.adjust(50)
 
 
