@@ -3,6 +3,10 @@ extends Label
 func _ready():
 	pass
 
+
+#this calculates the time that has passed in milliseconds, seconds, and minutes
+#currently broken in its current form as it starts counting in the menus before the game starts
+#variables with global before them can be found in global.gd
 func _process(delta):
     global.time_now = OS.get_unix_time()
     global.millisec_now = OS.get_ticks_msec()

@@ -1,3 +1,8 @@
+
+#I believe this is left over from when the character was animated
+#this script is not currently used anywhere
+
+
 extends Sprite
 
 var timer
