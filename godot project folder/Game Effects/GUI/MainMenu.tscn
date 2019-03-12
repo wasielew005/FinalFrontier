@@ -6,7 +6,7 @@
 [ext_resource path="res://Game Effects/GUI/New Game.gd" type="Script" id=4]
 [ext_resource path="res://Game Effects/GUI/Load Game.gd" type="Script" id=5]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )

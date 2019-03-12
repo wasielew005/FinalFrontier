@@ -17,5 +17,4 @@ func _ready():
 
 func _on_Load_Game_pressed():
 	get_tree().change_scene("res://Assets/Levels/kylerstestarea.tscn")
-	global.time_run = 1
 	global._get_time()

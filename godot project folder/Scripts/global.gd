@@ -20,18 +20,16 @@ var value = 0
 #bullets
 var ammo_in_weapon = 6
 
-var time_run = 0
 
 
 
 func _ready():
 	pass
 	
-#starts the beginning time
+#sets the beginning time to be calculated in the timekeeper.gd script
 func _get_time():
-    if time_run == 1:
-        time_start = OS.get_unix_time()
-        set_process(true)
+    time_start = OS.get_unix_time()
+    set_process(true)
 
 
  
