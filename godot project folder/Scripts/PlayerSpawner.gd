@@ -18,7 +18,6 @@ func _ready():
 
 func spawn():
 	#Where you place the Spawner node is where the Player will start, given that the variable "spawn_position" is set to (0,0)
-
 	if get_node("SpawnPoint").has_node("Player") && player.state == "Dead": 
 		print("Player is dead")
 		player.state = "alive"

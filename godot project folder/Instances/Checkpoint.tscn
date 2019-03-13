@@ -7,10 +7,10 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Checkpoint" type="Area2D"]
+[node name="Checkpoint" type="Area2D" index="0"]
 
-position = Vector2( -0.41712, -0.909704 )
-scale = Vector2( 0.644891, 0.644891 )
+position = Vector2( -0.346771, -0.35243 )
+scale = Vector2( 0.711945, 0.679619 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -20,12 +20,11 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
-level_scene = null
-spawner = NodePath("Null")
+player = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( 0.88076, 0.662332 )
+position = Vector2( -0.140169, 1.52139 )
 scale = Vector2( 2.59162, 2.59162 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
