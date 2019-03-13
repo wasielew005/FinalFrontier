@@ -13,11 +13,16 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 			if body.name == "Player":
+				#saves player info before switching scenes
+				save.save_game()
 				get_tree().change_scene(level_scene)
 				
 
 #spawns player at the beginning of the level by reloading the scene
 func spawn():
-	print(self.get_position())
+	#print(self.get_position())
 	get_tree().reload_current_scene()
-	#player.update_data()
+	save.load_save()
+
+func respawn():
+	player.set_position(self.get_position())

@@ -118,7 +118,10 @@ func get_input():
 func respawn():
 	#find last node checkpoint
 	#getNode("last checkpoint node").spawn()
+	#OR
+	#load SaveData.file
 	player_state = "alive"
+	#set all relevant player items to what they were at checkpoint
 	pass
 
 #tells the game to constantly check for user input

@@ -1,9 +1,5 @@
 extends Area2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
 #export(String, FILE, "*.tscn") var level_scene
 
 #export (NodePath) onready var spawner = get_node(spawner) if spawner else null
@@ -26,9 +22,11 @@ func _on_Checkpoint_body_entered(body):
 		print(player.player_state)
 		alreadyUsed = true;
 		print("alreadyUsed has been set to True.")
-		#transition.spawn()
-		
+		save.save_game()
 
 func spawn():
 	player.set_position(self.get_position())
-	#player.update_data()
+	save.load_save()
+
+func respawn():
+	player.set_position(self.get_position())
