@@ -8,6 +8,8 @@ var explosion = preload("res://Instances/Effects/Explosion.tscn")
 #calls the player node that gets used to connect the "hit" signal
 onready var player = get_node("Player")
 
+
+
 func _ready():
 	#connects the signal hit from player. executes show_hit when the hit signal is recieved
 	player.connect("hit", self, "show_hit")
