@@ -21,6 +21,8 @@ var value = 0
 #bullets
 var ammo_in_weapon = 6
 
+#if player has completed the game previously
+var ifCompletedGame
 
 func _ready():
 	pass
