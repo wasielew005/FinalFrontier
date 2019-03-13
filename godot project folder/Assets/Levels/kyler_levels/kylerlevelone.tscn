@@ -19,4 +19,13 @@ position = Vector2( 2122.01, 1603.85 )
 scale = Vector2( 2.51532, 0.391962 )
 level_scene = "res://Assets/Levels/kyler_levels/kylerleveltwo.tscn"
 
+[node name="Navigation2D" type="Navigation2D" parent="." index="4"]
+
+[node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+navpoly = null
+enabled = true
+
+[node name="Node2D" type="Node2D" parent="Navigation2D" index="1"]
+
 
