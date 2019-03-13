@@ -19,7 +19,7 @@ func _ready():
 func _on_Checkpoint_body_entered(body):
 	if body.name == "Player" && !alreadyUsed:
 		print("This is Player.")
-		print(player.player_state)
+		#print(player.player_state)
 		alreadyUsed = true;
 		print("alreadyUsed has been set to True.")
 		save.save_game()
