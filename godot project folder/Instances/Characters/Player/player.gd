@@ -21,6 +21,7 @@ var velocity = Vector2()
 #the raycast is the "bullet" that will collide with other objects
 onready var basicshootcast = get_node("basicshootcast")
 
+
 #hit is defined as a signal here, used in the shoot function 
 #the signal is connected to the level script and is used to play the hit animation
 #the level script is currently named kylerstestarea.gd
@@ -32,6 +33,7 @@ func _ready():
 	#loads the sound for the gun to be used when the player clicks the shoot button
 	#assigns the node "revolvershot" which holds the sound effects to the var revolver_shot created above
 	revolver_sound = get_node("revolvershot")
+	changeweapon()
 
 
 #Shooting - check for user input. trigger reloading
@@ -54,6 +56,26 @@ func _input(event):
 	if event.is_action_pressed("reload"):
 		if global.ammo_in_weapon < 6:
 			reload()
+			
+			
+	#the below is used to swap weapons
+	if event.is_action_pressed("revolverswap"):
+		global.visibleweapon = 1
+		global.playergundmg = 1
+		changeweapon()
+
+	if event.is_action_pressed("rifleswap"):
+		global.visibleweapon = 2
+		global.playergundmg = 2
+		changeweapon()
+
+func changeweapon():
+	if global.visibleweapon == 1:
+		get_node("playerrevolver").visible=true
+		get_node("playerrifle").visible=false
+	if global.visibleweapon == 2:
+		get_node("playerrevolver").visible=false
+		get_node("playerrifle").visible=true
 
 
 

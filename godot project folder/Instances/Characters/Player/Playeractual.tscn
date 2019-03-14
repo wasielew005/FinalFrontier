@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Instances/Characters/Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sheriff_twohands.png" type="Texture" id=2]
-[ext_resource path="res://Assets/SFX/Gun+Shot2.wav" type="AudioStream" id=3]
-[ext_resource path="res://Instances/GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Sheriff_Idle_Upscaled.png" type="Texture" id=3]
+[ext_resource path="res://Assets/SFX/Gun+Shot2.wav" type="AudioStream" id=4]
+[ext_resource path="res://Instances/GUI.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -27,14 +28,14 @@ __meta__ = {
 }
 speed = 200
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+[node name="playercollision" type="CollisionShape2D" parent="." index="0"]
 
 position = Vector2( 4, 0.126282 )
 scale = Vector2( 2.97825, 3.20387 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Camera2D" type="Camera2D" parent="." index="1"]
+[node name="playercamera" type="Camera2D" parent="." index="1"]
 
 position = Vector2( -0.537727, -0.179241 )
 anchor_mode = 1
@@ -61,26 +62,33 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Editor" ]
 
-[node name="Sprite" type="Sprite" parent="." index="2"]
+[node name="playerrevolver" type="Sprite" parent="." index="2"]
 
 rotation = 1.5708
 scale = Vector2( 0.067172, 0.066204 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="playerrifle" type="Sprite" parent="." index="3"]
+
+rotation = 1.5708
+scale = Vector2( 0.067172, 0.066204 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="basicshootcast" type="RayCast2D" parent="." index="3"]
+[node name="basicshootcast" type="RayCast2D" parent="." index="4"]
 
 position = Vector2( 32, 0 )
 rotation = -1.5708
 enabled = true
 exclude_parent = true
-cast_to = Vector2( 0, 250 )
+cast_to = Vector2( 0, 500 )
 collision_mask = 1
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="revolvershot" type="AudioStreamPlayer2D" parent="." index="4"]
+[node name="revolvershot" type="AudioStreamPlayer2D" parent="." index="5"]
 
-stream = ExtResource( 3 )
+stream = ExtResource( 4 )
 volume_db = 1.0
 pitch_scale = 1.0
 autoplay = false
@@ -89,6 +97,6 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="GUI" parent="." index="5" instance=ExtResource( 4 )]
+[node name="GUI" parent="." index="6" instance=ExtResource( 5 )]
 
 
