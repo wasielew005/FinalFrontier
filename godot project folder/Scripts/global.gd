@@ -21,6 +21,13 @@ var value = 0
 #bullets
 var ammo_in_weapon = 6
 
+#weapondamage
+var playergundmg = 1
+#visibleweapon
+var visibleweapon = 1
+
+
+
 
 func _ready():
 	pass
