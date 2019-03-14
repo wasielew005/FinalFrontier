@@ -7,7 +7,7 @@ var targethealth = 4
 
 
 func _ready():
-	get_parent().get_node("Player").connect("hit", self, "targethit")
+	get_parent().get_node("Player").connect("damage", self, "targethit")
 
 func targethit(decrease_health):
 	targethealth -= global.playergundmg
