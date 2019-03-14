@@ -16,4 +16,3 @@ func _process(delta):
 	var milliseconds = millisec_elapsed % 1000
 	global.str_elapsed = "%02d : %02d . %02d" % [minutes, seconds, milliseconds]
 	set_text(global.str_elapsed)
-	print(milliseconds)

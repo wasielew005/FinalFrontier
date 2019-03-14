@@ -27,7 +27,6 @@ onready var basicshootcast = get_node("basicshootcast")
 #the level script is currently named kylerstestarea.gd
 signal hit
 
-
 func _ready():
 	set_process_input(true)
 	#loads the sound for the gun to be used when the player clicks the shoot button
@@ -57,13 +56,11 @@ func _input(event):
 		if global.ammo_in_weapon < 6:
 			reload()
 			
-			
 	#the below is used to swap weapons
 	if event.is_action_pressed("revolverswap"):
 		global.visibleweapon = 1
 		global.playergundmg = 1
 		changeweapon()
-
 	if event.is_action_pressed("rifleswap"):
 		global.visibleweapon = 2
 		global.playergundmg = 2
@@ -76,6 +73,7 @@ func changeweapon():
 	if global.visibleweapon == 2:
 		get_node("playerrevolver").visible=false
 		get_node("playerrifle").visible=true
+	
 
 
 
