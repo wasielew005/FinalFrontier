@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Checkpoint" type="Area2D"]
+[node name="Checkpoint" type="Area2D" index="0"]
 
 position = Vector2( -0.346771, -0.35243 )
 scale = Vector2( 0.711945, 0.679619 )

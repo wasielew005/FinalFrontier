@@ -123,6 +123,12 @@ func respawn():
 	player_state = "alive"
 	#set all relevant player items to what they were at checkpoint
 	pass
+	
+func save():
+	var save_data = {
+			"ammo": global.ammo_in_weapon
+		}
+	return save_data
 
 #tells the game to constantly check for user input
 func _physics_process(delta):

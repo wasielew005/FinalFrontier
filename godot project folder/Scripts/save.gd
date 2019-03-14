@@ -48,4 +48,4 @@ func load_save():
 	
 	
 	#call nodeName.respawn() to re-place player without saving
-	return loaded_data['parentpath']
+	return loaded_data['level_scene']

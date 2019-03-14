@@ -14,15 +14,15 @@ func _physics_process(delta):
 	for body in bodies:
 			if body.name == "Player":
 				#saves player info before switching scenes
-				save.save_game()
 				get_tree().change_scene(level_scene)
+				save.save_game()
 				
 
 #spawns player at the beginning of the level by reloading the scene
 func spawn():
 	#print(self.get_position())
 	get_tree().reload_current_scene()
-	save.load_save()
+	#save.load_save()
 
 func respawn():
 	player.set_position(self.get_position())
@@ -30,7 +30,8 @@ func respawn():
 func save():
 	var save_data = {
 			"filename": get_filename(),
-			"parent": get_parent(),
-			"parentpath": get_parent().get_filename()
+			"parent": get_filename(),
+			"parentpath": get_parent().get_filename(),
+			"level_scene": self.level_scene
 		}
 	return save_data
