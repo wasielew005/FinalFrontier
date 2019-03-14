@@ -13,7 +13,7 @@ func _ready():
 	#if SaveData.json doesn't exist, then create it. else, do nothing
 	if not file.file_exists(SAVE_PATH):
 		create_save()
-	load_save()
+	#load_save()
 
 #creates SaveData.json file in specified path
 func create_save():
@@ -23,26 +23,16 @@ func create_save():
 func save_game():
 	print("Called save_game() in save.gd")
 	
-	#create a Dictionary. save_dictionary will be written to SaveData.JSON
-	var save_dictionary = {
-		"ammo": global.ammo_in_weapon,
-		"score": global.value
-	}
-	#data that needs to be saved:
-		#what checkpoint node player just hit
-			#how to pass in a node?; how is a node saved into JSON?
-		#time, score, health, items, no. of bullets 
-		#if(game_is_complete) save score into Scores.File
-	
-	print(save_dictionary.ammo)
-	
 	file.open(SAVE_PATH, File.WRITE)
 	
-	file.store_line(to_json(save_dictionary))
+	var save_nodes = get_tree().get_nodes_in_group("persist")
+	
+	for x in save_nodes:
+		var node_data = x.call("save")
+		file.store_line(to_json(node_data))
 	
 	file.close()
-	
-	pass
+
 
 func load_save():
 	print("Called load_save() in save.gd")
@@ -52,8 +42,10 @@ func load_save():
 	var loaded_data = {}
 	loaded_data = parse_json(file.get_as_text())
 
-	global.ammo_in_weapon = loaded_data['ammo']
-	global.value = loaded_data['score']
+	#global.ammo_in_weapon = loaded_data['ammo']
+	#global.value = loaded_data['score']
+	
+	
 	
 	#call nodeName.respawn() to re-place player without saving
-	pass
+	return loaded_data['parentpath']

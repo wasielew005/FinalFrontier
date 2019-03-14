@@ -26,3 +26,11 @@ func spawn():
 
 func respawn():
 	player.set_position(self.get_position())
+
+func save():
+	var save_data = {
+			"filename": get_filename(),
+			"parent": get_parent(),
+			"parentpath": get_parent().get_filename()
+		}
+	return save_data
