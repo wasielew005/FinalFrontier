@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/verticaltarget.png" type="Texture" id=1]
+[ext_resource path="res://Instances/verticaltarget.gd" type="Script" id=1]
+[ext_resource path="res://Assets/verticaltarget.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -13,11 +14,14 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
+targethealth = 4
+points = 50
 
 [node name="targetsprite" type="Sprite" parent="." index="0"]
 
 position = Vector2( 3211.63, 2072.58 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="targetcollision" type="CollisionShape2D" parent="." index="1"]
 

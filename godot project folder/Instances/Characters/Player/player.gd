@@ -26,7 +26,8 @@ onready var basicshootcast = get_node("basicshootcast")
 #the signal is connected to the level script and is used to play the hit animation
 #the level script is currently named kylerstestarea.gd
 signal hit
-signal damage
+signal hit_vtarget
+signal hit_htarget
 
 func _ready():
 	set_process_input(true)
@@ -89,13 +90,11 @@ func shoot():
 		#depending on the group, it adds a certain amount of points
 		#groups can be set to certain nodes nodes in the Node window under Groups
 		#the Node window uses the same window as the Inspector 
-		if collider.is_in_group("targets"):
-			#the verticle target in the level is assigned to the "targets" group
-			$GUI/Score.adjust(100)
-		if collider.is_in_group("htargets"):
-			emit_signal("damage", basicshootcast.get_collision_point())
-			#the horizontal target in the level is assigned to the "htargets" group
-			$GUI/Score.adjust(50)
+		if collider.is_in_group("vtarget"):
+			emit_signal("hit_vtarget", basicshootcast.get_collision_point())
+		if collider.is_in_group("htarget"):
+			emit_signal("hit_htarget", basicshootcast.get_collision_point())
+			
 
 
 
