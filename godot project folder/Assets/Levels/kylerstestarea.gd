@@ -13,7 +13,8 @@ onready var player = get_node("Player")
 func _ready():
 	#connects the signal hit from player. executes show_hit when the hit signal is recieved
 	player.connect("hit", self, "show_hit")
-	
+	get_node("/root/menumusic").stop()
+
 #shows the bullet collision animation at collision point when a collision is detected
 func show_hit(hit_location):
 	var smoke = explosion.instance()

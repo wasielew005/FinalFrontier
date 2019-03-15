@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/SFX/Lobo_Loco_-_Glueworm_Evening_Blues_ID_994.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/menumusic.gd" type="Script" id=2]
 
 [node name="menumusic" type="AudioStreamPlayer2D"]
 
@@ -12,5 +13,6 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Music"
 area_mask = 1
+script = ExtResource( 2 )
 
 

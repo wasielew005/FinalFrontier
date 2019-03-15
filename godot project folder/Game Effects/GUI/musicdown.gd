@@ -8,9 +8,6 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	pass
-	
-
-
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
@@ -18,8 +15,7 @@ func _ready():
 #	pass
 
 
-func _on_masterdown_pressed():
-	if global.mastervolume >= -25:
-		global.mastervolume -= 2
-		AudioServer.set_bus_volume_db(0, global.mastervolume)
-
+func _on_musicdown_pressed():
+	if global.music_volume >= -25:
+		global.music_volume -= 2
+		AudioServer.set_bus_volume_db(2, global.music_volume)
