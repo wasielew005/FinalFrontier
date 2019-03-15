@@ -94,7 +94,7 @@ pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
-bus = "Master"
+bus = "Sound Effects"
 area_mask = 1
 
 [node name="GUI" parent="." index="6" instance=ExtResource( 5 )]
