@@ -32,4 +32,3 @@ func set_highScore():
 
 func _process(delta):
 	set_highScore()
-	print(highScore)

@@ -91,7 +91,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=11]
 
-size = 10
+size = 13
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
@@ -216,10 +216,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 875.0
-margin_top = 493.0
-margin_right = 915.0
-margin_bottom = 527.0
+margin_left = 871.0
+margin_top = 491.0
+margin_right = 911.0
+margin_bottom = 525.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -237,19 +237,19 @@ ammoLength = 1
 
 [node name="Pixel_Bullet" type="Sprite" parent="." index="4"]
 
-position = Vector2( 941.636, 512.163 )
+position = Vector2( 936.298, 509.494 )
 scale = Vector2( 0.0210393, 0.0226182 )
 texture = ExtResource( 5 )
 
 [node name="Pixel_Bullet2" type="Sprite" parent="." index="5"]
 
-position = Vector2( 933.587, 512.163 )
+position = Vector2( 928.249, 509.494 )
 scale = Vector2( 0.0210393, 0.0226182 )
 texture = ExtResource( 5 )
 
 [node name="Pixel_Bullet3" type="Sprite" parent="." index="6"]
 
-position = Vector2( 949.382, 512.163 )
+position = Vector2( 944.044, 509.494 )
 scale = Vector2( 0.0210393, 0.0226182 )
 texture = ExtResource( 5 )
 
@@ -259,10 +259,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 881.0
-margin_top = 522.0
-margin_right = 955.0
-margin_bottom = 538.0
+margin_left = 866.0
+margin_top = 520.0
+margin_right = 960.0
+margin_bottom = 541.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -283,10 +283,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 893.0
-margin_top = 493.0
-margin_right = 950.0
-margin_bottom = 527.0
+margin_left = 887.0
+margin_top = 491.0
+margin_right = 921.0
+margin_bottom = 525.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
