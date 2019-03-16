@@ -8,4 +8,5 @@ extends CanvasLayer
 
 func _ready():
 	#AudioServer.set_bus_volume_db(0, global.mastervolume)
+	
 	pass
