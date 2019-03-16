@@ -29,6 +29,7 @@ onready var basicshootcast = get_node("basicshootcast")
 signal hit
 signal hit_vtarget
 signal hit_htarget
+signal hit_enemy
 
 func _ready():
 	set_process_input(true)
@@ -116,6 +117,8 @@ func shoot():
 			emit_signal("hit_vtarget", basicshootcast.get_collision_point())
 		if collider.is_in_group("htarget"):
 			emit_signal("hit_htarget", basicshootcast.get_collision_point())
+		if collider.is_in_group("enemy"):
+			emit_signal("hit_enemy", basicshootcast.get_collision_point())
 			
 
 

@@ -8,13 +8,15 @@
 custom_solver_bias = 0.0
 extents = Vector2( 7.8031, 4.0758 )
 
-[node name="Enemy" type="KinematicBody2D" index="0"]
+[node name="Enemy" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+targethealth = 10
+points = 9000
 walk_slowdown = 0.5
 nav_stop_threshold = 5
 

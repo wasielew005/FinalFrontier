@@ -6,6 +6,8 @@ var motion = Vector2()
 var possible_destinations = []
 var path = []
 var destination = Vector2()
+export (int) var targethealth = 10
+export (int) var points = 9000
 
 
 
@@ -21,7 +23,14 @@ func _ready():
 	set_process(true);
 	possible_destinations = available_destinations.get_children()
 	make_path()
+	get_parent().get_node("Player").connect("hit_enemy", self, "targethit")
 
+func targethit(decrease_health):
+	targethealth -= global.playergundmg
+	print(targethealth)
+	if targethealth <= 0:
+		get_parent().get_node("Player/GUI/Score").adjust(points)
+		queue_free()
 
 func _process(delta):
 	navigate()
