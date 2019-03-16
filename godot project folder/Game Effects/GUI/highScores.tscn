@@ -76,7 +76,7 @@ use_filter = false
 font_data = SubResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="ScoreBackground" type="Sprite" index="0"]
+[node name="ScoreBackground" type="Sprite"]
 
 position = Vector2( 958.729, 537.662 )
 texture = ExtResource( 1 )

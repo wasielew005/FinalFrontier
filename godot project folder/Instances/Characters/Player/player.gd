@@ -9,8 +9,8 @@ export (int) var speed = 200
 var revolver_sound
 
 #these two below are not currently used
-var spare_ammo = 20
-const AMMO_IN_MAG = 6
+const MAX_AMMO_PISTOL = 6
+const MAX_AMMO_RIFLE = 20
 
 var state = "Dead"
 
@@ -45,18 +45,31 @@ func _input(event):
 		if global.ammo_in_weapon > 0:
 			if global.reloading == 0:
 				shoot()
-				global.ammo_in_weapon -= 1
+				if get_node("playerrevolver").visible==true:
+					global.ammo_in_pistol -= 1
+					global.ammo_in_weapon = global.ammo_in_pistol
+				if get_node("playerrifle").visible==true:
+					global.ammo_in_rifle -= 1
+					global.ammo_in_weapon = global.ammo_in_rifle
 				#single line below plays the gun sound everytime the player shoots 
 				revolver_sound.play()
 				$GUI/Ammo.update()
 				#next two lines below auto reloads the gun if it is empty
-				if global.ammo_in_weapon == 0:
-					reload()
+				if get_node("playerrevolver").visible==true:
+					if global.ammo_in_pistol == 0:
+						reload()
+				if get_node("playerrifle").visible==true:
+					if global.ammo_in_rifle == 0:
+						reload()
 	#if the player clicks the "reload" button, reload() is called if there are less than 6 bullets
 	#reload is mapped to the "r" button in the project settings 
 	if event.is_action_pressed("reload"):
-		if global.ammo_in_weapon < 6:
-			reload()
+		if get_node("playerrevolver").visible==true:
+			if global.ammo_in_pistol < 6:
+				reload()
+		if get_node("playerrifle").visible==true:
+			if global.ammo_in_rifle < 20:
+				reload()
 			
 	#the below is used to swap weapons
 	if event.is_action_pressed("revolverswap"):
@@ -72,9 +85,13 @@ func changeweapon():
 	if global.visibleweapon == 1:
 		get_node("playerrevolver").visible=true
 		get_node("playerrifle").visible=false
+		global.ammo_in_weapon = global.ammo_in_pistol
+		$GUI/Ammo.update()
 	if global.visibleweapon == 2:
 		get_node("playerrevolver").visible=false
 		get_node("playerrifle").visible=true
+		global.ammo_in_weapon = global.ammo_in_rifle
+		$GUI/Ammo.update()
 	
 
 
@@ -112,7 +129,12 @@ func reload():
 	self.add_child(t)
 	t.start()
 	yield(t, "timeout")
-	global.ammo_in_weapon = 6
+	if get_node("playerrevolver").visible==true:
+		global.ammo_in_pistol = 6
+		global.ammo_in_weapon = global.ammo_in_pistol
+	if get_node("playerrifle").visible==true:
+		global.ammo_in_rifle = 20
+		global.ammo_in_weapon = global.ammo_in_rifle
 	$GUI/Ammo.update()
 	global.reloading = 0
 	$GUI/Reloading.update()

@@ -22,6 +22,8 @@ var reloading = 0
 var value = 0
 
 #bullets
+var ammo_in_pistol = 6
+var ammo_in_rifle = 20
 var ammo_in_weapon = 6
 
 #weapondamage
