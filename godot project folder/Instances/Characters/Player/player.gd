@@ -8,9 +8,11 @@ export (int) var speed = 200
 #revolver_sound is created to be assigned to the sound node later
 var revolver_sound
 
+var MAX_AMMO
+
 #these two below are not currently used
-var spare_ammo = 20
-const AMMO_IN_MAG = 6
+const MAX_AMMO_PISTOL = 6
+const MAX_AMMO_RIFLE = 20
 
 var player_state
 
@@ -21,17 +23,20 @@ var velocity = Vector2()
 #the raycast is the "bullet" that will collide with other objects
 onready var basicshootcast = get_node("basicshootcast")
 
+
 #hit is defined as a signal here, used in the shoot function 
 #the signal is connected to the level script and is used to play the hit animation
 #the level script is currently named kylerstestarea.gd
 signal hit
-
+signal hit_vtarget
+signal hit_htarget
 
 func _ready():
 	set_process_input(true)
 	#loads the sound for the gun to be used when the player clicks the shoot button
 	#assigns the node "revolvershot" which holds the sound effects to the var revolver_shot created above
 	revolver_sound = get_node("revolvershot")
+	changeweapon()
 	player_state = "alive"
 
 
@@ -43,18 +48,56 @@ func _input(event):
 		if global.ammo_in_weapon > 0:
 			if global.reloading == 0:
 				shoot()
-				global.ammo_in_weapon -= 1
+				if MAX_AMMO == MAX_AMMO_PISTOL:
+					global.ammo_in_pistol -= 1
+					global.ammo_in_weapon = global.ammo_in_pistol
+				if MAX_AMMO == MAX_AMMO_RIFLE:
+					global.ammo_in_rifle -= 1
+					global.ammo_in_weapon = global.ammo_in_rifle
 				#single line below plays the gun sound everytime the player shoots 
 				revolver_sound.play()
 				$GUI/Ammo.update()
 				#next two lines below auto reloads the gun if it is empty
-				if global.ammo_in_weapon == 0:
-					reload()
+				if MAX_AMMO == MAX_AMMO_PISTOL:
+					if global.ammo_in_pistol == 0:
+						reload()
+				if MAX_AMMO == MAX_AMMO_RIFLE:
+					if global.ammo_in_rifle == 0:
+						reload()
 	#if the player clicks the "reload" button, reload() is called if there are less than 6 bullets
 	#reload is mapped to the "r" button in the project settings 
 	if event.is_action_pressed("reload"):
-		if global.ammo_in_weapon < 6:
-			reload()
+		if MAX_AMMO == MAX_AMMO_PISTOL:
+			if global.ammo_in_pistol < MAX_AMMO_PISTOL:
+				reload()
+		if MAX_AMMO == MAX_AMMO_RIFLE:
+			if global.ammo_in_rifle < MAX_AMMO_RIFLE:
+				reload()
+			
+	#the below is used to swap weapons
+	if event.is_action_pressed("revolverswap"):
+		global.visibleweapon = 1
+		global.playergundmg = 1
+		changeweapon()
+	if event.is_action_pressed("rifleswap"):
+		global.visibleweapon = 2
+		global.playergundmg = 2
+		changeweapon()
+
+func changeweapon():
+	if global.visibleweapon == 1:
+		get_node("playerrevolver").visible=true
+		get_node("playerrifle").visible=false
+		global.ammo_in_weapon = global.ammo_in_pistol
+		MAX_AMMO = MAX_AMMO_PISTOL
+		$GUI/Ammo.update()
+	if global.visibleweapon == 2:
+		get_node("playerrevolver").visible=false
+		get_node("playerrifle").visible=true
+		global.ammo_in_weapon = global.ammo_in_rifle
+		MAX_AMMO = MAX_AMMO_RIFLE
+		$GUI/Ammo.update()
+	
 
 
 
@@ -69,12 +112,11 @@ func shoot():
 		#depending on the group, it adds a certain amount of points
 		#groups can be set to certain nodes nodes in the Node window under Groups
 		#the Node window uses the same window as the Inspector 
-		if collider.is_in_group("targets"):
-			#the verticle target in the level is assigned to the "targets" group
-			$GUI/Score.adjust(100)
-		if collider.is_in_group("htargets"):
-			#the horizontal target in the level is assigned to the "htargets" group
-			$GUI/Score.adjust(50)
+		if collider.is_in_group("vtarget"):
+			emit_signal("hit_vtarget", basicshootcast.get_collision_point())
+		if collider.is_in_group("htarget"):
+			emit_signal("hit_htarget", basicshootcast.get_collision_point())
+			
 
 
 
@@ -92,7 +134,12 @@ func reload():
 	self.add_child(t)
 	t.start()
 	yield(t, "timeout")
-	global.ammo_in_weapon = 6
+	if get_node("playerrevolver").visible==true:
+		global.ammo_in_pistol = 6
+		global.ammo_in_weapon = global.ammo_in_pistol
+	if get_node("playerrifle").visible==true:
+		global.ammo_in_rifle = 20
+		global.ammo_in_weapon = global.ammo_in_rifle
 	$GUI/Ammo.update()
 	global.reloading = 0
 	$GUI/Reloading.update()

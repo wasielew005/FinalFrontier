@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/SFX/Lobo_Loco_-_Glueworm_Evening_Blues_ID_994.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/menumusic.gd" type="Script" id=2]
+
+[node name="menumusic" type="AudioStreamPlayer" index="0"]
+
+stream = ExtResource( 1 )
+volume_db = 1.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Music"
+script = ExtResource( 2 )
+
+

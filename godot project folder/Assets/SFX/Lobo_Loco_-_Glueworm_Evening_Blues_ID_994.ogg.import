@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Lobo_Loco_-_Glueworm_Evening_Blues_ID_994.ogg-8260df3d334d785152fdc3454931e47c.oggstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Lobo_Loco_-_Glueworm_Evening_Blues_ID_994.ogg"
+dest_files=[ "res://.import/Lobo_Loco_-_Glueworm_Evening_Blues_ID_994.ogg-8260df3d334d785152fdc3454931e47c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

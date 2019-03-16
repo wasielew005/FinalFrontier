@@ -5,7 +5,6 @@
 [ext_resource path="res://Assets/Levels/testmap2_collision.tmx" type="PackedScene" id=3]
 [ext_resource path="res://Instances/Characters/Enemies/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Instances/Checkpoint.tscn" type="PackedScene" id=6]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -88,11 +87,6 @@ position = Vector2( 447.031, -203.476 )
 
 [node name="Player" parent="." index="4" instance=ExtResource( 5 )]
 
-position = Vector2( 798.922, -390.475 )
-
-[node name="Checkpoint" parent="." index="5" instance=ExtResource( 6 )]
-
-position = Vector2( 672.903, -396.346 )
-player = NodePath("../Player")
+position = Vector2( 858.852, -390.23 )
 
 

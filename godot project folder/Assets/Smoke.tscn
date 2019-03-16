@@ -49,21 +49,21 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="Curve" id=7]
+[sub_resource type="Curve" id=4]
 
 min_value = 0.99
 max_value = 2.0
 bake_resolution = 100
 _data = [ Vector2( 0.00374396, 0.99 ), 0.0, 0.0, 0, 0, Vector2( 0.998223, 1.32165 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=8]
+[sub_resource type="CurveTexture" id=5]
 
 flags = 4
 width = 2048
-curve = SubResource( 7 )
+curve = SubResource( 4 )
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="ParticlesMaterial" id=4]
+[sub_resource type="ParticlesMaterial" id=6]
 
 render_priority = 0
 next_pass = SubResource( 3 )
@@ -93,7 +93,7 @@ angle = 0.0
 angle_random = 0.0
 scale = 1.0
 scale_random = 1.0
-scale_curve = SubResource( 8 )
+scale_curve = SubResource( 5 )
 color_ramp = SubResource( 2 )
 hue_variation = 0.0
 hue_variation_random = 0.0
@@ -104,18 +104,18 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Angular Velocity", "Color", "Damping", "Emission Shape", "Flags", "Gravity", "Initial Velocity", "Orbit Velocity", "Radial Accel", "Resource", "Scale", "Spread", "Tangential Accel", "Trail" ]
 
-[sub_resource type="Curve" id=5]
+[sub_resource type="Curve" id=7]
 
 min_value = 0.0
 max_value = 1.0
 bake_resolution = 100
 _data = [  ]
 
-[sub_resource type="CurveTexture" id=6]
+[sub_resource type="CurveTexture" id=8]
 
 flags = 4
 width = 2048
-curve = SubResource( 5 )
+curve = SubResource( 7 )
 
 [node name="Particles2D" type="Particles2D" index="0"]
 
@@ -134,9 +134,9 @@ fract_delta = true
 visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = true
 draw_order = 0
-process_material = SubResource( 4 )
+process_material = SubResource( 6 )
 texture = null
-normal_map = SubResource( 6 )
+normal_map = SubResource( 8 )
 h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Drawing", "Material", "Process Material", "Textures", "Time", "Visibility" ]

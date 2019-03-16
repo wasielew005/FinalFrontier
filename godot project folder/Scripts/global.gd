@@ -3,7 +3,10 @@ extends Node
 #this script is used to assign vars that you don't want to be reset at scene change
 #this script is global because it is set that way in the project settings
 
-
+#Sound Buses
+var mastervolume = AudioServer.get_bus_volume_db(0)
+var soundeffect_volume = AudioServer.get_bus_volume_db(1)
+var music_volume = AudioServer.get_bus_volume_db(2)
 
 #timekeeper
 var time_start = 0
@@ -19,10 +22,19 @@ var reloading = 0
 var value = 0
 
 #bullets
+var ammo_in_pistol = 6
+var ammo_in_rifle = 20
 var ammo_in_weapon = 6
 
+#weapondamage
+var playergundmg = 1
+#visibleweapon
+var visibleweapon = 1
 #if player has completed the game previously
 var ifCompletedGame
+
+
+
 
 func _ready():
 	pass
