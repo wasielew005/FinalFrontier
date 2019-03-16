@@ -8,11 +8,10 @@ export (int) var speed = 200
 #revolver_sound is created to be assigned to the sound node later
 var revolver_sound
 
-var MAX_AMMO
 
 #these two below are not currently used
 const MAX_AMMO_PISTOL = 6
-const MAX_AMMO_RIFLE = 20
+const MAX_AMMO_RIFLE = 3
 
 var state = "Dead"
 
@@ -47,29 +46,29 @@ func _input(event):
 		if global.ammo_in_weapon > 0:
 			if global.reloading == 0:
 				shoot()
-				if MAX_AMMO == MAX_AMMO_PISTOL:
+				if global.MAX_AMMO == MAX_AMMO_PISTOL:
 					global.ammo_in_pistol -= 1
 					global.ammo_in_weapon = global.ammo_in_pistol
-				if MAX_AMMO == MAX_AMMO_RIFLE:
+				if global.MAX_AMMO == MAX_AMMO_RIFLE:
 					global.ammo_in_rifle -= 1
 					global.ammo_in_weapon = global.ammo_in_rifle
 				#single line below plays the gun sound everytime the player shoots 
 				revolver_sound.play()
 				$GUI/Ammo.update()
 				#next two lines below auto reloads the gun if it is empty
-				if MAX_AMMO == MAX_AMMO_PISTOL:
+				if global.MAX_AMMO == MAX_AMMO_PISTOL:
 					if global.ammo_in_pistol == 0:
 						reload()
-				if MAX_AMMO == MAX_AMMO_RIFLE:
+				if global.MAX_AMMO == MAX_AMMO_RIFLE:
 					if global.ammo_in_rifle == 0:
 						reload()
 	#if the player clicks the "reload" button, reload() is called if there are less than 6 bullets
 	#reload is mapped to the "r" button in the project settings 
 	if event.is_action_pressed("reload"):
-		if MAX_AMMO == MAX_AMMO_PISTOL:
+		if global.MAX_AMMO == MAX_AMMO_PISTOL:
 			if global.ammo_in_pistol < MAX_AMMO_PISTOL:
 				reload()
-		if MAX_AMMO == MAX_AMMO_RIFLE:
+		if global.MAX_AMMO == MAX_AMMO_RIFLE:
 			if global.ammo_in_rifle < MAX_AMMO_RIFLE:
 				reload()
 			
@@ -88,14 +87,16 @@ func changeweapon():
 		get_node("playerrevolver").visible=true
 		get_node("playerrifle").visible=false
 		global.ammo_in_weapon = global.ammo_in_pistol
-		MAX_AMMO = MAX_AMMO_PISTOL
+		global.MAX_AMMO = MAX_AMMO_PISTOL
 		$GUI/Ammo.update()
+		$GUI/MaxAmmo.update()
 	if global.visibleweapon == 2:
 		get_node("playerrevolver").visible=false
 		get_node("playerrifle").visible=true
 		global.ammo_in_weapon = global.ammo_in_rifle
-		MAX_AMMO = MAX_AMMO_RIFLE
+		global.MAX_AMMO = MAX_AMMO_RIFLE
 		$GUI/Ammo.update()
+		$GUI/MaxAmmo.update()
 	
 
 
@@ -137,7 +138,7 @@ func reload():
 		global.ammo_in_pistol = 6
 		global.ammo_in_weapon = global.ammo_in_pistol
 	if get_node("playerrifle").visible==true:
-		global.ammo_in_rifle = 20
+		global.ammo_in_rifle = 3
 		global.ammo_in_weapon = global.ammo_in_rifle
 	$GUI/Ammo.update()
 	global.reloading = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/Levels/Score.gd" type="Script" id=1]
 [ext_resource path="res://Instances/timekeeper.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scripts/HUDAmmo.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Pixel_Bullet.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/ReloadingLabel.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/HUDMaxAmmo.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -90,11 +91,24 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=11]
 
-size = 7
+size = 10
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=12]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+
+size = 22
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 12 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="GUI" type="CanvasLayer"]
 
@@ -202,10 +216,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 906.0
-margin_top = 496.0
-margin_right = 946.0
-margin_bottom = 530.0
+margin_left = 875.0
+margin_top = 493.0
+margin_right = 915.0
+margin_bottom = 527.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -218,24 +232,24 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 4 )
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "custom_fonts" ]
 ammoLength = 1
 
 [node name="Pixel_Bullet" type="Sprite" parent="." index="4"]
 
-position = Vector2( 935.89, 515.282 )
+position = Vector2( 941.636, 512.163 )
 scale = Vector2( 0.0210393, 0.0226182 )
 texture = ExtResource( 5 )
 
 [node name="Pixel_Bullet2" type="Sprite" parent="." index="5"]
 
-position = Vector2( 927.841, 515.282 )
+position = Vector2( 933.587, 512.163 )
 scale = Vector2( 0.0210393, 0.0226182 )
 texture = ExtResource( 5 )
 
 [node name="Pixel_Bullet3" type="Sprite" parent="." index="6"]
 
-position = Vector2( 943.636, 515.282 )
+position = Vector2( 949.382, 512.163 )
 scale = Vector2( 0.0210393, 0.0226182 )
 texture = ExtResource( 5 )
 
@@ -245,10 +259,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 902.0
-margin_top = 525.0
-margin_right = 976.0
-margin_bottom = 539.0
+margin_left = 881.0
+margin_top = 522.0
+margin_right = 955.0
+margin_bottom = 538.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -262,5 +276,30 @@ lines_skipped = 0
 max_lines_visible = -1
 script = ExtResource( 6 )
 _sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="MaxAmmo" type="Label" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 893.0
+margin_top = 493.0
+margin_right = 950.0
+margin_bottom = 527.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 13 )
+text = "/6"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 7 )
+_sections_unfolded = [ "custom_fonts" ]
+ammoLength = 1
 
 
