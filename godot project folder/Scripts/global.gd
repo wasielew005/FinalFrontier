@@ -32,6 +32,10 @@ var playergundmg = 1
 #visibleweapon
 var visibleweapon = 1
 
+#health for player
+var playerHealth = 5
+var maxHealth = 5
+
 
 
 

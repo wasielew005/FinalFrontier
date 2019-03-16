@@ -8,8 +8,6 @@ export (int) var speed = 200
 #revolver_sound is created to be assigned to the sound node later
 var revolver_sound
 
-
-#these two below are not currently used
 const MAX_AMMO_PISTOL = 6
 const MAX_AMMO_RIFLE = 3
 
@@ -90,15 +88,12 @@ func changeweapon():
 		global.ammo_in_weapon = global.ammo_in_pistol
 		global.MAX_AMMO = MAX_AMMO_PISTOL
 		$GUI/Ammo.update()
-		$GUI/MaxAmmo.update()
 	if global.visibleweapon == 2:
 		get_node("playerrevolver").visible=false
 		get_node("playerrifle").visible=true
 		global.ammo_in_weapon = global.ammo_in_rifle
 		global.MAX_AMMO = MAX_AMMO_RIFLE
 		$GUI/Ammo.update()
-		$GUI/MaxAmmo.update()
-	
 
 
 

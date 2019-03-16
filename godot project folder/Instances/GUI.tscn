@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/Levels/Score.gd" type="Script" id=1]
 [ext_resource path="res://Instances/timekeeper.gd" type="Script" id=2]
@@ -6,7 +6,8 @@
 [ext_resource path="res://Scripts/HUDAmmo.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Pixel_Bullet.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/ReloadingLabel.gd" type="Script" id=6]
-[ext_resource path="res://Scripts/HUDMaxAmmo.gd" type="Script" id=7]
+[ext_resource path="res://Assets/heart.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/currenthealth.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -104,10 +105,23 @@ font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
 
 [sub_resource type="DynamicFont" id=13]
 
-size = 22
+size = 17
 use_mipmaps = false
 use_filter = false
 font_data = SubResource( 12 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=14]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=15]
+
+size = 17
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 14 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="GUI" type="CanvasLayer"]
@@ -124,8 +138,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 39.0
-margin_bottom = 14.0
+margin_left = 874.0
+margin_top = 17.0
+margin_right = 916.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -172,9 +188,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 183.0
-margin_right = 253.0
-margin_bottom = 15.0
+margin_left = 898.0
+margin_top = 2.0
+margin_right = 968.0
+margin_bottom = 17.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -194,9 +211,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 148.0
-margin_right = 188.0
-margin_bottom = 15.0
+margin_left = 863.0
+margin_top = 2.0
+margin_right = 903.0
+margin_bottom = 17.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -277,16 +295,21 @@ max_lines_visible = -1
 script = ExtResource( 6 )
 _sections_unfolded = [ "Visibility", "custom_fonts" ]
 
-[node name="MaxAmmo" type="Label" parent="." index="8"]
+[node name="heart" type="Sprite" parent="." index="8"]
+
+position = Vector2( 28.0088, 23.3509 )
+texture = ExtResource( 7 )
+
+[node name="Health" type="Label" parent="." index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 887.0
-margin_top = 491.0
-margin_right = 921.0
-margin_bottom = 525.0
+margin_left = 42.0
+margin_top = 9.0
+margin_right = 176.0
+margin_bottom = 36.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -294,12 +317,34 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 13 )
-text = "/6"
+text = "Health:"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 7 )
 _sections_unfolded = [ "custom_fonts" ]
-ammoLength = 1
+
+[node name="currenthealth" type="Label" parent="Health" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 81.0
+margin_right = 151.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 15 )
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 8 )
+_sections_unfolded = [ "custom_fonts" ]
+healthLength = 1
 
 

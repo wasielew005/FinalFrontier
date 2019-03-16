@@ -23,7 +23,7 @@ func _ready():
 	set_process(true);
 	possible_destinations = available_destinations.get_children()
 	make_path()
-	get_parent().get_node("Player").connect("hit_enemy", self, "targethit")
+	get_parent().get_node("Player").connect("hit", self, "targethit")
 
 func targethit(decrease_health):
 	targethealth -= global.playergundmg
