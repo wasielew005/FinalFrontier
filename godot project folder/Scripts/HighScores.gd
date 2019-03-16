@@ -30,4 +30,7 @@ func set_highScore():
 		save_highScore()
 	pass
 
+func process(delta):
+	set_highScore()
+
 
