@@ -3,7 +3,7 @@ extends Node
 #global update
 
 var highScore = 0 setget set_highScore
-const filepath = "user://highScores.data"
+const filepath = "user://highScores1.data"
 
 func _ready():
 	load_highScore()
@@ -33,5 +33,3 @@ func set_highScore():
 func _process(delta):
 	set_highScore()
 	print(highScore)
-
-
