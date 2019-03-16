@@ -1,6 +1,6 @@
 extends Label
 
-export (int) var ammoLength = 1
+export (int) var ammoLength = 2
 
 
 func _ready():
