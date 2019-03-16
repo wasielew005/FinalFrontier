@@ -1,0 +1,242 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Game Effects/GUI/settingsmenu.gd" type="Script" id=1]
+[ext_resource path="res://Game Effects/GUI/masterup.gd" type="Script" id=2]
+[ext_resource path="res://Game Effects/GUI/masterdown.gd" type="Script" id=3]
+[ext_resource path="res://Game Effects/GUI/musicdown.gd" type="Script" id=4]
+[ext_resource path="res://Game Effects/GUI/musicup.gd" type="Script" id=5]
+[ext_resource path="res://Game Effects/GUI/soundeffectdown.gd" type="Script" id=6]
+[ext_resource path="res://Game Effects/GUI/soundeffectup.gd" type="Script" id=7]
+[ext_resource path="res://Game Effects/GUI/settingsbackbutton.gd" type="Script" id=8]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="settingsmenutitle" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = 24.0
+margin_right = 591.0
+margin_bottom = 40.0
+rect_rotation = 0.278429
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Settings - Buttons work. Someone else who wants a break from coding can make a real menu"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="masterup" type="Button" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 209.0
+margin_top = 88.0
+margin_right = 287.0
+margin_bottom = 108.0
+rect_rotation = 0.196529
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Master Up"
+flat = false
+align = 1
+script = ExtResource( 2 )
+
+[node name="masterdown" type="Button" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 27.0
+margin_top = 87.0
+margin_right = 123.0
+margin_bottom = 107.0
+rect_rotation = 0.196529
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Master Down"
+flat = false
+align = 1
+script = ExtResource( 3 )
+
+[node name="musicdown" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 28.0
+margin_top = 231.0
+margin_right = 118.0
+margin_bottom = 251.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Music Down"
+flat = false
+align = 1
+script = ExtResource( 4 )
+
+[node name="musicup" type="Button" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 214.0
+margin_top = 232.0
+margin_right = 286.0
+margin_bottom = 252.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Music Up"
+flat = false
+align = 1
+script = ExtResource( 5 )
+
+[node name="soundeffectdown" type="Button" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 29.0
+margin_top = 155.0
+margin_right = 159.0
+margin_bottom = 175.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Sound Effect Down"
+flat = false
+align = 1
+script = ExtResource( 6 )
+
+[node name="soundeffectup" type="Button" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 210.0
+margin_top = 154.0
+margin_right = 322.0
+margin_bottom = 174.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Sound Effect Up"
+flat = false
+align = 1
+script = ExtResource( 7 )
+
+[node name="settingsbackbutton" type="Button" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 41.0
+margin_top = 525.0
+margin_right = 83.0
+margin_bottom = 545.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Back"
+flat = false
+align = 1
+script = ExtResource( 8 )
+
+[connection signal="pressed" from="masterup" to="masterup" method="_on_masterup_pressed"]
+
+[connection signal="pressed" from="masterdown" to="masterdown" method="_on_masterdown_pressed"]
+
+[connection signal="pressed" from="musicdown" to="musicdown" method="_on_musicdown_pressed"]
+
+[connection signal="pressed" from="musicup" to="musicup" method="_on_musicup_pressed"]
+
+[connection signal="pressed" from="soundeffectdown" to="soundeffectdown" method="_on_soundeffectdown_pressed"]
+
+[connection signal="pressed" from="soundeffectup" to="soundeffectup" method="_on_soundeffectup_pressed"]
+
+[connection signal="pressed" from="settingsbackbutton" to="settingsbackbutton" method="_on_settingsbackbutton_pressed"]
+
+
