@@ -18,6 +18,8 @@ script = ExtResource( 1 )
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="0"]
 
+editor/display_folded = true
+
 [node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
 navpoly = SubResource( 1 )

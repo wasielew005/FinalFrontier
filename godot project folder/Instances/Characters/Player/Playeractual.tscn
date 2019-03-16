@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Instances/Characters/Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sheriff_twohands.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sheriff_Idle_Upscaled.png" type="Texture" id=3]
 [ext_resource path="res://Assets/SFX/Gun+Shot2.wav" type="AudioStream" id=4]
 [ext_resource path="res://Instances/GUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Game Effects/GUI/PauseScreen.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -98,5 +99,21 @@ bus = "Sound Effects"
 area_mask = 1
 
 [node name="GUI" parent="." index="6" instance=ExtResource( 5 )]
+
+[node name="pausemenu" type="CanvasLayer" parent="." index="7"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="PauseScreen" parent="pausemenu" index="0" instance=ExtResource( 6 )]
+
+visible = false
+margin_left = 0.00435901
+margin_top = 0.568221
+margin_right = 40.0044
+margin_bottom = 40.5682
 
 

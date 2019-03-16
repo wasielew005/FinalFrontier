@@ -13,7 +13,12 @@ onready var player = get_node("Player")
 func _ready():
 	#connects the signal hit from player. executes show_hit when the hit signal is recieved
 	player.connect("hit", self, "show_hit")
+	#get_parent().get_node("pausemenu/PauseScreen").connect("quit", self, "quit_to_menu")
 	get_node("/root/menumusic").stop()
+
+
+#func quit_to_menu(quit):
+#	get_tree().change_scene("res://Game Effects/GUI/MainMenu.tscn")
 
 #shows the bullet collision animation at collision point when a collision is detected
 func show_hit(hit_location):
