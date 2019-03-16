@@ -21,7 +21,7 @@ func save_highScore():
 	var file = File.new()
 	file.open(filepath, file.WRITE)
 	file.store_var(highScore)
-	file.close
+	file.close()
 	pass
 
 func set_highScore():
@@ -30,7 +30,8 @@ func set_highScore():
 		save_highScore()
 	pass
 
-func process(delta):
+func _process(delta):
 	set_highScore()
+	print(highScore)
 
 
