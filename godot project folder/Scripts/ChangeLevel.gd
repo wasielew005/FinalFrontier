@@ -5,6 +5,7 @@ extends Area2D
 #without opening and changing the script each time
 export(String, FILE, "*.tscn") var level_scene
 
+
 #constantly checks if the player enters the collision area
 #if they do, the scene is changed to the scene designated in level_scene
 func _physics_process(delta):
