@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Game Effects/GUI/settingsmenu.gd" type="Script" id=1]
 [ext_resource path="res://Game Effects/GUI/masterup.gd" type="Script" id=2]
@@ -8,6 +8,98 @@
 [ext_resource path="res://Game Effects/GUI/soundeffectdown.gd" type="Script" id=6]
 [ext_resource path="res://Game Effects/GUI/soundeffectup.gd" type="Script" id=7]
 [ext_resource path="res://Game Effects/GUI/settingsbackbutton.gd" type="Script" id=8]
+[ext_resource path="res://Assets/settingsIcon.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFontData" id=1]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 1 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=3]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=5]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 5 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=7]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=9]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 9 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=11]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 11 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=13]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+
+size = 60
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -47,10 +139,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 209.0
-margin_top = 88.0
-margin_right = 287.0
-margin_bottom = 108.0
+margin_left = 343.0
+margin_top = 360.0
+margin_right = 539.0
+margin_bottom = 429.0
 rect_rotation = 0.196529
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -59,6 +151,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -67,6 +160,7 @@ text = "Master Up"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="masterdown" type="Button" parent="." index="2"]
 
@@ -74,10 +168,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 27.0
-margin_top = 87.0
-margin_right = 123.0
-margin_bottom = 107.0
+margin_left = 130.0
+margin_top = 359.0
+margin_right = 326.0
+margin_bottom = 428.0
 rect_rotation = 0.196529
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -86,6 +180,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -94,6 +189,7 @@ text = "Master Down"
 flat = false
 align = 1
 script = ExtResource( 3 )
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="musicdown" type="Button" parent="." index="3"]
 
@@ -101,10 +197,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 28.0
-margin_top = 231.0
-margin_right = 118.0
-margin_bottom = 251.0
+margin_left = 130.0
+margin_top = 449.0
+margin_right = 326.0
+margin_bottom = 518.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -112,6 +208,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -120,6 +217,7 @@ text = "Music Down"
 flat = false
 align = 1
 script = ExtResource( 4 )
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="musicup" type="Button" parent="." index="4"]
 
@@ -127,10 +225,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 214.0
-margin_top = 232.0
-margin_right = 286.0
-margin_bottom = 252.0
+margin_left = 343.0
+margin_top = 449.0
+margin_right = 539.0
+margin_bottom = 518.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -138,6 +236,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 8 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -146,6 +245,7 @@ text = "Music Up"
 flat = false
 align = 1
 script = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="soundeffectdown" type="Button" parent="." index="5"]
 
@@ -153,10 +253,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 29.0
-margin_top = 155.0
-margin_right = 159.0
-margin_bottom = 175.0
+margin_left = 129.0
+margin_top = 539.0
+margin_right = 325.0
+margin_bottom = 608.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -164,14 +264,16 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 10 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Sound Effect Down"
+text = "SFX Down"
 flat = false
 align = 1
 script = ExtResource( 6 )
+_sections_unfolded = [ "Hint", "Rect", "custom_fonts" ]
 
 [node name="soundeffectup" type="Button" parent="." index="6"]
 
@@ -179,10 +281,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 210.0
-margin_top = 154.0
-margin_right = 322.0
-margin_bottom = 174.0
+margin_left = 343.0
+margin_top = 539.0
+margin_right = 539.0
+margin_bottom = 608.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -190,14 +292,16 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Sound Effect Up"
+text = "SFX Up"
 flat = false
 align = 1
 script = ExtResource( 7 )
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="settingsbackbutton" type="Button" parent="." index="7"]
 
@@ -205,10 +309,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 41.0
-margin_top = 525.0
-margin_right = 83.0
-margin_bottom = 545.0
+margin_left = 8.0
+margin_top = 965.0
+margin_right = 238.0
+margin_bottom = 1073.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -216,6 +320,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+custom_fonts/font = SubResource( 14 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -224,6 +329,19 @@ text = "Back"
 flat = false
 align = 1
 script = ExtResource( 8 )
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="settingsIcon2" type="Sprite" parent="." index="8"]
+
+position = Vector2( 1470.59, 543.503 )
+scale = Vector2( 0.346071, 0.354623 )
+texture = ExtResource( 9 )
+
+[node name="settingsIcon" type="Sprite" parent="." index="9"]
+
+position = Vector2( 1254.22, 373.963 )
+scale = Vector2( 0.346071, 0.354623 )
+texture = ExtResource( 9 )
 
 [connection signal="pressed" from="masterup" to="masterup" method="_on_masterup_pressed"]
 
