@@ -23,8 +23,9 @@ var value = 0
 
 #bullets
 var ammo_in_pistol = 6
-var ammo_in_rifle = 20
+var ammo_in_rifle = 3
 var ammo_in_weapon = 6
+var MAX_AMMO = 6
 
 #weapondamage
 var playergundmg = 1
@@ -32,6 +33,10 @@ var playergundmg = 1
 var visibleweapon = 1
 #if player has completed the game previously
 var ifCompletedGame
+
+#health for player
+var playerHealth = 5
+var maxHealth = 5
 
 
 
