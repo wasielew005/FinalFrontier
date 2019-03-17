@@ -9,8 +9,9 @@ var destination = Vector2()
 export (int) var targethealth = 10
 export (int) var points = 9000
 var i=1
-var test_dest= [0,1]
+var test_dest= [0,1,2]
 var w_t=false
+
 
 
 
@@ -46,23 +47,27 @@ func navigate():
 	var distance_to_destination = position.distance_to(path[0])
 	destination = path[0]
 	
+	
 
 	if distance_to_destination > nav_stop_threshold:
 		
 		move()
 			
 	else:
+		
 		update_path()
 	
 
 func move():
 	
-	look_at(destination)
+	
 	motion = (destination-position).normalized() * speed
 	
 	if is_on_wall():
 		make_path()
 	move_and_slide(motion)
+	
+	
 	
 	
 		
@@ -71,6 +76,7 @@ func move():
 
 func make_path():
 	var next_destination = possible_destinations[test_dest[i]]
+	look_at(next_destination.global_position)
 	if i < test_dest.size()-1: 
 		i+=1
 	else: 
@@ -97,6 +103,7 @@ func update_path():
 	else:
 		if path.size() == 1:
 			make_path()
+			
 		else:	
 			path.remove(0)
 		w_t=true
