@@ -124,13 +124,16 @@ use_filter = false
 font_data = SubResource( 14 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="GUI" type="CanvasLayer"]
+[node name="GUI" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 2, 2 )
 transform = Transform2D( 2, 0, 0, 2, 0, 0 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="Score" type="Label" parent="." index="0"]
 
@@ -138,9 +141,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 874.0
+margin_left = 864.0
 margin_top = 17.0
-margin_right = 916.0
+margin_right = 906.0
 margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -297,7 +300,7 @@ _sections_unfolded = [ "Visibility", "custom_fonts" ]
 
 [node name="heart" type="Sprite" parent="." index="8"]
 
-position = Vector2( 28.0088, 23.3509 )
+position = Vector2( 22.0246, 519.039 )
 texture = ExtResource( 7 )
 
 [node name="Health" type="Label" parent="." index="9"]
@@ -306,10 +309,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 42.0
-margin_top = 9.0
-margin_right = 176.0
-margin_bottom = 36.0
+margin_left = 36.0
+margin_top = 505.0
+margin_right = 170.0
+margin_bottom = 532.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
