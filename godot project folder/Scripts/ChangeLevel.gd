@@ -28,10 +28,13 @@ func respawn():
 	player.set_position(self.get_position())
 
 func save():
+	#var file_name = "LevelTransitionData.save"
+	#call to set highscore
 	var save_data = {
 			"filename": get_filename(),
 			"parent": get_filename(),
 			"parentpath": get_parent().get_filename(),
-			"level_scene": self.level_scene
+			"level_scene": self.level_scene,
+			"filepath": "LevelTransition.save"
 		}
 	return save_data

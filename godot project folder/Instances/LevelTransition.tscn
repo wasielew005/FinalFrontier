@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8.83597, 10.3065 )
 
-[node name="Level Transition" type="Area2D" groups=[
+[node name="Level Transition" type="Area2D" index="0" groups=[
 "persist",
 ]]
 
