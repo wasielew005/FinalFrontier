@@ -8,7 +8,7 @@
 [ext_resource path="res://Game Effects/GUI/LoadScores.gd" type="Script" id=6]
 [ext_resource path="res://Game Effects/GUI/Quit.gd" type="Script" id=7]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )

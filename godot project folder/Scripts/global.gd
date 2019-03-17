@@ -38,6 +38,8 @@ var ifCompletedGame
 var playerHealth = 5
 var maxHealth = 5
 
+#difficulty level
+var difficulty
 
 
 
