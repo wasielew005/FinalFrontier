@@ -83,7 +83,6 @@ _sections_unfolded = [ "Z Index" ]
 ] instance=ExtResource( 7 )]
 
 position = Vector2( 2672.72, 2210.89 )
-destination_order = [  ]
-reverseOrder = true
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 

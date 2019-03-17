@@ -10,19 +10,25 @@ extents = Vector2( 7.8031, 4.0758 )
 
 [node name="Enemy" type="KinematicBody2D"]
 
+rotation = 1.5708
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 targethealth = 10
 points = 9000
 walk_slowdown = 0.5
 nav_stop_threshold = 5
+destination_order = [  ]
+reverseOrder = true
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
+rotation = 1.5708
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
 [node name="body" type="CollisionShape2D" parent="." index="1"]
 
