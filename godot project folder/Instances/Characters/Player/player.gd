@@ -11,7 +11,7 @@ var revolver_sound
 const MAX_AMMO_PISTOL = 6
 const MAX_AMMO_RIFLE = 3
 
-var state = "Dead"
+var player_state
 
 var velocity = Vector2()
 
@@ -35,6 +35,7 @@ func _ready():
 	#assigns the node "revolvershot" which holds the sound effects to the var revolver_shot created above
 	revolver_sound = get_node("revolvershot")
 	changeweapon()
+	player_state = "alive"
 
 
 #Shooting - check for user input. trigger reloading
@@ -142,8 +143,6 @@ func reload():
 	global.reloading = 0
 	$GUI/Reloading.update()
 
-
-
 #this function is used for player movement. 
 #movement in godot is grid based, so the key presses move the character on x ,y
 func get_input():
@@ -162,6 +161,24 @@ func get_input():
 	#speed is defined at the top of the script
     velocity = velocity.normalized() * speed
 
+func respawn():
+	#find last node checkpoint
+	#getNode("last checkpoint node").spawn()
+	#OR
+	#load SaveData.file
+	player_state = "alive"
+	#set all relevant player items to what they were at checkpoint
+	pass
+	
+func save():
+	var time = global.time_now - global.time_start
+	var save_data = {
+			"ammo_in_weapon": global.ammo_in_weapon,
+			"score": global.value,
+			"timeelapsed": time,
+			"filepath": "Player.save"
+		}
+	return save_data
 
 #tells the game to constantly check for user input
 func _physics_process(delta):

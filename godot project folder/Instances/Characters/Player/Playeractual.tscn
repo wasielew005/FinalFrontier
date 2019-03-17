@@ -13,7 +13,9 @@ custom_solver_bias = 0.0
 radius = 8.77178
 height = 0.356161
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"persist",
+]]
 
 position = Vector2( 0.00435901, 0.568221 )
 rotation = 1.5708

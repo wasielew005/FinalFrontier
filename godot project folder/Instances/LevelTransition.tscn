@@ -7,7 +7,9 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8.83597, 10.3065 )
 
-[node name="Level Transition" type="Area2D"]
+[node name="Level Transition" type="Area2D" groups=[
+"persist",
+]]
 
 position = Vector2( 930.022, -389.635 )
 scale = Vector2( 1, 1.48751 )
@@ -20,6 +22,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 level_scene = "res://Assets/Levels/kylerstestarea.tscn"
+player = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 

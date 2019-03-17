@@ -20,6 +20,7 @@ config/icon="res://Assets/AJ sheriff.png"
 global="*res://Scripts/global.gd"
 HighScores="*res://Scripts/HighScores.gd"
 menumusic="*res://Scripts/menumusic.tscn"
+save="*res://Scripts/save.gd"
 
 [display]
 
