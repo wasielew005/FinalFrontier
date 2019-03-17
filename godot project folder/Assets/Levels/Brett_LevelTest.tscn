@@ -84,6 +84,8 @@ position = Vector2( -666.516, -532.978 )
 [node name="Enemy" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 447.031, -203.476 )
+destination_order = [  ]
+reverseOrder = true
 
 [node name="Player" parent="." index="4" instance=ExtResource( 5 )]
 

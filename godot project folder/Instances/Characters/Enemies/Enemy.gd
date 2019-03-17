@@ -8,11 +8,16 @@ var path = []
 var destination = Vector2()
 export (int) var targethealth = 10
 export (int) var points = 9000
+var i=1
+var test_dest= [0,1]
+var w_t=false
 
 
 
 export var walk_slowdown = 0.5
-export var nav_stop_threshold = 5
+export var nav_stop_threshold = 50
+export var destination_order= []
+export var reverseOrder= true
 
 
 onready var navigation = get_parent().get_node("Navigation2D");
@@ -33,41 +38,73 @@ func targethit(decrease_health):
 		queue_free()
 
 func _process(delta):
+
 	navigate()
 
 
 func navigate():
 	var distance_to_destination = position.distance_to(path[0])
 	destination = path[0]
+	
 
 	if distance_to_destination > nav_stop_threshold:
+		
 		move()
+			
 	else:
 		update_path()
-
+	
 
 func move():
+	
 	look_at(destination)
 	motion = (destination-position).normalized() * speed
 	
 	if is_on_wall():
 		make_path()
-	
 	move_and_slide(motion)
-
+	
+	
+		
+		
+		
 
 func make_path():
-	randomize()
-	var next_destination = possible_destinations[randi() % possible_destinations.size()]
+	var next_destination = possible_destinations[test_dest[i]]
+	if i < test_dest.size()-1: 
+		i+=1
+	else: 
+		i=0
+	path = navigation.get_simple_path(global_position, next_destination.global_position, true)
 	
-	path = navigation.get_simple_path(global_position, next_destination.global_position, false)
+	
+	
+	
+	
+	
+	
 
 
 func update_path():
-	if path.size() == 1:
-		make_path()
-	else:	
-		path.remove(0)
+	if w_t==true:
+		var t = Timer.new()
+		t.set_wait_time(1)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		w_t=false
+	else:
+		if path.size() == 1:
+			make_path()
+		else:	
+			path.remove(0)
+		w_t=true
+	
+	
+	
+	
+	
 
 
 
