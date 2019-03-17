@@ -176,6 +176,7 @@ func save():
 			"ammo_in_weapon": global.ammo_in_weapon,
 			"score": global.value,
 			"timeelapsed": time,
+			"difficulty": gloabal.difficulty,
 			"filepath": "Player.save"
 		}
 	return save_data
