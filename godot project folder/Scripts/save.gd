@@ -1,12 +1,12 @@
 extends Node
 
 #"user://" stores in ~/.local/share/godot/app_userdata/Name on macOS and Linux, and %APPDATA%/Name on Windows
-#const TRANSITION_PATH = "user://LevelTransition.save"
-#const PLAYER_PATH = "user://Player.save"
+const TRANSITION_PATH = "user://LevelTransition.save"
+const PLAYER_PATH = "user://Player.save"
 
 #because i, for the life of me, can't find %APP_DATA%, i'm using this until i'm able to make sure it works
-const TRANSITION_PATH = "C://Users/AJ/Desktop/LevelTransition.save"
-const PLAYER_PATH = "C://Users/AJ/Desktop/Player.save"
+#const TRANSITION_PATH = "C://Users/AJ/Desktop/LevelTransition.save"
+#const PLAYER_PATH = "C://Users/AJ/Desktop/Player.save"
 
 #File is godot's read/write system
 var file = File.new()
@@ -34,7 +34,7 @@ func save_game():
 	for x in save_nodes:
 		var node_data = x.call("save")
 		var name = node_data['filepath']
-		var save_path = "C://Users/AJ/Desktop/" + name
+		var save_path = "user://" + name
 		file.open(save_path, File.WRITE)
 		
 		file.store_line(to_json(node_data))
@@ -50,11 +50,7 @@ func load_save():
 	var loaded_data = {}
 	loaded_data = parse_json(file.get_as_text())
 	
-	while not file.eof_reached():
-		var current_line = parse_json(file.get_line())
-		
-		print(current_line)
-		
+	
 	#call nodeName.respawn() to re-place player without saving
 	return loaded_data['level_scene']
 
