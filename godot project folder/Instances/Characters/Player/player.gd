@@ -11,6 +11,7 @@ var revolver_sound
 const MAX_AMMO_PISTOL = 6
 const MAX_AMMO_RIFLE = 3
 
+#if player is "alive" or "dead"
 var player_state
 signal game_over
 
@@ -39,6 +40,10 @@ func _ready():
 	
 	if global.isGameComplete == null:
 		global.isGameComplete = false
+	
+	if global.playerHealth <= 0:
+		death()
+	
 	player_state = "alive"
 
 
@@ -176,6 +181,11 @@ func respawn():
 	#set all relevant player items to what they were at checkpoint
 	pass
 	
+
+func death():
+	emit_signal("game_over")
+	get_tree().paused = not get_tree().paused
+
 func save():
 	var time = global.time_now - global.time_start
 	var save_data = {
@@ -190,5 +200,5 @@ func save():
 
 #tells the game to constantly check for user input
 func _physics_process(delta):
-    get_input()
-    move_and_slide(velocity)
+	get_input()
+	move_and_slide(velocity)

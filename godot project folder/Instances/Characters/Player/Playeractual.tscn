@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Instances/Characters/Player/player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Sheriff_twohands.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/SFX/Gun+Shot2.wav" type="AudioStream" id=4]
 [ext_resource path="res://Instances/GUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Game Effects/GUI/PauseScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Game Effects/GUI/GameOver.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -117,5 +118,19 @@ margin_left = 0.00435901
 margin_top = 0.568221
 margin_right = 40.0044
 margin_bottom = 40.5682
+
+[node name="Game Over Screen" type="CanvasLayer" parent="." index="8"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Control" parent="Game Over Screen" index="0" instance=ExtResource( 7 )]
+
+visible = false
+
+[connection signal="game_over" from="." to="Game Over Screen/Control" method="_on_Player_game_over"]
 
 
