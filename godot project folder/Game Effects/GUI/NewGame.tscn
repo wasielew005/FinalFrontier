@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Game Effects/GUI/NewGame.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/MainMenuButtonFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Game Effects/GUI/Level Selection.gd" type="Script" id=3]
+[ext_resource path="res://Game Effects/GUI/Level Select Buttons.gd" type="Script" id=4]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -30,7 +32,7 @@ custom_constants/margin_left = 50
 custom_constants/margin_bottom = 50
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" index="0"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -48,7 +50,25 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 235.0
+margin_bottom = 980.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -70,7 +90,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "Size Flags", "custom_fonts" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -88,8 +108,9 @@ size_flags_vertical = 3
 alignment = 0
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -107,7 +128,7 @@ custom_constants/separation = 10
 alignment = 0
 _sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom_constants" ]
 
-[node name="Easy" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
+[node name="Easy" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -133,7 +154,7 @@ flat = false
 align = 0
 _sections_unfolded = [ "Hint", "Rect", "Size Flags", "custom_fonts" ]
 
-[node name="Normal" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
+[node name="Normal" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -160,7 +181,7 @@ flat = false
 align = 0
 _sections_unfolded = [ "Hint", "Rect", "Size Flags", "custom_fonts" ]
 
-[node name="Hard" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="2"]
+[node name="Hard" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -187,10 +208,257 @@ flat = false
 align = 0
 _sections_unfolded = [ "Hint", "Rect", "Size Flags", "custom_fonts" ]
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Easy" to="." method="_on_Easy_pressed"]
+[node name="Level Selection" type="VBoxContainer" parent="MarginContainer/HBoxContainer" index="1"]
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Normal" to="." method="_on_Normal_pressed"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1575.0
+margin_right = 1820.0
+margin_bottom = 980.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 10
+size_flags_vertical = 9
+alignment = 0
+script = ExtResource( 3 )
+_sections_unfolded = [ "Size Flags" ]
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Hard" to="." method="_on_Hard_pressed"]
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/Level Selection" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 458.0
+margin_right = 245.0
+margin_bottom = 488.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 10
+custom_fonts/font = ExtResource( 2 )
+text = "Select Level Order"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "custom_fonts" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Level Selection" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 206.0
+margin_top = 492.0
+margin_right = 245.0
+margin_bottom = 980.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 8
+size_flags_vertical = 3
+alignment = 0
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Level Select Buttons" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Level Selection/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 268.0
+margin_right = 39.0
+margin_bottom = 488.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 11
+size_flags_vertical = 12
+custom_constants/separation = 20
+alignment = 0
+script = ExtResource( 4 )
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "custom_constants" ]
+dropdown_path_one = NodePath("OptionButton")
+dropdown_path_two = NodePath("OptionButton2")
+dropdown_path_three = NodePath("OptionButton3")
+dropdown_path_four = NodePath("OptionButton4")
+dropdown_path_five = NodePath("OptionButton5")
+dropdown_path_six = NodePath("OptionButton6")
+
+[node name="OptionButton6" type="OptionButton" parent="MarginContainer/HBoxContainer/Level Selection/HBoxContainer/Level Select Buttons" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 39.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="OptionButton5" type="OptionButton" parent="MarginContainer/HBoxContainer/Level Selection/HBoxContainer/Level Select Buttons" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 40.0
+margin_right = 39.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="OptionButton4" type="OptionButton" parent="MarginContainer/HBoxContainer/Level Selection/HBoxContainer/Level Select Buttons" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 80.0
+margin_right = 39.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="OptionButton3" type="OptionButton" parent="MarginContainer/HBoxContainer/Level Selection/HBoxContainer/Level Select Buttons" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 120.0
+margin_right = 39.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="OptionButton2" type="OptionButton" parent="MarginContainer/HBoxContainer/Level Selection/HBoxContainer/Level Select Buttons" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 160.0
+margin_right = 39.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/Level Selection/HBoxContainer/Level Select Buttons" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 200.0
+margin_right = 39.0
+margin_bottom = 220.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Rect", "custom_fonts", "custom_styles" ]
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Easy" to="." method="_on_Easy_pressed"]
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Normal" to="." method="_on_Normal_pressed"]
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Hard" to="." method="_on_Hard_pressed"]
 
 

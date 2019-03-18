@@ -36,6 +36,9 @@ func _ready():
 	#assigns the node "revolvershot" which holds the sound effects to the var revolver_shot created above
 	revolver_sound = get_node("revolvershot")
 	changeweapon()
+	
+	if global.isGameComplete == null:
+		global.isGameComplete = false
 	player_state = "alive"
 
 
@@ -180,6 +183,7 @@ func save():
 			"score": global.value,
 			"timeelapsed": time,
 			"difficulty": global.difficulty,
+			"gameComplete": global.isGameComplete,
 			"filepath": "Player.save"
 		}
 	return save_data

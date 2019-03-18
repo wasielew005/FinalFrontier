@@ -1,5 +1,11 @@
 extends CanvasLayer
 
+func _ready():
+	pass
+	#if game = complete, then show select levels
+	#if not isGameComplete:
+		#$LevelSelector.hide()
+
 func _on_Easy_pressed():
 	global.difficulty = "easy"
 	get_tree().change_scene("res://Assets/Levels/kylerstestarea.tscn")

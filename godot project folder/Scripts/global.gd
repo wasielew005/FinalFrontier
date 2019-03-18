@@ -31,8 +31,9 @@ var MAX_AMMO = 6
 var playergundmg = 1
 #visibleweapon
 var visibleweapon = 1
+
 #if player has completed the game previously
-var ifCompletedGame
+var isGameComplete
 
 #health for player
 var playerHealth = 5
@@ -40,6 +41,7 @@ var maxHealth = 5
 
 #difficulty level
 var difficulty
+
 
 
 
