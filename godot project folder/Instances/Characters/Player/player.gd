@@ -174,11 +174,10 @@ func respawn():
 	pass
 	
 func save():
-	var time = global.time_now - global.time_start
 	var save_data = {
 			"ammo_in_weapon": global.ammo_in_weapon,
 			"score": global.value,
-			"timeelapsed": time,
+			"saved_elapsed": global.elapsed,
 			"difficulty": global.difficulty,
 			"filepath": "Player.save"
 		}
