@@ -52,6 +52,8 @@ position = Vector2( 2135.73, 2245.85 )
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="6"]
 
+editor/display_folded = true
+
 [node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
 navpoly = SubResource( 1 )
@@ -79,10 +81,19 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="Enemy" parent="." index="7" groups=[
 "enemy",
-"1",
 ] instance=ExtResource( 7 )]
 
 position = Vector2( 2672.72, 2210.89 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+targethealth = 3
+
+[node name="Enemy2" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2955.68, 2164.64 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+targethealth = 3
+points = 500
 
 

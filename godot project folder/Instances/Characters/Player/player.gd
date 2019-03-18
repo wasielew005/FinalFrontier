@@ -110,12 +110,14 @@ func shoot():
 		#depending on the group, it adds a certain amount of points
 		#groups can be set to certain nodes nodes in the Node window under Groups
 		#the Node window uses the same window as the Inspector 
-		if collider.is_in_group("vtarget"):
-			emit_signal("hit_vtarget", basicshootcast.get_collision_point())
-		if collider.is_in_group("htarget"):
-			emit_signal("hit_htarget", basicshootcast.get_collision_point())
 		if collider.is_in_group("enemy"):
-			emit_signal("hit_enemy", basicshootcast.get_collision_point())
+			collider.enemy_hit()
+		#if collider.is_in_group("vtarget"):
+			#emit_signal("hit_vtarget", basicshootcast.get_collision_point())
+		#if collider.is_in_group("htarget"):
+			#emit_signal("hit_htarget", basicshootcast.get_collision_point())
+		#if collider.is_in_group("enemy"):
+			#emit_signal("hit_enemy", basicshootcast.get_collision_point())
 			
 
 
