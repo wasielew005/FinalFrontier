@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Game Effects/GUI/PauseScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/MainMenuButtonFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Game Effects/GUI/buypopup.gd" type="Script" id=3]
+[ext_resource path="res://Assets/speedpowerup_button.png" type="Texture" id=4]
+[ext_resource path="res://Assets/unlimitedammopowerup_button.png" type="Texture" id=5]
 
 [node name="PauseScreen" type="Control" index="0"]
 
@@ -24,11 +26,8 @@ _sections_unfolded = [ "Pause" ]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -2.0
-margin_right = 2974.0
-margin_bottom = 1606.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -89,7 +88,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
-_sections_unfolded = [ "custom_constants" ]
+_sections_unfolded = [ "Margin", "custom_constants" ]
 
 [node name="Resume" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" index="0"]
 
@@ -236,16 +235,110 @@ hide_on_state_item_selection = false
 script = ExtResource( 3 )
 _sections_unfolded = [ "Pause", "Popup" ]
 
-[node name="close" type="Button" parent="buypopup" index="1"]
+[node name="speedbutton" type="TextureButton" parent="buypopup" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 14.0
+margin_top = 15.0
+margin_right = 1926.0
+margin_bottom = 1095.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+_sections_unfolded = [ "Margin", "Textures" ]
+
+[node name="unlimitedammonbutton" type="TextureButton" parent="buypopup" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 14.0
+margin_top = 245.0
+margin_right = 214.0
+margin_bottom = 445.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+_sections_unfolded = [ "Margin", "Textures" ]
+
+[node name="speedtext" type="Label" parent="buypopup" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 317.0
+margin_top = 92.0
+margin_right = 2229.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+text = "Multiples the speed of the player by 10 for 10 seconds"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "custom_fonts" ]
+
+[node name="unlimitedammotext" type="Label" parent="buypopup" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 314.0
+margin_top = 324.0
+margin_right = 2226.0
+margin_bottom = 354.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 2 )
+text = "unlimited ammo for 10 seconds"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "custom_fonts" ]
+
+[node name="close" type="Button" parent="buypopup" index="5"]
 
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -6.0
-margin_top = -10.0
-margin_right = 6.0
-margin_bottom = 10.0
+anchor_bottom = 1.0
+margin_left = -43.0
+margin_top = 484.0
+margin_right = 42.0
+margin_bottom = -20.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -261,7 +354,7 @@ group = null
 text = "Close"
 flat = false
 align = 1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
 
 [node name="settingspopup" type="PopupMenu" parent="." index="3"]
 
