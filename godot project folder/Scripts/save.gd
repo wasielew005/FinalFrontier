@@ -45,22 +45,26 @@ func save_game():
 func load_save():
 	print("Called load_save() in save.gd")
 	
+	#level transition data
 	file.open(TRANSITION_PATH, File.READ)
 	
-	var loaded_data = {}
-	loaded_data = parse_json(file.get_as_text())
+	var transition_data = {}
+	transition_data = parse_json(file.get_as_text())
 	
 	file.close()
 	
+	#player data
 	file.open(PLAYER_PATH, File.READ)
 	
 	var player_data = {}
 	player_data = parse_json(file.get_as_text())
 	global.saved_elapsed = player_data['saved_elapsed']
+	global.value = player_data['score']
 	
 	
 	#call nodeName.respawn() to re-place player without saving
-	return loaded_data['level_scene']
+	#this loads
+	return transition_data['level_scene']
 
 
 
