@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/restart button.png-e5381682b09b006099dba2af80292317.stex"
+path="res://.import/flashlight.png-8330afeffcf46318cbaca0ba3c9fc1aa.stex"
 
 [deps]
 
-source_file="res://Assets/Graphics/restart button.png"
-dest_files=[ "res://.import/restart button.png-e5381682b09b006099dba2af80292317.stex" ]
+source_file="res://Assets/flashlight.png"
+dest_files=[ "res://.import/flashlight.png-8330afeffcf46318cbaca0ba3c9fc1aa.stex" ]
 
 [params]
 
