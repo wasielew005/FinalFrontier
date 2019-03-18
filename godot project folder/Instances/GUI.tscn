@@ -1,7 +1,13 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/Levels/Score.gd" type="Script" id=1]
 [ext_resource path="res://Instances/timekeeper.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fonts/Kenney_Pixel_Square.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/HUDAmmo.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Pixel_Bullet.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/ReloadingLabel.gd" type="Script" id=6]
+[ext_resource path="res://Assets/heart.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/currenthealth.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFontData" id=1]
 
@@ -76,6 +82,48 @@ extra_spacing_char = 1
 font_data = SubResource( 8 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
+[sub_resource type="DynamicFont" id=10]
+
+size = 22
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=11]
+
+size = 13
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=12]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+
+size = 17
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 12 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=14]
+
+hinting = 2
+font_path = "res://Assets/Fonts/Kenney_Pixel_Square.ttf"
+
+[sub_resource type="DynamicFont" id=15]
+
+size = 17
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 14 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [node name="GUI" type="CanvasLayer"]
 
 layer = 1
@@ -83,6 +131,9 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 2, 2 )
 transform = Transform2D( 2, 0, 0, 2, 0, 0 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="Score" type="Label" parent="." index="0"]
 
@@ -90,8 +141,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 39.0
-margin_bottom = 14.0
+margin_left = 864.0
+margin_top = 17.0
+margin_right = 906.0
+margin_bottom = 32.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -138,9 +191,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 183.0
-margin_right = 253.0
-margin_bottom = 15.0
+margin_left = 898.0
+margin_top = 2.0
+margin_right = 968.0
+margin_bottom = 17.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -160,9 +214,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 148.0
-margin_right = 188.0
-margin_bottom = 15.0
+margin_left = 863.0
+margin_top = 2.0
+margin_right = 903.0
+margin_bottom = 17.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -175,5 +230,124 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
+
+[node name="Ammo" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 871.0
+margin_top = 491.0
+margin_right = 911.0
+margin_bottom = 525.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 10 )
+text = "6"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 4 )
+_sections_unfolded = [ "custom_fonts" ]
+ammoLength = 1
+
+[node name="Pixel_Bullet" type="Sprite" parent="." index="4"]
+
+position = Vector2( 936.298, 509.494 )
+scale = Vector2( 0.0210393, 0.0226182 )
+texture = ExtResource( 5 )
+
+[node name="Pixel_Bullet2" type="Sprite" parent="." index="5"]
+
+position = Vector2( 928.249, 509.494 )
+scale = Vector2( 0.0210393, 0.0226182 )
+texture = ExtResource( 5 )
+
+[node name="Pixel_Bullet3" type="Sprite" parent="." index="6"]
+
+position = Vector2( 944.044, 509.494 )
+scale = Vector2( 0.0210393, 0.0226182 )
+texture = ExtResource( 5 )
+
+[node name="Reloading" type="Label" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 866.0
+margin_top = 520.0
+margin_right = 960.0
+margin_bottom = 541.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 11 )
+text = "Reloading..."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 6 )
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="heart" type="Sprite" parent="." index="8"]
+
+position = Vector2( 22.0246, 519.039 )
+texture = ExtResource( 7 )
+
+[node name="Health" type="Label" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 36.0
+margin_top = 505.0
+margin_right = 170.0
+margin_bottom = 532.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 13 )
+text = "Health:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="currenthealth" type="Label" parent="Health" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 81.0
+margin_right = 151.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 15 )
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 8 )
+_sections_unfolded = [ "custom_fonts" ]
+healthLength = 1
 
 

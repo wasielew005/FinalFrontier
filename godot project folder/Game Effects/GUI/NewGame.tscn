@@ -1,14 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Fonts/MainMenuButtonFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Game Effects/GUI/NewGame.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/MainMenuButtonFont.tres" type="DynamicFont" id=2]
 
-[node name="CanvasLayer" type="CanvasLayer" index="0"]
+[node name="CanvasLayer" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="0"]
 
@@ -36,8 +38,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 50.0
 margin_top = 50.0
-margin_right = 974.0
-margin_bottom = 550.0
+margin_right = 1870.0
+margin_bottom = 1030.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -52,16 +54,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 218.0
+margin_top = 458.0
 margin_right = 235.0
-margin_bottom = 248.0
+margin_bottom = 488.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 0
 size_flags_vertical = 10
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Select difficulty"
 percent_visible = 1.0
 lines_skipped = 0
@@ -74,9 +76,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 252.0
+margin_top = 492.0
 margin_right = 200.0
-margin_bottom = 500.0
+margin_bottom = 980.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -92,9 +94,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 78.0
+margin_top = 318.0
 margin_right = 200.0
-margin_bottom = 248.0
+margin_bottom = 488.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -121,7 +123,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 0
 size_flags_vertical = 10
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -148,7 +150,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 0
 size_flags_vertical = 10
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -175,7 +177,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 0
 size_flags_vertical = 10
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -184,5 +186,11 @@ text = "Hard"
 flat = false
 align = 0
 _sections_unfolded = [ "Hint", "Rect", "Size Flags", "custom_fonts" ]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Easy" to="." method="_on_Easy_pressed"]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Normal" to="." method="_on_Normal_pressed"]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Hard" to="." method="_on_Hard_pressed"]
 
 

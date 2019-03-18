@@ -1,15 +1,63 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Levels/testmap2_collision.tmx" type="PackedScene" id=2]
-[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Levels/testmap2_collision.tmx" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Characters/Enemies/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=5]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 632.796, -437.239, 844.002, -439.289, 837.851, -334.711, 634.847, -330.61, 634.847, 147.167, 615.106, 745.673, -582.412, 741.572, -607.784, -465.946, 628.695, -472.098 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5, 6, 7, 8, 0 ) ]
+outlines = [ PoolVector2Array( -607.784, -465.946, 628.695, -472.098, 632.796, -437.239, 844.002, -439.289, 837.851, -334.711, 634.847, -330.61, 634.847, 147.167, 615.106, 745.673, -582.412, 741.572 ) ]
 
 [node name="Test Level" type="Node2D"]
 
 script = ExtResource( 1 )
 
-[node name="Map" type="TileMap" parent="." index="0"]
+[node name="Navigation2D" type="Navigation2D" parent="." index="0"]
+
+editor/display_folded = true
+
+[node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="0"]
+
+position = Vector2( 242.478, -110.496 )
+
+[node name="destination2" type="Position2D" parent="Navigation2D/destinations" index="1"]
+
+position = Vector2( 329.648, -89.6248 )
+
+[node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="2"]
+
+position = Vector2( 426.639, 367.094 )
+
+[node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="3"]
+
+position = Vector2( 561.69, -88.3972 )
+
+[node name="destination5" type="Position2D" parent="Navigation2D/destinations" index="4"]
+
+position = Vector2( 287.904, -358.5 )
+
+[node name="destination6" type="Position2D" parent="Navigation2D/destinations" index="5"]
+
+position = Vector2( -219.152, -336.401 )
+
+[node name="destination7" type="Position2D" parent="Navigation2D/destinations" index="6"]
+
+position = Vector2( 263.35, 708.404 )
+
+[node name="Level Transition" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="Map" type="TileMap" parent="." index="2"]
 
 mode = 0
 tile_set = null
@@ -29,14 +77,16 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray(  )
 
-[node name="testmap2_collision" parent="Map" index="0" instance=ExtResource( 2 )]
+[node name="testmap2_collision" parent="Map" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( -666.516, -532.978 )
 
-[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Enemy" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 853.039, -396.227 )
+position = Vector2( 447.031, -203.476 )
 
-[node name="Level Transition" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Player" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 858.852, -390.23 )
 
 
