@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Resume_Button_Pause_Menu.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Quit_Button_Pause_Menu.png" type="Texture" id=3]
 
-[node name="PauseScreen" type="Control"]
+[node name="PauseScreen" type="Control" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0

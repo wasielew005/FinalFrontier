@@ -25,7 +25,8 @@ func spawn():
 	#save.load_save()
 
 func respawn():
-	player.set_position(self.get_position())
+	#player.set_position(self.get_position())
+	pass
 
 func save():
 	#var file_name = "LevelTransitionData.save"

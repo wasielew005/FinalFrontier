@@ -11,27 +11,43 @@ export (int) var points = 9000
 var i=1
 var test_dest= [0,1,2]
 var w_t=false
+var target
+
+
+
 
 
 
 
 export var walk_slowdown = 0.5
 export var nav_stop_threshold = 50
-export var destination_order= []
+export (int) var destination_order= []
 export var reverseOrder= true
+
+
 
 
 onready var navigation = get_parent().get_node("Navigation2D");
 onready var available_destinations = get_parent().get_node("Navigation2D/destinations");
 onready var timer= get_node("Timer");
+onready var player= get_parent().get_node("Player")
+onready var detection_area= $Visibility
+
 
 func _ready():
-	set_process(true);
+	
+	set_process(true)
 	possible_destinations = available_destinations.get_children()
 	make_path()
-	get_parent().get_node("Player").connect("hit", self, "targethit")
+	#get_parent().get_node("Player").connect("hit", self, "targethit")
+	$Visibility/flashlight.self_modulate.r=1
+	detection_area.connect("body_entered",self,"_on_Visibility_body_entered")
+	detection_area.connect("body_exited",self,"_on_Visibility_body_exited")
+	
+	
+	
 
-func targethit(decrease_health):
+func enemy_hit():
 	targethealth -= global.playergundmg
 	print(targethealth)
 	if targethealth <= 0:
@@ -39,9 +55,22 @@ func targethit(decrease_health):
 		queue_free()
 
 func _process(delta):
-
+	
 	navigate()
-
+	
+	
+func _on_Visibility_body_entered(body):	
+		if target!=null:
+			return
+		elif body == player:
+			target=body
+			print("Target acquired")
+			$Visibility/flashlight.self_modulate.r=.1
+func _on_Visibility_body_exited(body):
+		if body==target:
+			target=null
+			print("we'll get him next time")
+			$Visibility/flashlight.self_modulate.r=1
 
 func navigate():
 	var distance_to_destination = position.distance_to(path[0])
