@@ -29,9 +29,9 @@ func _ready():
 	set_process(true);
 	possible_destinations = available_destinations.get_children()
 	make_path()
-	get_parent().get_node("Player").connect("hit", self, "targethit")
+	#get_parent().get_node("Player").connect("hit", self, "targethit")
 
-func targethit(decrease_health):
+func enemy_hit():
 	targethealth -= global.playergundmg
 	print(targethealth)
 	if targethealth <= 0:
