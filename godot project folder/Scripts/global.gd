@@ -43,7 +43,7 @@ var maxHealth = 5
 var difficulty
 
 #elapsed from previous save
-var saved_elapsed
+var saved_elapsed = 0
 
 
 func _ready():
