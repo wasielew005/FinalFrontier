@@ -50,6 +50,14 @@ func load_save():
 	var loaded_data = {}
 	loaded_data = parse_json(file.get_as_text())
 	
+	file.close()
+	
+	file.open(PLAYER_PATH, File.READ)
+	
+	var player_data = {}
+	player_data = parse_json(file.get_as_text())
+	global.saved_elapsed = player_data['saved_elapsed']
+	
 	
 	#call nodeName.respawn() to re-place player without saving
 	return loaded_data['level_scene']
