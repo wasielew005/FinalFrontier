@@ -12,6 +12,7 @@ const MAX_AMMO_PISTOL = 6
 const MAX_AMMO_RIFLE = 3
 
 var player_state
+signal game_over
 
 var velocity = Vector2()
 
