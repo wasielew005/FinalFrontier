@@ -34,7 +34,7 @@ var playergundmg = 1
 var visibleweapon = 1
 
 #if player has completed the game previously
-var isGameComplete
+var isGameComplete = true
 
 #level selection order
 var level_order # = ["default level path one", "default level path two"]
