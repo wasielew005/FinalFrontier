@@ -3,7 +3,8 @@ extends KinematicBody2D
 #the speed var is multiplied by the velocity in the movement script to determine character speed
 #exporting allows us to manipulate its value in the inspector window
 #this exports the variable speed, and takes in an int from the inspector window
-export (int) var speed = 200
+#export (int)
+var speed = 200
 
 #revolver_sound is created to be assigned to the sound node later
 var revolver_sound

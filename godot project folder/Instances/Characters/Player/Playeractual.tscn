@@ -30,7 +30,6 @@ _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibi
 __meta__ = {
 "_edit_group_": true
 }
-speed = 200
 
 [node name="playercollision" type="CollisionShape2D" parent="." index="0"]
 
