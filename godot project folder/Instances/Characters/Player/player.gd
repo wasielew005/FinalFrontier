@@ -11,6 +11,7 @@ var revolver_sound
 const MAX_AMMO_PISTOL = 6
 const MAX_AMMO_RIFLE = 3
 
+#if player is "alive" or "dead"
 var player_state
 signal game_over
 
@@ -36,6 +37,13 @@ func _ready():
 	#assigns the node "revolvershot" which holds the sound effects to the var revolver_shot created above
 	revolver_sound = get_node("revolvershot")
 	changeweapon()
+	
+	if global.isGameComplete == null:
+		global.isGameComplete = false
+	
+	if global.playerHealth <= 0:
+		death()
+	
 	player_state = "alive"
 
 
@@ -173,12 +181,18 @@ func respawn():
 	#set all relevant player items to what they were at checkpoint
 	pass
 	
+
+func death():
+	emit_signal("game_over")
+	get_tree().paused = not get_tree().paused
+
 func save():
 	var save_data = {
 			"ammo_in_weapon": global.ammo_in_weapon,
 			"score": global.value,
 			"saved_elapsed": global.elapsed,
 			"difficulty": global.difficulty,
+			"gameComplete": global.isGameComplete,
 			"filepath": "Player.save"
 		}
 	return save_data
