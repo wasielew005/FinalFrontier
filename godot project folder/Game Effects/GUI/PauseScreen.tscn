@@ -6,7 +6,7 @@
 [ext_resource path="res://Assets/speedpowerup_button.png" type="Texture" id=4]
 [ext_resource path="res://Assets/unlimitedammopowerup_button.png" type="Texture" id=5]
 
-[node name="PauseScreen" type="Control"]
+[node name="PauseScreen" type="Control" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -73,6 +73,7 @@ use_top_left = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -387,6 +388,8 @@ hide_on_state_item_selection = false
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/MuteSound" to="." method="_on_MuteSound_pressed"]
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+
+[connection signal="pressed" from="buypopup/speedbutton" to="buypopup" method="_on_speedbutton_pressed"]
 
 [connection signal="pressed" from="buypopup/close" to="." method="_on_close_pressed"]
 

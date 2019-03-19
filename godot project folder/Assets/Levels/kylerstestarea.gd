@@ -15,7 +15,6 @@ func _ready():
 	player.connect("hit", self, "show_hit")
 	#get_parent().get_node("pausemenu/PauseScreen").connect("quit", self, "quit_to_menu")
 	get_node("/root/menumusic").stop()
-	#player.speed = abilities.double_speed(player.speed)
 
 
 #func quit_to_menu(quit):
