@@ -12,6 +12,7 @@ var i=1
 var test_dest= [0,1,2]
 var w_t=false
 var target
+var cone_exception=false
 
 
 
@@ -45,7 +46,7 @@ func _ready():
 	detection_area.connect("body_entered",self,"_on_Visibility_body_entered")
 	detection_area.connect("body_exited",self,"_on_Visibility_body_exited")
 	
-	get_parent().get_node("Player").basicshootcast.add_exception($Visibility)
+	
 	
 
 	
@@ -60,6 +61,9 @@ func enemy_hit():
 func _process(delta):
 	
 	navigate()
+	if cone_exception==false:
+		player.basicshootcast.add_exception(detection_area)
+		cone_exception==true
 	
 	
 func _on_Visibility_body_entered(body):	
