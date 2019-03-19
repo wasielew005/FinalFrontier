@@ -13,6 +13,7 @@ func _input(event):
 		$MarginContainer/CenterContainer/VBoxContainer/Resume.grab_focus()
 		get_tree().paused = not get_tree().paused
 		visible = not visible
+		$buypopup.hide()
 
 func _on_Resume_pressed():
 	get_tree().paused = not get_tree().paused
