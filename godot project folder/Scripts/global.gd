@@ -34,7 +34,7 @@ var playergundmg = 1
 var visibleweapon = 1
 
 #if player has completed the game previously
-var isGameComplete
+var isGameComplete = true
 
 #health for player
 var playerHealth = 5
