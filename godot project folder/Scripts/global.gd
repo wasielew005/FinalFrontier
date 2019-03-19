@@ -34,7 +34,13 @@ var playergundmg = 1
 var visibleweapon = 1
 
 #if player has completed the game previously
-var isGameComplete = true
+var isGameComplete
+
+#level selection order
+var level_order # = ["default level path one", "default level path two"]
+
+#which level in level_order user is currently on
+var current_level = 0
 
 #health for player
 var playerHealth = 5

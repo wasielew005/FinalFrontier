@@ -3,6 +3,7 @@ extends Node
 #"user://" stores in ~/.local/share/godot/app_userdata/Name on macOS and Linux, and %APPDATA%/Name on Windows
 const TRANSITION_PATH = "user://LevelTransition.save"
 const PLAYER_PATH = "user://Player.save"
+#const LEVELORDER_PATH = "user://LevelOrder.save"
 
 #because i, for the life of me, can't find %APP_DATA%, i'm using this until i'm able to make sure it works
 #const TRANSITION_PATH = "C://Users/AJ/Desktop/LevelTransition.save"
@@ -61,6 +62,16 @@ func load_save():
 	global.saved_elapsed = player_data['saved_elapsed']
 	global.value = player_data['score']
 	
+	file.close()
+	
+	#level order data
+	
+	#file.open(LEVELORDER_PATH, File.READ)
+	#var order_data = parse_json(file.get_as_text())
+	#global.level_order = order_data['level_order']
+	#
+	#
+	#
 	
 	#call nodeName.respawn() to re-place player without saving
 	#this loads
