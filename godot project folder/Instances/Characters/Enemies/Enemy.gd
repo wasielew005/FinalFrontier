@@ -34,6 +34,7 @@ onready var player= get_parent().get_node("Player")
 onready var detection_area= $Visibility
 
 
+
 func _ready():
 	
 	set_process(true)
@@ -44,7 +45,9 @@ func _ready():
 	detection_area.connect("body_entered",self,"_on_Visibility_body_entered")
 	detection_area.connect("body_exited",self,"_on_Visibility_body_exited")
 	
+	get_parent().get_node("Player").basicshootcast.add_exception($Visibility)
 	
+
 	
 
 func enemy_hit():

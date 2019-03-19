@@ -24,6 +24,7 @@ var velocity = Vector2()
 onready var basicshootcast = get_node("basicshootcast")
 
 
+
 #hit is defined as a signal here, used in the shoot function 
 #the signal is connected to the level script and is used to play the hit animation
 #the level script is currently named kylerstestarea.gd
@@ -46,6 +47,7 @@ func _ready():
 		death()
 	
 	player_state = "alive"
+	
 
 
 #Shooting - check for user input. trigger reloading
