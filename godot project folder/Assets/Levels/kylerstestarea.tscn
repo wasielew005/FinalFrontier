@@ -100,6 +100,7 @@ points = 500
 ] instance=ExtResource( 7 )]
 
 position = Vector2( 2803.92, 2136.24 )
+_sections_unfolded = [ "Pickable" ]
 
 [node name="Player" parent="." index="9" instance=ExtResource( 8 )]
 

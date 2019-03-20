@@ -39,7 +39,7 @@ func _ready():
 	possible_destinations = available_destinations.get_children()
 	make_path()
 	#get_parent().get_node("Player").connect("hit", self, "targethit")
-	$Visibility/flashlight.self_modulate.r=1
+	$Visibility/flashlight.modulate=Color(1,1,1,.5)
 	detection_area.connect("body_entered",self,"_on_Visibility_body_entered")
 	detection_area.connect("body_exited",self,"_on_Visibility_body_exited")
 	
@@ -75,7 +75,7 @@ func _on_Visibility_body_exited(body):
 		if body==target:
 			target=null
 			print("we'll get him next time")
-			$Visibility/flashlight.modulate=Color(1,1,1,1)
+			$Visibility/flashlight.modulate=Color(1,1,1,.5)
 
 func navigate():
 	var distance_to_destination = position.distance_to(path[0])
