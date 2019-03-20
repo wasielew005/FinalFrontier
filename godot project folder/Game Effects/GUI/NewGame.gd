@@ -26,6 +26,7 @@ func _on_StartGameButton_pressed():
 	get_tree().change_scene("res://Assets/Levels/kylerstestarea.tscn")
 	
 	save.save_game()
+	global.saved_elapsed = 0
 	global._get_time()
 	pass
 
