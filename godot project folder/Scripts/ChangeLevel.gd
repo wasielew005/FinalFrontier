@@ -13,10 +13,17 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 			if body.name == "Player":
-				#saves player info before switching scenes
+				#saves player info and switches scenes
 				get_tree().change_scene(level_scene)
 				save.save_game()
 				
+
+# after boss level is complete, in script for boss level:
+# global.current_level += 1
+# get_tree().change_scene(global.level_order[global.current_level])
+# save.save_game()
+# 
+
 
 #spawns player at the beginning of the level by reloading the scene
 func spawn():
