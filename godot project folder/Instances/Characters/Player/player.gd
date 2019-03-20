@@ -33,7 +33,7 @@ signal hit
 signal hit_vtarget
 signal hit_htarget
 signal hit_enemy
-signal hit_melee_enemy
+
 
 func _ready():
 	set_process_input(true)
@@ -125,8 +125,7 @@ func shoot():
 		#the Node window uses the same window as the Inspector 
 		if collider.is_in_group("enemy"):
 			collider.enemy_hit()
-		if collider.is_in_group("melee_enemy"):
-			collider.melee_enemy_hit()
+
 		#if collider.is_in_group("htarget"):
 			#emit_signal("hit_htarget", basicshootcast.get_collision_point())
 		#if collider.is_in_group("enemy"):

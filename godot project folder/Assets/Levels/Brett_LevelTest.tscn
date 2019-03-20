@@ -13,7 +13,7 @@ vertices = PoolVector2Array( 632.796, -437.239, 844.002, -439.289, 837.851, -334
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5, 6, 7, 8, 0 ) ]
 outlines = [ PoolVector2Array( -607.784, -465.946, 628.695, -472.098, 632.796, -437.239, 844.002, -439.289, 837.851, -334.711, 634.847, -330.61, 634.847, 147.167, 615.106, 745.673, -582.412, 741.572 ) ]
 
-[node name="Test Level" type="Node2D" index="0"]
+[node name="Test Level" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -82,11 +82,15 @@ tile_data = PoolIntArray(  )
 
 position = Vector2( -666.516, -532.978 )
 
-[node name="Enemy" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Enemy" parent="." index="3" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
 
 position = Vector2( 447.031, -203.476 )
 
-[node name="melee_enemy" parent="." index="4" instance=ExtResource( 5 )]
+[node name="melee_enemy" parent="." index="4" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 452.196, -379.167 )
 

@@ -44,7 +44,7 @@ func _ready():
 
 	
 
-func melee_enemy_hit():
+func enemy_hit():
 	targethealth -= global.playergundmg
 	print(targethealth)
 	if targethealth <= 0:
