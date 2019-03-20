@@ -12,9 +12,7 @@ var i=1
 var test_dest= [0,1,2]
 var w_t=false
 var target
-
-
-
+var cone_exception=false
 
 
 
@@ -34,17 +32,20 @@ onready var player= get_parent().get_node("Player")
 onready var detection_area= $Visibility
 
 
+
 func _ready():
 	
 	set_process(true)
 	possible_destinations = available_destinations.get_children()
 	make_path()
 	#get_parent().get_node("Player").connect("hit", self, "targethit")
-	$Visibility/flashlight.self_modulate.r=1
+	$Visibility/flashlight.modulate=Color(1,1,1,.5)
 	detection_area.connect("body_entered",self,"_on_Visibility_body_entered")
 	detection_area.connect("body_exited",self,"_on_Visibility_body_exited")
 	
 	
+	
+
 	
 
 func enemy_hit():
@@ -57,6 +58,9 @@ func enemy_hit():
 func _process(delta):
 	
 	navigate()
+	if cone_exception==false:
+		player.basicshootcast.add_exception(detection_area)
+		cone_exception==true
 	
 	
 func _on_Visibility_body_entered(body):	
@@ -65,12 +69,13 @@ func _on_Visibility_body_entered(body):
 		elif body == player:
 			target=body
 			print("Target acquired")
-			$Visibility/flashlight.self_modulate.r=.1
+			$Visibility/flashlight.modulate= Color(1,1,1,.01)
+			player.detected=true;
 func _on_Visibility_body_exited(body):
 		if body==target:
 			target=null
 			print("we'll get him next time")
-			$Visibility/flashlight.self_modulate.r=1
+			$Visibility/flashlight.modulate=Color(1,1,1,.5)
 
 func navigate():
 	var distance_to_destination = position.distance_to(path[0])

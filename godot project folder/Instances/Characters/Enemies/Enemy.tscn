@@ -14,7 +14,7 @@ extents = Vector2( 7.8031, 4.0758 )
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
 
-[node name="Enemy" type="KinematicBody2D" index="0"]
+[node name="Enemy" type="KinematicBody2D"]
 
 rotation = 1.5708
 input_pickable = false
