@@ -69,16 +69,13 @@ func load_save():
 	file.close()
 	
 	#level order data
-	
 	file.open(LEVELORDER_PATH, File.READ)
 	
 	var order_data = {}
 	order_data = parse_json(file.get_as_text())
 	global.level_order = order_data['level_order']
-	
-	for x in global.level_order:
-		print(global.level_order[x])
-	
+
+	file.close()
 	
 	
 	#call nodeName.respawn() to re-place player without saving
