@@ -7,8 +7,6 @@ export(String, FILE, "*.tscn") var level_scene
 
 export (NodePath) onready var player = get_node(player) if player else null
 
-export (bool) var isLastLevel
-
 #constantly checks if the player enters the collision area
 #if they do, the scene is changed to the scene designated in level_scene
 func _physics_process(delta):
@@ -16,12 +14,16 @@ func _physics_process(delta):
 	for body in bodies:
 			if body.name == "Player":
 				#saves player info and switches scenes
-				#if isLastLevel:
-					# global.current_level += 1
-					#get_tree().change_scene(global.level_order[global.current_level])
 				get_tree().change_scene(level_scene)
 				save.save_game()
 				
+
+# after boss level is complete, in script for boss level:
+# global.current_level += 1
+# get_tree().change_scene(global.level_order[global.current_level])
+# save.save_game()
+# 
+
 
 #spawns player at the beginning of the level by reloading the scene
 func spawn():

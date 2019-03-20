@@ -182,16 +182,6 @@ func _on_OptionButton6_item_selected(ID):
 		selectedSix = ID
 		selectedList[5] = ID
 
-func _on_StartGameButton_pressed():
-	global.level_order = selectedList
-	global.current_level = 0
-	#get_tree().change_scene(selectedList[0])
-	
-	for x in global.level_order.size():
-		print(global.level_order[x])
-	
-	save.save_game()
-
 func save():
 	print("Called Level Selection save.")
 	var save_data = {
