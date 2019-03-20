@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=1]
 [ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Levels/testmap2_collision.tmx" type="PackedScene" id=3]
 [ext_resource path="res://Instances/Characters/Enemies/Enemy.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/Characters/Enemies/melee_enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=6]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -12,7 +13,7 @@ vertices = PoolVector2Array( 632.796, -437.239, 844.002, -439.289, 837.851, -334
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5, 6, 7, 8, 0 ) ]
 outlines = [ PoolVector2Array( -607.784, -465.946, 628.695, -472.098, 632.796, -437.239, 844.002, -439.289, 837.851, -334.711, 634.847, -330.61, 634.847, 147.167, 615.106, 745.673, -582.412, 741.572 ) ]
 
-[node name="Test Level" type="Node2D"]
+[node name="Test Level" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -85,7 +86,11 @@ position = Vector2( -666.516, -532.978 )
 
 position = Vector2( 447.031, -203.476 )
 
-[node name="Player" parent="." index="4" instance=ExtResource( 5 )]
+[node name="melee_enemy" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 452.196, -379.167 )
+
+[node name="Player" parent="." index="5" instance=ExtResource( 6 )]
 
 position = Vector2( 858.852, -390.23 )
 

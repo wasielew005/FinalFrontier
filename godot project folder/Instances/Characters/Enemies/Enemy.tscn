@@ -14,7 +14,7 @@ extents = Vector2( 7.8031, 4.0758 )
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
 
-[node name="Enemy" type="KinematicBody2D" index="0"]
+[node name="Enemy" type="KinematicBody2D"]
 
 rotation = 1.5708
 input_pickable = false
@@ -52,7 +52,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Visibility" type="Area2D" parent="." index="3"]
 
-position = Vector2( 0.856201, -3.09944e-06 )
+position = Vector2( 0.856201, -3.09944e-006 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

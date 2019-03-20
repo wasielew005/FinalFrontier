@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Instances/Characters/Enemies/melee_enemy.gd" type="Script" id=1]
+[ext_resource path="res://Assets/mobster_idle.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10.8817 )
+
+[node name="melee_enemy" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+targethealth = 10
+points = 9000
+walk_slowdown = 0.5
+nav_stop_threshold = 500
+destination_order = null
+reverseOrder = true
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="body" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 1.05775, -1.75403 )
+scale = Vector2( 2.23928, 1.52369 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+

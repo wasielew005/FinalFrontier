@@ -17,9 +17,6 @@ var cone_exception=false
 
 
 
-
-
-
 export var walk_slowdown = 0.5
 export var nav_stop_threshold = 50
 export (int) var destination_order= []
@@ -72,12 +69,13 @@ func _on_Visibility_body_entered(body):
 		elif body == player:
 			target=body
 			print("Target acquired")
-			$Visibility/flashlight.self_modulate.r=.1
+			$Visibility/flashlight.modulate= Color(1,1,1,.01)
+			player.detected=true;
 func _on_Visibility_body_exited(body):
 		if body==target:
 			target=null
 			print("we'll get him next time")
-			$Visibility/flashlight.self_modulate.r=1
+			$Visibility/flashlight.modulate=Color(1,1,1,1)
 
 func navigate():
 	var distance_to_destination = position.distance_to(path[0])

@@ -18,6 +18,7 @@ signal game_over
 
 var velocity = Vector2()
 
+var detected = false
 
 #the raycast for the pistol is prepared to be called when the user shoots
 #the raycast is the "bullet" that will collide with other objects
@@ -32,6 +33,7 @@ signal hit
 signal hit_vtarget
 signal hit_htarget
 signal hit_enemy
+signal hit_melee_enemy
 
 func _ready():
 	set_process_input(true)
@@ -123,8 +125,8 @@ func shoot():
 		#the Node window uses the same window as the Inspector 
 		if collider.is_in_group("enemy"):
 			collider.enemy_hit()
-		#if collider.is_in_group("vtarget"):
-			#emit_signal("hit_vtarget", basicshootcast.get_collision_point())
+		if collider.is_in_group("melee_enemy"):
+			collider.melee_enemy_hit()
 		#if collider.is_in_group("htarget"):
 			#emit_signal("hit_htarget", basicshootcast.get_collision_point())
 		#if collider.is_in_group("enemy"):
