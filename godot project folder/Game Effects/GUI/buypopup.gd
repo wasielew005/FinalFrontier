@@ -7,5 +7,5 @@ func _on_close_pressed():
 
 func _on_speedbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
-	player.speed = abilities.double_speed(player.speed)
+	abilities.double_speed()
 	pass # replace with function body

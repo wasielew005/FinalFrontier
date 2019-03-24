@@ -5,6 +5,10 @@ func _ready():
 
 #in PauseScreen, use this to test
 #var player = get_parent().get_parent()
+var double_damage = false
+onready var player = get_node("Player")
+var triple_speed = false
+
 #player.speed = abilities.double_speed(player.speed)
 
 #var t = Timer.new()
@@ -14,26 +18,40 @@ func _ready():
 #t.start()
 #yield(t, "timeout")
 
-func double_speed(var speed):
-	if Input.is_key_pressed("ui_3"):
+func triple_speed():
 		
-		speed = speed * 3
+	if Input.is_key_pressed("ui_3"):
+		player.speed = player.speed * 3
 		print("Triple speed!")
-	return speed
+		var t = Timer.new()
+		t.set_wait_time(5)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		player.speed = player.speed / 3
+		printf("Normal speed")
 	
-func medpack(var playerHealth):
+func medpack():
 	if Input.is_key_pressed("ui_4"):
-		if(playerHealth < maxHealth):
-			playerHealth = maxHealth
+		if(global.playerHealth < global.maxHealth):
+			global.playerHealth = global.maxHealth
 			print("Health restored!")
 		else:
-			print("Health is already full")
-	return playerHealth
+			print("Health is already full!")
 	
-func double_damage(var playerDamage):
+func double_damage():
 	if Input.is_key_pressed("ui_5"):
-		playerDamage = playerDamage * 2
-	return playerDamage
+		double_damage = true
+		printf("Double damage!")
+		var t = Timer.new()
+		t.set_wait_time(5)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		double_damage = false
+		printf("Normal damage")
 	
 func invisibility():
 	
@@ -43,5 +61,5 @@ func invincibility():
 	
 	pass
 	
-func silencer():
+func unlimited_ammo():
 	pass

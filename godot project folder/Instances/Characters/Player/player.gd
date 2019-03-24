@@ -121,6 +121,8 @@ func shoot():
 		#the Node window uses the same window as the Inspector 
 		if collider.is_in_group("enemy"):
 			collider.enemy_hit()
+			if abilities.double_damage:
+				collider.enemy_hit()
 		#if collider.is_in_group("vtarget"):
 			#emit_signal("hit_vtarget", basicshootcast.get_collision_point())
 		#if collider.is_in_group("htarget"):
