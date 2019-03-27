@@ -40,6 +40,9 @@ var isGameComplete
 var playerHealth = 5
 var maxHealth = 5
 
+#Character speed
+var speed = 200
+
 #difficulty level
 var difficulty
 

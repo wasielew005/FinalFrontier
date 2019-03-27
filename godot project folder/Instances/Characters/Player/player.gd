@@ -4,7 +4,7 @@ extends KinematicBody2D
 #exporting allows us to manipulate its value in the inspector window
 #this exports the variable speed, and takes in an int from the inspector window
 #export (int)
-var speed = 200
+#var speed = 200
 
 #revolver_sound is created to be assigned to the sound node later
 var revolver_sound
@@ -173,7 +173,7 @@ func get_input():
         velocity.y -= 1
 	#multiplies the velocity by the var "speed
 	#speed is defined at the top of the script
-    velocity = velocity.normalized() * speed
+    velocity = velocity.normalized() * global.speed
 
 func respawn():
 	#find last node checkpoint
