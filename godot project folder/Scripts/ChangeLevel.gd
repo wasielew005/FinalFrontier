@@ -4,6 +4,7 @@ extends Area2D
 #this allows us to instance the level changer many times and set the destination 
 #without opening and changing the script each time
 export(String, FILE, "*.tscn") var level_scene
+export(bool) var final_floor
 
 export (NodePath) onready var player = get_node(player) if player else null
 
@@ -16,6 +17,10 @@ func _physics_process(delta):
 				#saves player info and switches scenes
 				get_tree().change_scene(level_scene)
 				save.save_game()
+				#if final_floor:
+					#global.current_level += 1
+					#get_tree().change_scene(global.level_order[global.current_level])
+					#save.save_game()
 				
 
 # after boss level is complete, in script for boss level:

@@ -194,6 +194,7 @@ func save():
 	var save_data = {
 			"ammo_in_weapon": global.ammo_in_weapon,
 			"score": global.value,
+			"health": global.playerHealth,
 			"saved_elapsed": global.elapsed,
 			"difficulty": global.difficulty,
 			"gameComplete": global.isGameComplete,

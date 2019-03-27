@@ -20,6 +20,7 @@ onready var dropdown_six = get_node(dropdown_six_path)
 
 var listOptionItems = ["Choose a level", "Level One", "Level Two", "Level Three", "Level Four", "Level Five", "Level Six"]
 var selectedList = ["0", "1", "2", "3", "4", "5"]
+var finalList = ["0", "0", "0", "0", "0", "0"]
 
 var selectedOne = 0
 var selectedTwo = 0
@@ -120,23 +121,33 @@ func _on_OptionButton1_item_selected(ID):
 	if ID != selectedOne or 0:
 		disableOptions_if(ID, 1)
 		selectedOne = ID
+		#selectedOne = "res://Assets/Levels/kylerstestarea.tscn";
 		selectedList[0] = ID
+		#selectedList[0] = "res://Assets/Levels/kylerstestarea.tscn";
 	
 	else:
 		disableOptions_else(ID, 1)
 		selectedOne = ID
+		#selectedOne = "res://Assets/Levels/kylerstestarea.tscn";
 		selectedList[0] = ID
+		#selectedList[0] = "res://Assets/Levels/kylerstestarea.tscn";
+	
+	
 
 func _on_OptionButton2_item_selected(ID):
 	if ID != selectedTwo or 0:
 		disableOptions_if(ID, 2)
 		selectedTwo = ID
+		#selectedTwo =  "res://Assets/Levels/Brett_LevelTest.tscn"
 		selectedList[1] = ID
+		#selectedList[1] = "res://Assets/Levels/Brett_LevelTest.tscn";
 	
 	else:
 		disableOptions_else(ID, 2)
 		selectedTwo = ID
+		#selectedTwo =  "res://Assets/Levels/Brett_LevelTest.tscn";
 		selectedList[1] = ID
+		#selectedList[1] = "res://Assets/Levels/Brett_LevelTest.tscn";
 
 func _on_OptionButton3_item_selected(ID):
 	if ID != selectedThree or 0:
@@ -181,6 +192,23 @@ func _on_OptionButton6_item_selected(ID):
 		disableOptions_else(ID, 6)
 		selectedSix = ID
 		selectedList[5] = ID
+
+func get_final_level_order():
+	for x in range(0, 6):
+		match selectedList[x]:
+			1:
+				finalList[x] = "res://Assets/Levels/kylerstestarea.tscn";
+			2:
+				finalList[x] = "res://Assets/Levels/Brett_LevelTest.tscn";
+			3:
+				finalList[x] = "3"
+			4: 
+				finalList[x] = "4"
+			5:
+				finalList[x] = "5"
+			6:
+				finalList[x] = "6"
+	return finalList;
 
 func save():
 	print("Called Level Selection save.")

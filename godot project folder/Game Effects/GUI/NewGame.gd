@@ -16,11 +16,15 @@ func _on_Hard_pressed():
 
 func _on_StartGameButton_pressed():
 	if global.isGameComplete:
-		global.level_order = get_node("MarginContainer/HBoxContainer/Level Selection").selectedList
+		#global.level_order = get_node("MarginContainer/HBoxContainer/Level Selection").selectedList
+		global.level_order = get_node("MarginContainer/HBoxContainer/Level Selection").get_final_level_order()
 	else:
 		global.level_order = [1, 2, 3, 4, 5, 6]
 	
 	global.current_level = 0
+	global.value = 0;
+	global.ammo_in_weapon = global.MAX_AMMO
+	global.playerHealth = global.maxHealth
 	
 	#get_tree().change_scene(global.level_order[global.current_level])
 	get_tree().change_scene("res://Assets/Levels/kylerstestarea.tscn")
