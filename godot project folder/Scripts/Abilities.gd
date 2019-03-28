@@ -39,7 +39,7 @@ func medpack():
 func double_damage():
 	
 		double_damage = true
-		printf("Double damage!")
+		print("Double damage!")
 		var t = Timer.new()
 		t.set_wait_time(5)
 		t.set_one_shot(true)
@@ -47,12 +47,28 @@ func double_damage():
 		t.start()
 		yield(t, "timeout")
 		double_damage = false
-		printf("Normal damage")
+		print("Normal damage")
 	
 func invincibility():
-	
+	global.playerHealth = global.maxHealth
+	print("Invincibility!")
+	var t = Timer.new()
+	t.set_wait_time(5)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	global.playerHealth = global.playerHealth
+	print("Back to normal...")
 	pass
 	
 func unlimited_ammo():
-	
+	print("Max Ammo!")
+	var t = Timer.new()
+	t.set_wait_time(5)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	print("Back to normal...")
 	pass
