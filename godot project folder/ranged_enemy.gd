@@ -10,7 +10,8 @@ export (int) var targethealth = 10
 export (int) var points = 9000
 var w_t=false
 var init_path=false
-var target
+var frame_count=0;
+
 
 
 
@@ -26,7 +27,6 @@ export var reverseOrder= true
 
 onready var navigation = get_parent().get_node("Navigation2D");
 onready var available_destinations = get_parent().get_node("Navigation2D/destinations");
-onready var timer= get_node("Timer");
 onready var player= get_parent().get_node("Player")
 
 
@@ -35,11 +35,6 @@ onready var player= get_parent().get_node("Player")
 func _ready():
 	
 	set_process(true)
-	
-	
-	
-	
-	
 	
 
 	
@@ -65,7 +60,13 @@ func navigate():
 	var distance_to_destination = position.distance_to(path[0])
 	destination = path[0]
 	#print(destination)
+	#if distance_to_destination>20:
 	move()
+	if frame_count==15:
+		$gun.fire(-rotation_degrees)
+		frame_count=0;
+	else:
+		frame_count+=1
 	update_path()
 	
 	
