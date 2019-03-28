@@ -43,6 +43,9 @@ var maxHealth = 5
 #Character speed
 var speed = 200
 
+#Powerup global variables
+var maxammo = 0
+
 #difficulty level
 var difficulty
 

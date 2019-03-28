@@ -1,3 +1,4 @@
+
 extends Node
 
 func _ready():
@@ -7,8 +8,6 @@ func _ready():
 #var player = get_parent().get_parent()
 var double_damage = false
 var triple_speed = false
-onready var buypopup = get_node("buypopup")
-onready var player = get_node("Player")
 
 #var t = Timer.new()
 #t.set_wait_time(1)
@@ -63,12 +62,14 @@ func invincibility():
 	pass
 	
 func unlimited_ammo():
-	print("Max Ammo!")
-	var t = Timer.new()
-	t.set_wait_time(5)
-	t.set_one_shot(true)
-	self.add_child(t)
-	t.start()
-	yield(t, "timeout")
-	print("Back to normal...")
-	pass
+    global.maxammo = 1
+    print("Max Ammo!")
+    var ammoTimer = Timer.new()
+    ammoTimer.set_wait_time(5)
+    ammoTimer.set_one_shot(true)
+    self.add_child(ammoTimer)
+    ammoTimer.start()
+    yield(ammoTimer, "timeout")
+    global.maxammo = 0
+    print("Back to normal...")
+    #pass

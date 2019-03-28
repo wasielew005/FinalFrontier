@@ -57,10 +57,12 @@ func _input(event):
 			if global.reloading == 0:
 				shoot()
 				if global.MAX_AMMO == MAX_AMMO_PISTOL:
-					global.ammo_in_pistol -= 1
+					if global.maxammo == 0:
+						global.ammo_in_pistol -= 1
 					global.ammo_in_weapon = global.ammo_in_pistol
 				if global.MAX_AMMO == MAX_AMMO_RIFLE:
-					global.ammo_in_rifle -= 1
+					if global.maxammo == 0:
+						global.ammo_in_rifle -= 1
 					global.ammo_in_weapon = global.ammo_in_rifle
 				#single line below plays the gun sound everytime the player shoots 
 				revolver_sound.play()
