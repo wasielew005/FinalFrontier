@@ -48,7 +48,10 @@ func _ready():
 	
 
 func enemy_hit():
-	targethealth -= global.playergundmg
+	if global.double_damage == false:
+		targethealth -= global.playergundmg
+	if global.double_damage == true:
+		targethealth -= global.playergundmg * 2
 	print(targethealth)
 	if targethealth <= 0:
 		get_parent().get_node("Player/GUI/Score").adjust(points)

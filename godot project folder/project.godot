@@ -22,6 +22,7 @@ HighScores="*res://Scripts/HighScores.gd"
 menumusic="*res://Scripts/menumusic.tscn"
 save="*res://Scripts/save.gd"
 abilities="*res://Scripts/Abilities.gd"
+currenthealth="*res://Scripts/currenthealth.gd"
 
 [display]
 

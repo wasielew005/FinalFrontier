@@ -46,6 +46,12 @@ var speed = 200
 #Powerup global variables
 var maxammo = 0
 
+#Powerup double damage
+var double_damage = false
+
+#Powerup Invincibility
+var invinc = false
+
 #difficulty level
 var difficulty
 

@@ -31,36 +31,36 @@ func triple_speed():
 func medpack():
 	if(global.playerHealth < global.maxHealth):
 		global.playerHealth = global.maxHealth
+		
 		print("Health restored!")
 	else:
 		print("Health is already full!")
 	
 func double_damage():
 	
-		double_damage = true
-		print("Double damage!")
-		var t = Timer.new()
-		t.set_wait_time(5)
-		t.set_one_shot(true)
-		self.add_child(t)
-		t.start()
-		yield(t, "timeout")
-		double_damage = false
-		print("Normal damage")
+	global.double_damage = true
+	print("Double damage!")
+	var ddt = Timer.new()
+	ddt.set_wait_time(5)
+	ddt.set_one_shot(true)
+	self.add_child(ddt)
+	ddt.start()
+	yield(ddt, "timeout")
+	global.double_damage = false
+	print("Normal damage")
 	
 func invincibility():
-	global.playerHealth = global.maxHealth
+	global.invinc = true
 	print("Invincibility!")
-	var t = Timer.new()
-	t.set_wait_time(5)
-	t.set_one_shot(true)
-	self.add_child(t)
-	t.start()
-	yield(t, "timeout")
-	global.playerHealth = global.playerHealth
+	var invt = Timer.new()
+	invt.set_wait_time(5)
+	invt.set_one_shot(true)
+	self.add_child(invt)
+	invt.start()
+	yield(invt, "timeout")
+	global.invinc = false
 	print("Back to normal...")
-	pass
-	
+
 func unlimited_ammo():
     global.maxammo = 1
     print("Max Ammo!")
