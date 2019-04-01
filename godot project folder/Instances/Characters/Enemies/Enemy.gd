@@ -13,7 +13,7 @@ var test_dest= [0,1,2]
 var w_t=false
 var target
 var cone_exception=false
-
+var collision_info
 
 
 
@@ -57,7 +57,7 @@ func enemy_hit():
 
 func _process(delta):
 	
-	navigate()
+	navigate(delta)
 	if cone_exception==false:
 		player.basicshootcast.add_exception(detection_area)
 		cone_exception==true
@@ -77,7 +77,7 @@ func _on_Visibility_body_exited(body):
 			print("we'll get him next time")
 			$Visibility/flashlight.modulate=Color(1,1,1,.5)
 
-func navigate():
+func navigate(delta):
 	var distance_to_destination = position.distance_to(path[0])
 	destination = path[0]
 	
@@ -85,21 +85,21 @@ func navigate():
 
 	if distance_to_destination > nav_stop_threshold:
 		
-		move()
+		move(delta)
 			
 	else:
 		
 		update_path()
 	
 
-func move():
+func move(delta):
 	
 	
 	motion = (destination-position).normalized() * speed
 	
 	if is_on_wall():
 		make_path()
-	move_and_slide(motion)
+	collision_info = move_and_collide(motion * delta)
 	
 	
 	

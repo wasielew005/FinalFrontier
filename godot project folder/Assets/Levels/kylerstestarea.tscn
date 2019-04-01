@@ -84,7 +84,7 @@ _sections_unfolded = [ "Z Index" ]
 modulate = Color( 0.960938, 0.938416, 0.938416, 1 )
 self_modulate = Color( 0.917969, 0.90004, 0.90004, 1 )
 position = Vector2( 2672.72, 2210.89 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
 targethealth = 3
 
 [node name="Enemy2" parent="." index="7" groups=[
@@ -92,7 +92,7 @@ targethealth = 3
 ] instance=ExtResource( 6 )]
 
 position = Vector2( 2955.68, 2164.64 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
 targethealth = 3
 points = 500
 
@@ -101,11 +101,15 @@ points = 500
 ] instance=ExtResource( 7 )]
 
 position = Vector2( 2803.92, 2136.24 )
-_sections_unfolded = [ "Pickable" ]
+_sections_unfolded = [ "Collision", "Pickable", "collision" ]
 
-[node name="ranged_enemy" parent="." index="9" instance=ExtResource( 8 )]
+[node name="ranged_enemy" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 8 )]
 
 position = Vector2( 2467.05, 2082.92 )
+projectile_speed = 3
+fire_rate = 45
 
 [node name="Player" parent="." index="10" instance=ExtResource( 9 )]
 

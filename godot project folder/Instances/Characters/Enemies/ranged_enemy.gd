@@ -17,10 +17,14 @@ var frame_count=0;
 
 
 
+
 export var walk_slowdown = 0.5
 export var nav_stop_threshold = 500
 export (int) var destination_order= []
 export var reverseOrder= true
+export var fire_range = 300
+export var projectile_speed = 15
+export var fire_rate = 45
 
 
 
@@ -57,17 +61,25 @@ func _process(delta):
 	
 
 func navigate():
-	var distance_to_destination = position.distance_to(path[0])
+	var distance_to_destination = position.distance_to(player.global_position)
 	destination = path[0]
-	#print(destination)
-	#if distance_to_destination>20:
-	move()
-	if frame_count==15:
-		$gun.fire(-rotation_degrees)
-		frame_count=0;
+	#print(distance_to_destination)
+	if distance_to_destination > fire_range:
+		move()
+		if frame_count==fire_rate:
+			$gun.fire(-rotation_degrees)
+			frame_count=0;
+		else:
+			frame_count+=1
+		update_path()
 	else:
-		frame_count+=1
-	update_path()
+		look_at(player.global_position)
+		if frame_count==fire_rate:
+			$gun.fire(-rotation_degrees)
+			frame_count=0;
+		else:
+			frame_count+=1
+	
 	
 	
 

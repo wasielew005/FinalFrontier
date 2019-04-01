@@ -23,7 +23,7 @@ rotation = 1.5708
 scale = Vector2( 0.695125, 0.70014 )
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 3
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
@@ -86,7 +86,7 @@ rotation = -1.5708
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 500 )
-collision_mask = 1
+collision_mask = 3
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="revolvershot" type="AudioStreamPlayer2D" parent="." index="5"]

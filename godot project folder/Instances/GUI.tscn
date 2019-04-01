@@ -124,7 +124,7 @@ use_filter = false
 font_data = SubResource( 14 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="GUI" type="CanvasLayer" index="0"]
+[node name="GUI" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )

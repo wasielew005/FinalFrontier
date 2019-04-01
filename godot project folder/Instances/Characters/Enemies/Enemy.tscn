@@ -18,11 +18,11 @@ points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
 
 rotation = 1.5708
 input_pickable = false
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
 targethealth = 10
 points = 9000
 walk_slowdown = 0.5
@@ -52,7 +52,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Visibility" type="Area2D" parent="." index="3"]
 
-position = Vector2( 0.856201, -3.09944e-06 )
+position = Vector2( 0.856201, -3.09944e-006 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0

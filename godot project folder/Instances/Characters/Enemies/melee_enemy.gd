@@ -6,11 +6,13 @@ var motion = Vector2()
 
 var path = []
 var destination = Vector2()
+var bounce = Vector2()
 export (int) var targethealth = 10
 export (int) var points = 9000
 var w_t=false
 var init_path=false
-var target
+#var target
+var collision_info
 
 
 
@@ -56,28 +58,37 @@ func _process(delta):
 		if !init_path:	
 			make_path()
 			init_path=true
-		navigate()
+		navigate(delta)
 	
 	
 	
 
-func navigate():
+func navigate(delta):
 	var distance_to_destination = position.distance_to(path[0])
 	destination = path[0]
 	#print(destination)
-	move()
+	move(delta)
+	if collision_info && collision_info.collider && collision_info.collider == player:
+		global.playerHealth -= 1
+		motion = motion.bounce(collision_info.normal)
+		move_and_collide(motion * .3)
+		
+		
+	
+	
+	
 	update_path()
 	
 	
 
-func move():
+func move(delta):
 	
 	
 	motion = Vector2(speed, 0).rotated(rotation) 
 	#print(motion)
 	if is_on_wall():
 		make_path()
-	move_and_slide(motion)
+	collision_info = move_and_collide(motion*delta)
 	
 	
 	
