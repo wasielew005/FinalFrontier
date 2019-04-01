@@ -39,7 +39,7 @@ points = 80
 
 position = Vector2( 2045.45, 2249.99 )
 level_scene = "res://Assets/Levels/Brett_LevelTest.tscn"
-isLastLevel = null
+final_floor = null
 
 [node name="horizontaltarget" parent="." index="4" groups=[
 "htarget",

@@ -16,9 +16,9 @@ func _on_Hard_pressed():
 
 func _on_StartGameButton_pressed():
 	if global.isGameComplete:
-		#global.level_order = get_node("MarginContainer/HBoxContainer/Level Selection").selectedList
 		global.level_order = get_node("MarginContainer/HBoxContainer/Level Selection").get_final_level_order()
 	else:
+######### DEFINE DEFAULT PATH ORDER [.tscn] HERE ##########
 		global.level_order = [1, 2, 3, 4, 5, 6]
 	
 	global.current_level = 0
@@ -31,6 +31,7 @@ func _on_StartGameButton_pressed():
 	
 	save.save_game()
 	global.saved_elapsed = 0
+	global.saved_millisec = 0
 	global._get_time()
 	pass
 
@@ -41,7 +42,7 @@ func _on_BackButton_pressed():
 func save():
 	#change level_order to default level_order
 	var save_data = {
-			"level_order": [1, 2, 3, 4, 5, 6],
+			"level_order": global.level_order,
 			"current_level": 0,
 			"difficulty": global.difficulty,
 			"filepath": "LevelOrder.save"

@@ -196,6 +196,7 @@ func save():
 			"score": global.value,
 			"health": global.playerHealth,
 			"saved_elapsed": global.elapsed,
+			"saved_millisec": global.millisec_elapsed,
 			"difficulty": global.difficulty,
 			"gameComplete": global.isGameComplete,
 			"filepath": "Player.save"

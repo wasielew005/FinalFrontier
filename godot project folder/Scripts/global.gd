@@ -15,6 +15,7 @@ var str_elapsed = ""
 var millisec_start = 0
 var millisec_now = 0
 var elapsed = 0
+var millisec_elapsed = 0
 
 #Determines whether the character is reloading
 var reloading = 0
@@ -51,6 +52,7 @@ var difficulty
 
 #elapsed from previous save
 var saved_elapsed = 0
+var saved_millisec = 0
 
 
 func _ready():
