@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Instances/Characters/Enemies/ranged_enemy.gd" type="Script" id=1]
+[ext_resource path="res://Assets/mobster_gun.png" type="Texture" id=2]
+[ext_resource path="res://Instances/Characters/Enemies/gun.gd" type="Script" id=3]
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 12.8067 )
+
+[node name="ranged_enemy" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "collision" ]
+targethealth = 10
+points = 9000
+walk_slowdown = 0.5
+nav_stop_threshold = 500
+destination_order = null
+reverseOrder = true
+fire_range = 300
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+
+rotation = -1.5708
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="body" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -0.0932153, 0 )
+rotation = -1.5708
+scale = Vector2( 2.04448, 1 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="gun" type="Node2D" parent="." index="2"]
+
+rotation = 1.5708
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spawn" type="Position2D" parent="." index="3"]
+
+position = Vector2( 20.7436, 14.9065 )
+scale = Vector2( 0.450075, 0.445499 )
+
+
