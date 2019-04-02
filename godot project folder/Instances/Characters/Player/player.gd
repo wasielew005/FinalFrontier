@@ -206,5 +206,8 @@ func save():
 
 #tells the game to constantly check for user input
 func _physics_process(delta):
-    get_input()
-    move_and_slide(velocity)
+	$GUI/Health/currenthealth.update()
+	if global.playerHealth <= 0:
+		death()
+	get_input()
+	move_and_slide(velocity)

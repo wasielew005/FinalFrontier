@@ -6,13 +6,13 @@ var motion = Vector2()
 
 var path = []
 var destination = Vector2()
-var bounce = Vector2()
 export (int) var targethealth = 10
 export (int) var points = 9000
 var w_t=false
 var init_path=false
-#var target
-var collision_info
+var frame_count=0;
+
+
 
 
 
@@ -22,13 +22,15 @@ export var walk_slowdown = 0.5
 export var nav_stop_threshold = 500
 export (int) var destination_order= []
 export var reverseOrder= true
+export var fire_range = 300
+export var projectile_speed = 15
+export var fire_rate = 45
 
 
 
 
 onready var navigation = get_parent().get_node("Navigation2D");
 onready var available_destinations = get_parent().get_node("Navigation2D/destinations");
-onready var timer= get_node("Timer");
 onready var player= get_parent().get_node("Player")
 
 
@@ -37,11 +39,6 @@ onready var player= get_parent().get_node("Player")
 func _ready():
 	
 	set_process(true)
-	
-	
-	
-	
-	
 	
 
 	
@@ -58,37 +55,42 @@ func _process(delta):
 		if !init_path:	
 			make_path()
 			init_path=true
-		navigate(delta)
+		navigate()
 	
 	
 	
 
-func navigate(delta):
-	var distance_to_destination = position.distance_to(path[0])
+func navigate():
+	var distance_to_destination = position.distance_to(player.global_position)
 	destination = path[0]
-	#print(destination)
-	move(delta)
-	if collision_info && collision_info.collider && collision_info.collider == player:
-		global.playerHealth -= 1
-		motion = motion.bounce(collision_info.normal)
-		move_and_collide(motion * .3)
-		
-		
+	#print(distance_to_destination)
+	if distance_to_destination > fire_range:
+		move()
+		if frame_count==fire_rate:
+			$gun.fire(-rotation_degrees)
+			frame_count=0;
+		else:
+			frame_count+=1
+		update_path()
+	else:
+		look_at(player.global_position)
+		if frame_count==fire_rate:
+			$gun.fire(-rotation_degrees)
+			frame_count=0;
+		else:
+			frame_count+=1
 	
-	
-	
-	update_path()
 	
 	
 
-func move(delta):
+func move():
 	
 	
 	motion = Vector2(speed, 0).rotated(rotation) 
 	#print(motion)
 	if is_on_wall():
 		make_path()
-	collision_info = move_and_collide(motion*delta)
+	move_and_slide(motion)
 	
 	
 	
