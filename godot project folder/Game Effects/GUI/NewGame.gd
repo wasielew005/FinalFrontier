@@ -1,17 +1,26 @@
 extends CanvasLayer
 
+export (NodePath) var start_path
+onready var start_button = get_node(start_path)
+
+func _ready():
+	start_button.set_disabled(true)
+
 func _on_Easy_pressed():
 	global.difficulty = "easy"
+	start_button.set_disabled(false)
 	pass
 
 
 func _on_Normal_pressed():
 	global.difficulty = "normal"
+	start_button.set_disabled(false)
 	pass
 
 
 func _on_Hard_pressed():
 	global.difficulty = "hard"
+	start_button.set_disabled(false)
 	pass
 
 func _on_StartGameButton_pressed():

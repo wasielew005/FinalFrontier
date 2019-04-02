@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Fonts/MainMenuButtonFont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Game Effects/GUI/Level Selection.gd" type="Script" id=3]
 
-[node name="CanvasLayer" type="CanvasLayer" groups=[
+[node name="CanvasLayer" type="CanvasLayer" index="0" groups=[
 "persist",
 ]]
 
@@ -14,6 +14,7 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
+start_path = NodePath("MarginContainer/HBoxContainer/StartGameButton")
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="0"]
 

@@ -63,11 +63,13 @@ func load_save():
 	
 	var player_data = {}
 	player_data = parse_json(file.get_as_text())
+	
 	global.saved_elapsed = player_data['saved_elapsed']
 	global.saved_millisec = player_data['saved_millisec']
 	global.value = player_data['score']
 	global.playerHealth = player_data['health']
 	global.isGameComplete = player_data['gameComplete']
+	global.player_state = player_data['player_state']
 	
 	file.close()
 	

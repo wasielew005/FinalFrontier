@@ -46,6 +46,7 @@ var current_level = 0
 #health for player
 var playerHealth = 5
 var maxHealth = 5
+var player_state = "alive"
 
 #difficulty level
 var difficulty
