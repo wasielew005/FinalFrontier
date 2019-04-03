@@ -58,6 +58,8 @@ position = Vector2( 263.35, 708.404 )
 
 [node name="Level Transition" parent="." index="1" instance=ExtResource( 2 )]
 
+final_floor = null
+
 [node name="Map" type="TileMap" parent="." index="2"]
 
 mode = 0

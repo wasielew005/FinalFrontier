@@ -15,6 +15,7 @@ var str_elapsed = ""
 var millisec_start = 0
 var millisec_now = 0
 var elapsed = 0
+var millisec_elapsed = 0
 
 #Determines whether the character is reloading
 var reloading = 0
@@ -45,12 +46,14 @@ var current_level = 0
 #health for player
 var playerHealth = 5
 var maxHealth = 5
+var player_state = "alive"
 
 #difficulty level
 var difficulty
 
 #elapsed from previous save
 var saved_elapsed = 0
+var saved_millisec = 0
 
 
 func _ready():

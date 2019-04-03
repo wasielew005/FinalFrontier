@@ -13,7 +13,6 @@ const MAX_AMMO_PISTOL = 6
 const MAX_AMMO_RIFLE = 3
 
 #if player is "alive" or "dead"
-var player_state
 signal game_over
 
 var velocity = Vector2()
@@ -48,7 +47,7 @@ func _ready():
 	if global.playerHealth <= 0:
 		death()
 	
-	player_state = "alive"
+	global.player_state = "alive"
 	
 
 
@@ -181,12 +180,13 @@ func respawn():
 	#getNode("last checkpoint node").spawn()
 	#OR
 	#load SaveData.file
-	player_state = "alive"
+	global.player_state = "alive"
 	#set all relevant player items to what they were at checkpoint
 	pass
 	
 
 func death():
+	global.player_state = "dead"
 	emit_signal("game_over")
 	get_tree().paused = not get_tree().paused
 
@@ -194,7 +194,10 @@ func save():
 	var save_data = {
 			"ammo_in_weapon": global.ammo_in_weapon,
 			"score": global.value,
+			"health": global.playerHealth,
+			"player_state": global.player_state,
 			"saved_elapsed": global.elapsed,
+			"saved_millisec": global.millisec_elapsed,
 			"difficulty": global.difficulty,
 			"gameComplete": global.isGameComplete,
 			"filepath": "Player.save"

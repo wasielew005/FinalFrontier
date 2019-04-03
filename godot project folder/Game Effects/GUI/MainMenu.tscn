@@ -144,6 +144,7 @@ flat = false
 align = 2
 script = ExtResource( 4 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags", "custom_constants", "custom_fonts" ]
+button_path = NodePath(".")
 
 [node name="Load Game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" index="1"]
 
@@ -172,6 +173,7 @@ flat = false
 align = 2
 script = ExtResource( 5 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Size Flags", "custom_fonts" ]
+button_path = NodePath(".")
 
 [node name="Scores" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" index="2"]
 

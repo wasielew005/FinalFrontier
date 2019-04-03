@@ -11,9 +11,12 @@ func _process(delta):
 	global.millisec_now = OS.get_ticks_msec()
 	global.elapsed = int(global.saved_elapsed) + (global.time_now - global.time_start)
 	var elapsed = global.time_now - global.time_start
-	var millisec_elapsed = global.millisec_now - global.millisec_start
+	
+	global.millisec_elapsed = int(global.saved_millisec) + (global.millisec_now - global.millisec_start)
+	
+	#var millisec_elapsed = global.millisec_now - global.millisec_start
 	var minutes = global.elapsed / 60
 	var seconds = global.elapsed % 60
-	var milliseconds = millisec_elapsed % 1000
+	var milliseconds = global.millisec_elapsed % 1000
 	global.str_elapsed = "%02d : %02d . %02d" % [minutes, seconds, milliseconds]
 	set_text(global.str_elapsed)
