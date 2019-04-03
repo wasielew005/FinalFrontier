@@ -37,13 +37,42 @@ func _on_ddbutton_pressed():
 
 func _on_medbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
-	abilities.medpack()
+	if global.value > 1000:
+		global.value -= 1000
+		abilities.medpack()
+		$medbutton.disabled = true
+		var medcd = Timer.new()
+		medcd.set_wait_time(30)
+		medcd.set_one_shot(true)
+		self.add_child(medcd)
+		medcd.start()
+		yield(medcd, "timeout")
+		$medbutton.disabled = false
 
 func _on_unlimitedammonbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
-	abilities.unlimited_ammo()
+	if global.value > 2500:
+		global.value -= 2500
+		abilities.unlimited_ammo()
+		$unlimitedammonbutton.disabled = true
+		var uacd = Timer.new()
+		uacd.set_wait_time(30)
+		uacd.set_one_shot(true)
+		self.add_child(uacd)
+		uacd.start()
+		yield(uacd, "timeout")
+		$unlimitedammonbutton.disabled = false
 
 func _on_invincbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
-	abilities.invincibility()
-	pass 
+	if global.value > 2500:
+		global.value -= 2500
+		abilities.invincibility()
+		$invincbutton.disabled = true
+		var invcd = Timer.new()
+		invcd.set_wait_time(30)
+		invcd.set_one_shot(true)
+		self.add_child(invcd)
+		invcd.start()
+		yield(invcd, "timeout")
+		$invincbutton.disabled = false

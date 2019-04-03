@@ -72,4 +72,3 @@ func unlimited_ammo():
     yield(ammoTimer, "timeout")
     global.maxammo = 0
     print("Back to normal...")
-    #pass
