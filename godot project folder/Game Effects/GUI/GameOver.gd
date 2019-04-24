@@ -20,7 +20,9 @@ func _physics_process(delta):
 func _on_restart_pressed():
 	#load last save (Level Transition/Checkpoint)
 	#get_tree().reload_current_scene()
-	get_tree().change_scene(save.load_save())
+	##visible = not visible
+	#get_tree().change_scene("res://Game Effects/GUI/MainMenu.tscn")
+	get_tree().paused = not get_tree().paused
 	visible = not visible
 	get_tree().change_scene("res://Game Effects/GUI/MainMenu.tscn")
 

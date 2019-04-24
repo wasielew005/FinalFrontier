@@ -19,6 +19,8 @@ var velocity = Vector2()
 
 var detected = false
 
+var has_died = false
+
 #the raycast for the pistol is prepared to be called when the user shoots
 #the raycast is the "bullet" that will collide with other objects
 onready var basicshootcast = get_node("basicshootcast")
@@ -40,14 +42,14 @@ func _ready():
 	#assigns the node "revolvershot" which holds the sound effects to the var revolver_shot created above
 	revolver_sound = get_node("revolvershot")
 	changeweapon()
-	
+	global.player_state = "alive"
 	if global.isGameComplete == null:
 		global.isGameComplete = false
 	
-	if global.playerHealth <= 0:
-		death()
+	#if global.playerHealth <= 0:
+		#death()
 	
-	global.player_state = "alive"
+	
 	
 
 
@@ -189,9 +191,11 @@ func respawn():
 	
 
 func death():
-	global.player_state = "dead"
-	emit_signal("game_over")
-	get_tree().paused = not get_tree().paused
+	if has_died == false:
+		global.player_state = "dead"
+		get_tree().paused = not get_tree().paused
+		emit_signal("game_over")
+		has_died = true
 
 func save():
 	var save_data = {
