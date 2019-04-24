@@ -48,6 +48,18 @@ var playerHealth = 5
 var maxHealth = 5
 var player_state = "alive"
 
+#Character speed
+var speed = 200
+
+#Powerup global variables
+var maxammo = 0
+
+#Powerup double damage
+var double_damage = false
+
+#Powerup Invincibility
+var invinc = false
+
 #difficulty level
 var difficulty
 

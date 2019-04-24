@@ -4,7 +4,7 @@ extends KinematicBody2D
 #exporting allows us to manipulate its value in the inspector window
 #this exports the variable speed, and takes in an int from the inspector window
 #export (int)
-var speed = 200
+#var speed = 200
 
 #revolver_sound is created to be assigned to the sound node later
 var revolver_sound
@@ -60,10 +60,12 @@ func _input(event):
 			if global.reloading == 0:
 				shoot()
 				if global.MAX_AMMO == MAX_AMMO_PISTOL:
-					global.ammo_in_pistol -= 1
+					if global.maxammo == 0:
+						global.ammo_in_pistol -= 1
 					global.ammo_in_weapon = global.ammo_in_pistol
 				if global.MAX_AMMO == MAX_AMMO_RIFLE:
-					global.ammo_in_rifle -= 1
+					if global.maxammo == 0:
+						global.ammo_in_rifle -= 1
 					global.ammo_in_weapon = global.ammo_in_rifle
 				#single line below plays the gun sound everytime the player shoots 
 				revolver_sound.play()
@@ -124,7 +126,8 @@ func shoot():
 		#the Node window uses the same window as the Inspector 
 		if collider.is_in_group("enemy"):
 			collider.enemy_hit()
-
+			if abilities.double_damage:
+				collider.enemy_hit()
 		#if collider.is_in_group("htarget"):
 			#emit_signal("hit_htarget", basicshootcast.get_collision_point())
 		#if collider.is_in_group("enemy"):
@@ -173,7 +176,7 @@ func get_input():
         velocity.y -= 1
 	#multiplies the velocity by the var "speed
 	#speed is defined at the top of the script
-    velocity = velocity.normalized() * speed
+    velocity = velocity.normalized() * global.speed
 
 func respawn():
 	#find last node checkpoint
