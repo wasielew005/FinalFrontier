@@ -52,6 +52,7 @@ func enemy_hit():
 
 func _process(delta):
 	if player.detected == true:
+		visible = true
 		if !init_path:	
 			make_path()
 			init_path=true

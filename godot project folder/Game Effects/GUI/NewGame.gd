@@ -36,7 +36,7 @@ func _on_StartGameButton_pressed():
 	global.playerHealth = global.maxHealth
 	
 	#get_tree().change_scene(global.level_order[global.current_level])
-	get_tree().change_scene("res://Assets/Levels/kylerstestarea.tscn")
+	get_tree().change_scene("res://Assets/Levels/brettlevels/brettlevel1.tscn")
 	
 	save.save_game()
 	global.saved_elapsed = 0

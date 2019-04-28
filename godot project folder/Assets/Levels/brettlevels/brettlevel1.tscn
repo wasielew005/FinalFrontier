@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Levels/brettlevels/level1.tmx" type="PackedScene" id=2]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Characters/Enemies/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Characters/Enemies/melee_enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/Characters/Enemies/ranged_enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=7]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 2332.79, 2715.71, 2319.61, 2700.27, 2306.44, 2672.49, 2320.23, 2671.82, 2372.12, 2730.85, 3343.68, 1341.09, 3344.71, 1412.15, 2979.84, 1414.92, 2914.53, 1342.75, 2915.05, 1528.74, 2979.32, 1529.29, 2767.34, 1529.85, 2766.82, 1428.8, 2898.98, 1427.69, 2899.51, 1528.85, 2899.5, 1615.35, 2897.43, 1730.27, 2534.28, 2730.25, 2534.28, 2759.35, 2439.62, 2759.05, 2439.34, 2729.35, 3328.7, 2282.63, 3331.05, 2670.09, 2928.71, 2672.6, 2873.24, 2603.14, 2434.18, 1821.52, 3264.38, 1819.1, 2767.85, 1730.27, 2980.87, 1615.35, 3331.24, 1529.29, 3208.4, 1587.03, 2183.22, 2482.68, 1929.1, 2482.27, 1928.72, 2356.58, 1939.39, 2355.35, 2685.74, 2598.12, 2425.33, 2729.65, 2425.05, 2744.35, 2372.68, 2743.75, 3206.85, 1701.4, 2983.46, 1701.4, 3264.9, 1586.48, 3327.92, 1821.52, 2333.4, 2728.94, 2318.48, 2629.6, 2655.27, 2631.59, 2641.21, 2725.32 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 8, 7, 10 ), PoolIntArray( 11, 12, 13, 14, 15, 16 ), PoolIntArray( 17, 18, 19, 20 ), PoolIntArray( 21, 22, 23, 24, 25, 26 ), PoolIntArray( 16, 27, 11 ), PoolIntArray( 28, 15, 14, 9, 10 ), PoolIntArray( 28, 10, 29, 30 ), PoolIntArray( 31, 32, 33, 34 ), PoolIntArray( 31, 34, 25, 24, 35 ), PoolIntArray( 36, 37, 38, 4 ), PoolIntArray( 30, 39, 40, 28 ), PoolIntArray( 41, 30, 29 ), PoolIntArray( 41, 29, 42, 26 ), PoolIntArray( 26, 42, 21 ), PoolIntArray( 4, 43, 0 ), PoolIntArray( 44, 31, 35, 45 ), PoolIntArray( 44, 45, 46, 17, 20 ), PoolIntArray( 44, 20, 36 ), PoolIntArray( 44, 36, 4, 3 ) ]
+outlines = [ PoolVector2Array( 2534.28, 2730.25, 2534.28, 2759.35, 2439.62, 2759.05, 2439.34, 2729.35, 2425.33, 2729.65, 2425.05, 2744.35, 2372.68, 2743.75, 2372.12, 2730.85, 2333.4, 2728.94, 2332.79, 2715.71, 2319.61, 2700.27, 2306.44, 2672.49, 2320.23, 2671.82, 2318.48, 2629.6, 2183.22, 2482.68, 1929.1, 2482.27, 1928.72, 2356.58, 1939.39, 2355.35, 2434.18, 1821.52, 3264.38, 1819.1, 3264.9, 1586.48, 3208.4, 1587.03, 3206.85, 1701.4, 2983.46, 1701.4, 2980.87, 1615.35, 2899.5, 1615.35, 2897.43, 1730.27, 2767.85, 1730.27, 2767.34, 1529.85, 2766.82, 1428.8, 2898.98, 1427.69, 2899.51, 1528.85, 2915.05, 1528.74, 2914.53, 1342.75, 3343.68, 1341.09, 3344.71, 1412.15, 2979.84, 1414.92, 2979.32, 1529.29, 3331.24, 1529.29, 3327.92, 1821.52, 3328.7, 2282.63, 3331.05, 2670.09, 2928.71, 2672.6, 2873.24, 2603.14, 2685.74, 2598.12, 2655.27, 2631.59, 2641.21, 2725.32 ) ]
+
+[node name="brettlevel1" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="level1" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 37.9478, -645.111 )
+
+[node name="Level Transition" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 4087.07, 394.411 )
+scale = Vector2( 1.48955, 2.47638 )
+level_scene = "res://Assets/Levels/brettlevels/brettlevel2.tscn"
+final_floor = null
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="2"]
+
+[node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+position = Vector2( -3783.08, -2644.67 )
+scale = Vector2( 2.36882, 2.21141 )
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+[node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
+
+position = Vector2( 1236.06, 2232.14 )
+
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="1"]
+
+position = Vector2( 893.974, 2512.47 )
+
+[node name="destination2" type="Position2D" parent="Navigation2D/destinations" index="2"]
+
+position = Vector2( 1088.78, 2330.85 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="3"]
+
+position = Vector2( 1352.92, 2328.72 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Enemy" parent="." index="3" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+modulate = Color( 0.960938, 0.938416, 0.938416, 1 )
+self_modulate = Color( 0.917969, 0.90004, 0.90004, 1 )
+position = Vector2( 1234.79, 2227.55 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+destination_order = 0
+
+[node name="Enemy2" parent="." index="4" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1571.42, 2738.33 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+points = 500
+
+[node name="melee_enemy" parent="." index="5" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1371.54, 2411.98 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="ranged_enemy" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 1841.54, 2297.59 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="Player" parent="." index="7" instance=ExtResource( 7 )]
+
+position = Vector2( 2102.33, 3366.54 )
+
+

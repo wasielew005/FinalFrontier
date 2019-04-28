@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/level3.tmx-9c0c7f77c3d5961bc9d065ed31db5d99.scn"
+
+[deps]
+
+source_file="res://Assets/Levels/brettlevels/level3.tmx"
+dest_files=[ "res://.import/level3.tmx-9c0c7f77c3d5961bc9d065ed31db5d99.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

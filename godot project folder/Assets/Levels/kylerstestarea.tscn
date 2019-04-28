@@ -102,7 +102,7 @@ points = 500
 ] instance=ExtResource( 7 )]
 
 position = Vector2( 2803.92, 2136.24 )
-_sections_unfolded = [ "Collision", "Pickable", "collision" ]
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
 
 [node name="ranged_enemy" parent="." index="9" groups=[
 "enemy",

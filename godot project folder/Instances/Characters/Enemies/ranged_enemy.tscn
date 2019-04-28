@@ -4,8 +4,6 @@
 [ext_resource path="res://Assets/mobster_gun.png" type="Texture" id=2]
 [ext_resource path="res://Instances/Characters/Enemies/gun.gd" type="Script" id=3]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -26,6 +24,8 @@ nav_stop_threshold = 500
 destination_order = null
 reverseOrder = true
 fire_range = 300
+projectile_speed = 15
+fire_rate = 45
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
