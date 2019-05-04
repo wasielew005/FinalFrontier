@@ -31,6 +31,8 @@ final_floor = null
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
 position = Vector2( -3783.08, -2644.67 )

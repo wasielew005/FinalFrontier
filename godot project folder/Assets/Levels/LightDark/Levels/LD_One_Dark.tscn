@@ -18,7 +18,13 @@ scale = Vector2( 1.48955, 2.47638 )
 level_scene = "res://Assets/Levels/brettlevels/brettlevel2.tscn"
 final_floor = null
 
-[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="2"]
+
+position = Vector2( 3106.89, 3518.65 )
+rotation = 1.5708
+color = Color( 0.054902, 0.109804, 0.321569, 1 )
+
+[node name="Player" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 3106.89, 3518.65 )
 scale = Vector2( 1, 1 )
