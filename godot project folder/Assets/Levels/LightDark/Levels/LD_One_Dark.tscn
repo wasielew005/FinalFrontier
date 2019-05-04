@@ -17,7 +17,6 @@ script = ExtResource( 1 )
 position = Vector2( 6394.37, 238.237 )
 scale = Vector2( 1.48955, 2.47638 )
 level_scene = "res://Assets/Levels/LightDark/Levels/SwitchRoom.tscn"
-final_floor = null
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="2"]
 
