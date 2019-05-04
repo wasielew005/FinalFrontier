@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.2" tiledversion="1.2.2" name="brett_tileset" tilewidth="32" tileheight="32" tilecount="30" columns="0">
+<tileset version="1.2" tiledversion="1.2.3" name="brett_tileset" tilewidth="32" tileheight="32" tilecount="30" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="32" height="32" source="PNGs/pokertable2.png"/>

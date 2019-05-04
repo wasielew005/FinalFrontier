@@ -14,6 +14,7 @@ outlines = [ PoolVector2Array( 2323.6, 1903.57, 2320.96, 1808.94, 2228.52, 1810.
 [node name="brettbossbattle" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="bossbattle" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -24,7 +25,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 position = Vector2( 2084.97, 2798.11 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
-targethealth = 2
+targethealth = 20
 level_scene = "res://Assets/Levels/kylerstestarea.tscn"
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="2"]

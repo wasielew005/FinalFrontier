@@ -10,11 +10,11 @@
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( 2332.79, 2715.71, 2319.61, 2700.27, 2306.44, 2672.49, 2320.23, 2671.82, 2372.12, 2730.85, 3343.68, 1341.09, 3344.71, 1412.15, 2979.84, 1414.92, 2914.53, 1342.75, 2915.05, 1528.74, 2979.32, 1529.29, 2767.34, 1529.85, 2766.82, 1428.8, 2898.98, 1427.69, 2899.51, 1528.85, 2899.5, 1615.35, 2897.43, 1730.27, 2534.28, 2730.25, 2534.28, 2759.35, 2439.62, 2759.05, 2439.34, 2729.35, 3328.7, 2282.63, 3331.05, 2670.09, 2928.71, 2672.6, 2873.24, 2603.14, 2434.18, 1821.52, 3264.38, 1819.1, 2767.85, 1730.27, 2980.87, 1615.35, 3331.24, 1529.29, 3208.4, 1587.03, 2183.22, 2482.68, 1929.1, 2482.27, 1928.72, 2356.58, 1939.39, 2355.35, 2685.74, 2598.12, 2425.33, 2729.65, 2425.05, 2744.35, 2372.68, 2743.75, 3206.85, 1701.4, 2983.46, 1701.4, 3264.9, 1586.48, 3327.92, 1821.52, 2333.4, 2728.94, 2318.48, 2629.6, 2655.27, 2631.59, 2641.21, 2725.32 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 8, 7, 10 ), PoolIntArray( 11, 12, 13, 14, 15, 16 ), PoolIntArray( 17, 18, 19, 20 ), PoolIntArray( 21, 22, 23, 24, 25, 26 ), PoolIntArray( 16, 27, 11 ), PoolIntArray( 28, 15, 14, 9, 10 ), PoolIntArray( 28, 10, 29, 30 ), PoolIntArray( 31, 32, 33, 34 ), PoolIntArray( 31, 34, 25, 24, 35 ), PoolIntArray( 36, 37, 38, 4 ), PoolIntArray( 30, 39, 40, 28 ), PoolIntArray( 41, 30, 29 ), PoolIntArray( 41, 29, 42, 26 ), PoolIntArray( 26, 42, 21 ), PoolIntArray( 4, 43, 0 ), PoolIntArray( 44, 31, 35, 45 ), PoolIntArray( 44, 45, 46, 17, 20 ), PoolIntArray( 44, 20, 36 ), PoolIntArray( 44, 36, 4, 3 ) ]
-outlines = [ PoolVector2Array( 2534.28, 2730.25, 2534.28, 2759.35, 2439.62, 2759.05, 2439.34, 2729.35, 2425.33, 2729.65, 2425.05, 2744.35, 2372.68, 2743.75, 2372.12, 2730.85, 2333.4, 2728.94, 2332.79, 2715.71, 2319.61, 2700.27, 2306.44, 2672.49, 2320.23, 2671.82, 2318.48, 2629.6, 2183.22, 2482.68, 1929.1, 2482.27, 1928.72, 2356.58, 1939.39, 2355.35, 2434.18, 1821.52, 3264.38, 1819.1, 3264.9, 1586.48, 3208.4, 1587.03, 3206.85, 1701.4, 2983.46, 1701.4, 2980.87, 1615.35, 2899.5, 1615.35, 2897.43, 1730.27, 2767.85, 1730.27, 2767.34, 1529.85, 2766.82, 1428.8, 2898.98, 1427.69, 2899.51, 1528.85, 2915.05, 1528.74, 2914.53, 1342.75, 3343.68, 1341.09, 3344.71, 1412.15, 2979.84, 1414.92, 2979.32, 1529.29, 3331.24, 1529.29, 3327.92, 1821.52, 3328.7, 2282.63, 3331.05, 2670.09, 2928.71, 2672.6, 2873.24, 2603.14, 2685.74, 2598.12, 2655.27, 2631.59, 2641.21, 2725.32 ) ]
+vertices = PoolVector2Array( 2332.79, 2715.71, 2319.61, 2700.27, 2306.44, 2672.49, 2320.23, 2671.82, 2372.12, 2730.85, 2434.18, 1821.52, 2662.13, 1817.4, 2662.13, 1883.95, 2423.49, 1882.89, 1939.39, 2355.35, 2370.17, 1973.56, 3343.68, 1341.09, 3344.71, 1412.15, 2979.84, 1414.92, 2914.53, 1342.75, 2915.05, 1528.74, 2979.32, 1529.29, 2534.28, 2730.25, 2534.28, 2759.35, 2439.62, 2759.05, 2439.34, 2729.35, 2767.34, 1529.85, 2766.82, 1428.8, 2898.98, 1427.69, 2899.51, 1528.85, 2899.5, 1615.35, 2897.43, 1730.27, 2681.36, 1902.22, 2682.42, 1817.74, 3246.18, 2023.79, 3246.71, 2074.02, 2952.58, 2076.3, 2775.14, 2076.87, 2708.53, 2074.02, 2384.56, 2074.59, 2384.56, 1992.4, 2437.84, 1989.54, 3260.04, 2091.14, 3328.7, 2282.63, 3331.05, 2670.09, 2928.71, 2672.6, 2873.24, 2603.14, 2773.54, 2092.29, 2767.85, 1730.27, 2980.87, 1615.35, 3331.24, 1529.29, 3208.4, 1587.03, 3245.12, 1817.17, 2183.22, 2482.68, 1929.1, 2482.27, 1928.72, 2356.58, 2425.33, 2729.65, 2425.05, 2744.35, 2372.68, 2743.75, 3206.85, 1701.4, 2983.46, 1701.4, 3264.9, 1586.48, 3327.92, 1821.52, 3264.38, 1819.1, 2438.91, 1904.5, 2708, 2091.71, 2333.4, 2728.94, 2420.54, 1969.51, 2368.04, 2091.14, 2318.48, 2629.6, 2655.27, 2631.59, 2641.21, 2725.32, 2685.74, 2598.12 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 5, 8, 10 ), PoolIntArray( 11, 12, 13, 14 ), PoolIntArray( 15, 14, 13, 16 ), PoolIntArray( 17, 18, 19, 20 ), PoolIntArray( 21, 22, 23, 24, 25, 26 ), PoolIntArray( 27, 28, 29, 30, 31, 32, 33 ), PoolIntArray( 33, 34, 35, 36 ), PoolIntArray( 37, 38, 39, 40, 41, 42 ), PoolIntArray( 26, 43, 21 ), PoolIntArray( 44, 25, 24, 15, 16 ), PoolIntArray( 44, 16, 45, 46 ), PoolIntArray( 28, 47, 29 ), PoolIntArray( 48, 49, 50, 9 ), PoolIntArray( 51, 52, 53, 4 ), PoolIntArray( 46, 54, 55, 44 ), PoolIntArray( 56, 46, 45 ), PoolIntArray( 56, 45, 57, 58 ), PoolIntArray( 37, 58, 57, 38 ), PoolIntArray( 36, 59, 27, 33 ), PoolIntArray( 33, 32, 42, 60 ), PoolIntArray( 4, 61, 0 ), PoolIntArray( 8, 62, 10 ), PoolIntArray( 9, 10, 63, 48 ), PoolIntArray( 64, 65, 66, 17, 20 ), PoolIntArray( 63, 60, 42, 41, 67, 48 ), PoolIntArray( 64, 48, 67, 65 ), PoolIntArray( 64, 20, 51 ), PoolIntArray( 64, 51, 4, 3 ) ]
+outlines = [ PoolVector2Array( 2534.28, 2730.25, 2534.28, 2759.35, 2439.62, 2759.05, 2439.34, 2729.35, 2425.33, 2729.65, 2425.05, 2744.35, 2372.68, 2743.75, 2372.12, 2730.85, 2333.4, 2728.94, 2332.79, 2715.71, 2319.61, 2700.27, 2306.44, 2672.49, 2320.23, 2671.82, 2318.48, 2629.6, 2183.22, 2482.68, 1929.1, 2482.27, 1928.72, 2356.58, 1939.39, 2355.35, 2434.18, 1821.52, 2662.13, 1817.4, 2662.13, 1883.95, 2423.49, 1882.89, 2420.54, 1969.51, 2370.17, 1973.56, 2368.04, 2091.14, 2708, 2091.71, 2708.53, 2074.02, 2384.56, 2074.59, 2384.56, 1992.4, 2437.84, 1989.54, 2438.91, 1904.5, 2681.36, 1902.22, 2682.42, 1817.74, 3245.12, 1817.17, 3246.18, 2023.79, 3246.71, 2074.02, 2952.58, 2076.3, 2775.14, 2076.87, 2773.54, 2092.29, 3260.04, 2091.14, 3264.38, 1819.1, 3264.9, 1586.48, 3208.4, 1587.03, 3206.85, 1701.4, 2983.46, 1701.4, 2980.87, 1615.35, 2899.5, 1615.35, 2897.43, 1730.27, 2767.85, 1730.27, 2767.34, 1529.85, 2766.82, 1428.8, 2898.98, 1427.69, 2899.51, 1528.85, 2915.05, 1528.74, 2914.53, 1342.75, 3343.68, 1341.09, 3344.71, 1412.15, 2979.84, 1414.92, 2979.32, 1529.29, 3331.24, 1529.29, 3327.92, 1821.52, 3328.7, 2282.63, 3331.05, 2670.09, 2928.71, 2672.6, 2873.24, 2603.14, 2685.74, 2598.12, 2655.27, 2631.59, 2641.21, 2725.32 ) ]
 
-[node name="brettlevel1" type="Node2D"]
+[node name="brettlevel1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -58,13 +58,29 @@ _sections_unfolded = [ "Z Index" ]
 position = Vector2( 1352.92, 2328.72 )
 _sections_unfolded = [ "Z Index" ]
 
+[node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="4"]
+
+position = Vector2( 1843.01, 3075.25 )
+
+[node name="destination5" type="Position2D" parent="Navigation2D/destinations" index="5"]
+
+position = Vector2( 2342.31, 3086.44 )
+
+[node name="destination6" type="Position2D" parent="Navigation2D/destinations" index="6"]
+
+position = Vector2( 2098.95, 2984.34 )
+
+[node name="destination7" type="Position2D" parent="Navigation2D/destinations" index="7"]
+
+position = Vector2( 2222.03, 3241.68 )
+
 [node name="Enemy" parent="." index="3" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
 modulate = Color( 0.960938, 0.938416, 0.938416, 1 )
 self_modulate = Color( 0.917969, 0.90004, 0.90004, 1 )
-position = Vector2( 1234.79, 2227.55 )
+position = Vector2( 1264.2, 2289.99 )
 _sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
 targethealth = 3
 destination_order = 0
@@ -73,10 +89,12 @@ destination_order = 0
 "enemy",
 ] instance=ExtResource( 4 )]
 
-position = Vector2( 1571.42, 2738.33 )
+position = Vector2( 2112.31, 3071.45 )
 _sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
 targethealth = 3
 points = 500
+nav_stop_threshold = 7
+destination_order = 4
 
 [node name="melee_enemy" parent="." index="5" groups=[
 "enemy",
@@ -86,7 +104,63 @@ visible = false
 position = Vector2( 1371.54, 2411.98 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="ranged_enemy" parent="." index="6" groups=[
+[node name="melee_enemy2" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1864.48, 1700.74 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy3" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2600.37, 1415.53 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy4" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3790.47, 3003.51 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy5" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2515.87, 3130.27 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy6" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3896.1, 2014.11 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy7" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3776.39, 901.468 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy8" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3022.89, 971.888 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="ranged_enemy" parent="." index="13" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -95,7 +169,70 @@ position = Vector2( 1841.54, 2297.59 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="Player" parent="." index="7" instance=ExtResource( 7 )]
+[node name="ranged_enemy2" parent="." index="14" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2809.99, 2161.94 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy3" parent="." index="15" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2804.84, 2835.04 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy4" parent="." index="16" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 1705.89, 2938.07 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy5" parent="." index="17" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2596.62, 1890.17 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy6" parent="." index="18" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 3814.89, 2182.41 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy7" parent="." index="19" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 3814.89, 3097.87 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy8" parent="." index="20" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2829.01, 1900.73 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="Player" parent="." index="21" instance=ExtResource( 7 )]
 
 position = Vector2( 2102.33, 3366.54 )
 

@@ -82,7 +82,63 @@ visible = false
 position = Vector2( 1917.75, 3395 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="ranged_enemy" parent="." index="6" groups=[
+[node name="melee_enemy2" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1990.76, 2712.75 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy3" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2451.47, 2974.57 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy4" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2358.32, 2357.78 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy5" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3566.73, 2221.83 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy6" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3189.1, 3034.99 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy7" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3337.63, 3765.08 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy8" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3612.04, 3772.63 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="ranged_enemy" parent="." index="13" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -91,7 +147,52 @@ position = Vector2( 2628.17, 3716.79 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="Player" parent="." index="7" instance=ExtResource( 7 )]
+[node name="ranged_enemy2" parent="." index="14" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2227.88, 2959.02 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy3" parent="." index="15" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2623.13, 2616.63 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy4" parent="." index="16" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 3267.62, 2468.1 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy5" parent="." index="17" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 3338.11, 3482.66 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy6" parent="." index="18" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 3637.7, 3538.05 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="Player" parent="." index="19" instance=ExtResource( 7 )]
 
 position = Vector2( 1816, 4053.43 )
 
