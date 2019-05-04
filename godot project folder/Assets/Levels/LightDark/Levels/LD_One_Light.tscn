@@ -5,7 +5,7 @@
 [ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=4]
 
-[node name="LD_One_Light" type="Node2D"]
+[node name="LD_One_Light" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -15,10 +15,17 @@ script = ExtResource( 1 )
 
 position = Vector2( 6394.34, 238.457 )
 scale = Vector2( 1.48955, 2.47638 )
-level_scene = "res://Assets/Levels/brettlevels/brettlevel2.tscn"
+level_scene = "res://Assets/Levels/LightDark/Levels/SwitchRoom.tscn"
 final_floor = null
 
-[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
+[node name="Level Transition2" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 6395.01, 3393.78 )
+scale = Vector2( 1.48955, 2.47638 )
+level_scene = "res://Assets/Levels/LightDark/Levels/SwitchRoom.tscn"
+final_floor = null
+
+[node name="Player" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 3103.72, 3534.49 )
 scale = Vector2( 1, 1 )

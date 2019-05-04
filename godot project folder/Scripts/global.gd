@@ -67,6 +67,9 @@ var difficulty
 var saved_elapsed = 0
 var saved_millisec = 0
 
+#sets to true if player has a lighter in LightDark levels
+var has_lighter = true
+
 
 func _ready():
 	pass
