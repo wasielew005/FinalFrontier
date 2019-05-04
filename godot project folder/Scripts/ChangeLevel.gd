@@ -6,6 +6,9 @@ extends Area2D
 export(String, FILE, "*.tscn") var level_scene
 export(bool) var final_floor
 
+export (String, FILE, "*.tscn") var light
+export (String, FILE, "*.tscn") var dark
+
 export (NodePath) onready var player = get_node(player) if player else null
 
 #constantly checks if the player enters the collision area
@@ -21,7 +24,13 @@ func _physics_process(delta):
 					#save.save_game()
 			#else
 				#saves player info and switches scenes
-				get_tree().change_scene(level_scene)
+				
+				if global.lights == true && light != null:
+					get_tree().change_scene(light)
+				if global.lights == false && dark != null:
+					get_tree().change_scene(dark)
+				else:
+					get_tree().change_scene(level_scene)
 				save.save_game()
 				
 

@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/Switch Room.tmx-5daec5aa4388b0bca546a6ef9f765a1b.scn"
+path="res://.import/SwitchRoom_FloorOne.tmx-5b1a91f6810ffa102eac339cbfadd73d.scn"
 
 [deps]
 
-source_file="res://Assets/Levels/LightDark/Graphics/Switch Room.tmx"
-dest_files=[ "res://.import/Switch Room.tmx-5daec5aa4388b0bca546a6ef9f765a1b.scn" ]
+source_file="res://Assets/Levels/LightDark/Graphics/SwitchRoom_FloorOne.tmx"
+dest_files=[ "res://.import/SwitchRoom_FloorOne.tmx-5b1a91f6810ffa102eac339cbfadd73d.scn" ]
 
 [params]
 

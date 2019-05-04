@@ -6,7 +6,7 @@
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Levels/LightDark/Graphics/Lighting/Lighter.tscn" type="PackedScene" id=5]
 
-[node name="LD_One_Dark" type="Node2D"]
+[node name="LD_One_Dark" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -17,6 +17,8 @@ script = ExtResource( 1 )
 position = Vector2( 6394.37, 238.237 )
 scale = Vector2( 1.48955, 2.47638 )
 level_scene = "res://Assets/Levels/LightDark/Levels/SwitchRoom.tscn"
+light = null
+dark = null
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="2"]
 
@@ -26,8 +28,8 @@ color = Color( 0.0315552, 0.0604445, 0.171875, 1 )
 
 [node name="Player" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 3106.89, 3518.65 )
-scale = Vector2( 1, 1 )
+position = Vector2( 6245.9, 245.888 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="PlayerLighter" parent="Player" index="9" instance=ExtResource( 5 )]
 

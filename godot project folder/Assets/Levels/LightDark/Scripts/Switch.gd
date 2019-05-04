@@ -4,14 +4,19 @@ export (NodePath) onready var int_part = get_node(int_part)
 export (NodePath) onready var popup = get_node(popup)
 
 func _ready():
-	if global.has_lighter:
-		int_part.hide()
+	# Called when the node is added to the scene for the first time.
+	# Initialization here
+	pass
 
 func _process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
-		if body.name == "Player" && Input.is_action_pressed("ui_select"):
-			global.has_lighter = true
+		if body.name == "Player" && Input.is_action_pressed("ui_select") && global.lights:
+			if global.lights == true:
+				global.lights = false
+			else:
+				global.lights = true
+			
 			popup.show()
 			int_part.hide()
 			
@@ -24,7 +29,6 @@ func _process(delta):
 			t.queue_free()
 			
 			popup.hide()
-
+				
 		else:
 			pass
-

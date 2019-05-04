@@ -69,6 +69,8 @@ var saved_millisec = 0
 
 #sets to true if player has a lighter in LightDark levels
 var has_lighter = false
+#sets to true if level has lights on in LightDark levels
+var lights = true
 
 
 func _ready():
