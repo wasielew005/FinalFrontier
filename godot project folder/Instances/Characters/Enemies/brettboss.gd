@@ -6,7 +6,7 @@ var motion = Vector2()
 
 var path = []
 var destination = Vector2()
-export (int) var targethealth = 2
+export (int) var targethealth = 20
 export (int) var points = 25000
 var w_t=false
 var init_path=false
