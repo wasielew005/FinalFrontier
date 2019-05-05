@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Levels/LightDark/Graphics/Floor One_Dark.tmx" type="PackedScene" id=2]
 [ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Levels/LightDark/Graphics/Lighting/Lighter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Levels/LightDark/Instances/Enemy_WithLight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Levels/LightDark/Graphics/Lighting/Lighter.tscn" type="PackedScene" id=6]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 5.21887, 0.0380859, 6310.82, 0.0380859, 6332.52, 455.865, 16.0719, 510.13 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 5.21887, 0.0380859, 6310.82, 0.0380859, 6332.52, 455.865, 16.0719, 510.13 ) ]
 
 [node name="LD_One_Dark" type="Node2D" index="0"]
 
@@ -26,12 +33,39 @@ position = Vector2( 3106.89, 3518.65 )
 rotation = 1.5708
 color = Color( 0.0315552, 0.0604445, 0.171875, 1 )
 
-[node name="Player" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Enemy_WithLight" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 5528.1, 224.611 )
+scale = Vector2( 1.5, 1.5 )
+destination_order = [ 0, 1 ]
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="4"]
+
+[node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+position = Vector2( -0.0447583, -0.252935 )
+scale = Vector2( 1.00858, 7.64116 )
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+[node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
+
+position = Vector2( 4054.33, 195.322 )
+scale = Vector2( -2.06815, -1.89882 )
+
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="1"]
+
+position = Vector2( 5524.36, 201.699 )
+scale = Vector2( -2.33553, -1.77198 )
+
+[node name="Player" parent="." index="5" instance=ExtResource( 5 )]
 
 position = Vector2( 6245.9, 245.888 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="PlayerLighter" parent="Player" index="9" instance=ExtResource( 5 )]
+[node name="PlayerLighter" parent="Player" index="9" instance=ExtResource( 6 )]
 
 lighter = NodePath(".")
 

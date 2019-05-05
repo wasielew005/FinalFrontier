@@ -121,13 +121,13 @@ popup = NodePath("../Player/CanvasLayer/PopupDialog")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction" index="0"]
 
-position = Vector2( 10.9713, -12.9287 )
+position = Vector2( 892.664, -976.696 )
 scale = Vector2( 2.62851, 2.52049 )
 shape = SubResource( 2 )
 
 [node name="Interaction -- Lighter" parent="Interaction" index="1" instance=ExtResource( 7 )]
 
-position = Vector2( 896.444, -975.958 )
+position = Vector2( 895.59, -976.878 )
 scale = Vector2( 1.83346, 1.97523 )
 _sections_unfolded = [ "Process Material", "Time", "Transform" ]
 

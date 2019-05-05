@@ -21,7 +21,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 10, 11.9357 )
 
-[node name="SwitchRoom" type="Node2D" index="0"]
+[node name="SwitchRoom" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -31,7 +31,7 @@ script = ExtResource( 1 )
 
 position = Vector2( 68.2777, 271.064 )
 scale = Vector2( 1.48955, 2.47638 )
-level_scene = "res://Assets/Levels/brettlevels/brettlevel2.tscn"
+level_scene = "res://Assets/Levels/LightDark/Levels/LD_One_Dark.tscn"
 light = "res://Assets/Levels/LightDark/Levels/LD_One_Light.tscn"
 dark = "res://Assets/Levels/LightDark/Levels/LD_One_Dark.tscn"
 
