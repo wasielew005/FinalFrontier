@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Game Effects/GUI/PauseScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/MainMenuButtonFont.tres" type="DynamicFont" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Assets/Graphics/buy menu/medpack_button.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Graphics/buy menu/unlimited_ammo_button.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Graphics/buy menu/invincibility_button.png" type="Texture" id=8]
+
+[sub_resource type="Theme" id=1]
+
 
 [node name="PauseScreen" type="Control" index="0"]
 
@@ -509,31 +512,29 @@ _sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
+anchor_right = 1.0
 anchor_bottom = 0.0
-margin_left = 1009.0
-margin_top = 742.0
-margin_right = 1266.0
-margin_bottom = 813.0
+margin_bottom = 81.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = SubResource( 1 )
 popup_exclusive = false
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Material", "Mouse", "Popup", "Visibility" ]
 
 [node name="Label" type="Label" parent="buypopup/boughtitempopup" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 51.0
-margin_top = 22.0
-margin_right = 214.0
-margin_bottom = 52.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -81.5
+margin_top = -15.0
+margin_right = 81.5
+margin_bottom = 15.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

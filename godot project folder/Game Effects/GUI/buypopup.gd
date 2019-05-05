@@ -4,7 +4,6 @@ func _ready():
 	
 func _on_close_pressed():
 	$buypopup.hide()
-	$boughtitempopup.hide()
 	
 func _bought_item():
 	$boughtitempopup.show()
@@ -39,6 +38,7 @@ func _on_ddbutton_pressed():
 		global.value -= 1500
 		abilities.double_damage()
 		$ddbutton.disabled = true
+		_bought_item()
 		var ddcd = Timer.new()
 		ddcd.set_wait_time(30)
 		ddcd.set_one_shot(true)
@@ -54,6 +54,7 @@ func _on_medbutton_pressed():
 		global.value -= 1000
 		abilities.medpack()
 		$medbutton.disabled = true
+		_bought_item()
 		var medcd = Timer.new()
 		medcd.set_wait_time(30)
 		medcd.set_one_shot(true)
@@ -68,6 +69,7 @@ func _on_unlimitedammonbutton_pressed():
 		global.value -= 2500
 		abilities.unlimited_ammo()
 		$unlimitedammonbutton.disabled = true
+		_bought_item()
 		var uacd = Timer.new()
 		uacd.set_wait_time(30)
 		uacd.set_one_shot(true)
@@ -82,6 +84,7 @@ func _on_invincbutton_pressed():
 		global.value -= 2500
 		abilities.invincibility()
 		$invincbutton.disabled = true
+		_bought_item()
 		var invcd = Timer.new()
 		invcd.set_wait_time(30)
 		invcd.set_one_shot(true)
