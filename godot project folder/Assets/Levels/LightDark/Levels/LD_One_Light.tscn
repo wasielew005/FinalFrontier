@@ -45,9 +45,9 @@ dark = null
 
 [node name="Player" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 3101.55, 3533.66 )
+editor/display_folded = true
+position = Vector2( 6085.3, 262.702 )
 scale = Vector2( 1.5, 1.5 )
-_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "collision" ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player" index="9"]
 
@@ -127,7 +127,7 @@ shape = SubResource( 2 )
 
 [node name="Interaction -- Lighter" parent="Interaction" index="1" instance=ExtResource( 7 )]
 
-position = Vector2( 1.255, -5.24762 )
+position = Vector2( 896.444, -975.958 )
 scale = Vector2( 1.83346, 1.97523 )
 _sections_unfolded = [ "Process Material", "Time", "Transform" ]
 

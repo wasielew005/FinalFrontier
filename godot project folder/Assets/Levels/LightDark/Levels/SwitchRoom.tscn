@@ -37,7 +37,7 @@ dark = "res://Assets/Levels/LightDark/Levels/LD_One_Dark.tscn"
 
 [node name="Player" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 149.815, 271.644 )
+position = Vector2( 200.053, 268.568 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player" index="9"]
@@ -50,6 +50,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="PopupDialog" type="PopupDialog" parent="Player/CanvasLayer" index="0"]
 
+visible = false
 self_modulate = Color( 1, 1, 1, 0.508274 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -108,8 +109,6 @@ int_part = NodePath("Particles2D")
 popup = NodePath("../Player/CanvasLayer/PopupDialog")
 
 [node name="Particles2D" parent="Area2D" index="0" instance=ExtResource( 7 )]
-
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
 
