@@ -3,7 +3,7 @@ extends KinematicBody2D
 var motion = Vector2()
 
 onready var player = get_parent().get_node("Player")
-onready var projectile_speed = get_parent().get_node("ranged_enemy").projectile_speed
+onready var projectile_speed = global.projectile_speed
 var next_destination 
 	
 

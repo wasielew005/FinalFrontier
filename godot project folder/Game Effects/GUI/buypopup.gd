@@ -4,6 +4,18 @@ func _ready():
 	
 func _on_close_pressed():
 	$buypopup.hide()
+	$boughtitempopup.hide()
+	
+func _bought_item():
+	$boughtitempopup.show()
+	var t = Timer.new()
+	t.set_wait_time(2)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	t.queue_free()
+	$boughtitempopup.hide()
 
 func _on_speedbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
@@ -12,6 +24,7 @@ func _on_speedbutton_pressed():
 		global.value -= 1000
 		abilities.triple_speed()
 		$speedbutton.disabled = true
+		_bought_item()
 		var speedcd = Timer.new()
 		speedcd.set_wait_time(10)
 		speedcd.set_one_shot(true)
