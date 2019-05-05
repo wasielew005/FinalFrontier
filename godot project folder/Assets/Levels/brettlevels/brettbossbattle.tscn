@@ -33,6 +33,7 @@ player = NodePath("Null")
 
 position = Vector2( 2084.97, 2798.11 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
+targethealth = 20
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="3"]
 
