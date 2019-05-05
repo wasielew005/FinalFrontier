@@ -82,7 +82,63 @@ visible = false
 position = Vector2( 803.404, 2319.45 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="ranged_enemy" parent="." index="6" groups=[
+[node name="melee_enemy2" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 851.237, 2558.62 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy3" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1118.1, 2974.01 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy4" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1014.88, 3442.27 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy5" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2449.87, 2860.72 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy6" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1682.02, 1556.64 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy7" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2497.7, 2467.98 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="melee_enemy8" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1906.08, 2790.23 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
+
+[node name="ranged_enemy" parent="." index="13" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -91,7 +147,70 @@ position = Vector2( 364.75, 1833.09 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="Player" parent="." index="7" instance=ExtResource( 7 )]
+[node name="ranged_enemy2" parent="." index="14" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 1054.55, 1825.54 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy3" parent="." index="15" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 326.987, 2414.64 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy4" parent="." index="16" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 321.952, 3250.46 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy5" parent="." index="17" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 1588.27, 2404.57 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy6" parent="." index="18" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 1663.8, 2193.1 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy7" parent="." index="19" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2585.21, 1762.6 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="ranged_enemy8" parent="." index="20" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2786.61, 2031.98 )
+_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+projectile_speed = 3
+
+[node name="Player" parent="." index="21" instance=ExtResource( 7 )]
 
 position = Vector2( 75.9946, 2058.94 )
 

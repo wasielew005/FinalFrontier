@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Levels/brettlevels/bossbattle.tmx" type="PackedScene" id=2]
-[ext_resource path="res://Instances/Characters/Enemies/brettsboss.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Characters/Enemies/brettsboss.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=5]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -14,20 +15,27 @@ outlines = [ PoolVector2Array( 2323.6, 1903.57, 2320.96, 1808.94, 2228.52, 1810.
 [node name="brettbossbattle" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="bossbattle" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( -1.26489, -266.793 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+position = Vector2( -4.10107, -266.571 )
 
-[node name="ranged_enemy" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Level Transition" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 0 )
+scale = Vector2( 2.62169, 1.96334 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+final_floor = true
+player = NodePath("Null")
+
+[node name="ranged_enemy" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 2084.97, 2798.11 )
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
-targethealth = 2
-level_scene = "res://Assets/Levels/kylerstestarea.tscn"
+targethealth = 20
 
-[node name="Navigation2D" type="Navigation2D" parent="." index="2"]
+[node name="Navigation2D" type="Navigation2D" parent="." index="3"]
 
 [node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
@@ -35,8 +43,8 @@ position = Vector2( -597.554, 1061.06 )
 navpoly = SubResource( 1 )
 enabled = true
 
-[node name="Player" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Player" parent="." index="4" instance=ExtResource( 5 )]
 
-position = Vector2( 2063.87, 3808.21 )
+position = Vector2( 2060.61, 3762.6 )
 
 
