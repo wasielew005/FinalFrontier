@@ -1,5 +1,5 @@
 extends Node
-
+var projectile_speed = 3
 #this script is used to assign vars that you don't want to be reset at scene change
 #this script is global because it is set that way in the project settings
 
