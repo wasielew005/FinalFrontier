@@ -6,9 +6,8 @@ var motion = Vector2()
 
 var path = []
 var destination = Vector2()
-export (int) var targethealth = 20
+export (int) var targethealth = 2
 export (int) var points = 25000
-export(String, FILE, "*.tscn") var level_scene
 var w_t=false
 var init_path=false
 var frame_count=0;
@@ -46,7 +45,10 @@ func enemy_hit():
 	if targethealth <= 0:
 		get_parent().get_node("Player/GUI/Score").adjust(points)
 		queue_free()
-		get_tree().change_scene(level_scene)
+		get_parent().get_node("Level Transition").set_position(Vector2(2058.620117,2453.052734))
+		
+		
+				#get_tree().change_scene(level_scene)
 		save.save_game()
 
 func _process(delta):
@@ -100,4 +102,3 @@ func update_path():
 
 		else:
 			path.remove(0)
-
