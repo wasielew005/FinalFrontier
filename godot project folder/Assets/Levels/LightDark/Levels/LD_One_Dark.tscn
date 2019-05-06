@@ -860,7 +860,7 @@ scale = Vector2( 1, 0.506544 )
 [node name="Player" parent="." index="72" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( 292.128, 249.249 )
+position = Vector2( 3118.12, 3472.08 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="PlayerLighter" parent="Player" index="9" instance=ExtResource( 9 )]
