@@ -27,7 +27,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="LD_One_Light" type="Node2D" index="0"]
+[node name="LD_One_Light" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -51,6 +51,7 @@ dark = null
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="3"]
 
+editor/display_folded = true
 visible = false
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
@@ -83,7 +84,7 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="LighterDialogue" type="PopupDialog" parent="Player/CanvasLayer" index="0"]
+[node name="LighterDialog" type="PopupDialog" parent="Player/CanvasLayer" index="0"]
 
 visible = false
 self_modulate = Color( 1, 1, 1, 0.44749 )
@@ -105,7 +106,7 @@ size_flags_vertical = 1
 popup_exclusive = false
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Label" type="Label" parent="Player/CanvasLayer/LighterDialogue" index="0"]
+[node name="Label" type="Label" parent="Player/CanvasLayer/LighterDialog" index="0"]
 
 modulate = Color( 1, 1, 1, 0.994471 )
 anchor_left = 0.0
@@ -138,7 +139,7 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="CodeDialogue" type="PopupDialog" parent="Player/CanvasLayer2" index="0"]
+[node name="CodeDialog" type="PopupDialog" parent="Player/CanvasLayer2" index="0"]
 
 visible = false
 self_modulate = Color( 1, 1, 1, 0.44749 )
@@ -160,7 +161,7 @@ size_flags_vertical = 1
 popup_exclusive = false
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Label" type="Label" parent="Player/CanvasLayer2/CodeDialogue" index="0"]
+[node name="Label" type="Label" parent="Player/CanvasLayer2/CodeDialog" index="0"]
 
 modulate = Color( 1, 1, 1, 0.994471 )
 anchor_left = 0.0
@@ -198,7 +199,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 6 )
 int_part = NodePath("Interaction -- Lighter")
-popup = NodePath("../Player/CanvasLayer/LighterDialogue")
+popup = NodePath("../Player/CanvasLayer/LighterDialog")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lighter" index="0"]
 
@@ -225,7 +226,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 6 )
 int_part = NodePath("Interaction -- Code")
-popup = NodePath("../Player/CanvasLayer2/CodeDialogue")
+popup = NodePath("../Player/CanvasLayer2/CodeDialog")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Code" index="0"]
 
