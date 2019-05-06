@@ -227,7 +227,6 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="buypopup" type="PopupMenu" parent="." index="2"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -531,7 +530,7 @@ theme = SubResource( 1 )
 popup_exclusive = false
 _sections_unfolded = [ "Material", "Mouse", "Popup", "Visibility" ]
 
-[node name="Label" type="Label" parent="buypopup/boughtitempopup" index="0"]
+[node name="popuptext" type="Label" parent="buypopup/boughtitempopup" index="0"]
 
 anchor_left = 0.5
 anchor_top = 0.5
