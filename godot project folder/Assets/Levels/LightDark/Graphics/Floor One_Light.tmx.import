@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/Floor One_Light.tmx-647aa17f83c408240c5432dd2bb54fa2.scn"
+
+[deps]
+
+source_file="res://Assets/Levels/LightDark/Graphics/Floor One_Light.tmx"
+dest_files=[ "res://.import/Floor One_Light.tmx-647aa17f83c408240c5432dd2bb54fa2.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

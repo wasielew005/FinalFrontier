@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/SwitchRoom_FloorOne.tmx-5b1a91f6810ffa102eac339cbfadd73d.scn"
+
+[deps]
+
+source_file="res://Assets/Levels/LightDark/Graphics/SwitchRoom_FloorOne.tmx"
+dest_files=[ "res://.import/SwitchRoom_FloorOne.tmx-5b1a91f6810ffa102eac339cbfadd73d.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

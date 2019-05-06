@@ -6,6 +6,9 @@ extends Area2D
 export(String, FILE, "*.tscn") var level_scene
 export(bool) var final_floor
 
+export (String, FILE, "*.tscn") var light
+export (String, FILE, "*.tscn") var dark
+
 export (NodePath) onready var player = get_node(player) if player else null
 
 #constantly checks if the player enters the collision area
@@ -14,15 +17,22 @@ func _physics_process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 			if body.name == "Player":
-				#if final_floor:
+				if final_floor:
 					#changes to next world in specified order
-					#global.current_level += 1
-					#get_tree().change_scene(global.level_order[global.current_level])
-					#save.save_game()
-			#else
-				#saves player info and switches scenes
-				get_tree().change_scene(level_scene)
-				save.save_game()
+					global.current_level += 1
+					#global.level_order = ["res://Assets/Levels/brettlevels/brettlevel1.tscn", "res://Assets/Levels/LightDark/Levels/LD_One_Light.tscn", 3, 4, 5, 6]
+					print(global.level_order[global.current_level])
+					get_tree().change_scene(global.level_order[global.current_level])
+					save.save_game()
+				else:
+					#saves player info and switches scenes
+					if global.lights == true && light != null:
+						get_tree().change_scene(light)
+					elif global.lights == false && dark != null:
+						get_tree().change_scene(dark)
+					else:
+						get_tree().change_scene(level_scene)
+					save.save_game()
 				
 
 # after boss level is complete, in script for boss level:
