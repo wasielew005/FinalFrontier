@@ -29,7 +29,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="LD_One_Light" type="Node2D"]
+[node name="LD_One_Light" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 

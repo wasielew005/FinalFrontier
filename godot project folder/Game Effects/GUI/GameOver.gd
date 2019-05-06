@@ -22,9 +22,12 @@ func _on_restart_pressed():
 	#get_tree().reload_current_scene()
 	##visible = not visible
 	#get_tree().change_scene("res://Game Effects/GUI/MainMenu.tscn")
+	global.playerHealth = global.maxHealth
+	global.player_state = "alive"
 	get_tree().paused = not get_tree().paused
 	visible = not visible
-	get_tree().change_scene("res://Game Effects/GUI/MainMenu.tscn")
+	get_tree().reload_current_scene()
+	#get_tree().change_scene("res://Game Effects/GUI/MainMenu.tscn")
 
 
 func _on_quit_pressed():
