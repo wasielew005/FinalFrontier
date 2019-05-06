@@ -12,7 +12,7 @@
 [sub_resource type="Theme" id=1]
 
 
-[node name="PauseScreen" type="Control" index="0"]
+[node name="PauseScreen" type="Control"]
 
 pause_mode = 2
 anchor_left = 0.0

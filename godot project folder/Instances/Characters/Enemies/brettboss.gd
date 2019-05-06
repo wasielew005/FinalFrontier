@@ -24,7 +24,7 @@ export (int) var destination_order= []
 export var reverseOrder= true
 export var fire_range = 300
 export var projectile_speed = 10
-export var fire_rate = 50
+export var fire_rate = 15
 
 
 

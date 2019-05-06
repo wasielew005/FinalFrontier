@@ -28,15 +28,15 @@ func _on_StartGameButton_pressed():
 		global.level_order = get_node("MarginContainer/HBoxContainer/Level Selection").get_final_level_order()
 	else:
 ######### DEFINE DEFAULT PATH ORDER [.tscn] HERE ##########
-		global.level_order = [1, 2, 3, 4, 5, 6]
+		global.level_order = ["res://Assets/Levels/brettlevels/brettlevel1.tscn", 2, 3, 4, 5, 6]
 	
 	global.current_level = 0
 	global.value = 0;
 	global.ammo_in_weapon = global.MAX_AMMO
 	global.playerHealth = global.maxHealth
 	
-	#get_tree().change_scene(global.level_order[global.current_level])
-	get_tree().change_scene("res://Assets/Levels/brettlevels/brettlevel1.tscn")
+	get_tree().change_scene(global.level_order[global.current_level])
+	#get_tree().change_scene("res://Assets/Levels/brettlevels/brettlevel1.tscn")
 	
 	save.save_game()
 	global.saved_elapsed = 0
