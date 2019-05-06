@@ -199,7 +199,7 @@ func get_final_level_order():
 			1:
 				finalList[x] = "res://Assets/Levels/brettlevels/brettlevel1.tscn";
 			2:
-				finalList[x] = "2";
+				finalList[x] = "res://Assets/Levels/LightDark/Levels/LD_One_Light.tscn";
 			3:
 				finalList[x] = "3"
 			4: 
