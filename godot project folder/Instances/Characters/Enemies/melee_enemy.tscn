@@ -9,7 +9,7 @@ custom_solver_bias = 0.0
 radius = 4.39604
 height = 20.0
 
-[node name="melee_enemy" type="KinematicBody2D" index="0"]
+[node name="melee_enemy" type="KinematicBody2D"]
 
 rotation = 1.5708
 input_pickable = false

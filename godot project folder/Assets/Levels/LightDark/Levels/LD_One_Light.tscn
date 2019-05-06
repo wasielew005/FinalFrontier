@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Levels/LightDark/Graphics/Floor One_Light.tmx" type="PackedScene" id=2]
@@ -8,7 +8,13 @@
 [ext_resource path="res://Assets/Levels/LightDark/Scripts/Interaction.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Levels/LightDark/Instances/Interaction.tscn" type="PackedScene" id=7]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( -5.33789, -30.1173, 6365.34, 13.2945, 6397.9, 3670.74, -5.33789, 3703.3 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -5.33789, -30.1173, 6365.34, 13.2945, 6397.9, 3670.74, -5.33789, 3703.3 ) ]
+
+[sub_resource type="DynamicFont" id=2]
 
 size = 60
 use_mipmaps = false
@@ -16,7 +22,7 @@ use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -43,10 +49,30 @@ level_scene = "res://Assets/Levels/LightDark/Levels/SwitchRoom.tscn"
 light = null
 dark = null
 
-[node name="Player" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Navigation2D" type="Navigation2D" parent="." index="3"]
 
-editor/display_folded = true
-position = Vector2( 6085.3, 262.702 )
+visible = false
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="0"]
+
+position = Vector2( 5582.65, 244.106 )
+scale = Vector2( 4.8619, 4.41989 )
+
+[node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="1"]
+
+position = Vector2( 4086.75, 183.753 )
+scale = Vector2( 4.8619, 4.41989 )
+
+[node name="Player" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 3101.13, 3506.01 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player" index="9"]
@@ -57,7 +83,7 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="PopupDialog" type="PopupDialog" parent="Player/CanvasLayer" index="0"]
+[node name="LighterDialogue" type="PopupDialog" parent="Player/CanvasLayer" index="0"]
 
 visible = false
 self_modulate = Color( 1, 1, 1, 0.44749 )
@@ -79,7 +105,7 @@ size_flags_vertical = 1
 popup_exclusive = false
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Label" type="Label" parent="Player/CanvasLayer/PopupDialog" index="0"]
+[node name="Label" type="Label" parent="Player/CanvasLayer/LighterDialogue" index="0"]
 
 modulate = Color( 1, 1, 1, 0.994471 )
 anchor_left = 0.0
@@ -96,7 +122,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "(It takes a little bit of effort, but a small flame comes out of the item.)"
 autowrap = true
 percent_visible = 1.0
@@ -104,9 +130,64 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Visibility", "custom_fonts" ]
 
-[node name="Interaction" type="Area2D" parent="." index="4"]
+[node name="CanvasLayer2" type="CanvasLayer" parent="Player" index="10"]
 
-position = Vector2( 3101.6, 2742.19 )
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="CodeDialogue" type="PopupDialog" parent="Player/CanvasLayer2" index="0"]
+
+visible = false
+self_modulate = Color( 1, 1, 1, 0.44749 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1101.0
+margin_top = 902.0
+margin_right = 1712.0
+margin_bottom = 1075.0
+rect_min_size = Vector2( 50, 100 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Label" type="Label" parent="Player/CanvasLayer2/CodeDialogue" index="0"]
+
+modulate = Color( 1, 1, 1, 0.994471 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 13.0
+margin_right = 592.0
+margin_bottom = 157.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "(It's a piece of paper with \"DON'T FORGET! CODE: 4827\" written on it.)"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="Lighter" type="Area2D" parent="." index="5"]
+
+position = Vector2( 5412.57, 344.807 )
 scale = Vector2( 2.72708, 2.53135 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -117,17 +198,44 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 6 )
 int_part = NodePath("Interaction -- Lighter")
-popup = NodePath("../Player/CanvasLayer/PopupDialog")
+popup = NodePath("../Player/CanvasLayer/LighterDialogue")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lighter" index="0"]
 
-position = Vector2( 892.664, -976.696 )
+position = Vector2( 1.93858, -2.37124 )
 scale = Vector2( 2.62851, 2.52049 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
-[node name="Interaction -- Lighter" parent="Interaction" index="1" instance=ExtResource( 7 )]
+[node name="Interaction -- Lighter" parent="Lighter" index="1" instance=ExtResource( 7 )]
 
-position = Vector2( 895.59, -976.878 )
+position = Vector2( 4.8647, -2.55335 )
+scale = Vector2( 1.83346, 1.97523 )
+_sections_unfolded = [ "Process Material", "Time", "Transform" ]
+
+[node name="Code" type="Area2D" parent="." index="6"]
+
+position = Vector2( 1291.29, 3460.26 )
+scale = Vector2( 2.72708, 2.53135 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+int_part = NodePath("Interaction -- Code")
+popup = NodePath("../Player/CanvasLayer2/CodeDialogue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Code" index="0"]
+
+position = Vector2( 1.93858, -2.37124 )
+scale = Vector2( 2.62851, 2.52049 )
+shape = SubResource( 3 )
+
+[node name="Interaction -- Code" parent="Code" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 4.8647, -2.55335 )
 scale = Vector2( 1.83346, 1.97523 )
 _sections_unfolded = [ "Process Material", "Time", "Transform" ]
 
