@@ -27,7 +27,7 @@ func _physics_process(delta):
 				
 				if global.lights == true && light != null:
 					get_tree().change_scene(light)
-				if global.lights == false && dark != null:
+				elif global.lights == false && dark != null:
 					get_tree().change_scene(dark)
 				else:
 					get_tree().change_scene(level_scene)

@@ -638,6 +638,7 @@ scale = Vector2( 2, 2 )
 [node name="Navigation2D" type="Navigation2D" parent="." index="70"]
 
 editor/display_folded = true
+visible = false
 
 [node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
@@ -857,7 +858,8 @@ scale = Vector2( 1, 0.506544 )
 
 [node name="Player" parent="." index="72" instance=ExtResource( 8 )]
 
-position = Vector2( 3105.8, 3504.25 )
+editor/display_folded = true
+position = Vector2( 3105.38, 3482.9 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="PlayerLighter" parent="Player" index="9" instance=ExtResource( 9 )]

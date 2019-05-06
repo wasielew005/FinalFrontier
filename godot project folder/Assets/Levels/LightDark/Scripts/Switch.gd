@@ -11,7 +11,7 @@ func _ready():
 func _process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
-		if body.name == "Player" && Input.is_action_pressed("ui_select") && global.lights:
+		if body.name == "Player" && Input.is_action_pressed("ui_select"):
 			if global.lights == true:
 				global.lights = false
 			else:

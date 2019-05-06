@@ -354,6 +354,9 @@ scale = Vector2( 2, 2 )
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="44"]
 
+editor/display_folded = true
+visible = false
+
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
 navpoly = SubResource( 1 )
@@ -539,7 +542,7 @@ scale = Vector2( 2.82548, 3.21962 )
 [node name="Player" parent="." index="45" instance=ExtResource( 6 )]
 
 editor/display_folded = true
-position = Vector2( 3101.13, 3506.01 )
+position = Vector2( 3101.33, 3490.56 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Player" index="9"]
