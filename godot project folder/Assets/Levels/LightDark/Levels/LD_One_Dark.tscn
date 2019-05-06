@@ -844,6 +844,7 @@ script = ExtResource( 6 )
 popupFailure = NodePath("../Player/CanvasLayer/PopupFailure")
 popupSuccess = NodePath("../Player/CanvasLayer2/PopupSuccess")
 door = NodePath("Door")
+doorCollision = NodePath("CollisionShape2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
@@ -859,7 +860,7 @@ scale = Vector2( 1, 0.506544 )
 [node name="Player" parent="." index="72" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( 3105.38, 3482.9 )
+position = Vector2( 292.128, 249.249 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="PlayerLighter" parent="Player" index="9" instance=ExtResource( 9 )]

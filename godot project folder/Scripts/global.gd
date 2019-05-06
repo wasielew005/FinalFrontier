@@ -72,7 +72,7 @@ var has_lighter = false
 #sets to true if level has lights on in LightDark levels
 var lights = true
 #sets to true if player has a code in LightDark levels
-var has_code = false
+var has_code = true
 
 
 func _ready():
