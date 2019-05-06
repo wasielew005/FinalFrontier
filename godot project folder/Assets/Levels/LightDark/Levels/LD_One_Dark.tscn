@@ -17,12 +17,12 @@ vertices = PoolVector2Array( 5.21887, 0.0380859, 6310.82, 0.0380859, 6332.52, 45
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 5.21887, 0.0380859, 6310.82, 0.0380859, 6332.52, 455.865, 16.0719, 510.13 ) ]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 
 size = 40
 use_mipmaps = false
@@ -183,6 +183,7 @@ destination_order = [ 34, 35 ]
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5352.11, 388.367 )
 scale = Vector2( 2, 2 )
 
@@ -190,6 +191,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5935.55, 119.528 )
 scale = Vector2( 2, 2 )
 
@@ -197,6 +199,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 2197.72, 1075.15 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -205,6 +208,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 2630.44, 1089.06 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -213,6 +217,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 2930.46, 1094.2 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -221,6 +226,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3029.78, 1095.91 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -229,6 +235,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3120.53, 1095.91 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -237,6 +244,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3209.58, 1094.2 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -245,6 +253,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3305.47, 1090.77 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -253,6 +262,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 2550.31, 1087.35 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -261,6 +271,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 2481.82, 1094.2 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -269,6 +280,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 2399.62, 1089.06 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -277,6 +289,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3404.62, 1086.2 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -285,6 +298,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 4049.72, 1221.08 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -293,6 +307,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3954.21, 1223.66 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -301,6 +316,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3845.81, 1223.66 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -309,6 +325,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3750.3, 1223.66 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -317,6 +334,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3647.06, 1226.25 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -325,6 +343,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3675.45, 1943.8 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -333,6 +352,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3770.95, 1943.8 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -341,6 +361,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3863.87, 1946.38 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -349,6 +370,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3961.96, 1948.96 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -357,6 +379,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 4067.78, 1946.38 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -365,6 +388,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 662.131, 2543.99 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -373,6 +397,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 808.229, 2543.99 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -381,6 +406,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 954.327, 2547.79 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -389,6 +415,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 1083.66, 2543.48 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -397,6 +424,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 756.026, 763.049 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -405,6 +433,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 449.947, 133.647 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -413,6 +442,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 135.247, 133.647 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -421,6 +451,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 1583.73, 741.494 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -429,6 +460,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 1450.09, 1754.57 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -437,6 +469,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 1652.71, 1646.8 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -445,6 +478,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 1816.52, 1638.18 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -453,6 +487,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5098.59, 2662.27 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -461,6 +496,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5095.73, 2782.39 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -469,6 +505,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5095.73, 2893.93 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -477,6 +514,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5092.88, 3014.05 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -485,6 +523,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 4297.8, 1844.32 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -493,6 +532,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5647.85, 3466.72 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -501,6 +541,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 6274.25, 3065.98 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -509,6 +550,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 6274.25, 1521.39 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -517,6 +559,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5307.45, 1062.94 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -525,6 +568,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 3650.44, 153.204 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -533,6 +577,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 111.245, 641.632 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -541,6 +586,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 671.802, 767.471 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -549,6 +595,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 823.624, 1483.09 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -557,6 +604,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 1214.98, 1268.78 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -565,6 +613,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5296.92, 1199.88 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -573,6 +622,7 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5303.94, 1326.29 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
@@ -581,13 +631,13 @@ scale = Vector2( 2, 2 )
 "enemy",
 ] instance=ExtResource( 5 )]
 
+visible = false
 position = Vector2( 5923.19, 399.25 )
 scale = Vector2( 2, 2 )
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="70"]
 
 editor/display_folded = true
-visible = false
 
 [node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
@@ -798,7 +848,7 @@ door = NodePath("Door")
 
 position = Vector2( 27.5548, 0.96727 )
 scale = Vector2( 3.75548, 3.17677 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Door" parent="Area2D" index="1" instance=ExtResource( 7 )]
 
@@ -807,7 +857,7 @@ scale = Vector2( 1, 0.506544 )
 
 [node name="Player" parent="." index="72" instance=ExtResource( 8 )]
 
-position = Vector2( 342.196, 264.951 )
+position = Vector2( 3105.8, 3504.25 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="PlayerLighter" parent="Player" index="9" instance=ExtResource( 9 )]
@@ -858,7 +908,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "(There's a pad with numbers on it next to the door. You enter in some numbers, but nothing happens.)"
 autowrap = true
 percent_visible = 1.0
@@ -910,7 +960,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "(There's a pad with numbers on it next to the door. You enter in the code you found earlier.)"
 autowrap = true
 percent_visible = 1.0
