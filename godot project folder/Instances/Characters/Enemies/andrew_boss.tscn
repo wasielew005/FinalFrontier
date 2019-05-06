@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Instances/Characters/Enemies/andrew_boss.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Levels/andrew_levels/assets/boss_base.png" type="Texture" id=2]
+[ext_resource path="res://Instances/Characters/Enemies/boss_gun.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Levels/andrew_levels/assets/boss_head.png" type="Texture" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 2.1016
+
+[node name="andrew_boss" type="KinematicBody2D" index="0"]
+
+position = Vector2( -0.00625992, -0.264686 )
+scale = Vector2( 1.66656, 1.60296 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+targethealth = 10
+points = 9000
+walk_slowdown = 0.5
+nav_stop_threshold = 500
+destination_order = null
+reverseOrder = true
+fire_range = 300
+projectile_speed = 15
+fire_rate = 100
+
+[node name="sprite_base" type="Sprite" parent="." index="0"]
+
+position = Vector2( -1.51992e-006, -0.111825 )
+rotation = 3.14159
+scale = Vector2( 1.2579, 1.27717 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="gun" type="Node2D" parent="." index="1"]
+
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sprite_head" type="Sprite" parent="." index="2"]
+
+position = Vector2( 5.01799, 0.691991 )
+rotation = 3.14159
+scale = Vector2( 1.3076, 1.34379 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="spawn" type="Position2D" parent="sprite_head" index="0"]
+
+position = Vector2( -18.3807, 0.427476 )
+
+[node name="body" type="CollisionShape2D" parent="." index="3"]
+
+position = Vector2( 5.40641, 0.414749 )
+scale = Vector2( 4.85179, 4.82304 )
+shape = SubResource( 1 )
+
+
