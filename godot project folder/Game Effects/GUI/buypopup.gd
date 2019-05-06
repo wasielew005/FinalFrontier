@@ -20,7 +20,7 @@ func _on_speedbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	#var pressed = true
 	if global.value > 1000:
-		global.value -= 1000
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-1000)
 		abilities.triple_speed()
 		$speedbutton.disabled = true
 		_bought_item()
@@ -35,7 +35,7 @@ func _on_speedbutton_pressed():
 func _on_ddbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	if global.value > 1500:
-		global.value -= 1500
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-1500)
 		abilities.double_damage()
 		$ddbutton.disabled = true
 		_bought_item()
@@ -51,7 +51,7 @@ func _on_ddbutton_pressed():
 func _on_medbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	if global.value > 1000:
-		global.value -= 1000
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-1000)
 		abilities.medpack()
 		$medbutton.disabled = true
 		_bought_item()
@@ -66,7 +66,7 @@ func _on_medbutton_pressed():
 func _on_unlimitedammonbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	if global.value > 2500:
-		global.value -= 2500
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-2500)
 		abilities.unlimited_ammo()
 		$unlimitedammonbutton.disabled = true
 		_bought_item()
@@ -81,7 +81,7 @@ func _on_unlimitedammonbutton_pressed():
 func _on_invincbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	if global.value > 2500:
-		global.value -= 2500
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-2500)
 		abilities.invincibility()
 		$invincbutton.disabled = true
 		_bought_item()
