@@ -197,9 +197,9 @@ func get_final_level_order():
 	for x in range(0, 6):
 		match selectedList[x]:
 			1:
-				finalList[x] = "res://Assets/Levels/kylerstestarea.tscn";
+				finalList[x] = "res://Assets/Levels/brettlevels/brettlevel1.tscn";
 			2:
-				finalList[x] = "res://Assets/Levels/Brett_LevelTest.tscn";
+				finalList[x] = "2";
 			3:
 				finalList[x] = "3"
 			4: 

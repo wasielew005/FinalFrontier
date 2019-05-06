@@ -55,7 +55,7 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="3"]
 
-position = Vector2( 1352.92, 2328.72 )
+position = Vector2( 1231.75, 2329.98 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="4"]
@@ -74,6 +74,118 @@ position = Vector2( 2098.95, 2984.34 )
 
 position = Vector2( 2222.03, 3241.68 )
 
+[node name="destination8" type="Position2D" parent="Navigation2D/destinations" index="8"]
+
+position = Vector2( 2251.3, 2172.48 )
+
+[node name="destination9" type="Position2D" parent="Navigation2D/destinations" index="9"]
+
+position = Vector2( 2000.95, 2031.23 )
+
+[node name="destination10" type="Position2D" parent="Navigation2D/destinations" index="10"]
+
+position = Vector2( 2038.72, 2284.37 )
+
+[node name="destination11" type="Position2D" parent="Navigation2D/destinations" index="11"]
+
+position = Vector2( 2455.97, 2517.9 )
+
+[node name="destination12" type="Position2D" parent="Navigation2D/destinations" index="12"]
+
+position = Vector2( 2624.25, 2418.31 )
+
+[node name="destination13" type="Position2D" parent="Navigation2D/destinations" index="13"]
+
+position = Vector2( 2845.14, 2443.55 )
+
+[node name="destination14" type="Position2D" parent="Navigation2D/destinations" index="14"]
+
+position = Vector2( 2886.79, 2578.61 )
+
+[node name="destination15" type="Position2D" parent="Navigation2D/destinations" index="15"]
+
+position = Vector2( 2665.9, 2677.06 )
+
+[node name="destination16" type="Position2D" parent="Navigation2D/destinations" index="16"]
+
+position = Vector2( 2566.72, 1900.67 )
+
+[node name="destination17" type="Position2D" parent="Navigation2D/destinations" index="17"]
+
+position = Vector2( 2961.89, 1899.12 )
+
+[node name="destination18" type="Position2D" parent="Navigation2D/destinations" index="18"]
+
+position = Vector2( 2732.54, 1906.87 )
+
+[node name="destination19" type="Position2D" parent="Navigation2D/destinations" index="19"]
+
+position = Vector2( 2726.34, 2058.74 )
+
+[node name="destination20" type="Position2D" parent="Navigation2D/destinations" index="20"]
+
+position = Vector2( 2732.54, 1908.42 )
+
+[node name="destination21" type="Position2D" parent="Navigation2D/destinations" index="21"]
+
+position = Vector2( 2785.55, 1671.12 )
+
+[node name="destination22" type="Position2D" parent="Navigation2D/destinations" index="22"]
+
+position = Vector2( 3089.75, 1426.25 )
+
+[node name="destination23" type="Position2D" parent="Navigation2D/destinations" index="23"]
+
+position = Vector2( 3205.98, 2190.41 )
+
+[node name="destination24" type="Position2D" parent="Navigation2D/destinations" index="24"]
+
+position = Vector2( 3200.38, 2735.86 )
+
+[node name="destination25" type="Position2D" parent="Navigation2D/destinations" index="25"]
+
+position = Vector2( 2968.57, 3051.8 )
+
+[node name="destination26" type="Position2D" parent="Navigation2D/destinations" index="26"]
+
+position = Vector2( 3193.51, 2909.28 )
+
+[node name="destination27" type="Position2D" parent="Navigation2D/destinations" index="27"]
+
+position = Vector2( 3286.24, 3221.8 )
+
+[node name="destination28" type="Position2D" parent="Navigation2D/destinations" index="28"]
+
+position = Vector2( 3779.05, 2416.47 )
+
+[node name="destination29" type="Position2D" parent="Navigation2D/destinations" index="29"]
+
+position = Vector2( 3988.53, 2584.75 )
+
+[node name="destination30" type="Position2D" parent="Navigation2D/destinations" index="30"]
+
+position = Vector2( 4010.85, 2258.5 )
+
+[node name="destination31" type="Position2D" parent="Navigation2D/destinations" index="31"]
+
+position = Vector2( 3808.24, 2584.75 )
+
+[node name="destination32" type="Position2D" parent="Navigation2D/destinations" index="32"]
+
+position = Vector2( 3709.5, 1029.91 )
+
+[node name="destination33" type="Position2D" parent="Navigation2D/destinations" index="33"]
+
+position = Vector2( 3387.64, 821.641 )
+
+[node name="destination34" type="Position2D" parent="Navigation2D/destinations" index="34"]
+
+position = Vector2( 3708.24, 877.179 )
+
+[node name="destination35" type="Position2D" parent="Navigation2D/destinations" index="35"]
+
+position = Vector2( 3396.47, 1034.96 )
+
 [node name="Enemy" parent="." index="3" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
@@ -83,7 +195,7 @@ self_modulate = Color( 0.917969, 0.90004, 0.90004, 1 )
 position = Vector2( 1264.2, 2289.99 )
 _sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
 targethealth = 3
-destination_order = 0
+destination_order = [ 0, 1, 2, 3 ]
 
 [node name="Enemy2" parent="." index="4" groups=[
 "enemy",
@@ -94,9 +206,97 @@ _sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
 targethealth = 3
 points = 500
 nav_stop_threshold = 7
-destination_order = 4
+destination_order = [ 4, 5, 6, 7 ]
 
-[node name="melee_enemy" parent="." index="5" groups=[
+[node name="Enemy3" parent="." index="5" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2250.9, 2170.94 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+points = 500
+nav_stop_threshold = 7
+destination_order = [ 8, 9, 10 ]
+
+[node name="Enemy4" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2470.69, 2571.02 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+points = 500
+nav_stop_threshold = 7
+destination_order = [ 11, 12, 13, 14, 15 ]
+
+[node name="Enemy5" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2568.32, 1896.91 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+points = 500
+nav_stop_threshold = 7
+destination_order = [ 16, 17, 18, 19, 20 ]
+
+[node name="Enemy6" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2785.42, 1672.23 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+points = 500
+nav_stop_threshold = 7
+destination_order = [ 21, 22 ]
+
+[node name="Enemy7" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 3209.87, 2386.33 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+points = 500
+nav_stop_threshold = 7
+destination_order = [ 23, 24 ]
+
+[node name="Enemy8" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 3192.75, 2919.06 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+points = 500
+nav_stop_threshold = 7
+destination_order = [ 25, 26, 27 ]
+
+[node name="Enemy9" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 3935.53, 2431.53 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+points = 500
+nav_stop_threshold = 7
+destination_order = [ 28, 29, 30, 31 ]
+
+[node name="Enemy10" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 3571.31, 980.38 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
+targethealth = 3
+points = 500
+nav_stop_threshold = 7
+destination_order = [ 32, 33, 34, 35 ]
+
+[node name="melee_enemy" parent="." index="13" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -104,7 +304,7 @@ visible = false
 position = Vector2( 1371.54, 2411.98 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="melee_enemy2" parent="." index="6" groups=[
+[node name="melee_enemy2" parent="." index="14" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -112,7 +312,7 @@ visible = false
 position = Vector2( 1864.48, 1700.74 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="melee_enemy3" parent="." index="7" groups=[
+[node name="melee_enemy3" parent="." index="15" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -120,7 +320,7 @@ visible = false
 position = Vector2( 2600.37, 1415.53 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="melee_enemy4" parent="." index="8" groups=[
+[node name="melee_enemy4" parent="." index="16" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -128,7 +328,7 @@ visible = false
 position = Vector2( 3790.47, 3003.51 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="melee_enemy5" parent="." index="9" groups=[
+[node name="melee_enemy5" parent="." index="17" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -136,7 +336,7 @@ visible = false
 position = Vector2( 2515.87, 3130.27 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="melee_enemy6" parent="." index="10" groups=[
+[node name="melee_enemy6" parent="." index="18" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -144,7 +344,7 @@ visible = false
 position = Vector2( 3896.1, 2014.11 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="melee_enemy7" parent="." index="11" groups=[
+[node name="melee_enemy7" parent="." index="19" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -152,7 +352,7 @@ visible = false
 position = Vector2( 3776.39, 901.468 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="melee_enemy8" parent="." index="12" groups=[
+[node name="melee_enemy8" parent="." index="20" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -160,7 +360,7 @@ visible = false
 position = Vector2( 3022.89, 971.888 )
 _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "collision" ]
 
-[node name="ranged_enemy" parent="." index="13" groups=[
+[node name="ranged_enemy" parent="." index="21" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -169,7 +369,7 @@ position = Vector2( 1841.54, 2297.59 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="ranged_enemy2" parent="." index="14" groups=[
+[node name="ranged_enemy2" parent="." index="22" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -178,7 +378,7 @@ position = Vector2( 2809.99, 2161.94 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="ranged_enemy3" parent="." index="15" groups=[
+[node name="ranged_enemy3" parent="." index="23" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -187,7 +387,7 @@ position = Vector2( 2804.84, 2835.04 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="ranged_enemy4" parent="." index="16" groups=[
+[node name="ranged_enemy4" parent="." index="24" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -196,7 +396,7 @@ position = Vector2( 1705.89, 2938.07 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="ranged_enemy5" parent="." index="17" groups=[
+[node name="ranged_enemy5" parent="." index="25" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -205,7 +405,7 @@ position = Vector2( 2596.62, 1890.17 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="ranged_enemy6" parent="." index="18" groups=[
+[node name="ranged_enemy6" parent="." index="26" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -214,7 +414,7 @@ position = Vector2( 3814.89, 2182.41 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="ranged_enemy7" parent="." index="19" groups=[
+[node name="ranged_enemy7" parent="." index="27" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -223,7 +423,7 @@ position = Vector2( 3814.89, 3097.87 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="ranged_enemy8" parent="." index="20" groups=[
+[node name="ranged_enemy8" parent="." index="28" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
@@ -232,7 +432,7 @@ position = Vector2( 2829.01, 1900.73 )
 _sections_unfolded = [ "Collision", "Visibility", "collision" ]
 projectile_speed = 3
 
-[node name="Player" parent="." index="21" instance=ExtResource( 7 )]
+[node name="Player" parent="." index="29" instance=ExtResource( 7 )]
 
 position = Vector2( 2102.33, 3366.54 )
 

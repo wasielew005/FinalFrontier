@@ -30,18 +30,22 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="ColorRect" type="ColorRect" parent="." index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -89.0
+margin_top = -102.5
+margin_right = 89.0
+margin_bottom = 102.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 1, 1, 1, 0.784549 )
-_sections_unfolded = [ "Grow Direction", "Material", "Pause", "Visibility" ]
+color = Color( 1, 1, 1, 0.585647 )
+_sections_unfolded = [ "Focus", "Material", "Mouse", "Pause", "Theme", "Visibility" ]
 
 [node name="MarginContainer" type="MarginContainer" parent="." index="1"]
 
@@ -79,7 +83,6 @@ use_top_left = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -224,6 +227,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="buypopup" type="PopupMenu" parent="." index="2"]
 
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -510,6 +514,7 @@ _sections_unfolded = [ "Anchor", "Margin", "custom_fonts" ]
 
 [node name="boughtitempopup" type="PopupDialog" parent="buypopup" index="12"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -525,7 +530,7 @@ theme = SubResource( 1 )
 popup_exclusive = false
 _sections_unfolded = [ "Material", "Mouse", "Popup", "Visibility" ]
 
-[node name="Label" type="Label" parent="buypopup/boughtitempopup" index="0"]
+[node name="popuptext" type="Label" parent="buypopup/boughtitempopup" index="0"]
 
 anchor_left = 0.5
 anchor_top = 0.5

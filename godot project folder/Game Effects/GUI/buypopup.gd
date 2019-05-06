@@ -20,9 +20,10 @@ func _on_speedbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	#var pressed = true
 	if global.value > 1000:
-		global.value -= 1000
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-1000)
 		abilities.triple_speed()
 		$speedbutton.disabled = true
+		$boughtitempopup/popuptext.set_text("Bought Triple Speed!")
 		_bought_item()
 		var speedcd = Timer.new()
 		speedcd.set_wait_time(10)
@@ -31,13 +32,17 @@ func _on_speedbutton_pressed():
 		speedcd.start()
 		yield(speedcd, "timeout")
 		$speedbutton.disabled = false
+	else:
+		$boughtitempopup/popuptext.set_text("Not Enough Points!")
+		_bought_item()
 
 func _on_ddbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	if global.value > 1500:
-		global.value -= 1500
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-1500)
 		abilities.double_damage()
 		$ddbutton.disabled = true
+		$boughtitempopup/popuptext.set_text("Bought Double Damage!")
 		_bought_item()
 		var ddcd = Timer.new()
 		ddcd.set_wait_time(30)
@@ -46,14 +51,18 @@ func _on_ddbutton_pressed():
 		ddcd.start()
 		yield(ddcd, "timeout")
 		$ddbutton.disabled = false
+	else:
+		$boughtitempopup/popuptext.set_text("Not Enough Points!")
+		_bought_item()
 		
 
 func _on_medbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	if global.value > 1000:
-		global.value -= 1000
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-1000)
 		abilities.medpack()
 		$medbutton.disabled = true
+		$boughtitempopup/popuptext.set_text("Bought Medpack!")
 		_bought_item()
 		var medcd = Timer.new()
 		medcd.set_wait_time(30)
@@ -62,13 +71,17 @@ func _on_medbutton_pressed():
 		medcd.start()
 		yield(medcd, "timeout")
 		$medbutton.disabled = false
+	else:
+		$boughtitempopup/popuptext.set_text("Not Enough Points!")
+		_bought_item()
 
 func _on_unlimitedammonbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	if global.value > 2500:
-		global.value -= 2500
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-2500)
 		abilities.unlimited_ammo()
 		$unlimitedammonbutton.disabled = true
+		$boughtitempopup/popuptext.set_text("Bought Unlimited Ammo!")
 		_bought_item()
 		var uacd = Timer.new()
 		uacd.set_wait_time(30)
@@ -77,13 +90,17 @@ func _on_unlimitedammonbutton_pressed():
 		uacd.start()
 		yield(uacd, "timeout")
 		$unlimitedammonbutton.disabled = false
-
+	else:
+		$boughtitempopup/popuptext.set_text("Not Enough Points!")
+		_bought_item()
+		
 func _on_invincbutton_pressed():
 	var player = get_parent().get_parent().get_parent()
 	if global.value > 2500:
-		global.value -= 2500
+		get_parent().get_parent().get_parent().get_node("GUI/Score").adjust(-2500)
 		abilities.invincibility()
 		$invincbutton.disabled = true
+		$boughtitempopup/popuptext.set_text("Bought Invincibility!")
 		_bought_item()
 		var invcd = Timer.new()
 		invcd.set_wait_time(30)
@@ -92,3 +109,6 @@ func _on_invincbutton_pressed():
 		invcd.start()
 		yield(invcd, "timeout")
 		$invincbutton.disabled = false
+	else:
+		$boughtitempopup/popuptext.set_text("Not Enough Points!")
+		_bought_item()
