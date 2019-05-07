@@ -29,7 +29,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="LD_One_Light" type="Node2D"]
+[node name="LD_One_Light" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -163,189 +163,243 @@ position = Vector2( 5663.73, 2050.27 )
 scale = Vector2( 2, 2 )
 destination_order = [ 31, 32, 33, 34, 33, 32 ]
 
-[node name="melee_enemy" parent="." index="17" instance=ExtResource( 5 )]
+[node name="melee_enemy" parent="." index="17" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 1662.1, 1626.09 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy2" parent="." index="18" instance=ExtResource( 5 )]
+[node name="melee_enemy2" parent="." index="18" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 979.283, 737.525 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy3" parent="." index="19" instance=ExtResource( 5 )]
+[node name="melee_enemy3" parent="." index="19" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 1169.57, 738.388 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy4" parent="." index="20" instance=ExtResource( 5 )]
+[node name="melee_enemy4" parent="." index="20" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 1344.06, 736.285 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy5" parent="." index="21" instance=ExtResource( 5 )]
+[node name="melee_enemy5" parent="." index="21" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 1566.91, 738.388 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy6" parent="." index="22" instance=ExtResource( 5 )]
+[node name="melee_enemy6" parent="." index="22" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 824.252, 1484.12 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy7" parent="." index="23" instance=ExtResource( 5 )]
+[node name="melee_enemy7" parent="." index="23" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 1214.67, 1263.22 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy8" parent="." index="24" instance=ExtResource( 5 )]
+[node name="melee_enemy8" parent="." index="24" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 663.4, 2541.34 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy9" parent="." index="25" instance=ExtResource( 5 )]
+[node name="melee_enemy9" parent="." index="25" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 838.964, 2544.85 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy10" parent="." index="26" instance=ExtResource( 5 )]
+[node name="melee_enemy10" parent="." index="26" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 996.973, 2551.87 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy11" parent="." index="27" instance=ExtResource( 5 )]
+[node name="melee_enemy11" parent="." index="27" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 2013.22, 3319.05 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy12" parent="." index="28" instance=ExtResource( 5 )]
+[node name="melee_enemy12" parent="." index="28" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 2010.7, 3423.53 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy13" parent="." index="29" instance=ExtResource( 5 )]
+[node name="melee_enemy13" parent="." index="29" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 2008.19, 3541.85 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy14" parent="." index="30" instance=ExtResource( 5 )]
+[node name="melee_enemy14" parent="." index="30" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 5097.15, 2651.93 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy15" parent="." index="31" instance=ExtResource( 5 )]
+[node name="melee_enemy15" parent="." index="31" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 5097.15, 2766.02 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy16" parent="." index="32" instance=ExtResource( 5 )]
+[node name="melee_enemy16" parent="." index="32" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 5097.15, 2873.76 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy17" parent="." index="33" instance=ExtResource( 5 )]
+[node name="melee_enemy17" parent="." index="33" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 5097.15, 2984.67 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy18" parent="." index="34" instance=ExtResource( 5 )]
+[node name="melee_enemy18" parent="." index="34" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 4303.24, 1788.52 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy19" parent="." index="35" instance=ExtResource( 5 )]
+[node name="melee_enemy19" parent="." index="35" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 3664.06, 134.541 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy20" parent="." index="36" instance=ExtResource( 5 )]
+[node name="melee_enemy20" parent="." index="36" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 3096.21, 232.624 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy21" parent="." index="37" instance=ExtResource( 5 )]
+[node name="melee_enemy21" parent="." index="37" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 2610.96, 227.462 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy22" parent="." index="38" instance=ExtResource( 5 )]
+[node name="melee_enemy22" parent="." index="38" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 2791.64, 717.875 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy23" parent="." index="39" instance=ExtResource( 5 )]
+[node name="melee_enemy23" parent="." index="39" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 5917.08, 127.275 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy24" parent="." index="40" instance=ExtResource( 5 )]
+[node name="melee_enemy24" parent="." index="40" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 5708.95, 123.07 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy25" parent="." index="41" instance=ExtResource( 5 )]
+[node name="melee_enemy25" parent="." index="41" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 5299.57, 1006.81 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy26" parent="." index="42" instance=ExtResource( 5 )]
+[node name="melee_enemy26" parent="." index="42" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 5301.9, 1113.96 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy27" parent="." index="43" instance=ExtResource( 5 )]
+[node name="melee_enemy27" parent="." index="43" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
 
 visible = false
 position = Vector2( 5294.91, 1221.12 )
@@ -683,7 +737,35 @@ position = Vector2( 4.8647, -2.55335 )
 scale = Vector2( 1.83346, 1.97523 )
 _sections_unfolded = [ "Process Material", "Time", "Transform" ]
 
-[node name="Code" type="Area2D" parent="." index="47"]
+[node name="Lighter2" type="Area2D" parent="." index="47"]
+
+editor/display_folded = true
+position = Vector2( 5678.84, 3373.08 )
+scale = Vector2( 2.72708, 2.53135 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+int_part = NodePath("Interaction -- Lighter")
+popup = NodePath("../Player/CanvasLayer/LighterDialog")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lighter2" index="0"]
+
+position = Vector2( 1.93858, -2.37124 )
+scale = Vector2( 2.62851, 2.52049 )
+shape = SubResource( 3 )
+
+[node name="Interaction -- Lighter" parent="Lighter2" index="1" instance=ExtResource( 9 )]
+
+position = Vector2( 4.8647, -2.55335 )
+scale = Vector2( 1.83346, 1.97523 )
+_sections_unfolded = [ "Process Material", "Time", "Transform" ]
+
+[node name="Code" type="Area2D" parent="." index="48"]
 
 editor/display_folded = true
 position = Vector2( 1291.29, 3460.26 )

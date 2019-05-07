@@ -53,13 +53,22 @@ level_scene = "res://Assets/Levels/LightDark/Levels/SwitchRoom.tscn"
 light = null
 dark = null
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="3"]
+[node name="Level Transition3" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 6369.7, 3392.31 )
+scale = Vector2( 1, 2.78347 )
+_sections_unfolded = [ "Transform" ]
+level_scene = "res://Assets/Levels/LightDark/Levels/SwitchRoom.tscn"
+light = null
+dark = null
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="4"]
 
 position = Vector2( 3106.89, 3518.65 )
 rotation = 1.5708
 color = Color( 0.0315552, 0.0604445, 0.171875, 1 )
 
-[node name="Enemy_WithLight" parent="." index="4" groups=[
+[node name="Enemy_WithLight" parent="." index="5" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -67,7 +76,7 @@ position = Vector2( 5528.1, 224.611 )
 scale = Vector2( 2, 2 )
 destination_order = [ 0, 1 ]
 
-[node name="Enemy_WithLight2" parent="." index="5" groups=[
+[node name="Enemy_WithLight2" parent="." index="6" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -75,7 +84,7 @@ position = Vector2( 2328.94, 424.06 )
 scale = Vector2( 2, 2 )
 destination_order = [ 2, 3 ]
 
-[node name="Enemy_WithLight3" parent="." index="6" groups=[
+[node name="Enemy_WithLight3" parent="." index="7" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -83,7 +92,7 @@ position = Vector2( 3531.67, 709.452 )
 scale = Vector2( 2, 2 )
 destination_order = [ 4, 5, 6, 7, 5 ]
 
-[node name="Enemy_WithLight4" parent="." index="7" groups=[
+[node name="Enemy_WithLight4" parent="." index="8" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -91,7 +100,7 @@ position = Vector2( 2395.47, 2201.84 )
 scale = Vector2( 2, 2 )
 destination_order = [ 8, 9, 10, 11 ]
 
-[node name="Enemy_WithLight5" parent="." index="8" groups=[
+[node name="Enemy_WithLight5" parent="." index="9" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -99,7 +108,7 @@ position = Vector2( 3824.51, 2746.99 )
 scale = Vector2( 2, 2 )
 destination_order = [ 10, 11, 8, 9 ]
 
-[node name="Enemy_WithLight6" parent="." index="9" groups=[
+[node name="Enemy_WithLight6" parent="." index="10" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -107,7 +116,7 @@ position = Vector2( 3336.58, 1612.24 )
 scale = Vector2( 2, 2 )
 destination_order = [ 13, 12, 13, 14 ]
 
-[node name="Enemy_WithLight7" parent="." index="10" groups=[
+[node name="Enemy_WithLight7" parent="." index="11" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -115,7 +124,7 @@ position = Vector2( 2706.29, 1728.96 )
 scale = Vector2( 2, 2 )
 destination_order = [ 15, 16, 15, 17 ]
 
-[node name="Enemy_WithLight8" parent="." index="11" groups=[
+[node name="Enemy_WithLight8" parent="." index="12" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -123,7 +132,7 @@ position = Vector2( 1838.67, 297.2 )
 scale = Vector2( 2, 2 )
 destination_order = [ 18, 19 ]
 
-[node name="Enemy_WithLight9" parent="." index="12" groups=[
+[node name="Enemy_WithLight9" parent="." index="13" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -131,7 +140,7 @@ position = Vector2( 1069.7, 799.318 )
 scale = Vector2( 2, 2 )
 destination_order = [ 20, 21, 22, 23, 22 ]
 
-[node name="Enemy_WithLight10" parent="." index="13" groups=[
+[node name="Enemy_WithLight10" parent="." index="14" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -139,7 +148,7 @@ position = Vector2( 630.054, 1091.12 )
 scale = Vector2( 2, 2 )
 destination_order = [ 24, 25 ]
 
-[node name="Enemy_WithLight11" parent="." index="14" groups=[
+[node name="Enemy_WithLight11" parent="." index="15" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -147,7 +156,7 @@ position = Vector2( 233.588, 742.418 )
 scale = Vector2( 2, 2 )
 destination_order = [ 26, 27 ]
 
-[node name="Enemy_WithLight12" parent="." index="15" groups=[
+[node name="Enemy_WithLight12" parent="." index="16" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -155,7 +164,7 @@ position = Vector2( 224.034, 2968.36 )
 scale = Vector2( 2, 2 )
 destination_order = [ 28, 29 ]
 
-[node name="Enemy_WithLight14" parent="." index="16" groups=[
+[node name="Enemy_WithLight14" parent="." index="17" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -163,7 +172,7 @@ position = Vector2( 5396.55, 1684.03 )
 scale = Vector2( 2, 2 )
 destination_order = [ 30, 31 ]
 
-[node name="Enemy_WithLight15" parent="." index="17" groups=[
+[node name="Enemy_WithLight15" parent="." index="18" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -171,7 +180,7 @@ position = Vector2( 5373.1, 2757.24 )
 scale = Vector2( 2, 2 )
 destination_order = [ 32, 33 ]
 
-[node name="Enemy_WithLight16" parent="." index="18" groups=[
+[node name="Enemy_WithLight16" parent="." index="19" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -179,7 +188,7 @@ position = Vector2( 1838.13, 3465.53 )
 scale = Vector2( 2, 2 )
 destination_order = [ 34, 35 ]
 
-[node name="melee_enemy" parent="." index="19" groups=[
+[node name="melee_enemy" parent="." index="20" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -187,7 +196,7 @@ visible = false
 position = Vector2( 5352.11, 388.367 )
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy2" parent="." index="20" groups=[
+[node name="melee_enemy2" parent="." index="21" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -195,7 +204,7 @@ visible = false
 position = Vector2( 5935.55, 119.528 )
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy4" parent="." index="21" groups=[
+[node name="melee_enemy4" parent="." index="22" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -204,7 +213,7 @@ position = Vector2( 2197.72, 1075.15 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy5" parent="." index="22" groups=[
+[node name="melee_enemy5" parent="." index="23" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -213,7 +222,7 @@ position = Vector2( 2630.44, 1089.06 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy6" parent="." index="23" groups=[
+[node name="melee_enemy6" parent="." index="24" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -222,7 +231,7 @@ position = Vector2( 2930.46, 1094.2 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy8" parent="." index="24" groups=[
+[node name="melee_enemy8" parent="." index="25" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -231,7 +240,7 @@ position = Vector2( 3029.78, 1095.91 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy9" parent="." index="25" groups=[
+[node name="melee_enemy9" parent="." index="26" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -240,7 +249,7 @@ position = Vector2( 3120.53, 1095.91 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy10" parent="." index="26" groups=[
+[node name="melee_enemy10" parent="." index="27" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -249,7 +258,7 @@ position = Vector2( 3209.58, 1094.2 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy11" parent="." index="27" groups=[
+[node name="melee_enemy11" parent="." index="28" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -258,7 +267,7 @@ position = Vector2( 3305.47, 1090.77 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy12" parent="." index="28" groups=[
+[node name="melee_enemy12" parent="." index="29" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -267,7 +276,7 @@ position = Vector2( 2550.31, 1087.35 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy13" parent="." index="29" groups=[
+[node name="melee_enemy13" parent="." index="30" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -276,7 +285,7 @@ position = Vector2( 2481.82, 1094.2 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy14" parent="." index="30" groups=[
+[node name="melee_enemy14" parent="." index="31" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -285,7 +294,7 @@ position = Vector2( 2399.62, 1089.06 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy7" parent="." index="31" groups=[
+[node name="melee_enemy7" parent="." index="32" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -294,7 +303,7 @@ position = Vector2( 3404.62, 1086.2 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy15" parent="." index="32" groups=[
+[node name="melee_enemy15" parent="." index="33" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -303,7 +312,7 @@ position = Vector2( 4049.72, 1221.08 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy16" parent="." index="33" groups=[
+[node name="melee_enemy16" parent="." index="34" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -312,7 +321,7 @@ position = Vector2( 3954.21, 1223.66 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy17" parent="." index="34" groups=[
+[node name="melee_enemy17" parent="." index="35" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -321,7 +330,7 @@ position = Vector2( 3845.81, 1223.66 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy18" parent="." index="35" groups=[
+[node name="melee_enemy18" parent="." index="36" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -330,7 +339,7 @@ position = Vector2( 3750.3, 1223.66 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy19" parent="." index="36" groups=[
+[node name="melee_enemy19" parent="." index="37" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -339,7 +348,7 @@ position = Vector2( 3647.06, 1226.25 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy20" parent="." index="37" groups=[
+[node name="melee_enemy20" parent="." index="38" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -348,7 +357,7 @@ position = Vector2( 3675.45, 1943.8 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy21" parent="." index="38" groups=[
+[node name="melee_enemy21" parent="." index="39" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -357,7 +366,7 @@ position = Vector2( 3770.95, 1943.8 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy22" parent="." index="39" groups=[
+[node name="melee_enemy22" parent="." index="40" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -366,7 +375,7 @@ position = Vector2( 3863.87, 1946.38 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy23" parent="." index="40" groups=[
+[node name="melee_enemy23" parent="." index="41" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -375,7 +384,7 @@ position = Vector2( 3961.96, 1948.96 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy24" parent="." index="41" groups=[
+[node name="melee_enemy24" parent="." index="42" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -384,7 +393,7 @@ position = Vector2( 4067.78, 1946.38 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy25" parent="." index="42" groups=[
+[node name="melee_enemy25" parent="." index="43" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -393,7 +402,7 @@ position = Vector2( 662.131, 2543.99 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy26" parent="." index="43" groups=[
+[node name="melee_enemy26" parent="." index="44" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -402,7 +411,7 @@ position = Vector2( 808.229, 2543.99 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy27" parent="." index="44" groups=[
+[node name="melee_enemy27" parent="." index="45" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -411,7 +420,7 @@ position = Vector2( 954.327, 2547.79 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy28" parent="." index="45" groups=[
+[node name="melee_enemy28" parent="." index="46" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -420,7 +429,7 @@ position = Vector2( 1083.66, 2543.48 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy29" parent="." index="46" groups=[
+[node name="melee_enemy29" parent="." index="47" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -429,7 +438,7 @@ position = Vector2( 756.026, 763.049 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy30" parent="." index="47" groups=[
+[node name="melee_enemy30" parent="." index="48" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -438,7 +447,7 @@ position = Vector2( 449.947, 133.647 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy31" parent="." index="48" groups=[
+[node name="melee_enemy31" parent="." index="49" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -447,7 +456,7 @@ position = Vector2( 135.247, 133.647 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy32" parent="." index="49" groups=[
+[node name="melee_enemy32" parent="." index="50" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -456,7 +465,7 @@ position = Vector2( 1583.73, 741.494 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy33" parent="." index="50" groups=[
+[node name="melee_enemy33" parent="." index="51" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -465,7 +474,7 @@ position = Vector2( 1450.09, 1754.57 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy34" parent="." index="51" groups=[
+[node name="melee_enemy34" parent="." index="52" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -474,7 +483,7 @@ position = Vector2( 1652.71, 1646.8 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy35" parent="." index="52" groups=[
+[node name="melee_enemy35" parent="." index="53" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -483,7 +492,7 @@ position = Vector2( 1816.52, 1638.18 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy36" parent="." index="53" groups=[
+[node name="melee_enemy36" parent="." index="54" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -492,7 +501,7 @@ position = Vector2( 5098.59, 2662.27 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy37" parent="." index="54" groups=[
+[node name="melee_enemy37" parent="." index="55" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -501,7 +510,7 @@ position = Vector2( 5095.73, 2782.39 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy38" parent="." index="55" groups=[
+[node name="melee_enemy38" parent="." index="56" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -510,7 +519,7 @@ position = Vector2( 5095.73, 2893.93 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy39" parent="." index="56" groups=[
+[node name="melee_enemy39" parent="." index="57" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -519,7 +528,7 @@ position = Vector2( 5092.88, 3014.05 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy40" parent="." index="57" groups=[
+[node name="melee_enemy40" parent="." index="58" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -528,7 +537,7 @@ position = Vector2( 4297.8, 1844.32 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy41" parent="." index="58" groups=[
+[node name="melee_enemy41" parent="." index="59" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -537,7 +546,7 @@ position = Vector2( 5647.85, 3466.72 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy42" parent="." index="59" groups=[
+[node name="melee_enemy42" parent="." index="60" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -546,7 +555,7 @@ position = Vector2( 6274.25, 3065.98 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy43" parent="." index="60" groups=[
+[node name="melee_enemy43" parent="." index="61" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -555,7 +564,7 @@ position = Vector2( 6274.25, 1521.39 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy44" parent="." index="61" groups=[
+[node name="melee_enemy44" parent="." index="62" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -564,7 +573,7 @@ position = Vector2( 5307.45, 1062.94 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy47" parent="." index="62" groups=[
+[node name="melee_enemy47" parent="." index="63" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -573,7 +582,7 @@ position = Vector2( 3650.44, 153.204 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy48" parent="." index="63" groups=[
+[node name="melee_enemy48" parent="." index="64" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -582,7 +591,7 @@ position = Vector2( 111.245, 641.632 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy49" parent="." index="64" groups=[
+[node name="melee_enemy49" parent="." index="65" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -591,7 +600,7 @@ position = Vector2( 671.802, 767.471 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy50" parent="." index="65" groups=[
+[node name="melee_enemy50" parent="." index="66" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -600,7 +609,7 @@ position = Vector2( 823.624, 1483.09 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy51" parent="." index="66" groups=[
+[node name="melee_enemy51" parent="." index="67" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -609,7 +618,7 @@ position = Vector2( 1214.98, 1268.78 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy45" parent="." index="67" groups=[
+[node name="melee_enemy45" parent="." index="68" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -618,7 +627,7 @@ position = Vector2( 5296.92, 1199.88 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy46" parent="." index="68" groups=[
+[node name="melee_enemy46" parent="." index="69" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -627,7 +636,7 @@ position = Vector2( 5303.94, 1326.29 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
-[node name="melee_enemy3" parent="." index="69" groups=[
+[node name="melee_enemy3" parent="." index="70" groups=[
 "enemy",
 ] instance=ExtResource( 5 )]
 
@@ -635,7 +644,7 @@ visible = false
 position = Vector2( 5923.19, 399.25 )
 scale = Vector2( 2, 2 )
 
-[node name="Navigation2D" type="Navigation2D" parent="." index="70"]
+[node name="Navigation2D" type="Navigation2D" parent="." index="71"]
 
 editor/display_folded = true
 visible = false
@@ -829,8 +838,9 @@ scale = Vector2( -2.15119, -2.24756 )
 position = Vector2( 469.491, 3466.22 )
 scale = Vector2( -2.15119, -2.24756 )
 
-[node name="Area2D" type="Area2D" parent="." index="71"]
+[node name="Area2D" type="Area2D" parent="." index="72"]
 
+editor/display_folded = true
 position = Vector2( 47.9466, 253.523 )
 scale = Vector2( 1, 2.87574 )
 input_pickable = true
@@ -857,7 +867,7 @@ shape = SubResource( 2 )
 position = Vector2( -80.4207, -31.5559 )
 scale = Vector2( 1, 0.506544 )
 
-[node name="Player" parent="." index="72" instance=ExtResource( 8 )]
+[node name="Player" parent="." index="73" instance=ExtResource( 8 )]
 
 editor/display_folded = true
 position = Vector2( 3118.12, 3472.08 )
