@@ -9,7 +9,7 @@ custom_solver_bias = 0.0
 radius = 4.39604
 height = 20.0
 
-[node name="melee_enemy" type="KinematicBody2D"]
+[node name="melee_enemy" type="KinematicBody2D" index="0"]
 
 rotation = 1.5708
 input_pickable = false
@@ -36,12 +36,5 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( -0.299931, 0.242586 )
 scale = Vector2( 3.24138, 1.65702 )
 shape = SubResource( 1 )
-
-[node name="Timer" type="Timer" parent="." index="2"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
 
 

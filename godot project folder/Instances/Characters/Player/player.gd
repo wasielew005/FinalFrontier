@@ -36,6 +36,7 @@ signal hit_htarget
 signal hit_enemy
 
 
+
 func _ready():
 	set_process_input(true)
 	#loads the sound for the gun to be used when the player clicks the shoot button
@@ -214,6 +215,7 @@ func save():
 #tells the game to constantly check for user input
 func _physics_process(delta):
 	$GUI/Health/currenthealth.update()
+	
 	if global.playerHealth <= 0:
 		death()
 	get_input()

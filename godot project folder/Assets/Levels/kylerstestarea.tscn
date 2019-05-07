@@ -52,6 +52,8 @@ targethealth = 15
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="5"]
 
+editor/display_folded = true
+
 [node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
 navpoly = SubResource( 1 )

@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Instances/Characters/Player/player.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sheriff_twohands.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Sheriff_Idle_Upscaled.png" type="Texture" id=3]
-[ext_resource path="res://Assets/SFX/Gun+Shot2.wav" type="AudioStream" id=4]
-[ext_resource path="res://Instances/GUI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Game Effects/GUI/PauseScreen.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Game Effects/GUI/GameOver.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Sheriff_Rifle_Damage.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sheriff_Revolver_Damage.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sheriff_twohands.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sheriff_Idle_Upscaled.png" type="Texture" id=5]
+[ext_resource path="res://Assets/SFX/Gun+Shot2.wav" type="AudioStream" id=6]
+[ext_resource path="res://Instances/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game Effects/GUI/PauseScreen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Game Effects/GUI/GameOver.tscn" type="PackedScene" id=9]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -65,21 +67,37 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Drag Margin", "Editor" ]
 
-[node name="playerrevolver" type="Sprite" parent="." index="2"]
+[node name="player_rifle_damaged" type="Sprite" parent="." index="2"]
 
+visible = false
 rotation = 1.5708
 scale = Vector2( 0.067172, 0.066204 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Transform" ]
 
-[node name="playerrifle" type="Sprite" parent="." index="3"]
+[node name="player_revolver_damaged" type="Sprite" parent="." index="3"]
 
+visible = false
 rotation = 1.5708
 scale = Vector2( 0.067172, 0.066204 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="playerrevolver" type="Sprite" parent="." index="4"]
+
+rotation = 1.5708
+scale = Vector2( 0.067172, 0.066204 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="playerrifle" type="Sprite" parent="." index="5"]
+
+rotation = 1.5708
+scale = Vector2( 0.067172, 0.066204 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="basicshootcast" type="RayCast2D" parent="." index="4"]
+[node name="basicshootcast" type="RayCast2D" parent="." index="6"]
 
 position = Vector2( 32, 0 )
 rotation = -1.5708
@@ -89,9 +107,9 @@ cast_to = Vector2( 0, 500 )
 collision_mask = 3
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="revolvershot" type="AudioStreamPlayer2D" parent="." index="5"]
+[node name="revolvershot" type="AudioStreamPlayer2D" parent="." index="7"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 6 )
 volume_db = 1.0
 pitch_scale = 1.0
 autoplay = false
@@ -100,9 +118,9 @@ attenuation = 1.0
 bus = "Sound Effects"
 area_mask = 1
 
-[node name="GUI" parent="." index="6" instance=ExtResource( 5 )]
+[node name="GUI" parent="." index="8" instance=ExtResource( 7 )]
 
-[node name="pausemenu" type="CanvasLayer" parent="." index="7"]
+[node name="pausemenu" type="CanvasLayer" parent="." index="9"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -110,7 +128,7 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="PauseScreen" parent="pausemenu" index="0" instance=ExtResource( 6 )]
+[node name="PauseScreen" parent="pausemenu" index="0" instance=ExtResource( 8 )]
 
 visible = false
 margin_left = 0.00435901
@@ -118,7 +136,7 @@ margin_top = 0.568221
 margin_right = 40.0044
 margin_bottom = 40.5682
 
-[node name="Game Over screen" type="CanvasLayer" parent="." index="8"]
+[node name="Game Over screen" type="CanvasLayer" parent="." index="10"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -126,7 +144,7 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="Control" parent="Game Over screen" index="0" instance=ExtResource( 7 )]
+[node name="Control" parent="Game Over screen" index="0" instance=ExtResource( 9 )]
 
 visible = false
 
