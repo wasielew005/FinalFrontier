@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/Levels/kylerlevelthree.tmx" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Levels/Kyler_Levels/kylerlevelthree.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
 
@@ -10,6 +10,6 @@ script = ExtResource( 2 )
 
 [node name="Player" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 2523.78, 4722.66 )
+position = Vector2( 2525.68, 4762.66 )
 
 
