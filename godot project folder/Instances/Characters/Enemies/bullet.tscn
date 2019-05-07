@@ -8,8 +8,9 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="bullet" type="KinematicBody2D"]
+[node name="bullet" type="KinematicBody2D" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 2
 collision_mask = 1
@@ -27,5 +28,12 @@ _sections_unfolded = [ "Offset" ]
 position = Vector2( -0.67469, 0.953503 )
 scale = Vector2( 0.326795, 0.333581 )
 shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
 
 

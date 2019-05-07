@@ -17,12 +17,15 @@ func _ready():
     
 
 func _process(delta):
-	
 	var collision_info = move_and_collide(motion)
 	if collision_info:
 		if collision_info.collider == player:
+			#print(global.playerHealth)
 			global.playerHealth -= 1
-			print(global.playerHealth)
+
 		queue_free()
+			
+		
+		
 	
      

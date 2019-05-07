@@ -28,7 +28,6 @@ export var reverseOrder= true
 
 onready var navigation = get_parent().get_node("Navigation2D");
 onready var available_destinations = get_parent().get_node("Navigation2D/destinations");
-onready var timer= get_node("Timer");
 onready var player= get_parent().get_node("Player")
 
 
@@ -71,8 +70,42 @@ func navigate(delta):
 	move(delta)
 	if collision_info && collision_info.collider && collision_info.collider == player:
 		global.playerHealth -= 1
+		
 		motion = motion.bounce(collision_info.normal)
 		move_and_collide(motion * .3)
+		
+		if get_parent().get_node("Player/playerrifle").visible==true:
+			get_parent().get_node("Player/playerrifle").visible = false
+			get_parent().get_node("Player/player_rifle_damaged").visible=true
+			
+			var t = Timer.new()
+			t.set_wait_time(0.05)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			yield(t, "timeout")
+			t.queue_free()
+			
+			get_parent().get_node("Player/playerrifle").visible = true
+			get_parent().get_node("Player/player_rifle_damaged").visible=false
+			
+		
+		elif get_parent().get_node("Player/playerrevolver").visible==true:
+			get_parent().get_node("Player/playerrevolver").visible = false
+			get_parent().get_node("Player/player_revolver_damaged").visible=true
+			
+			var t = Timer.new()
+			t.set_wait_time(0.05)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			yield(t, "timeout")
+			t.queue_free()
+			
+			get_parent().get_node("Player/player_revolver_damaged").visible=false
+			get_parent().get_node("Player/playerrevolver").visible = true
+		
+		
 		
 		
 	
