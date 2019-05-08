@@ -27,8 +27,6 @@ position = Vector2( 37.9478, -645.111 )
 position = Vector2( 4087.07, 394.411 )
 scale = Vector2( 1.48955, 2.47638 )
 level_scene = "res://Assets/Levels/brettlevels/brettlevel2.tscn"
-light = null
-dark = null
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="2"]
 

@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/kylerbossroom.tmx-a2b04982a7f43ff76cb04f4c98d7ca6e.scn"
+
+[deps]
+
+source_file="res://Assets/Levels/Kyler_Levels/kylerbossroom.tmx"
+dest_files=[ "res://.import/kylerbossroom.tmx-a2b04982a7f43ff76cb04f4c98d7ca6e.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

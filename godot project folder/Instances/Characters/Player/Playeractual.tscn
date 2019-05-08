@@ -95,7 +95,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 rotation = 1.5708
 scale = Vector2( 0.067172, 0.066204 )
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="basicshootcast" type="RayCast2D" parent="." index="6"]
 
