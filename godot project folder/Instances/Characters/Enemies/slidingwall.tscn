@@ -8,9 +8,9 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 6.1579 )
 
-[node name="slidingwall" type="KinematicBody2D"]
+[node name="slidingwall" type="KinematicBody2D" index="0"]
 
-position = Vector2( -1.23625, -11.7911 )
+position = Vector2( -8.0856, -11.7911 )
 scale = Vector2( 10.66, 2.14048 )
 input_pickable = false
 collision_layer = 3
