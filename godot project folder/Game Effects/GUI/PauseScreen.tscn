@@ -227,7 +227,6 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="buypopup" type="PopupMenu" parent="." index="2"]
 
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -387,7 +386,8 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
 text = "Multiples the speed of the 
-player by 3 for 5 seconds"
+player by 3 for 5 seconds. 
+(1,000 Points)"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -410,7 +410,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
-text = "Restores health to full"
+text = "Restores health to full
+(1,000 Points)"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -433,7 +434,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
-text = "Double damage for 5 seconds"
+text = "Double damage for 5 seconds
+(1,500 Points)"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -456,7 +458,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
-text = "Character invincible for 5 seconds"
+text = "Character invincible for 5 seconds
+(2,500 Points)"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -479,7 +482,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 2 )
-text = "unlimited ammo for 5 seconds"
+text = "unlimited ammo for 5 seconds
+(2,500 Points)"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
