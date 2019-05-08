@@ -9,7 +9,7 @@ var destination = Vector2()
 export (int) var targethealth = 10
 export (int) var points = 9000
 var i=0
-var test_dest= [0,1,2]
+var test_dest= [0,1]
 var w_t=false
 var target
 var cone_exception=false
@@ -28,8 +28,7 @@ export var reverseOrder= true
 
 onready var navigation = get_parent().get_node("Navigation2D");
 onready var available_destinations = get_parent().get_node("Navigation2D/destinations");
-onready var timer= get_node("Timer");
-onready var player= get_parent().get_node("Player")
+
 
 
 
@@ -90,10 +89,10 @@ func move(delta):
 		
 
 func make_path():
-	var next_destination = possible_destinations[destination_order[i]]
+	var next_destination = possible_destinations[test_dest[i]]
 	##look_at(next_destination.global_position)
 	print(i)
-	if i < destination_order.size()-1: 
+	if i < test_dest.size()-1: 
 		i+=1
 	else: 
 		i=0
