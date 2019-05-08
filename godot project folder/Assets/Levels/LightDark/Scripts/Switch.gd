@@ -29,6 +29,6 @@ func _process(delta):
 			t.queue_free()
 			
 			popup.hide()
-				
+			
 		else:
 			pass

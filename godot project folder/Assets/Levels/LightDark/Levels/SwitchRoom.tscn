@@ -31,7 +31,7 @@ script = ExtResource( 1 )
 
 position = Vector2( 68.2777, 271.064 )
 scale = Vector2( 1.48955, 2.47638 )
-level_scene = "res://Assets/Levels/LightDark/Levels/LD_One_Dark.tscn"
+level_scene = "res://Assets/Levels/kyler_levels/kylerlevelone.tscn"
 light = "res://Assets/Levels/LightDark/Levels/LD_One_Light.tscn"
 dark = "res://Assets/Levels/LightDark/Levels/LD_One_Dark.tscn"
 
