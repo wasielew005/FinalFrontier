@@ -10,7 +10,7 @@
 custom_solver_bias = 0.0
 radius = 2.1016
 
-[node name="andrew_boss" type="KinematicBody2D" index="0"]
+[node name="andrew_boss" type="KinematicBody2D"]
 
 position = Vector2( -0.00625992, -0.264686 )
 scale = Vector2( 1.66656, 1.60296 )
@@ -51,18 +51,17 @@ __meta__ = {
 [node name="sprite_head" type="Sprite" parent="." index="2"]
 
 position = Vector2( 5.01799, 0.691991 )
-rotation = 3.14159
 scale = Vector2( 1.3076, 1.34379 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="spawn" type="Position2D" parent="sprite_head" index="0"]
 
-position = Vector2( -18.3807, 0.427476 )
+position = Vector2( 21.2679, -0.427478 )
 
 [node name="body" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( 5.40641, 0.414749 )
+position = Vector2( 6.05101, 0.223269 )
 scale = Vector2( 4.85179, 4.82304 )
 shape = SubResource( 1 )
 
