@@ -25,7 +25,7 @@ outlines = [ PoolVector2Array( 2386.79, 2146.86, 2089.5, 2148.53, 2096.18, 2051.
 custom_solver_bias = 0.0
 extents = Vector2( 25.3464, 1.42969 )
 
-[node name="kylerbossroom" index="0" instance=ExtResource( 1 )]
+[node name="kylerbossroom" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
@@ -519,6 +519,7 @@ fire_rate = 1000
 
 position = Vector2( 2422.27, 1070.5 )
 scale = Vector2( 2.33991, 0.752089 )
+final_floor = true
 
 [connection signal="body_entered" from="bossdetection" to="bossdetection" method="_on_Area2D_body_entered"]
 
