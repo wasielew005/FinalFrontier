@@ -1,0 +1,179 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Levels/LoganLevels/LoganLevel1.tmx" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Characters/Enemies/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Characters/Enemies/melee_enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=6]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 2507.04, 1260.01, 2503.34, 1010.18, 3343.52, 1010.18, 3347.22, 1998.41, 2651.39, 2000.26, 1949.15, 1996.68, 1248.23, 1999.69, 1250.47, 1000.92, 2048.09, 1000.92, 2049.94, 1102.71, 2051.79, 1260.01, 2649.54, 2052.07, 3345.37, 2044.67, 3349.81, 2699.38, 2498.01, 2701.05, 2496.34, 2400.42, 2099.88, 2650.86, 2099.88, 2696.08, 1248.23, 2699.1, 1248.23, 2047.92, 1949.15, 2049.43, 2092.16, 2397.07 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8, 9, 10 ), PoolIntArray( 11, 12, 13, 14, 15 ), PoolIntArray( 16, 17, 18, 19, 20, 21 ), PoolIntArray( 5, 10, 0, 4, 11, 15, 21, 20 ) ]
+outlines = [ PoolVector2Array( 2099.88, 2650.86, 2099.88, 2696.08, 1248.23, 2699.1, 1248.23, 2047.92, 1949.15, 2049.43, 1949.15, 1996.68, 1248.23, 1999.69, 1250.47, 1000.92, 2048.09, 1000.92, 2049.94, 1102.71, 2051.79, 1260.01, 2507.04, 1260.01, 2503.34, 1010.18, 3343.52, 1010.18, 3347.22, 1998.41, 2651.39, 2000.26, 2649.54, 2052.07, 3345.37, 2044.67, 3349.81, 2699.38, 2498.01, 2701.05, 2496.34, 2400.42, 2092.16, 2397.07 ) ]
+
+[node name="LoganLevel1" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 2297.19, 2670.07 )
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="3"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+navpoly = SubResource( 1 )
+enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+[node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
+
+position = Vector2( 2958.57, 2157.87 )
+
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="1"]
+
+position = Vector2( 1728.79, 2153.78 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination2" type="Position2D" parent="Navigation2D/destinations" index="2"]
+
+position = Vector2( 1394, 1126.13 )
+
+[node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="3"]
+
+position = Vector2( 1893.86, 1126.86 )
+
+[node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="4"]
+
+position = Vector2( 2034.04, 1383.11 )
+
+[node name="destination5" type="Position2D" parent="Navigation2D/destinations" index="5"]
+
+position = Vector2( 2038.57, 1850.38 )
+
+[node name="destination6" type="Position2D" parent="Navigation2D/destinations" index="6"]
+
+position = Vector2( 2575.14, 1374.07 )
+
+[node name="destination7" type="Position2D" parent="Navigation2D/destinations" index="7"]
+
+position = Vector2( 2605.33, 1865.46 )
+
+[node name="destination8" type="Position2D" parent="Navigation2D/destinations" index="8"]
+
+position = Vector2( 2674.66, 1141.94 )
+
+[node name="destination9" type="Position2D" parent="Navigation2D/destinations" index="9"]
+
+position = Vector2( 3164.55, 1143.44 )
+
+[node name="Enemy" parent="." index="4" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1605.64, 1132.82 )
+destination_order = [ 2, 3 ]
+
+[node name="Enemy2" parent="." index="5" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2032.22, 1503.63 )
+destination_order = [ 4, 5 ]
+
+[node name="Enemy3" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2583.91, 1508.15 )
+destination_order = [ 6, 7 ]
+
+[node name="Enemy4" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2775.34, 1146.39 )
+destination_order = [ 8, 9 ]
+
+[node name="Enemy5" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1727.92, 2150.31 )
+destination_order = [ 0, 1 ]
+
+[node name="melee_enemy" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1347.84, 1132.38 )
+
+[node name="melee_enemy6" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1873.41, 1911.49 )
+
+[node name="melee_enemy7" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2761.71, 1930 )
+
+[node name="melee_enemy8" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3135.53, 1154.59 )
+
+[node name="melee_enemy2" parent="." index="13" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1565.2, 2149.45 )
+
+[node name="melee_enemy3" parent="." index="14" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1682.08, 2612.88 )
+
+[node name="melee_enemy4" parent="." index="15" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2965.72, 2594.42 )
+
+[node name="melee_enemy5" parent="." index="16" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3250.74, 2163.81 )
+
+[node name="Level Transition" parent="." index="17" instance=ExtResource( 6 )]
+
+position = Vector2( 2271.71, 1024.4 )
+scale = Vector2( 2.46897, 0.750605 )
+level_scene = "res://Assets/Levels/LoganLevels/LoganLevel2.tscn"
+light = null
+dark = null
+player = NodePath("../Player")
+
+

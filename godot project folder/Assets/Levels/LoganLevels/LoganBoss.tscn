@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Levels/LoganLevels/LoganBoss.tmx" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 2644.37, 2351.71, 1596.54, 2349.66, 1598.59, 1806.27, 2644.37, 1802.16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 2644.37, 1802.16, 1598.59, 1806.27, 1596.54, 2349.66, 2644.37, 2351.71 ) ]
+
+[node name="LoganBoss" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 2115.83, 1271.26 )
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="2"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+navpoly = SubResource( 1 )
+enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+
