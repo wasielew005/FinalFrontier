@@ -1,9 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Assets/Levels/kylerlevelone.tmx" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Levels/Kyler_Levels/kylerlevelone.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Characters/Enemies/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Characters/Enemies/melee_enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/Characters/Enemies/ranged_enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Levels/Kyler_Levels/doorswitch.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Levels/Kyler_Levels/activateddoor.tscn" type="PackedScene" id=9]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 1383.3, 1490.41, 1390.84, 1638.13, 1214.48, 1633.61, 1206.94, 1464.79, 1307.93, 1460.26, 1332.05, 1060.82, 1312.45, 869.389, 1479.77, 863.36, 1485.8, 1063.84, 1469.22, 1246.22, 1574.73, 1068.36, 1564.18, 863.36, 1785.76, 866.375, 1784.25, 958.322, 1609.4, 1479.86, 1607.89, 1315.56, 1675.72, 1318.57, 1796.31, 1488.9, 1793.29, 997.513, 1662.16, 1246.22, 616.066, 1253.76, 608.529, 1107.55, 781.873, 1107.55, 784.888, 1300.49, 619.081, 1636.62, 804.483, 1681.84, 867.791, 1314.05, 3893.22, 3438.32, 2847.1, 3446.48, 2857.98, 3106.39, 3003.54, 3111.83, 3893.22, 3436.96, 3893.22, 3299.56, 1142.13, 1390.93, 1140.62, 1641.14, 994.407, 1635.12, 2595.2, 1915.48, 2841.65, 1907.9, 2843.01, 2088.83, 2742.35, 2095.63, 861.762, 1116.59, 1023.05, 1115.08, 1036.61, 1308.02, 4161.21, 3256.03, 4158.49, 3054.7, 4442.81, 3056.06, 4448.25, 3487.29, 4159.85, 3491.37, 4154.41, 3295.48, 3894.58, 3258.75, 3886.42, 2505.11, 3600.74, 2653.39, 1065.25, 1033.69, 1063.74, 860.345, 1235.58, 861.853, 1121.02, 1039.72, 1234.07, 1057.81, 1118.01, 1308.02, 2087.22, 857.331, 2090.24, 1083.43, 1962.12, 1083.43, 1954.58, 991.483, 1962.12, 955.307, 1407.42, 2091.84, 1404.4, 1909.45, 1651.6, 1907.94, 1503.89, 2108.42, 2742.35, 2400.36, 2746.43, 2692.84, 2645.76, 2694.2, 1618.44, 2685.73, 1515.94, 2684.22, 1508.41, 2397.83, 2740.99, 2348.66, 1962.12, 857.331, 3006.26, 2652.03, 3301.46, 2653.39, 3346.35, 2654.75, 1764.66, 3015.83, 1627.49, 3018.85, 1654.62, 1745.15, 2058.59, 1749.67, 2592.18, 1751.18, 1499.36, 2352.61, 2644.4, 3038.37, 2490.68, 3041.09, 2452, 3097.23, 1766.16, 3091.2, 991.392, 1687.87, 849.703, 1689.38, 3612.98, 2505.11, 3340.91, 2362.27, 3301.46, 2396.28, 1479.77, 1294.46, 1535.54, 1317.07, 1534.03, 1473.83, 1310.95, 1384.9, 805.99, 2393.3, 848.196, 2354.11 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8, 9 ), PoolIntArray( 10, 11, 12, 13 ), PoolIntArray( 14, 15, 16, 17 ), PoolIntArray( 18, 17, 16, 19 ), PoolIntArray( 20, 21, 22, 23 ), PoolIntArray( 24, 20, 23, 25 ), PoolIntArray( 25, 23, 26 ), PoolIntArray( 27, 28, 29, 30, 31 ), PoolIntArray( 32, 31, 30 ), PoolIntArray( 33, 34, 35 ), PoolIntArray( 36, 37, 38, 39 ), PoolIntArray( 26, 40, 41, 42 ), PoolIntArray( 43, 44, 45, 46 ), PoolIntArray( 43, 46, 47, 48 ), PoolIntArray( 49, 43, 48, 32 ), PoolIntArray( 50, 49, 32, 30, 51 ), PoolIntArray( 52, 53, 54, 55 ), PoolIntArray( 55, 54, 56, 57 ), PoolIntArray( 58, 59, 60, 61, 62 ), PoolIntArray( 63, 64, 65, 66 ), PoolIntArray( 67, 68, 69, 70, 71, 72, 73 ), PoolIntArray( 62, 74, 58 ), PoolIntArray( 13, 62, 61, 18 ), PoolIntArray( 10, 13, 18, 19, 9 ), PoolIntArray( 8, 10, 9 ), PoolIntArray( 30, 75, 76, 77 ), PoolIntArray( 78, 79, 70, 69 ), PoolIntArray( 65, 80, 81 ), PoolIntArray( 66, 65, 81, 82, 36, 72, 83 ), PoolIntArray( 69, 84, 85, 78 ), PoolIntArray( 86, 87, 78, 85 ), PoolIntArray( 35, 88, 89, 25 ), PoolIntArray( 51, 90, 50 ), PoolIntArray( 77, 51, 30 ), PoolIntArray( 91, 77, 76, 92 ), PoolIntArray( 73, 91, 92, 67 ), PoolIntArray( 93, 94, 95, 0, 4, 96 ), PoolIntArray( 25, 26, 42, 57, 33, 35 ), PoolIntArray( 57, 56, 5, 9, 93, 96, 33 ), PoolIntArray( 97, 25, 89, 98 ), PoolIntArray( 72, 97, 98, 83 ), PoolIntArray( 39, 73, 72, 36 ) ]
+outlines = [ PoolVector2Array( 2452, 3097.23, 1766.16, 3091.2, 1764.66, 3015.83, 1627.49, 3018.85, 1618.44, 2685.73, 1515.94, 2684.22, 1508.41, 2397.83, 805.99, 2393.3, 804.483, 1681.84, 619.081, 1636.62, 616.066, 1253.76, 608.529, 1107.55, 781.873, 1107.55, 784.888, 1300.49, 867.791, 1314.05, 861.762, 1116.59, 1023.05, 1115.08, 1036.61, 1308.02, 1118.01, 1308.02, 1121.02, 1039.72, 1065.25, 1033.69, 1063.74, 860.345, 1235.58, 861.853, 1234.07, 1057.81, 1332.05, 1060.82, 1312.45, 869.389, 1479.77, 863.36, 1485.8, 1063.84, 1574.73, 1068.36, 1564.18, 863.36, 1785.76, 866.375, 1784.25, 958.322, 1962.12, 955.307, 1962.12, 857.331, 2087.22, 857.331, 2090.24, 1083.43, 1962.12, 1083.43, 1954.58, 991.483, 1793.29, 997.513, 1796.31, 1488.9, 1609.4, 1479.86, 1607.89, 1315.56, 1675.72, 1318.57, 1662.16, 1246.22, 1469.22, 1246.22, 1479.77, 1294.46, 1535.54, 1317.07, 1534.03, 1473.83, 1383.3, 1490.41, 1390.84, 1638.13, 1214.48, 1633.61, 1206.94, 1464.79, 1307.93, 1460.26, 1310.95, 1384.9, 1142.13, 1390.93, 1140.62, 1641.14, 994.407, 1635.12, 991.392, 1687.87, 849.703, 1689.38, 848.196, 2354.11, 1499.36, 2352.61, 1503.89, 2108.42, 1407.42, 2091.84, 1404.4, 1909.45, 1651.6, 1907.94, 1654.62, 1745.15, 2058.59, 1749.67, 2592.18, 1751.18, 2595.2, 1915.48, 2841.65, 1907.9, 2843.01, 2088.83, 2742.35, 2095.63, 2740.99, 2348.66, 3340.91, 2362.27, 3346.35, 2654.75, 3600.74, 2653.39, 3612.98, 2505.11, 3886.42, 2505.11, 3894.58, 3258.75, 4161.21, 3256.03, 4158.49, 3054.7, 4442.81, 3056.06, 4448.25, 3487.29, 4159.85, 3491.37, 4154.41, 3295.48, 3893.22, 3299.56, 3893.22, 3436.96, 3893.22, 3438.32, 2847.1, 3446.48, 2857.98, 3106.39, 3003.54, 3111.83, 3006.26, 2652.03, 3301.46, 2653.39, 3301.46, 2396.28, 2742.35, 2400.36, 2746.43, 2692.84, 2645.76, 2694.2, 2644.4, 3038.37, 2490.68, 3041.09 ) ]
 
 [node name="kylerlevelone" instance=ExtResource( 1 )]
 
@@ -11,22 +22,302 @@ script = ExtResource( 2 )
 
 [node name="Player" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 2124.63, 3621.89 )
+position = Vector2( 2124.2, 3610.74 )
 
-[node name="Level Transition" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Navigation2D" type="Navigation2D" parent="." index="3"]
 
-position = Vector2( 2122.01, 1603.85 )
-scale = Vector2( 2.51532, 0.391962 )
-level_scene = "res://Assets/Levels/kyler_levels/kylerleveltwo.tscn"
-final_floor = null
+editor/display_folded = true
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
-[node name="Navigation2D" type="Navigation2D" parent="." index="4"]
+[node name="destinations" type="Node2D" parent="Navigation2D" index="0"]
 
-[node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+[node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
 
-navpoly = null
+position = Vector2( 1860.66, 2908.39 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="1"]
+
+position = Vector2( 2400.13, 2909.96 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination2" type="Position2D" parent="Navigation2D/destinations" index="2"]
+
+position = Vector2( 2591.81, 2735.77 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="3"]
+
+position = Vector2( 2660.98, 2142.33 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="4"]
+
+position = Vector2( 1654.31, 2138.66 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination5" type="Position2D" parent="Navigation2D/destinations" index="5"]
+
+position = Vector2( 1664.48, 2730.75 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination6" type="Position2D" parent="Navigation2D/destinations" index="6"]
+
+position = Vector2( 3056.14, 2899.16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination7" type="Position2D" parent="Navigation2D/destinations" index="7"]
+
+position = Vector2( 3783.43, 2901.01 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination8" type="Position2D" parent="Navigation2D/destinations" index="8"]
+
+position = Vector2( 3061.7, 3267.43 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination9" type="Position2D" parent="Navigation2D/destinations" index="9"]
+
+position = Vector2( 1071.42, 1580.82 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination10" type="Position2D" parent="Navigation2D/destinations" index="10"]
+
+position = Vector2( 999.598, 1275.18 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination11" type="Position2D" parent="Navigation2D/destinations" index="11"]
+
+position = Vector2( 673.913, 1482.28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination12" type="Position2D" parent="Navigation2D/destinations" index="12"]
+
+position = Vector2( 1169.88, 1163.98 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destination13" type="Position2D" parent="Navigation2D/destinations" index="13"]
+
+position = Vector2( 1763.92, 1143.62 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="1"]
+
+navpoly = SubResource( 1 )
 enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Node2D" type="Node2D" parent="Navigation2D" index="1"]
+[node name="Enemy" parent="." index="4" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1862.01, 2909.06 )
+targethealth = 3
+points = 100
+destination_order = [ 0, 1 ]
+
+[node name="Enemy2" parent="." index="5" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2589.95, 2736.82 )
+targethealth = 3
+points = 100
+destination_order = [ 2, 3, 4, 5 ]
+
+[node name="Enemy3" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 3054.81, 2900.81 )
+targethealth = 3
+points = 100
+destination_order = [ 6, 7, 8 ]
+
+[node name="Enemy4" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 997.991, 1279.53 )
+targethealth = 3
+points = 100
+destination_order = [ 9, 10, 11 ]
+
+[node name="Enemy5" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1170.1, 1164.79 )
+targethealth = 3
+points = 100
+destination_order = [ 12, 13 ]
+
+[node name="melee_enemy" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 1073.97, 2432.54 )
+points = 200
+
+[node name="melee_enemy2" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 1691.93, 1828.28 )
+points = 200
+
+[node name="melee_enemy3" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2557.96, 1820.73 )
+points = 200
+
+[node name="melee_enemy4" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2077.11, 2053.8 )
+points = 200
+
+[node name="melee_enemy5" parent="." index="13" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2171.72, 2054.29 )
+points = 200
+
+[node name="melee_enemy6" parent="." index="14" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 3322.72, 2852.2 )
+points = 200
+
+[node name="melee_enemy7" parent="." index="15" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 3427.13, 3196.01 )
+points = 200
+
+[node name="melee_enemy8" parent="." index="16" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2938.76, 3398.71 )
+points = 200
+
+[node name="melee_enemy9" parent="." index="17" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 3821.5, 2557.71 )
+points = 200
+
+[node name="melee_enemy10" parent="." index="18" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 1439.92, 1004.4 )
+points = 200
+
+[node name="melee_enemy11" parent="." index="19" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 662.008, 1278.81 )
+points = 200
+
+[node name="melee_enemy12" parent="." index="20" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 1618.67, 901.18 )
+points = 200
+
+[node name="ranged_enemy" parent="." index="21" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2066.47, 1727.04 )
+points = 300
+
+[node name="ranged_enemy2" parent="." index="22" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2269.92, 1977.93 )
+points = 300
+
+[node name="ranged_enemy4" parent="." index="23" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 4185.61, 3090.27 )
+points = 300
+
+[node name="ranged_enemy3" parent="." index="24" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 1989.33, 888.978 )
+points = 300
+
+[node name="Level Transition" parent="." index="25" instance=ExtResource( 7 )]
+
+position = Vector2( 2122.01, 1625.47 )
+scale = Vector2( 2.57611, 0.833297 )
+level_scene = "res://Assets/Levels/Kyler_Levels/kylerleveltwo.tscn"
+
+[node name="doorswitch" parent="." index="26" instance=ExtResource( 8 )]
+
+position = Vector2( 2079.92, 974.867 )
+scale = Vector2( 0.689835, 0.714671 )
+
+[node name="doorswitch2" parent="." index="27" instance=ExtResource( 8 )]
+
+position = Vector2( 4413.66, 3283.44 )
+scale = Vector2( 0.689835, 0.714671 )
+
+[node name="activateddoor" parent="." index="28" instance=ExtResource( 9 )]
+
+position = Vector2( 2125.36, 1720.61 )
+scale = Vector2( 3.00552, 1 )
 
 

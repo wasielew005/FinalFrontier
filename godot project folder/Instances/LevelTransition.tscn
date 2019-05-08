@@ -23,6 +23,8 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 level_scene = "res://Assets/Levels/kylerstestarea.tscn"
 final_floor = null
+light = null
+dark = null
 player = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
