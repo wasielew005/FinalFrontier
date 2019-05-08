@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Levels/Kyler_Levels/kylerlevelone.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Instances/Characters/Enemies/melee_enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Instances/Characters/Enemies/ranged_enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Levels/Kyler_Levels/doorswitch.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Levels/Kyler_Levels/activateddoor.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -304,5 +306,20 @@ scale = Vector2( 2.57611, 0.833297 )
 level_scene = "res://Assets/Levels/Kyler_Levels/kylerleveltwo.tscn"
 light = null
 dark = null
+
+[node name="doorswitch" parent="." index="26" instance=ExtResource( 8 )]
+
+position = Vector2( 2079.92, 974.867 )
+scale = Vector2( 0.689835, 0.714671 )
+
+[node name="doorswitch2" parent="." index="27" instance=ExtResource( 8 )]
+
+position = Vector2( 4413.66, 3283.44 )
+scale = Vector2( 0.689835, 0.714671 )
+
+[node name="activateddoor" parent="." index="28" instance=ExtResource( 9 )]
+
+position = Vector2( 2125.36, 1720.61 )
+scale = Vector2( 3.00552, 1 )
 
 
