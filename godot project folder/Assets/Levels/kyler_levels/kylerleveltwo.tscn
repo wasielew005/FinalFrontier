@@ -1,15 +1,459 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Levels/Kyler_Levels/kylerleveltwo.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Characters/Enemies/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Characters/Enemies/melee_enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/Characters/Enemies/ranged_enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=7]
 
-[node name="kylerleveltwo" index="0" instance=ExtResource( 1 )]
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 3600.01, 900.89, 3556.84, 900.076, 3553.58, 750.207, 3600.82, 751.021, 3649.25, 900.849, 3649.25, 948.905, 3750.25, 948.905, 3748.62, 1001.03, 3200.9, 1599.73, 3503.08, 1000.26, 3600.82, 948.946, 547.623, 4548.2, 447.439, 4547.38, 449.068, 4501.77, 704.832, 4246.86, 852.471, 4250.96, 852.471, 4341.18, 851.058, 4349.5, 1499.4, 4348.68, 1496.96, 4249.31, 1998.69, 4248.5, 2000.32, 4349.5, 1000.49, 4553.08, 999.672, 4601.14, 848.989, 4601.14, 849.803, 4553.08, 1000.93, 4450.5, 303.272, 4500.14, 290.623, 4593.4, 99.9231, 4597.5, 97.8726, 4195.59, 302.926, 4193.54, 300.876, 4047.95, 700.731, 4047.95, 2151.38, 4601.14, 2150.57, 4801.51, 2001.51, 4799.06, 1347.46, 4553.08, 1350.35, 4500.18, 2148.56, 4549.86, 3200.09, 997.002, 2751.29, 2798.68, 2600.61, 2800.31, 2600.61, 1901.1, 2749.67, 1899.47, 1348.72, 4348.68, 2001.51, 250.875, 2198.62, 252.504, 2197.81, 304.633, 3649.25, 750.98, 3698.12, 751.795, 3698.94, 900.849, 2400.24, 599.524, 2400.24, 750.207, 1749.46, 746.949, 1749.83, 300.56, 1949.38, 300.56, 1498.15, 4799.06, 1349.09, 4800.69, 3348.7, 3299.56, 3351.14, 3598.48, 3198.83, 3599.3, 3050.59, 3297.12, 2199.88, 3596.9, 2199.88, 3297.97, 2499.61, 3298.79, 2350.56, 3599.34, 4049.17, 1000.22, 4049.17, 1648.56, 802.562, 4550.64, 1000.93, 4349.5, 1100.3, 4450.5, 1100.3, 4500.18, 2799.72, 1897.8, 2950.41, 1899.43, 2950.41, 2799.46, 2799.72, 2799.46, 802.562, 4746.93, 601.38, 4751.01, 598.122, 4602.77, 2397.36, 303.818, 2398.99, 548.984, 3199.65, 3947.91, 2951.22, 3949.54, 2798.91, 3096.75, 2148.56, 4350.31, 3502.27, 951.389, 2598.98, 3951.21, 2350.56, 3948.76, 2749.67, 3100.05, 2798.91, 4100.22, 2748.85, 4100.26, 2599.8, 4099.44, 2948.78, 4099.4, 2501.24, 3100.86, 3048.96, 3098.38, 1999.07, 4900.06, 1500.59, 4900.06, 1949.38, 254.948, 3648.44, 550.613, 3599.19, 599.524, 551.695, 4597.88, 2401.87, 4549.86, 2448.67, 4598.69, 2450.3, 4351.09, 2401.06, 4299, 2748.85, 4299, 2800.54, 4352.71, 2749.67, 1599.73, 2798.91, 1649.38 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8, 9, 10 ), PoolIntArray( 11, 12, 13, 14, 15, 16, 17 ), PoolIntArray( 18, 19, 20, 21 ), PoolIntArray( 22, 23, 24, 25, 26 ), PoolIntArray( 27, 28, 29, 30, 31 ), PoolIntArray( 31, 32, 33, 14 ), PoolIntArray( 27, 31, 14, 13 ), PoolIntArray( 34, 35, 36, 37, 38, 18, 21, 39 ), PoolIntArray( 8, 40, 9 ), PoolIntArray( 41, 42, 43, 44 ), PoolIntArray( 38, 45, 18 ), PoolIntArray( 46, 47, 48 ), PoolIntArray( 49, 50, 51, 4, 3 ), PoolIntArray( 52, 53, 54, 55, 56 ), PoolIntArray( 57, 58, 37 ), PoolIntArray( 59, 60, 61, 62 ), PoolIntArray( 63, 64, 65, 66 ), PoolIntArray( 7, 67, 68, 8 ), PoolIntArray( 69, 17, 70, 26, 25 ), PoolIntArray( 26, 71, 72, 22 ), PoolIntArray( 73, 74, 75, 76, 41, 44 ), PoolIntArray( 77, 78, 79, 69 ), PoolIntArray( 48, 80, 81 ), PoolIntArray( 62, 61, 82, 83, 84 ), PoolIntArray( 21, 85, 39 ), PoolIntArray( 9, 86, 10 ), PoolIntArray( 87, 88, 66, 65, 89, 84 ), PoolIntArray( 90, 91, 92, 87, 84, 83, 93 ), PoolIntArray( 65, 94, 89 ), PoolIntArray( 84, 95, 62 ), PoolIntArray( 36, 96, 97, 57 ), PoolIntArray( 52, 56, 98, 46, 48, 81 ), PoolIntArray( 52, 81, 99, 100 ), PoolIntArray( 100, 99, 49, 3 ), PoolIntArray( 10, 0, 4, 5 ), PoolIntArray( 79, 101, 11, 17, 69 ), PoolIntArray( 37, 22, 72, 38 ), PoolIntArray( 36, 57, 37 ), PoolIntArray( 34, 39, 102, 103 ), PoolIntArray( 104, 103, 102, 105 ), PoolIntArray( 104, 105, 106, 107 ), PoolIntArray( 90, 107, 106, 91 ), PoolIntArray( 84, 89, 41, 76 ), PoolIntArray( 73, 44, 108, 109 ), PoolIntArray( 109, 108, 8, 68 ) ]
+outlines = [ PoolVector2Array( 290.623, 4593.4, 99.9231, 4597.5, 97.8726, 4195.59, 302.926, 4193.54, 300.876, 4047.95, 700.731, 4047.95, 704.832, 4246.86, 852.471, 4250.96, 852.471, 4341.18, 851.058, 4349.5, 1000.93, 4349.5, 1000.93, 4450.5, 1100.3, 4450.5, 1100.3, 4500.18, 1350.35, 4500.18, 1348.72, 4348.68, 1499.4, 4348.68, 1496.96, 4249.31, 1998.69, 4248.5, 2000.32, 4349.5, 2148.56, 4350.31, 2148.56, 4549.86, 2401.87, 4549.86, 2401.06, 4299, 2748.85, 4299, 2748.85, 4100.26, 2599.8, 4099.44, 2598.98, 3951.21, 2350.56, 3948.76, 2350.56, 3599.34, 2199.88, 3596.9, 2199.88, 3297.97, 2499.61, 3298.79, 2501.24, 3100.86, 2749.67, 3100.05, 2751.29, 2798.68, 2600.61, 2800.31, 2600.61, 1901.1, 2749.67, 1899.47, 2749.67, 1599.73, 3200.9, 1599.73, 3200.09, 997.002, 3503.08, 1000.26, 3502.27, 951.389, 3600.82, 948.946, 3600.01, 900.89, 3556.84, 900.076, 3553.58, 750.207, 3600.82, 751.021, 3599.19, 599.524, 2400.24, 599.524, 2400.24, 750.207, 1749.46, 746.949, 1749.83, 300.56, 1949.38, 300.56, 1949.38, 254.948, 2001.51, 250.875, 2198.62, 252.504, 2197.81, 304.633, 2397.36, 303.818, 2398.99, 548.984, 3648.44, 550.613, 3649.25, 750.98, 3698.12, 751.795, 3698.94, 900.849, 3649.25, 900.849, 3649.25, 948.905, 3750.25, 948.905, 3748.62, 1001.03, 4049.17, 1000.22, 4049.17, 1648.56, 2798.91, 1649.38, 2799.72, 1897.8, 2950.41, 1899.43, 2950.41, 2799.46, 2799.72, 2799.46, 2798.91, 3096.75, 3048.96, 3098.38, 3050.59, 3297.12, 3348.7, 3299.56, 3351.14, 3598.48, 3198.83, 3599.3, 3199.65, 3947.91, 2951.22, 3949.54, 2948.78, 4099.4, 2798.91, 4100.22, 2800.54, 4352.71, 2450.3, 4351.09, 2448.67, 4598.69, 2151.38, 4601.14, 2150.57, 4801.51, 2001.51, 4799.06, 1999.07, 4900.06, 1500.59, 4900.06, 1498.15, 4799.06, 1349.09, 4800.69, 1347.46, 4553.08, 1000.49, 4553.08, 999.672, 4601.14, 848.989, 4601.14, 849.803, 4553.08, 802.562, 4550.64, 802.562, 4746.93, 601.38, 4751.01, 598.122, 4602.77, 551.695, 4597.88, 547.623, 4548.2, 447.439, 4547.38, 449.068, 4501.77, 303.272, 4500.14 ) ]
+
+[node name="kylerleveltwo" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
 [node name="Player" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 222.971, 4856.46 )
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="3"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+navpoly = SubResource( 1 )
+enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+[node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
+
+position = Vector2( 717.722, 4271.55 )
+
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="1"]
+
+position = Vector2( 715.506, 4661.57 )
+
+[node name="destination2" type="Position2D" parent="Navigation2D/destinations" index="2"]
+
+position = Vector2( 374.196, 4482.32 )
+
+[node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="3"]
+
+position = Vector2( 1399.12, 4392.57 )
+
+[node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="4"]
+
+position = Vector2( 1403.55, 4771.52 )
+
+[node name="destination5" type="Position2D" parent="Navigation2D/destinations" index="5"]
+
+position = Vector2( 1661.31, 4441.41 )
+
+[node name="destination6" type="Position2D" parent="Navigation2D/destinations" index="6"]
+
+position = Vector2( 2056.23, 4444.43 )
+
+[node name="destination7" type="Position2D" parent="Navigation2D/destinations" index="7"]
+
+position = Vector2( 2060.75, 4696.15 )
+
+[node name="destination8" type="Position2D" parent="Navigation2D/destinations" index="8"]
+
+position = Vector2( 1661.31, 4693.14 )
+
+[node name="destination9" type="Position2D" parent="Navigation2D/destinations" index="9"]
+
+position = Vector2( 2495.43, 3344.97 )
+
+[node name="destination10" type="Position2D" parent="Navigation2D/destinations" index="10"]
+
+position = Vector2( 2692.1, 3547.61 )
+
+[node name="destination11" type="Position2D" parent="Navigation2D/destinations" index="11"]
+
+position = Vector2( 2903.07, 3358.85 )
+
+[node name="destination12" type="Position2D" parent="Navigation2D/destinations" index="12"]
+
+position = Vector2( 3134.4, 3351.44 )
+
+[node name="destination13" type="Position2D" parent="Navigation2D/destinations" index="13"]
+
+position = Vector2( 3114.04, 3643.84 )
+
+[node name="destination14" type="Position2D" parent="Navigation2D/destinations" index="14"]
+
+position = Vector2( 2901.22, 3623.48 )
+
+[node name="destination15" type="Position2D" parent="Navigation2D/destinations" index="15"]
+
+position = Vector2( 2652.59, 2495.85 )
+
+[node name="destination16" type="Position2D" parent="Navigation2D/destinations" index="16"]
+
+position = Vector2( 2889.25, 2494.35 )
+
+[node name="destination17" type="Position2D" parent="Navigation2D/destinations" index="17"]
+
+position = Vector2( 2647.1, 2197.79 )
+
+[node name="destination18" type="Position2D" parent="Navigation2D/destinations" index="18"]
+
+position = Vector2( 2879.72, 2192.35 )
+
+[node name="destination19" type="Position2D" parent="Navigation2D/destinations" index="19"]
+
+position = Vector2( 3278.61, 1275.89 )
+
+[node name="destination20" type="Position2D" parent="Navigation2D/destinations" index="20"]
+
+position = Vector2( 3933.1, 1278.29 )
+
+[node name="destination21" type="Position2D" parent="Navigation2D/destinations" index="21"]
+
+position = Vector2( 3623.53, 1302.31 )
+
+[node name="destination22" type="Position2D" parent="Navigation2D/destinations" index="22"]
+
+position = Vector2( 3625.39, 982.157 )
+
+[node name="destination23" type="Position2D" parent="Navigation2D/destinations" index="23"]
+
+position = Vector2( 1923.61, 359.611 )
+
+[node name="destination24" type="Position2D" parent="Navigation2D/destinations" index="24"]
+
+position = Vector2( 2241.7, 355.067 )
+
+[node name="destination25" type="Position2D" parent="Navigation2D/destinations" index="25"]
+
+position = Vector2( 2248.51, 693.605 )
+
+[node name="destination26" type="Position2D" parent="Navigation2D/destinations" index="26"]
+
+position = Vector2( 1923.61, 686.789 )
+
+[node name="Enemy" parent="." index="4" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 711.724, 4277.29 )
+targethealth = 3
+points = 100
+destination_order = [ 0, 1 ]
+
+[node name="Enemy2" parent="." index="5" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 374.082, 4572.73 )
+rotation = 4.71239
+targethealth = 3
+points = 100
+destination_order = [ 2 ]
+
+[node name="Enemy3" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1398.7, 4385.88 )
+targethealth = 3
+points = 100
+destination_order = [ 3, 4 ]
+
+[node name="Enemy4" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1660.98, 4437.13 )
+targethealth = 3
+points = 100
+destination_order = [ 5, 6, 7, 8 ]
+
+[node name="Enemy5" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2694.86, 3544.73 )
+targethealth = 3
+points = 100
+destination_order = [ 9, 10 ]
+
+[node name="Enemy6" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2898.91, 3359.72 )
+targethealth = 3
+points = 100
+destination_order = [ 11, 12, 13, 14 ]
+
+[node name="Enemy7" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2653.15, 2496.61 )
+targethealth = 3
+points = 100
+destination_order = [ 15, 15 ]
+
+[node name="Enemy8" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2649.07, 2194.61 )
+targethealth = 3
+points = 100
+destination_order = [ 15, 15 ]
+
+[node name="Enemy9" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 3271.13, 1274.08 )
+targethealth = 3
+points = 100
+destination_order = [ 19, 20 ]
+
+[node name="Enemy10" parent="." index="13" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 3622.61, 1296.39 )
+targethealth = 3
+points = 100
+destination_order = [ 21, 22 ]
+
+[node name="Enemy11" parent="." index="14" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1924.1, 356.613 )
+targethealth = 3
+points = 100
+destination_order = [ 23, 24, 25, 26 ]
+
+[node name="melee_enemy" parent="." index="15" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 627.026, 4319.5 )
+points = 200
+
+[node name="melee_enemy2" parent="." index="16" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 371.11, 4318.35 )
+points = 200
+
+[node name="melee_enemy3" parent="." index="17" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1966.1, 4279.72 )
+points = 200
+
+[node name="melee_enemy4" parent="." index="18" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1681.81, 4314.92 )
+points = 200
+
+[node name="melee_enemy5" parent="." index="19" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1750.58, 4832.39 )
+points = 200
+
+[node name="melee_enemy6" parent="." index="20" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2625.21, 4368.03 )
+points = 200
+
+[node name="melee_enemy7" parent="." index="21" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2670.42, 3822.02 )
+points = 200
+
+[node name="melee_enemy8" parent="." index="22" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2879.42, 3823.02 )
+points = 200
+
+[node name="melee_enemy9" parent="." index="23" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2389.01, 3325.2 )
+points = 200
+
+[node name="melee_enemy10" parent="." index="24" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3231.04, 3323.35 )
+points = 200
+
+[node name="melee_enemy11" parent="." index="25" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2677.71, 3121.64 )
+points = 200
+
+[node name="melee_enemy12" parent="." index="26" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2875.72, 3125.34 )
+points = 200
+
+[node name="melee_enemy13" parent="." index="27" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2631.44, 2779.27 )
+points = 200
+
+[node name="melee_enemy14" parent="." index="28" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2916.43, 2781.12 )
+points = 200
+
+[node name="melee_enemy15" parent="." index="29" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2918.49, 1921.95 )
+points = 200
+
+[node name="melee_enemy16" parent="." index="30" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2633.46, 1926.05 )
+points = 200
+
+[node name="melee_enemy17" parent="." index="31" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3467.6, 1079.11 )
+points = 200
+
+[node name="melee_enemy19" parent="." index="32" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2825.7, 619.933 )
+points = 200
+
+[node name="melee_enemy20" parent="." index="33" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3325.5, 534.525 )
+points = 200
+
+[node name="melee_enemy18" parent="." index="34" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3788.31, 1075.25 )
+points = 200
+
+[node name="melee_enemy21" parent="." index="35" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1797.58, 647.954 )
+points = 200
+
+[node name="melee_enemy22" parent="." index="36" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 2349.26, 644.94 )
+points = 200
+
+[node name="ranged_enemy" parent="." index="37" instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 1970.51, 288.517 )
+points = 300
+
+[node name="ranged_enemy2" parent="." index="38" instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 3567.77, 1112.53 )
+points = 300
+
+[node name="ranged_enemy3" parent="." index="39" instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2720.9, 2379.76 )
+points = 300
+
+[node name="ranged_enemy4" parent="." index="40" instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2645.53, 4053.44 )
+points = 300
+
+[node name="ranged_enemy5" parent="." index="41" instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 1763.97, 4796.41 )
+points = 300
+
+[node name="Level Transition" parent="." index="42" instance=ExtResource( 7 )]
+
+position = Vector2( 2074.12, 72.2897 )
+scale = Vector2( 0.925363, 0.825797 )
+level_scene = "res://Assets/Levels/Kyler_Levels/kylerlevelthree.tscn"
+light = null
+dark = null
 
 

@@ -25,7 +25,8 @@ script = ExtResource( 1 )
 position = Vector2( 2686.44, 1600.15 )
 scale = Vector2( 4.04899, 2.94393 )
 level_scene = "res://Assets/Levels/brettlevels/brettlevel3.tscn"
-final_floor = null
+light = null
+dark = null
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="2"]
 
@@ -36,8 +37,6 @@ navpoly = SubResource( 1 )
 enabled = true
 
 [node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
-
-editor/display_folded = true
 
 [node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
 
@@ -382,7 +381,7 @@ _sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "coll
 
 visible = false
 position = Vector2( 364.75, 1833.09 )
-_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 projectile_speed = 3
 
 [node name="ranged_enemy2" parent="." index="23" groups=[
@@ -391,7 +390,7 @@ projectile_speed = 3
 
 visible = false
 position = Vector2( 1054.55, 1825.54 )
-_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 projectile_speed = 3
 
 [node name="ranged_enemy3" parent="." index="24" groups=[
@@ -400,7 +399,7 @@ projectile_speed = 3
 
 visible = false
 position = Vector2( 326.987, 2414.64 )
-_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 projectile_speed = 3
 
 [node name="ranged_enemy4" parent="." index="25" groups=[
@@ -409,7 +408,7 @@ projectile_speed = 3
 
 visible = false
 position = Vector2( 321.952, 3250.46 )
-_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 projectile_speed = 3
 
 [node name="ranged_enemy5" parent="." index="26" groups=[
@@ -418,7 +417,7 @@ projectile_speed = 3
 
 visible = false
 position = Vector2( 1588.27, 2404.57 )
-_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 projectile_speed = 3
 
 [node name="ranged_enemy6" parent="." index="27" groups=[
@@ -427,7 +426,7 @@ projectile_speed = 3
 
 visible = false
 position = Vector2( 1663.8, 2193.1 )
-_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 projectile_speed = 3
 
 [node name="ranged_enemy7" parent="." index="28" groups=[
@@ -436,7 +435,7 @@ projectile_speed = 3
 
 visible = false
 position = Vector2( 2585.21, 1762.6 )
-_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 projectile_speed = 3
 
 [node name="ranged_enemy8" parent="." index="29" groups=[
@@ -445,7 +444,7 @@ projectile_speed = 3
 
 visible = false
 position = Vector2( 2786.61, 2031.98 )
-_sections_unfolded = [ "Collision", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
 projectile_speed = 3
 
 
