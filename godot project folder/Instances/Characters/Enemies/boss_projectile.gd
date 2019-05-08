@@ -17,11 +17,23 @@ func _ready():
 
 
 func _process(delta):
-
+	
 	var collision_info = move_and_collide(motion)
 	if collision_info:
 		if collision_info.collider == player:
 			global.playerHealth -= 1
+			$body.disabled = true
+			self.visible = false
+			global.speed = global.speed / 3
+			print("You have been slowed")
+			var t = Timer.new()
+			t.set_wait_time(3)
+			t.set_one_shot(true)
+			self.add_child(t)
+			t.start()
+			yield(t, "timeout")
+			global.speed = global.speed * 3
 			print(global.playerHealth)
+		
 		queue_free()
 
