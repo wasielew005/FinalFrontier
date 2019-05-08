@@ -1,8 +1,29 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Levels/Kyler_Levels/kylerbossroom.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Levels/Kyler_Levels/bossdetection.gd" type="Script" id=4]
+[ext_resource path="res://Instances/Characters/Enemies/melee_enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Levels/Kyler_Levels/kylerobjects/hor0.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Levels/Kyler_Levels/bigboye.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.2207, 30.4211 )
+
+[sub_resource type="NavigationPolygon" id=2]
+
+vertices = PoolVector2Array( 2386.79, 2146.86, 2089.5, 2148.53, 2096.18, 2051.66, 2897.87, 1754.37, 2752.56, 2046.65, 1849, 1751.03, 1845.66, 1540.59, 1945.87, 1543.93, 1942.53, 1751.03, 2348.38, 1146.43, 2345.04, 1047.89, 2498.69, 1049.56, 2500.36, 1146.43, 2901.21, 2049.99, 2757.57, 1249.98, 2892.86, 1248.31, 2897.87, 1547.27, 1947.54, 1248.31, 2094.51, 1248.31, 3001.42, 1548.94, 3001.42, 1746.02, 2749.22, 2148.53, 1949.21, 2048.32, 2097.85, 1149.77, 2752.56, 1148.1 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 10, 11, 12 ), PoolIntArray( 3, 13, 4 ), PoolIntArray( 14, 15, 16 ), PoolIntArray( 7, 17, 18, 3 ), PoolIntArray( 16, 19, 20, 3 ), PoolIntArray( 4, 21, 0 ), PoolIntArray( 3, 2, 22, 8, 7 ), PoolIntArray( 14, 16, 3, 18, 23, 9, 12 ), PoolIntArray( 12, 24, 14 ) ]
+outlines = [ PoolVector2Array( 2386.79, 2146.86, 2089.5, 2148.53, 2096.18, 2051.66, 1949.21, 2048.32, 1942.53, 1751.03, 1849, 1751.03, 1845.66, 1540.59, 1945.87, 1543.93, 1947.54, 1248.31, 2094.51, 1248.31, 2097.85, 1149.77, 2348.38, 1146.43, 2345.04, 1047.89, 2498.69, 1049.56, 2500.36, 1146.43, 2752.56, 1148.1, 2757.57, 1249.98, 2892.86, 1248.31, 2897.87, 1547.27, 3001.42, 1548.94, 3001.42, 1746.02, 2897.87, 1754.37, 2901.21, 2049.99, 2752.56, 2046.65, 2749.22, 2148.53 ) ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 25.3464, 1.42969 )
 
 [node name="kylerbossroom" index="0" instance=ExtResource( 1 )]
 
@@ -10,6 +31,495 @@ script = ExtResource( 2 )
 
 [node name="Player" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 2424.39, 2557.52 )
+position = Vector2( 2425.47, 2471.28 )
+
+[node name="bossdetection" type="Area2D" parent="." index="2"]
+
+position = Vector2( 2424.06, 2123.95 )
+scale = Vector2( 1, 0.102489 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 4 )
+
+[node name="bossdetectioncollision" type="CollisionShape2D" parent="bossdetection" index="0"]
+
+position = Vector2( -0.5271, 56.5664 )
+shape = SubResource( 1 )
+
+[node name="melee_enemy" parent="." index="3" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2047.44, 1326.81 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy2" parent="." index="4" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2795.84, 1329.9 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy3" parent="." index="5" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2134.48, 1177.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy4" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2185.73, 1177.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy5" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2239.73, 1175.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy6" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2291.73, 1174.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy7" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2725.73, 1168.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy8" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2673.73, 1168.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy9" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2621.73, 1168.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy10" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2566.73, 1169.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy11" parent="." index="13" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2107.41, 1327.5 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy12" parent="." index="14" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2741.11, 1328.01 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy13" parent="." index="15" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2344.73, 1174.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy14" parent="." index="16" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2395.73, 1175.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy15" parent="." index="17" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2514.73, 1172.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy16" parent="." index="18" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2454.73, 1176.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy17" parent="." index="19" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2136.42, 1215.35 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy18" parent="." index="20" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2191.94, 1217.2 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy19" parent="." index="21" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2245.61, 1215.35 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy20" parent="." index="22" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2299.28, 1213.5 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy21" parent="." index="23" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2356.65, 1213.5 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy22" parent="." index="24" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2410.31, 1213.5 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy23" parent="." index="25" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2462.13, 1211.65 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy24" parent="." index="26" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2513.95, 1207.95 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy25" parent="." index="27" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2563.92, 1207.95 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy26" parent="." index="28" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2613.88, 1207.95 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy27" parent="." index="29" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2665.7, 1207.95 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy28" parent="." index="30" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2721.22, 1209.8 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy29" parent="." index="31" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2134.86, 1253.52 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy30" parent="." index="32" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2184.61, 1253.52 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy31" parent="." index="33" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2238.87, 1252.01 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy32" parent="." index="34" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2721.22, 1248.99 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy33" parent="." index="35" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2669.97, 1247.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy34" parent="." index="36" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2620.23, 1247.49 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy35" parent="." index="37" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2587.06, 1282.15 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy36" parent="." index="38" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2641.33, 1280.65 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy37" parent="." index="39" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2695.59, 1283.66 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy38" parent="." index="40" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2752.87, 1283.66 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy39" parent="." index="41" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2807.13, 1283.66 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy40" parent="." index="42" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2858.38, 1283.66 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy41" parent="." index="43" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2256.94, 1283.66 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy42" parent="." index="44" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2200.43, 1283.66 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy43" parent="." index="45" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2145.02, 1283.66 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy44" parent="." index="46" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2089.62, 1284.77 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy45" parent="." index="47" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2038.65, 1286.99 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy46" parent="." index="48" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 1983.25, 1285.88 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy47" parent="." index="49" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 1986.59, 1329.3 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy48" parent="." index="50" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 1981.58, 1367.72 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy49" parent="." index="51" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2856.75, 1330.97 )
+targethealth = 2
+points = 100
+
+[node name="melee_enemy50" parent="." index="52" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+position = Vector2( 2860.09, 1374.4 )
+targethealth = 2
+points = 100
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="53"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+navpoly = SubResource( 2 )
+enabled = true
+
+[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+[node name="door" type="KinematicBody2D" parent="." index="54"]
+
+visible = false
+position = Vector2( 2424.34, 2156.09 )
+scale = Vector2( 1.05581, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="door" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door" index="1"]
+
+position = Vector2( -0.158936, 0.627441 )
+shape = SubResource( 3 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="door2" type="KinematicBody2D" parent="." index="55"]
+
+position = Vector2( 2422.83, 1144.58 )
+scale = Vector2( 3.27397, 1 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
+
+[node name="Sprite" type="Sprite" parent="door2" index="0"]
+
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door2" index="1"]
+
+position = Vector2( -0.158936, 0.627441 )
+shape = SubResource( 3 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="bigboye" parent="." index="56" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2443.78, 1643.76 )
+targethealth = 50
+points = 10000
+walk_slowdown = 0.005
+fire_range = 20
+projectile_speed = 1000
+fire_rate = 1000
+
+[node name="Level Transition" parent="." index="57" instance=ExtResource( 8 )]
+
+position = Vector2( 2422.27, 1070.5 )
+scale = Vector2( 2.33991, 0.752089 )
+
+[connection signal="body_entered" from="bossdetection" to="bossdetection" method="_on_Area2D_body_entered"]
 
 

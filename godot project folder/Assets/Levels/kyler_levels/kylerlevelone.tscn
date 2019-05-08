@@ -304,8 +304,6 @@ points = 300
 position = Vector2( 2122.01, 1625.47 )
 scale = Vector2( 2.57611, 0.833297 )
 level_scene = "res://Assets/Levels/Kyler_Levels/kylerleveltwo.tscn"
-light = null
-dark = null
 
 [node name="doorswitch" parent="." index="26" instance=ExtResource( 8 )]
 

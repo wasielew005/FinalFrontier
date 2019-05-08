@@ -418,31 +418,41 @@ visible = false
 position = Vector2( 2349.26, 644.94 )
 points = 200
 
-[node name="ranged_enemy" parent="." index="37" instance=ExtResource( 6 )]
+[node name="ranged_enemy" parent="." index="37" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
 
 visible = false
 position = Vector2( 1970.51, 288.517 )
 points = 300
 
-[node name="ranged_enemy2" parent="." index="38" instance=ExtResource( 6 )]
+[node name="ranged_enemy2" parent="." index="38" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
 
 visible = false
 position = Vector2( 3567.77, 1112.53 )
 points = 300
 
-[node name="ranged_enemy3" parent="." index="39" instance=ExtResource( 6 )]
+[node name="ranged_enemy3" parent="." index="39" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
 
 visible = false
 position = Vector2( 2720.9, 2379.76 )
 points = 300
 
-[node name="ranged_enemy4" parent="." index="40" instance=ExtResource( 6 )]
+[node name="ranged_enemy4" parent="." index="40" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
 
 visible = false
 position = Vector2( 2645.53, 4053.44 )
 points = 300
 
-[node name="ranged_enemy5" parent="." index="41" instance=ExtResource( 6 )]
+[node name="ranged_enemy5" parent="." index="41" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
 
 visible = false
 position = Vector2( 1763.97, 4796.41 )
@@ -453,7 +463,5 @@ points = 300
 position = Vector2( 2074.12, 72.2897 )
 scale = Vector2( 0.925363, 0.825797 )
 level_scene = "res://Assets/Levels/Kyler_Levels/kylerlevelthree.tscn"
-light = null
-dark = null
 
 
