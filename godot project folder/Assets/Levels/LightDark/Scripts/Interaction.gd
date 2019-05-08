@@ -4,10 +4,7 @@ export (NodePath) onready var int_part = get_node(int_part)
 export (NodePath) onready var popup = get_node(popup)
 
 func _ready():
-	if global.has_lighter:
-		int_part.hide()
-	if global.has_code:
-		int_part.hide()
+	pass
 
 func _process(delta):
 	var bodies = get_overlapping_bodies()
@@ -27,7 +24,7 @@ func _process(delta):
 			
 			popup.hide()
 			
-		if body.name == "Player" && Input.is_action_pressed("ui_select") && self.name == "Code":
+		elif body.name == "Player" && Input.is_action_pressed("ui_select") && self.name == "Code":
 			global.has_code = true
 			popup.show()
 			int_part.hide()
