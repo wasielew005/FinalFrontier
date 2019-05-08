@@ -1,0 +1,256 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Levels/LoganLevels/LoganLevel2.tmx" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Characters/Enemies/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/Characters/Enemies/ranged_enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/Characters/Enemies/melee_enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=7]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 2145.46, 4600.82, 2699.13, 4599.46, 2700.49, 4754.54, 1446.23, 4745.02, 1449.31, 4603.54, 2000.26, 4600.82, 1499.64, 2353.48, 3597.34, 2353.48, 3595.98, 2796.97, 2948.44, 2794.25, 1501, 3550.61, 2947.08, 2852.74, 1700.62, 3798.2, 3844.93, 2851.38, 3846.29, 3799.56, 1501, 4048.51, 1700.62, 3853.98, 2000.26, 4047.15, 2696.41, 3852.62, 2696.41, 4194.07, 2149.54, 4194.07 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 0, 4, 5 ), PoolIntArray( 6, 7, 8, 9 ), PoolIntArray( 10, 6, 9, 11, 12 ), PoolIntArray( 13, 14, 12, 11 ), PoolIntArray( 15, 10, 12, 16 ), PoolIntArray( 17, 15, 16, 18 ), PoolIntArray( 17, 18, 19, 20 ), PoolIntArray( 5, 17, 20, 0 ) ]
+outlines = [ PoolVector2Array( 1446.23, 4745.02, 2700.49, 4754.54, 2699.13, 4599.46, 2145.46, 4600.82, 2149.54, 4194.07, 2696.41, 4194.07, 2696.41, 3852.62, 1700.62, 3853.98, 1700.62, 3798.2, 3846.29, 3799.56, 3844.93, 2851.38, 2947.08, 2852.74, 2948.44, 2794.25, 3595.98, 2796.97, 3597.34, 2353.48, 1499.64, 2353.48, 1501, 3550.61, 1501, 4048.51, 2000.26, 4047.15, 2000.26, 4600.82, 1449.31, 4603.54 ) ]
+
+[node name="LoganLevel2" groups=[
+"enemy",
+] instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 2077.35, 4922.35 )
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="3"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+position = Vector2( 1, 0 )
+navpoly = SubResource( 1 )
+enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+[node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
+
+position = Vector2( 1662.91, 4671.01 )
+
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="1"]
+
+position = Vector2( 2567.06, 4676.55 )
+
+[node name="destination2" type="Position2D" parent="Navigation2D/destinations" index="2"]
+
+position = Vector2( 2646.41, 3893.39 )
+
+[node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="3"]
+
+position = Vector2( 2093.56, 4013.34 )
+
+[node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="4"]
+
+position = Vector2( 1577.41, 3924.88 )
+
+[node name="destination5" type="Position2D" parent="Navigation2D/destinations" index="5"]
+
+position = Vector2( 1822.94, 3691.64 )
+
+[node name="destination6" type="Position2D" parent="Navigation2D/destinations" index="6"]
+
+position = Vector2( 2492.2, 3754.95 )
+
+[node name="destination7" type="Position2D" parent="Navigation2D/destinations" index="7"]
+
+position = Vector2( 3165.98, 3664.51 )
+
+[node name="destination8" type="Position2D" parent="Navigation2D/destinations" index="8"]
+
+position = Vector2( 3672.44, 3745.91 )
+
+[node name="destination9" type="Position2D" parent="Navigation2D/destinations" index="9"]
+
+position = Vector2( 3753.05, 2996.32 )
+
+[node name="destination10" type="Position2D" parent="Navigation2D/destinations" index="10"]
+
+position = Vector2( 2822.19, 2666.91 )
+
+[node name="destination11" type="Position2D" parent="Navigation2D/destinations" index="11"]
+
+position = Vector2( 2827.75, 3207.29 )
+
+[node name="destination12" type="Position2D" parent="Navigation2D/destinations" index="12"]
+
+position = Vector2( 3453.25, 3470.07 )
+
+[node name="destination13" type="Position2D" parent="Navigation2D/destinations" index="13"]
+
+position = Vector2( 1745.13, 3457.12 )
+
+[node name="destination14" type="Position2D" parent="Navigation2D/destinations" index="14"]
+
+position = Vector2( 1604.49, 3460.82 )
+
+[node name="destination15" type="Position2D" parent="Navigation2D/destinations" index="15"]
+
+position = Vector2( 1595.23, 2426.33 )
+
+[node name="destination16" type="Position2D" parent="Navigation2D/destinations" index="16"]
+
+position = Vector2( 3467.38, 2438.63 )
+
+[node name="destination17" type="Position2D" parent="Navigation2D/destinations" index="17"]
+
+position = Vector2( 1919.22, 2682.64 )
+
+[node name="destination18" type="Position2D" parent="Navigation2D/destinations" index="18"]
+
+position = Vector2( 1919.22, 3232.19 )
+
+[node name="Enemy" parent="." index="4" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1611.46, 4668.61 )
+destination_order = [ 0, 1 ]
+
+[node name="Enemy2" parent="." index="5" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2498.73, 3923.29 )
+destination_order = [ 2, 3, 4 ]
+
+[node name="Enemy3" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2030.68, 3693.22 )
+destination_order = [ 5, 6, 7, 8 ]
+
+[node name="Enemy4" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 3750.96, 3292.38 )
+destination_order = [ 8, 9 ]
+
+[node name="Enemy5" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2675.37, 3434.34 )
+destination_order = [ 12, 13 ]
+
+[node name="Enemy7" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2814.58, 2923.85 )
+destination_order = [ 10, 11 ]
+
+[node name="Enemy8" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1918.77, 2953.33 )
+destination_order = [ 17, 18 ]
+
+[node name="Enemy9" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 1599.77, 2965.02 )
+destination_order = [ 14, 15 ]
+
+[node name="Enemy6" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+position = Vector2( 2677.04, 2432.23 )
+destination_order = [ 15, 16 ]
+
+[node name="ranged_enemy" parent="." index="13" instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1539.91, 2390.03 )
+
+[node name="ranged_enemy2" parent="." index="14" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1541.58, 3509.05 )
+
+[node name="ranged_enemy3" parent="." index="15" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3559.16, 3143.28 )
+
+[node name="ranged_enemy5" parent="." index="16" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 1553.75, 4017.38 )
+
+[node name="ranged_enemy4" parent="." index="17" groups=[
+"enemy",
+] instance=ExtResource( 5 )]
+
+visible = false
+position = Vector2( 3548.06, 2739.85 )
+
+[node name="melee_enemy" parent="." index="18" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 3801.7, 2898.51 )
+
+[node name="melee_enemy2" parent="." index="19" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 3810.68, 3772.43 )
+
+[node name="melee_enemy3" parent="." index="20" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2656.09, 4910.76 )
+
+[node name="melee_enemy5" parent="." index="21" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 2036.45, 4139.14 )
+
+[node name="melee_enemy4" parent="." index="22" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+visible = false
+position = Vector2( 1485.44, 4925.87 )
+
+[node name="Level Transition" parent="." index="23" instance=ExtResource( 7 )]
+
+position = Vector2( 2623.26, 2949.39 )
+scale = Vector2( 1, 3.10893 )
+level_scene = "res://Assets/Levels/LoganLevels/LoganLevel3.tscn"
+light = null
+dark = null
+player = NodePath("../Player")
+
+

@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/kylerbossroom.tmx-a2b04982a7f43ff76cb04f4c98d7ca6e.scn"
+path="res://.import/kylerbossroom.tmx-744cc0aab188a104ed415e4380455045.scn"
 
 [deps]
 
-source_file="res://Assets/Levels/Kyler_Levels/kylerbossroom.tmx"
-dest_files=[ "res://.import/kylerbossroom.tmx-a2b04982a7f43ff76cb04f4c98d7ca6e.scn" ]
+source_file="res://Assets/Levels/kyler_levels/kylerbossroom.tmx"
+dest_files=[ "res://.import/kylerbossroom.tmx-744cc0aab188a104ed415e4380455045.scn" ]
 
 [params]
 

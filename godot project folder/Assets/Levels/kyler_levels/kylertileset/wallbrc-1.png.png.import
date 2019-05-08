@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wallbrc-1.png.png-581f3d24956383c928d9f8353b3cbca2.stex"
+path="res://.import/wallbrc-1.png.png-1b7abf9cdbb465b398a4621a951f27d0.stex"
 
 [deps]
 
-source_file="res://Assets/Levels/Kyler_Levels/kylertileset/wallbrc-1.png.png"
-dest_files=[ "res://.import/wallbrc-1.png.png-581f3d24956383c928d9f8353b3cbca2.stex" ]
+source_file="res://Assets/Levels/kyler_levels/kylertileset/wallbrc-1.png.png"
+dest_files=[ "res://.import/wallbrc-1.png.png-1b7abf9cdbb465b398a4621a951f27d0.stex" ]
 
 [params]
 

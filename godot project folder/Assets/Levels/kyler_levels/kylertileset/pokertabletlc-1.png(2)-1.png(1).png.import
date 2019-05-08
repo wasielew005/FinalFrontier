@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pokertabletlc-1.png(2)-1.png(1).png-ee53f82cd8754c02f3b9d83a931d39d0.stex"
+path="res://.import/pokertabletlc-1.png(2)-1.png(1).png-b8f07c603a965e6abe7f6e0f5c95214f.stex"
 
 [deps]
 
-source_file="res://Assets/Levels/Kyler_Levels/kylertileset/pokertabletlc-1.png(2)-1.png(1).png"
-dest_files=[ "res://.import/pokertabletlc-1.png(2)-1.png(1).png-ee53f82cd8754c02f3b9d83a931d39d0.stex" ]
+source_file="res://Assets/Levels/kyler_levels/kylertileset/pokertabletlc-1.png(2)-1.png(1).png"
+dest_files=[ "res://.import/pokertabletlc-1.png(2)-1.png(1).png-b8f07c603a965e6abe7f6e0f5c95214f.stex" ]
 
 [params]
 

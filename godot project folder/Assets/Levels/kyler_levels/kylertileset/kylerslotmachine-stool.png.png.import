@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kylerslotmachine-stool.png.png-27f3b4f0404b5ad7cfc2827c759be2fb.stex"
+path="res://.import/kylerslotmachine-stool.png.png-f3133b4d18750cc715ac1a2814e049f8.stex"
 
 [deps]
 
-source_file="res://Assets/Levels/Kyler_Levels/kylertileset/kylerslotmachine-stool.png.png"
-dest_files=[ "res://.import/kylerslotmachine-stool.png.png-27f3b4f0404b5ad7cfc2827c759be2fb.stex" ]
+source_file="res://Assets/Levels/kyler_levels/kylertileset/kylerslotmachine-stool.png.png"
+dest_files=[ "res://.import/kylerslotmachine-stool.png.png-f3133b4d18750cc715ac1a2814e049f8.stex" ]
 
 [params]
 

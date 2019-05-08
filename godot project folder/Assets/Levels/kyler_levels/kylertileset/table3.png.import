@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/table3.png-4afb665b2d74fa313a438975a190e6ce.stex"
+path="res://.import/table3.png-520dea32e9dd013549609c3287505c3f.stex"
 
 [deps]
 
-source_file="res://Assets/Levels/Kyler_Levels/kylertileset/table3.png"
-dest_files=[ "res://.import/table3.png-4afb665b2d74fa313a438975a190e6ce.stex" ]
+source_file="res://Assets/Levels/kyler_levels/kylertileset/table3.png"
+dest_files=[ "res://.import/table3.png-520dea32e9dd013549609c3287505c3f.stex" ]
 
 [params]
 
