@@ -11,6 +11,7 @@ func _process(delta):
 	for body in bodies:
 		if body.name == "Player" && Input.is_action_pressed("ui_select") && self.name == "Lighter":
 			global.has_lighter = true
+			int_part.hide()
 			popup.show()
 			
 			var t = Timer.new()
@@ -25,6 +26,7 @@ func _process(delta):
 			
 		elif body.name == "Player" && Input.is_action_pressed("ui_select") && self.name == "Code":
 			global.has_code = true
+			int_part.hide()
 			popup.show()
 			
 			var t = Timer.new()

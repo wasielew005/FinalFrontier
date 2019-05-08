@@ -8,29 +8,33 @@ func _ready():
 	# Initialization here
 	pass
 
-func _process(delta):
-	var bodies = get_overlapping_bodies()
-	for body in bodies:
-		if body.name == "Player" && Input.is_action_pressed("ui_select"):
-			if global.lights == true:
-				global.lights = false
-				print("Lights are now off")
+func _input(event):
+	if event.is_action_pressed("ui_select"):
+		var bodies = get_overlapping_bodies()
+		for body in bodies:
+			if body.name == "Player" && Input.is_action_pressed("ui_select"):
+				print(body.name)
+				if global.lights == true:
+					global.lights = false
+					
+				elif global.lights == false:
+					global.lights = true
+				
+				popup.show()
+				int_part.hide()
+				
+				var t = Timer.new()
+				t.set_wait_time(10)
+				t.set_one_shot(true)
+				self.add_child(t)
+				t.start()
+				yield(t, "timeout")
+				t.queue_free()
+				
+				popup.hide()
+				
 			else:
-				global.lights = true
-				print("Lights are now on")
-			
-			popup.show()
-			int_part.hide()
-			
-			var t = Timer.new()
-			t.set_wait_time(10)
-			t.set_one_shot(true)
-			self.add_child(t)
-			t.start()
-			yield(t, "timeout")
-			t.queue_free()
-			
-			popup.hide()
-			
-		else:
-			pass
+				pass
+
+func _process(delta):
+	pass
