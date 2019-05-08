@@ -9,9 +9,15 @@
  </tile>
  <tile id="2">
   <image width="64" height="64" source="kylertilesresize/resize_kylerslotmachine.png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="4.5" y="17.5" width="56" height="26"/>
+  </objectgroup>
  </tile>
  <tile id="3">
   <image width="64" height="64" source="kylertilesresize/resize_kylerslotmachine-stool.png.png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="3.5" y="16.5" width="57" height="28.5"/>
+  </objectgroup>
  </tile>
  <tile id="4">
   <image width="64" height="64" source="kylertilesresize/resize_kylerstairs.png"/>
@@ -24,15 +30,35 @@
  </tile>
  <tile id="7">
   <image width="64" height="64" source="kylertilesresize/resize_pokertabletlc-1.png(2)-1.png(1).png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="19" y="-1">
+    <polygon points="0,0 -0.5,21.5 24.5,47 44,47 45.5,0.5"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="8">
   <image width="64" height="64" source="kylertilesresize/resize_pokertabletlc-1.png(2)-1.png(2).png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="2.5" y="0">
+    <polygon points="0,0 43,1 42.5,20.5 18.5,45.5 -1.5,45"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="9">
   <image width="64" height="64" source="kylertilesresize/resize_pokertabletlc-1.png(2)-1.png(3).png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="0.5" y="17.5">
+    <polygon points="0,0 19,0 44.5,26 44.5,46.5 0,46"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="10">
   <image width="64" height="64" source="kylertilesresize/resize_pokertabletlc-1.png(2)-1.png.png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="63.5" y="19">
+    <polygon points="0,0 -22.5,-0.5 -45,22 -44.5,43.5 -0.5,43.5"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="11">
   <image width="64" height="64" source="kylertilesresize/resize_table.png"/>

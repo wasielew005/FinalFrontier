@@ -25,9 +25,9 @@ _sections_unfolded = [ "Collision", "Occluder" ]
 [node name="walls" parent="." index="1"]
 
 collision_use_kinematic = true
-collision_layer = 31
-collision_mask = 31
-_sections_unfolded = [ "Collision" ]
+collision_layer = 5
+collision_mask = 0
+_sections_unfolded = [ "Cell", "Collision", "Material", "Occluder" ]
 
 [node name="Level Transition" parent="." index="2" instance=ExtResource( 3 )]
 
@@ -54,192 +54,192 @@ enabled = true
 
 [node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
 
-position = Vector2( 1167.71, 4882.14 )
+position = Vector2( 1246.29, 4891.96 )
 scale = Vector2( -4.5317, -5.85417 )
 
-[node name="destination2" type="Position2D" parent="Navigation2D/destinations" index="1"]
-
-position = Vector2( 1155.43, 4425.42 )
-scale = Vector2( -4.5317, -5.85417 )
-
-[node name="destination5" type="Position2D" parent="Navigation2D/destinations" index="2"]
-
-position = Vector2( 1150.52, 3998.17 )
-scale = Vector2( -4.5317, -5.85417 )
-
-[node name="destination6" type="Position2D" parent="Navigation2D/destinations" index="3"]
-
-position = Vector2( 1140.7, 3477.61 )
-scale = Vector2( -4.5317, -5.85417 )
-
-[node name="destination9" type="Position2D" parent="Navigation2D/destinations" index="4"]
-
-position = Vector2( 1155.43, 3013.53 )
-scale = Vector2( -4.5317, -5.85417 )
-
-[node name="destination11" type="Position2D" parent="Navigation2D/destinations" index="5"]
-
-position = Vector2( 1135.79, 2684.49 )
-scale = Vector2( -4.5317, -5.85417 )
-
-[node name="destination13" type="Position2D" parent="Navigation2D/destinations" index="6"]
-
-position = Vector2( 1152.98, 3251.71 )
-scale = Vector2( -4.5317, -5.85417 )
-
-[node name="destination14" type="Position2D" parent="Navigation2D/destinations" index="7"]
-
-position = Vector2( 1145.61, 3750.17 )
-scale = Vector2( -4.5317, -5.85417 )
-
-[node name="destination16" type="Position2D" parent="Navigation2D/destinations" index="8"]
-
-position = Vector2( 1138.25, 4216.71 )
-scale = Vector2( -4.5317, -5.85417 )
-
-[node name="destination19" type="Position2D" parent="Navigation2D/destinations" index="9"]
-
-position = Vector2( 1167.71, 4643.96 )
-scale = Vector2( -4.5317, -5.85417 )
-
-[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="10"]
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="1"]
 
 position = Vector2( 819.035, 4887.05 )
 scale = Vector2( 9.6882, -6.83636 )
 
-[node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="11"]
+[node name="destination2" type="Position2D" parent="Navigation2D/destinations" index="2"]
+
+position = Vector2( 1155.43, 4425.42 )
+scale = Vector2( -4.5317, -5.85417 )
+
+[node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="3"]
 
 position = Vector2( 806.757, 4430.33 )
 scale = Vector2( 9.6882, -6.83636 )
 
-[node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="12"]
+[node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="4"]
 
 position = Vector2( 801.846, 4003.08 )
 scale = Vector2( 9.6882, -6.83636 )
 
-[node name="destination7" type="Position2D" parent="Navigation2D/destinations" index="13"]
+[node name="destination5" type="Position2D" parent="Navigation2D/destinations" index="5"]
+
+position = Vector2( 1150.52, 3998.17 )
+scale = Vector2( -4.5317, -5.85417 )
+
+[node name="destination6" type="Position2D" parent="Navigation2D/destinations" index="6"]
+
+position = Vector2( 1140.7, 3477.61 )
+scale = Vector2( -4.5317, -5.85417 )
+
+[node name="destination7" type="Position2D" parent="Navigation2D/destinations" index="7"]
 
 position = Vector2( 792.024, 3482.52 )
 scale = Vector2( 9.6882, -6.83636 )
 
-[node name="destination8" type="Position2D" parent="Navigation2D/destinations" index="14"]
+[node name="destination8" type="Position2D" parent="Navigation2D/destinations" index="8"]
 
 position = Vector2( 806.757, 3018.43 )
 scale = Vector2( 9.6882, -6.83636 )
 
-[node name="destination10" type="Position2D" parent="Navigation2D/destinations" index="15"]
+[node name="destination9" type="Position2D" parent="Navigation2D/destinations" index="9"]
+
+position = Vector2( 1155.43, 3013.53 )
+scale = Vector2( -4.5317, -5.85417 )
+
+[node name="destination10" type="Position2D" parent="Navigation2D/destinations" index="10"]
 
 position = Vector2( 787.114, 2689.4 )
 scale = Vector2( 9.6882, -6.83636 )
 
-[node name="destination20" type="Position2D" parent="Navigation2D/destinations" index="16"]
+[node name="destination11" type="Position2D" parent="Navigation2D/destinations" index="11"]
 
-position = Vector2( 917.254, 2119.73 )
-scale = Vector2( 9.6882, -6.83636 )
+position = Vector2( 1135.79, 2684.49 )
+scale = Vector2( -4.5317, -5.85417 )
 
-[node name="destination21" type="Position2D" parent="Navigation2D/destinations" index="17"]
-
-position = Vector2( 931.987, 2515.06 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination26" type="Position2D" parent="Navigation2D/destinations" index="18"]
-
-position = Vector2( 1761.94, 2050.98 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination28" type="Position2D" parent="Navigation2D/destinations" index="19"]
-
-position = Vector2( 1639.16, 2055.89 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination35" type="Position2D" parent="Navigation2D/destinations" index="20"]
-
-position = Vector2( 1621.98, 2900.57 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination37" type="Position2D" parent="Navigation2D/destinations" index="21"]
-
-position = Vector2( 1754.57, 2900.57 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination31" type="Position2D" parent="Navigation2D/destinations" index="22"]
-
-position = Vector2( 1896.99, 2065.71 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination34" type="Position2D" parent="Navigation2D/destinations" index="23"]
-
-position = Vector2( 1879.8, 2910.39 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination27" type="Position2D" parent="Navigation2D/destinations" index="24"]
-
-position = Vector2( 1759.48, 2524.88 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination29" type="Position2D" parent="Navigation2D/destinations" index="25"]
-
-position = Vector2( 1636.71, 2529.8 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination33" type="Position2D" parent="Navigation2D/destinations" index="26"]
-
-position = Vector2( 1619.52, 3374.48 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination36" type="Position2D" parent="Navigation2D/destinations" index="27"]
-
-position = Vector2( 1752.12, 3374.48 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination30" type="Position2D" parent="Navigation2D/destinations" index="28"]
-
-position = Vector2( 1894.53, 2539.62 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination32" type="Position2D" parent="Navigation2D/destinations" index="29"]
-
-position = Vector2( 1877.34, 3384.3 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination22" type="Position2D" parent="Navigation2D/destinations" index="30"]
-
-position = Vector2( 914.798, 1773.51 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination25" type="Position2D" parent="Navigation2D/destinations" index="31"]
-
-position = Vector2( 966.363, 1628.64 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination23" type="Position2D" parent="Navigation2D/destinations" index="32"]
-
-position = Vector2( 1644.07, 1763.69 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination24" type="Position2D" parent="Navigation2D/destinations" index="33"]
-
-position = Vector2( 1695.64, 1616.36 )
-scale = Vector2( 9.6882, -6.83636 )
-
-[node name="destination12" type="Position2D" parent="Navigation2D/destinations" index="34"]
+[node name="destination12" type="Position2D" parent="Navigation2D/destinations" index="12"]
 
 position = Vector2( 804.302, 3256.62 )
 scale = Vector2( 9.6882, -6.83636 )
 
-[node name="destination15" type="Position2D" parent="Navigation2D/destinations" index="35"]
+[node name="destination13" type="Position2D" parent="Navigation2D/destinations" index="13"]
+
+position = Vector2( 1152.98, 3251.71 )
+scale = Vector2( -4.5317, -5.85417 )
+
+[node name="destination14" type="Position2D" parent="Navigation2D/destinations" index="14"]
+
+position = Vector2( 1145.61, 3750.17 )
+scale = Vector2( -4.5317, -5.85417 )
+
+[node name="destination15" type="Position2D" parent="Navigation2D/destinations" index="15"]
 
 position = Vector2( 796.936, 3755.08 )
 scale = Vector2( 9.6882, -6.83636 )
 
-[node name="destination17" type="Position2D" parent="Navigation2D/destinations" index="36"]
+[node name="destination16" type="Position2D" parent="Navigation2D/destinations" index="16"]
+
+position = Vector2( 1138.25, 4216.71 )
+scale = Vector2( -4.5317, -5.85417 )
+
+[node name="destination17" type="Position2D" parent="Navigation2D/destinations" index="17"]
 
 position = Vector2( 789.569, 4221.62 )
 scale = Vector2( 9.6882, -6.83636 )
 
-[node name="destination18" type="Position2D" parent="Navigation2D/destinations" index="37"]
+[node name="destination18" type="Position2D" parent="Navigation2D/destinations" index="18"]
 
 position = Vector2( 819.035, 4648.87 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination19" type="Position2D" parent="Navigation2D/destinations" index="19"]
+
+position = Vector2( 1167.71, 4643.96 )
+scale = Vector2( -4.5317, -5.85417 )
+
+[node name="destination20" type="Position2D" parent="Navigation2D/destinations" index="20"]
+
+position = Vector2( 917.254, 2119.73 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination21" type="Position2D" parent="Navigation2D/destinations" index="21"]
+
+position = Vector2( 931.987, 2515.06 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination22" type="Position2D" parent="Navigation2D/destinations" index="22"]
+
+position = Vector2( 914.798, 1773.51 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination23" type="Position2D" parent="Navigation2D/destinations" index="23"]
+
+position = Vector2( 1644.07, 1763.69 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination24" type="Position2D" parent="Navigation2D/destinations" index="24"]
+
+position = Vector2( 1695.64, 1616.36 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination25" type="Position2D" parent="Navigation2D/destinations" index="25"]
+
+position = Vector2( 966.363, 1628.64 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination26" type="Position2D" parent="Navigation2D/destinations" index="26"]
+
+position = Vector2( 1761.94, 2050.98 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination27" type="Position2D" parent="Navigation2D/destinations" index="27"]
+
+position = Vector2( 1759.48, 2524.88 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination28" type="Position2D" parent="Navigation2D/destinations" index="28"]
+
+position = Vector2( 1639.16, 2055.89 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination29" type="Position2D" parent="Navigation2D/destinations" index="29"]
+
+position = Vector2( 1636.71, 2529.8 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination30" type="Position2D" parent="Navigation2D/destinations" index="30"]
+
+position = Vector2( 1894.53, 2539.62 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination31" type="Position2D" parent="Navigation2D/destinations" index="31"]
+
+position = Vector2( 1896.99, 2065.71 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination32" type="Position2D" parent="Navigation2D/destinations" index="32"]
+
+position = Vector2( 1877.34, 3384.3 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination33" type="Position2D" parent="Navigation2D/destinations" index="33"]
+
+position = Vector2( 1619.52, 3374.48 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination34" type="Position2D" parent="Navigation2D/destinations" index="34"]
+
+position = Vector2( 1879.8, 2910.39 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination35" type="Position2D" parent="Navigation2D/destinations" index="35"]
+
+position = Vector2( 1621.98, 2900.57 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination36" type="Position2D" parent="Navigation2D/destinations" index="36"]
+
+position = Vector2( 1752.12, 3374.48 )
+scale = Vector2( 9.6882, -6.83636 )
+
+[node name="destination37" type="Position2D" parent="Navigation2D/destinations" index="37"]
+
+position = Vector2( 1754.57, 2900.57 )
 scale = Vector2( 9.6882, -6.83636 )
 
 [node name="Enemy" parent="." index="5" instance=ExtResource( 4 )]
