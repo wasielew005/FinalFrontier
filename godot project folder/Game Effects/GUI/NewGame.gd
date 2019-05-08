@@ -28,7 +28,7 @@ func _on_StartGameButton_pressed():
 		global.level_order = get_node("MarginContainer/HBoxContainer/Level Selection").get_final_level_order()
 	else:
 ######### DEFINE DEFAULT PATH ORDER [.tscn] HERE ##########
-		global.level_order = ["res://Assets/Levels/brettlevels/brettlevel1.tscn", "res://Assets/Levels/LightDark/Levels/LD_One_Light.tscn", 3, 4, 5, 6]
+		global.level_order = ["res://Assets/Levels/brettlevels/brettlevel1.tscn", "res://Assets/Levels/LightDark/Levels/LD_One_Light.tscn", "res://Assets/Levels/kyler_levels/kylerlevelone.tscn", 4, 5, 6]
 	
 	global.current_level = 0
 	global.value = 0;

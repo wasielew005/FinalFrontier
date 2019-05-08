@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hor0.png-a1a89329f316bdfaf5fc6bf6a398eb92.stex"
+path="res://.import/hor0.png-ec292b3adea32de8c0f828342aa2bca7.stex"
 
 [deps]
 
-source_file="res://Assets/Levels/Kyler_Levels/kylerobjects/hor0.png"
-dest_files=[ "res://.import/hor0.png-a1a89329f316bdfaf5fc6bf6a398eb92.stex" ]
+source_file="res://Assets/Levels/kyler_levels/kylerobjects/hor0.png"
+dest_files=[ "res://.import/hor0.png-ec292b3adea32de8c0f828342aa2bca7.stex" ]
 
 [params]
 
