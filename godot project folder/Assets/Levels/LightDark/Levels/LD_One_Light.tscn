@@ -40,16 +40,12 @@ script = ExtResource( 1 )
 position = Vector2( 6394.34, 238.457 )
 scale = Vector2( 1.48955, 2.47638 )
 level_scene = "res://Assets/Levels/LightDark/Levels/SwitchRoom.tscn"
-light = null
-dark = null
 
 [node name="Level Transition2" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 6395.01, 3393.78 )
 scale = Vector2( 1.48955, 2.47638 )
 level_scene = "res://Assets/Levels/LightDark/Levels/SwitchRoom.tscn"
-light = null
-dark = null
 
 [node name="Enemy" parent="." index="3" groups=[
 "enemy",
@@ -737,35 +733,7 @@ position = Vector2( 4.8647, -2.55335 )
 scale = Vector2( 1.83346, 1.97523 )
 _sections_unfolded = [ "Process Material", "Time", "Transform" ]
 
-[node name="Lighter2" type="Area2D" parent="." index="47"]
-
-editor/display_folded = true
-position = Vector2( 5678.84, 3373.08 )
-scale = Vector2( 2.72708, 2.53135 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 8 )
-int_part = NodePath("Interaction -- Lighter")
-popup = NodePath("../Player/CanvasLayer/LighterDialog")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lighter2" index="0"]
-
-position = Vector2( 1.93858, -2.37124 )
-scale = Vector2( 2.62851, 2.52049 )
-shape = SubResource( 3 )
-
-[node name="Interaction -- Lighter" parent="Lighter2" index="1" instance=ExtResource( 9 )]
-
-position = Vector2( 4.8647, -2.55335 )
-scale = Vector2( 1.83346, 1.97523 )
-_sections_unfolded = [ "Process Material", "Time", "Transform" ]
-
-[node name="Code" type="Area2D" parent="." index="48"]
+[node name="Code" type="Area2D" parent="." index="47"]
 
 editor/display_folded = true
 position = Vector2( 1291.29, 3460.26 )

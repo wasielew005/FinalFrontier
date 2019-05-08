@@ -14,7 +14,7 @@ func _process(delta):
 		if body.name == "Player" && Input.is_action_pressed("ui_select"):
 			if global.lights == true:
 				global.lights = false
-			else:
+			elif global.lights == false:
 				global.lights = true
 			
 			popup.show()
