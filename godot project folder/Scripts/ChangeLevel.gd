@@ -20,6 +20,8 @@ func _physics_process(delta):
 				if final_floor:
 					#changes to next world in specified order
 					global.current_level += 1
+					#print("Current_level:")
+					#print(global.current_level)
 					#global.level_order = ["res://Assets/Levels/brettlevels/brettlevel1.tscn", "res://Assets/Levels/LightDark/Levels/LD_One_Light.tscn", 3, 4, 5, 6]
 					print(global.level_order[global.current_level])
 					get_tree().change_scene(global.level_order[global.current_level])
