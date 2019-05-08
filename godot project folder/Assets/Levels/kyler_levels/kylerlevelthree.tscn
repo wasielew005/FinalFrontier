@@ -228,107 +228,134 @@ destination_order = [ 28, 29 ]
 
 [node name="melee_enemy" parent="." index="14" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1525.16, 3779.13 )
 points = 200
 
 [node name="melee_enemy2" parent="." index="15" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1525.16, 3742.56 )
 points = 200
 
 [node name="melee_enemy3" parent="." index="16" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1525.16, 3707.11 )
 points = 200
 
 [node name="melee_enemy4" parent="." index="17" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1930.06, 2827.64 )
 points = 200
 
 [node name="melee_enemy5" parent="." index="18" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1727.97, 2582.12 )
 points = 200
 
 [node name="melee_enemy6" parent="." index="19" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1185.16, 2136.18 )
 points = 200
 
 [node name="melee_enemy7" parent="." index="20" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1818.16, 1728.66 )
 points = 200
 
 [node name="melee_enemy8" parent="." index="21" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2347.6, 2132.84 )
 points = 200
 
 [node name="melee_enemy9" parent="." index="22" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3127.57, 1621.77 )
 points = 200
 
 [node name="melee_enemy10" parent="." index="23" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3316.3, 1618.43 )
 points = 200
 
 [node name="melee_enemy11" parent="." index="24" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3297.29, 2478.23 )
 points = 200
 
 [node name="melee_enemy12" parent="." index="25" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3498.41, 3343.43 )
 points = 200
 
 [node name="melee_enemy13" parent="." index="26" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2942.72, 3333.18 )
 points = 200
 
 [node name="melee_enemy14" parent="." index="27" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2768.42, 4633.22 )
 points = 200
 
 [node name="melee_enemy15" parent="." index="28" instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2280.05, 4627.78 )
 points = 200
 
 [node name="ranged_enemy" parent="." index="29" instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3121.77, 2127.97 )
 points = 300
 
 [node name="ranged_enemy2" parent="." index="30" instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3350.87, 2475.46 )
 points = 300
 
 [node name="ranged_enemy3" parent="." index="31" instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3518.24, 3820 )
 points = 300
 
 [node name="ranged_enemy4" parent="." index="32" instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4687.04, 4026.42 )
 points = 300
 
 [node name="ranged_enemy5" parent="." index="33" instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 1043.95, 4810.27 )
 points = 300
 
 [node name="ranged_enemy6" parent="." index="34" instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3012.77, 3580.1 )
+points = 300
+
+[node name="ranged_enemy7" parent="." index="35" instance=ExtResource( 7 )]
+
+visible = false
+position = Vector2( 2348.23, 2315.94 )
 points = 300
 
 
