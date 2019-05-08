@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/switchoff.png-9fe46953f643452f443f263c19e53284.stex"
+path="res://.import/switchoff.png-90ace8327c41916a476ba7d64b2f5386.stex"
 
 [deps]
 
-source_file="res://Assets/Levels/Kyler_Levels/kylerobjects/switchoff.png"
-dest_files=[ "res://.import/switchoff.png-9fe46953f643452f443f263c19e53284.stex" ]
+source_file="res://Assets/Levels/kyler_levels/kylerobjects/switchoff.png"
+dest_files=[ "res://.import/switchoff.png-90ace8327c41916a476ba7d64b2f5386.stex" ]
 
 [params]
 

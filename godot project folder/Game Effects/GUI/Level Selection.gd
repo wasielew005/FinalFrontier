@@ -197,15 +197,15 @@ func get_final_level_order():
 	for x in range(0, 6):
 		match selectedList[x]:
 			1:
-				finalList[x] = "res://Assets/Levels/brettlevels/brettlevel1.tscn";
+				finalList[x] = "res://Assets/Levels/brettlevels/brettlevel1.tscn"
 			2:
-				finalList[x] = "res://Assets/Levels/LightDark/Levels/LD_One_Light.tscn";
+				finalList[x] = "res://Assets/Levels/LightDark/Levels/LD_One_Light.tscn"
 			3:
-				finalList[x] = "3"
+				finalList[x] = "res://Assets/Levels/kyler_levels/kylerlevelthree.tscn"
 			4: 
-				finalList[x] = "4"
+				finalList[x] = "res://Assets/Levels/andrew_levels/andrew_one.tscn"
 			5:
-				finalList[x] = "5"
+				finalList[x] = "res://Assets/Levels/LoganLevels/LoganLevel1.tscn"
 			6:
 				finalList[x] = "6"
 	return finalList;

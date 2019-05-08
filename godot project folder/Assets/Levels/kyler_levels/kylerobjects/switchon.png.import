@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/switchon.png-606c21275758e02860e8e6d21adb6a45.stex"
+path="res://.import/switchon.png-1de4fd1ecb3cf8c189ab7d37bf8e5b77.stex"
 
 [deps]
 
-source_file="res://Assets/Levels/Kyler_Levels/kylerobjects/switchon.png"
-dest_files=[ "res://.import/switchon.png-606c21275758e02860e8e6d21adb6a45.stex" ]
+source_file="res://Assets/Levels/kyler_levels/kylerobjects/switchon.png"
+dest_files=[ "res://.import/switchon.png-1de4fd1ecb3cf8c189ab7d37bf8e5b77.stex" ]
 
 [params]
 
