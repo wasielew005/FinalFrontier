@@ -12,7 +12,7 @@ vertices = PoolVector2Array( -94.6133, 0.906403, -94.6133, -25.6685, 72.6409, -2
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5 ), PoolIntArray( 6, 7, 8, 0, 3, 5 ), PoolIntArray( 5, 9, 6 ), PoolIntArray( 6, 10, 11, 12, 13, 14, 15, 16, 17, 7 ) ]
 outlines = [ PoolVector2Array( -94.6133, -25.6685, -94.6133, 0.906403, -150.317, 0.906403, -153.873, 36.7248, -488.095, 361.401, -575.911, 449.472, -578.282, 484.135, -271.318, 756.817, 109.126, 757.972, 340.493, 753.351, 550.271, 502.622, 557.382, 429.829, 179.307, 86.6659, 173.382, 41.9574, 136.641, 37.3357, 134.271, 8.44989, 86.863, 9.60532, 72.6409, -20.4359 ) ]
 
-[node name="andrew_three_boss" index="0" instance=ExtResource( 1 )]
+[node name="andrew_three_boss" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
@@ -25,38 +25,27 @@ _sections_unfolded = [ "Collision", "Visibility" ]
 
 _sections_unfolded = [ "Cell", "Collision" ]
 
-[node name="Level Transition" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 1567.24, 2688.76 )
-scale = Vector2( 2.87751, 1.91834 )
-level_scene = "res://Assets/Levels/andrew_levels/andrew_one.tscn"
-final_floor = false
-
-[node name="Level Transition2" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Level Transition2" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 1600.39, 894.805 )
 scale = Vector2( 2.07181, 2.12516 )
-final_floor = null
+level_scene = "res://Assets/Levels/andrew_levels/andrew_four.tscn"
 
-[node name="Navigation2D" type="Navigation2D" parent="." index="4"]
+[node name="Navigation2D" type="Navigation2D" parent="." index="3"]
 
 position = Vector2( 1600.39, 894.805 )
 scale = Vector2( 2.07181, 2.12516 )
 
 [node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
-visible = false
 navpoly = SubResource( 1 )
 enabled = true
 
-[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+[node name="Node2D" type="Node2D" parent="Navigation2D" index="1"]
 
-[node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
+position = Vector2( -378.546, -22.5616 )
 
-position = Vector2( -169.123, 477.703 )
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
-
-[node name="andrew_boss" parent="." index="5" groups=[
+[node name="andrew_boss" parent="." index="4" groups=[
 "enemy",
 ] instance=ExtResource( 4 )]
 
@@ -67,7 +56,7 @@ _sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
 fire_range = 500
 projectile_speed = 10
 
-[node name="Player" parent="." index="6" instance=ExtResource( 5 )]
+[node name="Player" parent="." index="5" instance=ExtResource( 5 )]
 
 position = Vector2( 1569.19, 2579.83 )
 rotation = -1.5708
