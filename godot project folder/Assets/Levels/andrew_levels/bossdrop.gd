@@ -6,6 +6,7 @@ extends Sprite
 
 func _ready():
 	self.visible = false
+	global.speed = 200
 	pass
 
 func _process(delta):
