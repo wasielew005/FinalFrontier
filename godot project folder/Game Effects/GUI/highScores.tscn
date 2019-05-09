@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/ScoreBackground.jpg" type="Texture" id=1]
 [ext_resource path="res://Assets/Fonts/Kenney_Pixel_Square.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Game Effects/GUI/HighScore.gd" type="Script" id=3]
-[ext_resource path="res://Game Effects/GUI/backtomenu.gd" type="Script" id=4]
+[ext_resource path="res://Game Effects/GUI/TimeHighScore.gd" type="Script" id=4]
+[ext_resource path="res://Game Effects/GUI/backtomenu.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -121,7 +122,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
-text = "Level 1"
+text = "HighScore"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -194,7 +195,9 @@ text = "Time:"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script = ExtResource( 4 )
 _sections_unfolded = [ "custom_fonts" ]
+paddingLength = 6
 
 [node name="TimeVar" type="Label" parent="Level1/Time" index="0"]
 
@@ -243,7 +246,7 @@ group = null
 text = "Back"
 flat = false
 align = 1
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "custom_fonts" ]
 
 [connection signal="pressed" from="Back" to="Back" method="_on_Back_pressed"]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Levels/LoganLevels/LoganBoss.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Characters/Enemies/ranged_enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Levels/LoganLevels/BossScript.gd" type="Script" id=5]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -10,7 +12,12 @@ vertices = PoolVector2Array( 2644.37, 2351.71, 1596.54, 2349.66, 1598.59, 1806.2
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 2644.37, 1802.16, 1598.59, 1806.27, 1596.54, 2349.66, 2644.37, 2351.71 ) ]
 
-[node name="LoganBoss" instance=ExtResource( 1 )]
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.1011, 10 )
+
+[node name="LoganBoss" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
@@ -27,5 +34,74 @@ enabled = true
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="ranged_enemy" parent="." index="3" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+visible = false
+position = Vector2( 1622.59, 1837.39 )
+
+[node name="ranged_enemy2" parent="." index="4" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+visible = false
+position = Vector2( 1630.66, 2300.77 )
+
+[node name="ranged_enemy3" parent="." index="5" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+visible = false
+position = Vector2( 2616.39, 2319.05 )
+
+[node name="ranged_enemy5" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+visible = false
+position = Vector2( 2132.7, 2317.18 )
+
+[node name="ranged_enemy4" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+visible = false
+position = Vector2( 2617.83, 1831.41 )
+
+[node name="ranged_enemy6" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+visible = false
+position = Vector2( 2615.02, 2085.44 )
+
+[node name="ranged_enemy7" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 4 )]
+
+visible = false
+position = Vector2( 1619.52, 2072.32 )
+
+[node name="bossdetection" type="Area2D" parent="." index="10"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+
+[node name="bossdetectioncollision" type="CollisionShape2D" parent="bossdetection" index="0"]
+
+position = Vector2( 2155.99, 1391.41 )
+scale = Vector2( 52.0606, 3.97225 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="body_entered" from="bossdetection" to="bossdetection" method="_on_Area2D_body_entered"]
 
 
