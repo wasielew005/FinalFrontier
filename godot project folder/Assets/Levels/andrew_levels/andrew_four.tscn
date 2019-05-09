@@ -1,17 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Levels/andrew_levels/andrew_four.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
 [ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Levels/andrew_levels/assets/minimap.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Levels/andrew_levels/minimap.gd" type="Script" id=6]
 
 [node name="andrew_four" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 
-[node name="floor" parent="." index="0"]
+[node name="walls" parent="." index="1"]
 
-visible = true
+collision_layer = 15
+collision_mask = 15
+_sections_unfolded = [ "Collision", "Occluder" ]
 
 [node name="Level Transition" parent="." index="2" instance=ExtResource( 3 )]
 
@@ -25,5 +29,13 @@ final_floor = true
 position = Vector2( 3160.72, 5136.48 )
 rotation = 4.71239
 scale = Vector2( 1.47883, 2.09611 )
+
+[node name="minimap" type="Sprite" parent="." index="4"]
+
+position = Vector2( 3322.86, 4921.03 )
+scale = Vector2( 1.05659, 0.95917 )
+texture = ExtResource( 5 )
+script = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
 
 

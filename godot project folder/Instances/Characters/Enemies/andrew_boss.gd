@@ -7,7 +7,7 @@ var motion = Vector2()
 var path = []
 var destination = Vector2()
 export (int) var targethealth = 10
-export (int) var points = 9000
+export (int) var points = 30000
 var w_t=false
 var init_path=false
 var frame_count=0;
@@ -49,10 +49,15 @@ func enemy_hit():
 	if targethealth <= 0:
 		get_parent().get_node("Player/GUI/Score").adjust(points)
 		queue_free()
+		get_parent().get_node("bossdrop").visible = true
+		
+		
+		
 
 func _process(delta):
 	if !init_path:	
 		make_path()
+		
 		init_path=true
 	
 	navigate()

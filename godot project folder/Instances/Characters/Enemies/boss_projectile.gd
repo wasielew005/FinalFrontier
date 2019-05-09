@@ -4,6 +4,10 @@ var motion = Vector2()
 
 onready var player = get_parent().get_node("Player")
 onready var projectile_speed = get_parent().get_node("andrew_boss").projectile_speed
+onready var wallone = get_parent().get_node("decayingwall")
+onready var walltwo = get_parent().get_node("decayingwall2")
+onready var wallthree = get_parent().get_node("decayingwall3")
+
 var next_destination
 
 
@@ -35,5 +39,20 @@ func _process(delta):
 			global.speed = global.speed * 3
 			print(global.playerHealth)
 		
+		if collision_info.collider == wallone:
+			wallone.health-= 1
+			$body.disabled = true
+			self.visible = false
+		
+		if collision_info.collider == walltwo:
+			walltwo.health-= 1
+			$body.disabled = true
+			self.visible = false
+		
+		if collision_info.collider == wallthree:
+			wallthree.health-= 1
+			$body.disabled = true
+			self.visible = false
+			
 		queue_free()
 
