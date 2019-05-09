@@ -244,8 +244,6 @@ position = Vector2( 1977.99, 3535.88 )
 position = Vector2( 820.654, 2775.17 )
 scale = Vector2( 2.48101, 0.807507 )
 level_scene = "res://Assets/Levels/LoganLevels/LoganBoss.tscn"
-light = null
-dark = null
 player = NodePath("../Player")
 
 
