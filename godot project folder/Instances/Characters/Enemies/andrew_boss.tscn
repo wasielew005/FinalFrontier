@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Instances/Characters/Enemies/andrew_boss.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Levels/andrew_levels/assets/boss_base.png" type="Texture" id=2]
@@ -10,6 +10,11 @@
 custom_solver_bias = 0.0
 radius = 2.1016
 
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
 [node name="andrew_boss" type="KinematicBody2D"]
 
 position = Vector2( -0.00625992, -0.264686 )
@@ -19,7 +24,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+_sections_unfolded = [ "Collision", "Transform", "Z Index", "collision" ]
 targethealth = 10
 points = 9000
 walk_slowdown = 0.5
@@ -64,5 +69,12 @@ position = Vector2( 21.2679, -0.427478 )
 position = Vector2( 6.05101, 0.223269 )
 scale = Vector2( 4.85179, 4.82304 )
 shape = SubResource( 1 )
+
+[node name="basebody" type="CollisionShape2D" parent="." index="4"]
+
+position = Vector2( 1.70746, 0.508835 )
+scale = Vector2( 4.48389, 4.42613 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Pause", "Z Index" ]
 
 
