@@ -34,11 +34,14 @@ _sections_unfolded = [ "Cell", "Collision", "Material", "Occluder" ]
 
 [node name="Level Transition2" parent="." index="2" instance=ExtResource( 3 )]
 
+visible = false
 position = Vector2( 3547.66, 4796.93 )
 scale = Vector2( 3.37628, 1.9715 )
 level_scene = "res://Assets/Levels/andrew_levels/andrew_two.tscn"
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="3"]
+
+visible = false
 
 [node name="navigation" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
 
