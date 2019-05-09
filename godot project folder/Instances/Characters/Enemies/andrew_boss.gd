@@ -57,6 +57,7 @@ func enemy_hit():
 func _process(delta):
 	if !init_path:	
 		make_path()
+		
 		init_path=true
 	
 	navigate()
