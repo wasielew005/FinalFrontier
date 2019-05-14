@@ -623,426 +623,497 @@ level_scene = "res://Assets/Levels/hunter_levels/hunter_level3.tscn"
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3813.27, 3749.11 )
 
 [node name="melee_enemy2" parent="." index="50" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3611.05, 3224.26 )
 
 [node name="melee_enemy3" parent="." index="51" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2781.74, 3869.53 )
 
 [node name="melee_enemy4" parent="." index="52" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1697.96, 3285.6 )
 
 [node name="melee_enemy5" parent="." index="53" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2018.33, 3487.82 )
 
 [node name="melee_enemy6" parent="." index="54" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2211.45, 3608.24 )
 
 [node name="melee_enemy7" parent="." index="55" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2463.65, 3746.83 )
 
 [node name="melee_enemy8" parent="." index="56" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2972.6, 3992.22 )
 
 [node name="melee_enemy9" parent="." index="57" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2972.6, 4319.4 )
 
 [node name="melee_enemy10" parent="." index="58" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2777.2, 4264.87 )
 
 [node name="melee_enemy11" parent="." index="59" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1563.91, 3621.87 )
 
 [node name="melee_enemy12" parent="." index="60" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1757.04, 3749.11 )
 
 [node name="melee_enemy13" parent="." index="61" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 1956.98, 3876.34 )
 
 [node name="melee_enemy14" parent="." index="62" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2275.07, 4010.4 )
 
 [node name="melee_enemy15" parent="." index="63" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2534.09, 4137.63 )
 
 [node name="melee_enemy16" parent="." index="64" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2977.14, 3299.24 )
 
 [node name="melee_enemy17" parent="." index="65" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3106.65, 3033.4 )
 
 [node name="melee_enemy18" parent="." index="66" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2913.52, 2908.44 )
 
 [node name="melee_enemy19" parent="." index="67" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2722.67, 3162.91 )
 
 [node name="melee_enemy20" parent="." index="68" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2590.89, 3042.49 )
 
 [node name="melee_enemy21" parent="." index="69" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2461.38, 2726.67 )
 
 [node name="melee_enemy22" parent="." index="70" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2784.02, 2731.22 )
 
 [node name="melee_enemy23" parent="." index="71" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3490.63, 4573.87 )
 
 [node name="melee_enemy24" parent="." index="72" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4129.08, 3235.62 )
 
 [node name="melee_enemy25" parent="." index="73" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4388.1, 2672.14 )
 
 [node name="melee_enemy26" parent="." index="74" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4251.78, 2333.6 )
 
 [node name="melee_enemy27" parent="." index="75" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4513.06, 2135.93 )
 
 [node name="melee_enemy28" parent="." index="76" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4574.41, 2660.78 )
 
 [node name="melee_enemy29" parent="." index="77" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4956.12, 2858.45 )
 
 [node name="melee_enemy30" parent="." index="78" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5083.35, 2983.42 )
 
 [node name="melee_enemy31" parent="." index="79" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5212.86, 3117.47 )
 
 [node name="melee_enemy32" parent="." index="80" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5603.66, 3172 )
 
 [node name="melee_enemy33" parent="." index="81" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5283.3, 2840.28 )
 
 [node name="melee_enemy34" parent="." index="82" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5921.75, 3299.24 )
 
 [node name="melee_enemy35" parent="." index="83" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5528.68, 3939.96 )
 
 [node name="melee_enemy36" parent="." index="84" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5917.21, 3749.11 )
 
 [node name="melee_enemy37" parent="." index="85" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 6369.35, 1701.97 )
 
 [node name="melee_enemy38" parent="." index="86" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 6246.66, 1831.48 )
 
 [node name="melee_enemy39" parent="." index="87" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 6044.44, 2029.15 )
 
 [node name="melee_enemy40" parent="." index="88" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5924.02, 2154.11 )
 
 [node name="melee_enemy41" parent="." index="89" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5665, 2276.8 )
 
 [node name="melee_enemy42" parent="." index="90" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5403.72, 2072.31 )
 
 [node name="melee_enemy43" parent="." index="91" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5537.77, 1945.08 )
 
 [node name="melee_enemy44" parent="." index="92" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5730.9, 1815.57 )
 
 [node name="melee_enemy45" parent="." index="93" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5924.02, 1699.69 )
 
 [node name="melee_enemy46" parent="." index="94" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 6046.71, 1567.91 )
 
 [node name="melee_enemy47" parent="." index="95" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 6237.57, 1438.41 )
 
 [node name="melee_enemy48" parent="." index="96" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 6373.89, 1311.17 )
 
 [node name="melee_enemy49" parent="." index="97" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4508.52, 1833.75 )
 
 [node name="melee_enemy50" parent="." index="98" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4578.95, 1629.26 )
 
 [node name="melee_enemy51" parent="." index="99" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4831.15, 1763.31 )
 
 [node name="melee_enemy52" parent="." index="100" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4065.46, 1956.44 )
 
 [node name="melee_enemy53" parent="." index="101" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4197.24, 1765.58 )
 
 [node name="melee_enemy54" parent="." index="102" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3617.86, 1445.22 )
 
 [node name="melee_enemy55" parent="." index="103" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 4190.43, 1442.95 )
 
 [node name="melee_enemy56" parent="." index="104" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3549.7, 2017.79 )
 
 [node name="melee_enemy57" parent="." index="105" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3688.3, 1899.64 )
 
 [node name="melee_enemy58" parent="." index="106" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3033.94, 2469.93 )
 
 [node name="melee_enemy59" parent="." index="107" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3036.21, 1622.44 )
 
 [node name="melee_enemy60" parent="." index="108" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2202.36, 1624.72 )
 
 [node name="melee_enemy61" parent="." index="109" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2204.63, 2469.93 )
 
 [node name="melee_enemy62" parent="." index="110" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2781.74, 1254.37 )
 
 [node name="melee_enemy63" parent="." index="111" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2918.06, 1136.22 )
 
 [node name="melee_enemy75" parent="." index="112" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 5151.8, 491.402 )
 
 [node name="melee_enemy64" parent="." index="113" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3040.76, 938.549 )
 
 [node name="melee_enemy65" parent="." index="114" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2913.52, 665.9 )
 
 [node name="melee_enemy66" parent="." index="115" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2781.74, 795.408 )
 
 [node name="melee_enemy67" parent="." index="116" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2652.23, 927.188 )
 
 [node name="melee_enemy68" parent="." index="117" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2524.99, 1052.15 )
 
 [node name="melee_enemy69" parent="." index="118" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 2395.49, 1174.84 )
 
 [node name="melee_enemy70" parent="." index="119" groups=[
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3898.03, 953.4 )
 scale = Vector2( 4.58351, 5.62043 )
 
@@ -1050,6 +1121,7 @@ scale = Vector2( 4.58351, 5.62043 )
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3595.59, 266.32 )
 scale = Vector2( 4.77194, 5.63143 )
 
@@ -1057,6 +1129,7 @@ scale = Vector2( 4.77194, 5.63143 )
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3158.69, 267.454 )
 scale = Vector2( 4.90653, 5.62468 )
 
@@ -1064,6 +1137,7 @@ scale = Vector2( 4.90653, 5.62468 )
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3363.92, 885.548 )
 scale = Vector2( 4.80128, 5.94426 )
 
@@ -1071,6 +1145,7 @@ scale = Vector2( 4.80128, 5.94426 )
 "enemy",
 ] instance=ExtResource( 6 )]
 
+visible = false
 position = Vector2( 3979.91, 269.72 )
 scale = Vector2( 4.79323, 5.73829 )
 
@@ -1078,420 +1153,490 @@ scale = Vector2( 4.79323, 5.73829 )
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 1892.62, 3422.53 )
 
 [node name="ranged_enemy2" parent="." index="125" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 1621.3, 3684.81 )
 
 [node name="ranged_enemy3" parent="." index="126" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 1815.74, 3808.41 )
 
 [node name="ranged_enemy4" parent="." index="127" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2075.01, 3939.55 )
 
 [node name="ranged_enemy5" parent="." index="128" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2150.37, 3549.15 )
 
 [node name="ranged_enemy6" parent="." index="129" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2338.79, 3680.29 )
 
 [node name="ranged_enemy7" parent="." index="130" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2655.33, 3811.43 )
 
 [node name="ranged_enemy8" parent="." index="131" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2849.78, 3933.52 )
 
 [node name="ranged_enemy9" parent="." index="132" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3158.78, 4575.65 )
 
 [node name="ranged_enemy10" parent="." index="133" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3553.71, 4323.92 )
 
 [node name="ranged_enemy11" parent="." index="134" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2643.27, 4192.79 )
 
 [node name="ranged_enemy12" parent="." index="135" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2391.55, 4069.18 )
 
 [node name="ranged_enemy13" parent="." index="136" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3170.84, 3163.27 )
 
 [node name="ranged_enemy14" parent="." index="137" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2836.21, 3235.62 )
 
 [node name="ranged_enemy15" parent="." index="138" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2646.29, 3105.99 )
 
 [node name="ranged_enemy16" parent="." index="139" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2519.67, 2980.88 )
 
 [node name="ranged_enemy17" parent="." index="140" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2851.29, 2846.73 )
 
 [node name="ranged_enemy18" parent="." index="141" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2980.92, 2968.82 )
 
 [node name="ranged_enemy19" parent="." index="142" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3812.97, 3295.92 )
 
 [node name="ranged_enemy20" parent="." index="143" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4385.76, 3237.13 )
 
 [node name="ranged_enemy21" parent="." index="144" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3809.96, 3693.86 )
 
 [node name="ranged_enemy22" parent="." index="145" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3093.97, 3681.8 )
 
 [node name="ranged_enemy23" parent="." index="146" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5603.69, 3812.94 )
 
 [node name="ranged_enemy24" parent="." index="147" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5989.57, 3681.8 )
 
 [node name="ranged_enemy25" parent="." index="148" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5986.56, 3356.21 )
 
 [node name="ranged_enemy26" parent="." index="149" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5602.19, 3038.16 )
 
 [node name="ranged_enemy27" parent="." index="150" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5348.95, 2908.53 )
 
 [node name="ranged_enemy28" parent="." index="151" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5266.05, 3167.79 )
 
 [node name="ranged_enemy29" parent="." index="152" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5139.43, 3044.19 )
 
 [node name="ranged_enemy30" parent="." index="153" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5012.81, 2916.07 )
 
 [node name="ranged_enemy31" parent="." index="154" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5281.12, 2662.83 )
 
 [node name="ranged_enemy32" parent="." index="155" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4691.75, 2723.13 )
 
 [node name="ranged_enemy33" parent="." index="156" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4120.47, 2522.65 )
 
 [node name="ranged_enemy34" parent="." index="157" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4307.38, 2269.42 )
 
 [node name="ranged_enemy35" parent="." index="158" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4570.17, 2010.33 )
 
 [node name="ranged_enemy36" parent="." index="159" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5350.14, 2533.1 )
 
 [node name="ranged_enemy37" parent="." index="160" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5473.94, 2338.57 )
 
 [node name="ranged_enemy38" parent="." index="161" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5465.77, 2012.08 )
 
 [node name="ranged_enemy39" parent="." index="162" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5586.85, 1884.2 )
 
 [node name="ranged_enemy40" parent="." index="163" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5780.02, 1756.32 )
 
 [node name="ranged_enemy41" parent="." index="164" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5974.56, 1629.81 )
 
 [node name="ranged_enemy42" parent="." index="165" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 6181.33, 1959.02 )
 
 [node name="ranged_enemy43" parent="." index="166" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 6307.85, 1763.13 )
 
 [node name="ranged_enemy44" parent="." index="167" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5985.44, 2084.17 )
 
 [node name="ranged_enemy45" parent="." index="168" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5794.99, 2214.77 )
 
 [node name="ranged_enemy46" parent="." index="169" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 6167.73, 1497.85 )
 
 [node name="ranged_enemy47" parent="." index="170" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 6296.96, 1369.98 )
 
 [node name="ranged_enemy48" parent="." index="171" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4899.86, 1817.54 )
 
 [node name="ranged_enemy49" parent="." index="172" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5284.84, 2009.35 )
 
 [node name="ranged_enemy50" parent="." index="173" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4387, 1563.15 )
 
 [node name="ranged_enemy51" parent="." index="174" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4370.67, 1760.41 )
 
 [node name="ranged_enemy52" parent="." index="175" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3797.95, 1952.22 )
 
 [node name="ranged_enemy53" parent="." index="176" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3901.34, 1432.55 )
 
 [node name="ranged_enemy54" parent="." index="177" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3047.03, 2076.01 )
 
 [node name="ranged_enemy55" parent="." index="178" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2198.15, 2086.9 )
 
 [node name="ranged_enemy56" parent="." index="179" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2196.79, 1674.7 )
 
 [node name="ranged_enemy57" parent="." index="180" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2455.26, 1115.59 )
 
 [node name="ranged_enemy58" parent="." index="181" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2587.22, 987.711 )
 
 [node name="ranged_enemy59" parent="." index="182" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2713.73, 861.196 )
 
 [node name="ranged_enemy60" parent="." index="183" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2840.25, 730.6 )
 
 [node name="ranged_enemy61" parent="." index="184" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2852.49, 1187.69 )
 
 [node name="ranged_enemy62" parent="." index="185" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 2980.37, 997.234 )
 
 [node name="ranged_enemy63" parent="." index="186" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3109.6, 867.998 )
 
 [node name="ranged_enemy65" parent="." index="187" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4188.86, 350.98 )
 
 [node name="ranged_enemy66" parent="." index="188" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4316.98, 482.118 )
 
 [node name="ranged_enemy67" parent="." index="189" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3777.35, 236.422 )
 
 [node name="ranged_enemy68" parent="." index="190" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3358.31, 237.929 )
 
 [node name="ranged_enemy69" parent="." index="191" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 3676.36, 968.99 )
 
 [node name="ranged_enemy70" parent="." index="192" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 4084.85, 981.049 )
 
 [node name="ranged_enemy64" parent="." index="193" groups=[
 "enemy",
 ] instance=ExtResource( 7 )]
 
+visible = false
 position = Vector2( 5143.36, 730.6 )
 
 
