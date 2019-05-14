@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/RedoneLevel2.tmx-1ac07b9414924f2cf1dea21c575f9ed0.scn"
+
+[deps]
+
+source_file="res://Assets/Levels/hunter_levels/RedoneLevel2.tmx"
+dest_files=[ "res://.import/RedoneLevel2.tmx-1ac07b9414924f2cf1dea21c575f9ed0.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

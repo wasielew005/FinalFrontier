@@ -1,0 +1,1497 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Levels/hunter_levels/RedoneLevel3.tmx" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Levels/kylerstestarea.gd" type="Script" id=2]
+[ext_resource path="res://Instances/Characters/Enemies/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Instances/Characters/Player/Playeractual.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Instances/LevelTransition.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Instances/Characters/Enemies/melee_enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Instances/Characters/Enemies/ranged_enemy.tscn" type="PackedScene" id=7]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 1403.89, 3707.1, 1411.3, 3775.58, 193.59, 3771.88, 193.59, 3710.81, 2116.38, 2045.25, 2118.23, 1728.8, 2179.3, 1734.35, 2181.15, 2045.25, 2945.46, 3261.11, 2814.06, 3262.96, 2817.77, 3200.04, 3067.6, 1730.65, 2173.75, 1601.1, 2369.92, 1604.8, 5379.02, 3773.73, 5565.93, 3884.76, 5567.78, 3968.04, 5371.62, 3960.64, 4801.63, 3775.58, 1089.29, 2811.41, 1211.43, 2813.26, 1207.73, 2879.88, 3517.3, 4604.65, 3134.22, 4606.51, 3141.62, 4349.27, 3513.6, 4343.72, 5373.47, 4030.96, 4801.63, 4027.26, 125.117, 3712.66, 128.818, 3007.57, 193.59, 3005.72, 1470.52, 3573.86, 1466.81, 3710.81, 195.441, 2878.03, 258.362, 2815.11, 384.204, 2822.51, 4222.38, 1534.48, 4420.4, 1534.48, 4418.55, 1599.25, 3583.92, 3514.64, 3576.52, 4345.57, 2686.37, 1601.1, 3069.45, 1599.25, 2430.99, 2494.95, 3585.77, 1734.35, 3580.22, 1410.49, 4220.53, 1410.49, 6335.79, 1280.95, 6781.79, 1280.95, 6785.49, 3646.04, 6152.58, 3644.18, 5316.1, 2041.55, 384.204, 2752.19, 1089.29, 2754.04, 4350.08, 3262.96, 4159.46, 3775.58, 3774.54, 3770.03, 3778.24, 3516.49, 4414.85, 2556.02, 3582.07, 958.938, 3198.99, 833.096, 2947.31, 549.952, 2947.31, 190.932, 4153.91, 189.081, 4155.76, 316.774, 4159.46, 953.386, 4413, 3262.96, 5377.17, 894.167, 5186.56, 892.316, 5186.56, 827.544, 5569.63, 703.553, 4157.61, 1020.01, 3582.07, 1010.76, 4668.38, 2685.56, 4544.39, 2685.56, 4542.54, 2557.87, 4601.76, 1601.1, 5184.71, 320.475, 5369.77, 320.475, 5567.78, 505.537, 5119.93, 827.544, 5118.08, 701.702, 5123.64, 514.79, 2181.15, 2491.25, 3076.85, 3327.73, 2945.46, 3324.03, 3200.84, 953.386, 4927.47, 2752.19, 4670.23, 2748.49, 2925.1, 3968.04, 3006.53, 3969.89, 3008.38, 4034.66, 2943.61, 4345.57, 2503.16, 2752.19, 2434.69, 2748.49, 5945.31, 3773.73, 5749.14, 3775.58, 1538.99, 2942.8, 1600.06, 2946.5, 1605.61, 3262.96, 3073.15, 4027.26, 1531.59, 2878.03, 5375.32, 3200.04, 4350.08, 3710.81, 1533.44, 3581.26, 1722.2, 3255.55, 1786.97, 3325.88, 1918.37, 3385.1, 2046.06, 3453.57, 1533.44, 3646.03, 2173.75, 3516.49, 2232.97, 3579.41, 2368.07, 3646.03, 2493.91, 3714.51, 2682.67, 3775.58, 2815.92, 3836.65, 5316.1, 1984.18, 5245.78, 3196.33, 4925.62, 2876.18, 2682.67, 3196.33, 2497.61, 3005.72, 2369.92, 1149.55, 2686.37, 1273.54, 2817.77, 1273.54, 4422.25, 699.852, 4226.09, 311.222, 4437.06, 511.089, 5121.78, 381.546 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11 ), PoolIntArray( 6, 12, 13 ), PoolIntArray( 14, 15, 16, 17, 18 ), PoolIntArray( 19, 20, 21 ), PoolIntArray( 22, 23, 24, 25 ), PoolIntArray( 17, 26, 27, 18 ), PoolIntArray( 3, 28, 29, 30 ), PoolIntArray( 31, 32, 0, 30, 33, 34, 35 ), PoolIntArray( 36, 37, 38 ), PoolIntArray( 39, 40, 25 ), PoolIntArray( 41, 42, 11, 43, 7, 6, 13 ), PoolIntArray( 44, 45, 46, 36 ), PoolIntArray( 47, 48, 49, 50, 51 ), PoolIntArray( 0, 3, 30 ), PoolIntArray( 35, 52, 53, 19 ), PoolIntArray( 54, 55, 56, 57, 58 ), PoolIntArray( 59, 60, 61, 62, 63, 64, 65 ), PoolIntArray( 58, 66, 54 ), PoolIntArray( 67, 68, 69, 70 ), PoolIntArray( 65, 71, 72, 59 ), PoolIntArray( 73, 74, 75, 76 ), PoolIntArray( 77, 78, 79, 70, 69, 80, 81, 82 ), PoolIntArray( 43, 83, 7 ), PoolIntArray( 84, 85, 8, 11, 44 ), PoolIntArray( 59, 86, 60 ), PoolIntArray( 87, 88, 73 ), PoolIntArray( 89, 90, 91, 92 ), PoolIntArray( 93, 94, 43, 11 ), PoolIntArray( 51, 50, 95, 96 ), PoolIntArray( 97, 98, 99 ), PoolIntArray( 39, 25, 24, 100, 84, 44 ), PoolIntArray( 21, 101, 97 ), PoolIntArray( 51, 96, 15, 102 ), PoolIntArray( 54, 103, 55 ), PoolIntArray( 31, 21, 97, 99, 104 ), PoolIntArray( 31, 35, 19, 21 ), PoolIntArray( 104, 99, 105, 106 ), PoolIntArray( 104, 106, 107, 108, 92, 109 ), PoolIntArray( 92, 108, 110, 111 ), PoolIntArray( 92, 111, 112, 113 ), PoolIntArray( 92, 113, 114, 115, 89 ), PoolIntArray( 24, 92, 91, 100 ), PoolIntArray( 76, 116, 51, 87, 73 ), PoolIntArray( 15, 14, 102 ), PoolIntArray( 51, 102, 117, 118, 87 ), PoolIntArray( 38, 76, 75, 58 ), PoolIntArray( 44, 36, 38, 58, 57, 39 ), PoolIntArray( 11, 10, 119, 120, 93 ), PoolIntArray( 41, 13, 121, 122 ), PoolIntArray( 123, 122, 121, 61, 60 ), PoolIntArray( 124, 65, 64, 125, 126 ), PoolIntArray( 81, 124, 126, 82 ), PoolIntArray( 77, 82, 127 ) ]
+outlines = [ PoolVector2Array( 4159.46, 3775.58, 4350.08, 3710.81, 4350.08, 3262.96, 4413, 3262.96, 4414.85, 2556.02, 4542.54, 2557.87, 4544.39, 2685.56, 4668.38, 2685.56, 4670.23, 2748.49, 4927.47, 2752.19, 4925.62, 2876.18, 5245.78, 3196.33, 5375.32, 3200.04, 5379.02, 3773.73, 4801.63, 3775.58, 4801.63, 4027.26, 5373.47, 4030.96, 5371.62, 3960.64, 5567.78, 3968.04, 5565.93, 3884.76, 5749.14, 3775.58, 5945.31, 3773.73, 6152.58, 3644.18, 6785.49, 3646.04, 6781.79, 1280.95, 6335.79, 1280.95, 5316.1, 2041.55, 5316.1, 1984.18, 4601.76, 1601.1, 4418.55, 1599.25, 4420.4, 1534.48, 4222.38, 1534.48, 4220.53, 1410.49, 3580.22, 1410.49, 3585.77, 1734.35, 3067.6, 1730.65, 3069.45, 1599.25, 2686.37, 1601.1, 2686.37, 1273.54, 2817.77, 1273.54, 3198.99, 833.096, 3200.84, 953.386, 3582.07, 958.938, 3582.07, 1010.76, 4157.61, 1020.01, 4159.46, 953.386, 4422.25, 699.852, 5118.08, 701.702, 5119.93, 827.544, 5186.56, 827.544, 5186.56, 892.316, 5377.17, 894.167, 5569.63, 703.553, 5567.78, 505.537, 5369.77, 320.475, 5184.71, 320.475, 5121.78, 381.546, 5123.64, 514.79, 4437.06, 511.089, 4226.09, 311.222, 4155.76, 316.774, 4153.91, 189.081, 2947.31, 190.932, 2947.31, 549.952, 2369.92, 1149.55, 2369.92, 1604.8, 2173.75, 1601.1, 2179.3, 1734.35, 2118.23, 1728.8, 2116.38, 2045.25, 2181.15, 2045.25, 2181.15, 2491.25, 2430.99, 2494.95, 2434.69, 2748.49, 2503.16, 2752.19, 2497.61, 3005.72, 2682.67, 3196.33, 2817.77, 3200.04, 2814.06, 3262.96, 2945.46, 3261.11, 2945.46, 3324.03, 3076.85, 3327.73, 3073.15, 4027.26, 3008.38, 4034.66, 3006.53, 3969.89, 2925.1, 3968.04, 2815.92, 3836.65, 2682.67, 3775.58, 2493.91, 3714.51, 2368.07, 3646.03, 2232.97, 3579.41, 2173.75, 3516.49, 2046.06, 3453.57, 1918.37, 3385.1, 1786.97, 3325.88, 1722.2, 3255.55, 1605.61, 3262.96, 1600.06, 2946.5, 1538.99, 2942.8, 1531.59, 2878.03, 1207.73, 2879.88, 1211.43, 2813.26, 1089.29, 2811.41, 1089.29, 2754.04, 384.204, 2752.19, 384.204, 2822.51, 258.362, 2815.11, 195.441, 2878.03, 193.59, 3005.72, 128.818, 3007.57, 125.117, 3712.66, 193.59, 3710.81, 193.59, 3771.88, 1411.3, 3775.58, 1403.89, 3707.1, 1466.81, 3710.81, 1470.52, 3573.86, 1533.44, 3581.26, 1533.44, 3646.03, 2943.61, 4345.57, 3141.62, 4349.27, 3134.22, 4606.51, 3517.3, 4604.65, 3513.6, 4343.72, 3576.52, 4345.57, 3583.92, 3514.64, 3778.24, 3516.49, 3774.54, 3770.03 ) ]
+
+[node name="RedoneLevel3" index="0" groups=[
+"enemy",
+] instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="3"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="destinations" type="Node2D" parent="Navigation2D" index="1"]
+
+[node name="destination0" type="Position2D" parent="Navigation2D/destinations" index="0"]
+
+position = Vector2( 3041.8, 438.041 )
+
+[node name="destination1" type="Position2D" parent="Navigation2D/destinations" index="1"]
+
+position = Vector2( 3172.4, 707.395 )
+
+[node name="destination2" type="Position2D" parent="Navigation2D/destinations" index="2"]
+
+position = Vector2( 3354.69, 761.81 )
+
+[node name="destination3" type="Position2D" parent="Navigation2D/destinations" index="3"]
+
+position = Vector2( 3550.58, 774.054 )
+
+[node name="destination4" type="Position2D" parent="Navigation2D/destinations" index="4"]
+
+position = Vector2( 3749.2, 789.018 )
+
+[node name="destination5" type="Position2D" parent="Navigation2D/destinations" index="5"]
+
+position = Vector2( 3958.69, 824.388 )
+
+[node name="destination6" type="Position2D" parent="Navigation2D/destinations" index="6"]
+
+position = Vector2( 4143.71, 787.658 )
+
+[node name="destination7" type="Position2D" parent="Navigation2D/destinations" index="7"]
+
+position = Vector2( 4324.64, 711.477 )
+
+[node name="destination8" type="Position2D" parent="Navigation2D/destinations" index="8"]
+
+position = Vector2( 4184.52, 451.645 )
+
+[node name="destination9" type="Position2D" parent="Navigation2D/destinations" index="9"]
+
+position = Vector2( 3995.42, 398.59 )
+
+[node name="destination10" type="Position2D" parent="Navigation2D/destinations" index="10"]
+
+position = Vector2( 3791.37, 397.23 )
+
+[node name="destination11" type="Position2D" parent="Navigation2D/destinations" index="11"]
+
+position = Vector2( 3610.44, 398.59 )
+
+[node name="destination12" type="Position2D" parent="Navigation2D/destinations" index="12"]
+
+position = Vector2( 3405.02, 398.59 )
+
+[node name="destination13" type="Position2D" parent="Navigation2D/destinations" index="13"]
+
+position = Vector2( 3217.29, 408.113 )
+
+[node name="destination14" type="Position2D" parent="Navigation2D/destinations" index="14"]
+
+position = Vector2( 4196.76, 610.809 )
+
+[node name="destination15" type="Position2D" parent="Navigation2D/destinations" index="15"]
+
+position = Vector2( 3179.2, 601.286 )
+
+[node name="destination16" type="Position2D" parent="Navigation2D/destinations" index="16"]
+
+position = Vector2( 3029.56, 696.513 )
+
+[node name="destination17" type="Position2D" parent="Navigation2D/destinations" index="17"]
+
+position = Vector2( 2554.79, 1237.94 )
+
+[node name="destination18" type="Position2D" parent="Navigation2D/destinations" index="18"]
+
+position = Vector2( 2537.1, 1583.48 )
+
+[node name="destination19" type="Position2D" parent="Navigation2D/destinations" index="19"]
+
+position = Vector2( 3497.53, 1797.06 )
+
+[node name="destination20" type="Position2D" parent="Navigation2D/destinations" index="20"]
+
+position = Vector2( 2262.31, 1792.98 )
+
+[node name="destination21" type="Position2D" parent="Navigation2D/destinations" index="21"]
+
+position = Vector2( 3502.97, 1919.49 )
+
+[node name="destination22" type="Position2D" parent="Navigation2D/destinations" index="22"]
+
+position = Vector2( 2258.22, 1923.57 )
+
+[node name="destination23" type="Position2D" parent="Navigation2D/destinations" index="23"]
+
+position = Vector2( 2983.31, 2075.93 )
+
+[node name="destination24" type="Position2D" parent="Navigation2D/destinations" index="24"]
+
+position = Vector2( 2260.95, 2081.38 )
+
+[node name="destination25" type="Position2D" parent="Navigation2D/destinations" index="25"]
+
+position = Vector2( 2981.94, 2455.48 )
+
+[node name="destination26" type="Position2D" parent="Navigation2D/destinations" index="26"]
+
+position = Vector2( 2271.83, 2409.23 )
+
+[node name="destination27" type="Position2D" parent="Navigation2D/destinations" index="27"]
+
+position = Vector2( 2852.71, 2458.2 )
+
+[node name="destination28" type="Position2D" parent="Navigation2D/destinations" index="28"]
+
+position = Vector2( 2256.86, 2176.6 )
+
+[node name="destination29" type="Position2D" parent="Navigation2D/destinations" index="29"]
+
+position = Vector2( 2632.33, 2815.98 )
+
+[node name="destination30" type="Position2D" parent="Navigation2D/destinations" index="30"]
+
+position = Vector2( 3132.95, 3263.54 )
+
+[node name="destination31" type="Position2D" parent="Navigation2D/destinations" index="31"]
+
+position = Vector2( 3712.47, 3380.53 )
+
+[node name="destination32" type="Position2D" parent="Navigation2D/destinations" index="32"]
+
+position = Vector2( 4311.03, 3407.74 )
+
+[node name="destination33" type="Position2D" parent="Navigation2D/destinations" index="33"]
+
+position = Vector2( 3896.12, 3682.54 )
+
+[node name="destination34" type="Position2D" parent="Navigation2D/destinations" index="34"]
+
+position = Vector2( 4281.1, 3662.13 )
+
+[node name="destination35" type="Position2D" parent="Navigation2D/destinations" index="35"]
+
+position = Vector2( 3399.58, 4498.76 )
+
+[node name="destination36" type="Position2D" parent="Navigation2D/destinations" index="36"]
+
+position = Vector2( 3407.74, 3437.67 )
+
+[node name="destination37" type="Position2D" parent="Navigation2D/destinations" index="37"]
+
+position = Vector2( 3230.89, 4498.76 )
+
+[node name="destination38" type="Position2D" parent="Navigation2D/destinations" index="38"]
+
+position = Vector2( 3232.25, 3437.67 )
+
+[node name="destination39" type="Position2D" parent="Navigation2D/destinations" index="39"]
+
+position = Vector2( 1724.96, 3629.48 )
+
+[node name="destination40" type="Position2D" parent="Navigation2D/destinations" index="40"]
+
+position = Vector2( 2947.93, 4230.77 )
+
+[node name="destination41" type="Position2D" parent="Navigation2D/destinations" index="41"]
+
+position = Vector2( 1767.13, 3426.79 )
+
+[node name="destination42" type="Position2D" parent="Navigation2D/destinations" index="42"]
+
+position = Vector2( 2946.57, 4072.97 )
+
+[node name="destination43" type="Position2D" parent="Navigation2D/destinations" index="43"]
+
+position = Vector2( 5365.32, 3881.15 )
+
+[node name="destination44" type="Position2D" parent="Navigation2D/destinations" index="44"]
+
+position = Vector2( 4905.52, 3893.4 )
+
+[node name="destination45" type="Position2D" parent="Navigation2D/destinations" index="45"]
+
+position = Vector2( 6106.25, 3518.94 )
+
+[node name="destination46" type="Position2D" parent="Navigation2D/destinations" index="46"]
+
+position = Vector2( 6694.33, 3515.25 )
+
+[node name="destination47" type="Position2D" parent="Navigation2D/destinations" index="47"]
+
+position = Vector2( 5062.67, 2754.05 )
+
+[node name="destination48" type="Position2D" parent="Navigation2D/destinations" index="48"]
+
+position = Vector2( 5460.45, 3176.4 )
+
+[node name="destination49" type="Position2D" parent="Navigation2D/destinations" index="49"]
+
+position = Vector2( 5476.42, 3290.58 )
+
+[node name="destination50" type="Position2D" parent="Navigation2D/destinations" index="50"]
+
+position = Vector2( 5494.83, 3737.47 )
+
+[node name="destination51" type="Position2D" parent="Navigation2D/destinations" index="51"]
+
+position = Vector2( 5924.54, 3674.86 )
+
+[node name="destination52" type="Position2D" parent="Navigation2D/destinations" index="52"]
+
+position = Vector2( 5859.47, 3363.01 )
+
+[node name="destination53" type="Position2D" parent="Navigation2D/destinations" index="53"]
+
+position = Vector2( 6389.85, 1460.02 )
+
+[node name="destination54" type="Position2D" parent="Navigation2D/destinations" index="54"]
+
+position = Vector2( 5423.62, 2226.13 )
+
+[node name="destination55" type="Position2D" parent="Navigation2D/destinations" index="55"]
+
+position = Vector2( 4357.95, 1626.99 )
+
+[node name="destination56" type="Position2D" parent="Navigation2D/destinations" index="56"]
+
+position = Vector2( 4855.18, 1930.24 )
+
+[node name="destination57" type="Position2D" parent="Navigation2D/destinations" index="57"]
+
+position = Vector2( 4645.24, 2067.75 )
+
+[node name="destination58" type="Position2D" parent="Navigation2D/destinations" index="58"]
+
+position = Vector2( 4896.92, 2245.77 )
+
+[node name="destination59" type="Position2D" parent="Navigation2D/destinations" index="59"]
+
+position = Vector2( 4898.15, 2296.11 )
+
+[node name="destination60" type="Position2D" parent="Navigation2D/destinations" index="60"]
+
+position = Vector2( 4605.95, 2580.94 )
+
+[node name="destination61" type="Position2D" parent="Navigation2D/destinations" index="61"]
+
+position = Vector2( 5239.46, 2605.5 )
+
+[node name="destination62" type="Position2D" parent="Navigation2D/destinations" index="62"]
+
+position = Vector2( 4946.03, 2296.11 )
+
+[node name="destination63" type="Position2D" parent="Navigation2D/destinations" index="63"]
+
+position = Vector2( 4941.12, 2245.77 )
+
+[node name="destination64" type="Position2D" parent="Navigation2D/destinations" index="64"]
+
+position = Vector2( 5233.32, 2012.5 )
+
+[node name="destination65" type="Position2D" parent="Navigation2D/destinations" index="65"]
+
+position = Vector2( 4462.3, 2388.19 )
+
+[node name="destination66" type="Position2D" parent="Navigation2D/destinations" index="66"]
+
+position = Vector2( 4222.89, 2680.39 )
+
+[node name="destination67" type="Position2D" parent="Navigation2D/destinations" index="67"]
+
+position = Vector2( 4249.9, 3285.67 )
+
+[node name="destination68" type="Position2D" parent="Navigation2D/destinations" index="68"]
+
+position = Vector2( 3679.01, 1514.04 )
+
+[node name="destination69" type="Position2D" parent="Navigation2D/destinations" index="69"]
+
+position = Vector2( 3934.37, 1866.4 )
+
+[node name="destination70" type="Position2D" parent="Navigation2D/destinations" index="70"]
+
+position = Vector2( 4143.09, 1510.35 )
+
+[node name="Enemy" parent="." index="4" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 2994.19, 436.681 )
+destination_order = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ]
+
+[node name="Enemy2" parent="." index="5" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3117.98, 707.396 )
+destination_order = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 0 ]
+
+[node name="Enemy3" parent="." index="6" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3392.78, 759.09 )
+destination_order = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 0, 1 ]
+
+[node name="Enemy4" parent="." index="7" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3594.11, 771.334 )
+destination_order = [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 0, 1, 2 ]
+
+[node name="Enemy5" parent="." index="8" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3792.73, 786.298 )
+destination_order = [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 0, 1, 2, 3 ]
+
+[node name="Enemy6" parent="." index="9" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3995.43, 818.947 )
+destination_order = [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 0, 1, 2, 3, 4 ]
+
+[node name="Enemy7" parent="." index="10" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4146.43, 827.109 )
+destination_order = [ 6, 7, 8, 9, 10, 11, 12, 13, 0, 1, 2, 3, 4, 5 ]
+
+[node name="Enemy8" parent="." index="11" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4277.02, 706.036 )
+destination_order = [ 7, 8, 9, 10, 11, 12, 13, 0, 1, 2, 3, 4, 5, 6 ]
+
+[node name="Enemy9" parent="." index="12" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4138.27, 450.285 )
+destination_order = [ 8, 9, 10, 11, 12, 13, 0, 1, 2, 3, 4, 5, 6, 7 ]
+
+[node name="Enemy10" parent="." index="13" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4034.88, 398.591 )
+destination_order = [ 9, 10, 11, 12, 13, 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
+
+[node name="Enemy11" parent="." index="14" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3828.1, 394.51 )
+destination_order = [ 10, 11, 12, 13, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+
+[node name="Enemy12" parent="." index="15" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3645.81, 397.23 )
+destination_order = [ 11, 12, 13, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+
+[node name="Enemy13" parent="." index="16" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3444.47, 395.87 )
+destination_order = [ 12, 13, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+
+[node name="Enemy14" parent="." index="17" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3262.18, 404.033 )
+destination_order = [ 13, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
+
+[node name="Enemy15" parent="." index="18" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4151.87, 618.971 )
+destination_order = [ 14, 15 ]
+
+[node name="Enemy16" parent="." index="19" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 2977.87, 695.152 )
+destination_order = [ 16, 17, 18, 17 ]
+
+[node name="Enemy17" parent="." index="20" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3444.47, 1795.7 )
+destination_order = [ 19, 20 ]
+
+[node name="Enemy18" parent="." index="21" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3447.19, 1918.13 )
+destination_order = [ 21, 22 ]
+
+[node name="Enemy19" parent="." index="22" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 2919.37, 2077.29 )
+destination_order = [ 23, 24, 25 ]
+
+[node name="Enemy20" parent="." index="23" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 2211.97, 2405.15 )
+destination_order = [ 26, 27, 28 ]
+
+[node name="Enemy21" parent="." index="24" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 2547.99, 2818.7 )
+destination_order = [ 29, 30 ]
+
+[node name="Enemy22" parent="." index="25" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3656.69, 3376.45 )
+destination_order = [ 31, 32, 33, 34 ]
+
+[node name="Enemy27" parent="." index="26" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 5414.3, 3881.15 )
+destination_order = [ 43, 44 ]
+
+[node name="Enemy28" parent="." index="27" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 6051.49, 3515.29 )
+destination_order = [ 45, 46 ]
+
+[node name="Enemy29" parent="." index="28" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4996.87, 2752.86 )
+destination_order = [ 47, 48 ]
+
+[node name="Enemy37" parent="." index="29" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4505.77, 2390.68 )
+destination_order = [ 65, 66, 67, 66 ]
+
+[node name="Enemy31" parent="." index="30" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 6446.83, 1460.05 )
+destination_order = [ 53, 54 ]
+
+[node name="Enemy32" parent="." index="31" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4299.51, 1601.24 )
+destination_order = [ 55, 56 ]
+
+[node name="Enemy38" parent="." index="32" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3740.89, 1504.25 )
+destination_order = [ 68, 69, 70, 69 ]
+
+[node name="Enemy33" parent="." index="33" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4592.94, 2069.01 )
+destination_order = [ 57, 58 ]
+
+[node name="Enemy34" parent="." index="34" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4831.12, 2293.69 )
+destination_order = [ 59, 60 ]
+
+[node name="Enemy35" parent="." index="35" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 5183.48, 2643.59 )
+destination_order = [ 61, 62 ]
+
+[node name="Enemy36" parent="." index="36" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 4994.41, 2249.49 )
+destination_order = [ 63, 64 ]
+
+[node name="Enemy30" parent="." index="37" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 5420.44, 3288.16 )
+destination_order = [ 49, 50, 51, 52 ]
+
+[node name="Enemy23" parent="." index="38" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3232.25, 4555.9 )
+destination_order = [ 37, 38 ]
+
+[node name="Enemy25" parent="." index="39" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 1678.71, 3379.17 )
+destination_order = [ 41, 42 ]
+
+[node name="Enemy26" parent="." index="40" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 1654.22, 3595.47 )
+destination_order = [ 39, 40 ]
+
+[node name="Enemy24" parent="." index="41" groups=[
+"enemy",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 3399.58, 4554.54 )
+destination_order = [ 35, 36 ]
+
+[node name="Player" parent="." index="42" instance=ExtResource( 4 )]
+
+position = Vector2( 4212.16, 4112.3 )
+
+[node name="Level Transition" parent="." index="43" instance=ExtResource( 5 )]
+
+position = Vector2( 1516.51, 3413 )
+scale = Vector2( 2.36997, 4.99573 )
+level_scene = "res://Assets/Levels/hunter_levels/hunter_level3.tscn"
+
+[node name="Level Transition2" parent="." index="44" instance=ExtResource( 5 )]
+
+position = Vector2( 6623.33, 1704.85 )
+scale = Vector2( 4.84817, 1.25875 )
+level_scene = "res://Assets/Levels/hunter_levels/hunter_level3.tscn"
+
+[node name="Level Transition3" parent="." index="45" instance=ExtResource( 5 )]
+
+position = Vector2( 5537.48, 607.712 )
+scale = Vector2( 0.747392, 2.91089 )
+level_scene = "res://Assets/Levels/hunter_levels/hunter_level3.tscn"
+
+[node name="Level Transition6" parent="." index="46" instance=ExtResource( 5 )]
+
+position = Vector2( 5280.68, 863.842 )
+scale = Vector2( 2.99127, 0.841979 )
+level_scene = "res://Assets/Levels/LoganLevels/LoganLevel1.tscn"
+
+[node name="Level Transition4" parent="." index="47" instance=ExtResource( 5 )]
+
+position = Vector2( 5279.47, 348.461 )
+scale = Vector2( 2.93404, 0.90346 )
+level_scene = "res://Assets/Levels/hunter_levels/hunter_level3.tscn"
+
+[node name="Level Transition5" parent="." index="48" instance=ExtResource( 5 )]
+
+position = Vector2( 2143.01, 1885.53 )
+scale = Vector2( 0.874802, 4.95231 )
+level_scene = "res://Assets/Levels/hunter_levels/hunter_level3.tscn"
+
+[node name="melee_enemy" parent="." index="49" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3813.27, 3749.11 )
+
+[node name="melee_enemy2" parent="." index="50" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3611.05, 3224.26 )
+
+[node name="melee_enemy3" parent="." index="51" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2781.74, 3869.53 )
+
+[node name="melee_enemy4" parent="." index="52" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 1697.96, 3285.6 )
+
+[node name="melee_enemy5" parent="." index="53" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2018.33, 3487.82 )
+
+[node name="melee_enemy6" parent="." index="54" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2211.45, 3608.24 )
+
+[node name="melee_enemy7" parent="." index="55" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2463.65, 3746.83 )
+
+[node name="melee_enemy8" parent="." index="56" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2972.6, 3992.22 )
+
+[node name="melee_enemy9" parent="." index="57" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2972.6, 4319.4 )
+
+[node name="melee_enemy10" parent="." index="58" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2777.2, 4264.87 )
+
+[node name="melee_enemy11" parent="." index="59" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 1563.91, 3621.87 )
+
+[node name="melee_enemy12" parent="." index="60" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 1757.04, 3749.11 )
+
+[node name="melee_enemy13" parent="." index="61" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 1956.98, 3876.34 )
+
+[node name="melee_enemy14" parent="." index="62" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2275.07, 4010.4 )
+
+[node name="melee_enemy15" parent="." index="63" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2534.09, 4137.63 )
+
+[node name="melee_enemy16" parent="." index="64" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2977.14, 3299.24 )
+
+[node name="melee_enemy17" parent="." index="65" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3106.65, 3033.4 )
+
+[node name="melee_enemy18" parent="." index="66" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2913.52, 2908.44 )
+
+[node name="melee_enemy19" parent="." index="67" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2722.67, 3162.91 )
+
+[node name="melee_enemy20" parent="." index="68" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2590.89, 3042.49 )
+
+[node name="melee_enemy21" parent="." index="69" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2461.38, 2726.67 )
+
+[node name="melee_enemy22" parent="." index="70" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2784.02, 2731.22 )
+
+[node name="melee_enemy23" parent="." index="71" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3490.63, 4573.87 )
+
+[node name="melee_enemy24" parent="." index="72" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4129.08, 3235.62 )
+
+[node name="melee_enemy25" parent="." index="73" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4388.1, 2672.14 )
+
+[node name="melee_enemy26" parent="." index="74" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4251.78, 2333.6 )
+
+[node name="melee_enemy27" parent="." index="75" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4513.06, 2135.93 )
+
+[node name="melee_enemy28" parent="." index="76" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4574.41, 2660.78 )
+
+[node name="melee_enemy29" parent="." index="77" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4956.12, 2858.45 )
+
+[node name="melee_enemy30" parent="." index="78" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5083.35, 2983.42 )
+
+[node name="melee_enemy31" parent="." index="79" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5212.86, 3117.47 )
+
+[node name="melee_enemy32" parent="." index="80" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5603.66, 3172 )
+
+[node name="melee_enemy33" parent="." index="81" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5283.3, 2840.28 )
+
+[node name="melee_enemy34" parent="." index="82" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5921.75, 3299.24 )
+
+[node name="melee_enemy35" parent="." index="83" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5528.68, 3939.96 )
+
+[node name="melee_enemy36" parent="." index="84" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5917.21, 3749.11 )
+
+[node name="melee_enemy37" parent="." index="85" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 6369.35, 1701.97 )
+
+[node name="melee_enemy38" parent="." index="86" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 6246.66, 1831.48 )
+
+[node name="melee_enemy39" parent="." index="87" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 6044.44, 2029.15 )
+
+[node name="melee_enemy40" parent="." index="88" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5924.02, 2154.11 )
+
+[node name="melee_enemy41" parent="." index="89" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5665, 2276.8 )
+
+[node name="melee_enemy42" parent="." index="90" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5403.72, 2072.31 )
+
+[node name="melee_enemy43" parent="." index="91" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5537.77, 1945.08 )
+
+[node name="melee_enemy44" parent="." index="92" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5730.9, 1815.57 )
+
+[node name="melee_enemy45" parent="." index="93" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5924.02, 1699.69 )
+
+[node name="melee_enemy46" parent="." index="94" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 6046.71, 1567.91 )
+
+[node name="melee_enemy47" parent="." index="95" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 6237.57, 1438.41 )
+
+[node name="melee_enemy48" parent="." index="96" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 6373.89, 1311.17 )
+
+[node name="melee_enemy49" parent="." index="97" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4508.52, 1833.75 )
+
+[node name="melee_enemy50" parent="." index="98" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4578.95, 1629.26 )
+
+[node name="melee_enemy51" parent="." index="99" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4831.15, 1763.31 )
+
+[node name="melee_enemy52" parent="." index="100" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4065.46, 1956.44 )
+
+[node name="melee_enemy53" parent="." index="101" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4197.24, 1765.58 )
+
+[node name="melee_enemy54" parent="." index="102" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3617.86, 1445.22 )
+
+[node name="melee_enemy55" parent="." index="103" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 4190.43, 1442.95 )
+
+[node name="melee_enemy56" parent="." index="104" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3549.7, 2017.79 )
+
+[node name="melee_enemy57" parent="." index="105" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3688.3, 1899.64 )
+
+[node name="melee_enemy58" parent="." index="106" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3033.94, 2469.93 )
+
+[node name="melee_enemy59" parent="." index="107" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3036.21, 1622.44 )
+
+[node name="melee_enemy60" parent="." index="108" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2202.36, 1624.72 )
+
+[node name="melee_enemy61" parent="." index="109" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2204.63, 2469.93 )
+
+[node name="melee_enemy62" parent="." index="110" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2781.74, 1254.37 )
+
+[node name="melee_enemy63" parent="." index="111" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2918.06, 1136.22 )
+
+[node name="melee_enemy75" parent="." index="112" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 5151.8, 491.402 )
+
+[node name="melee_enemy64" parent="." index="113" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3040.76, 938.549 )
+
+[node name="melee_enemy65" parent="." index="114" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2913.52, 665.9 )
+
+[node name="melee_enemy66" parent="." index="115" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2781.74, 795.408 )
+
+[node name="melee_enemy67" parent="." index="116" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2652.23, 927.188 )
+
+[node name="melee_enemy68" parent="." index="117" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2524.99, 1052.15 )
+
+[node name="melee_enemy69" parent="." index="118" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 2395.49, 1174.84 )
+
+[node name="melee_enemy70" parent="." index="119" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3898.03, 953.4 )
+scale = Vector2( 4.58351, 5.62043 )
+
+[node name="melee_enemy74" parent="." index="120" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3595.59, 266.32 )
+scale = Vector2( 4.77194, 5.63143 )
+
+[node name="melee_enemy71" parent="." index="121" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3158.69, 267.454 )
+scale = Vector2( 4.90653, 5.62468 )
+
+[node name="melee_enemy72" parent="." index="122" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3363.92, 885.548 )
+scale = Vector2( 4.80128, 5.94426 )
+
+[node name="melee_enemy73" parent="." index="123" groups=[
+"enemy",
+] instance=ExtResource( 6 )]
+
+position = Vector2( 3979.91, 269.72 )
+scale = Vector2( 4.79323, 5.73829 )
+
+[node name="ranged_enemy" parent="." index="124" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 1892.62, 3422.53 )
+
+[node name="ranged_enemy2" parent="." index="125" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 1621.3, 3684.81 )
+
+[node name="ranged_enemy3" parent="." index="126" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 1815.74, 3808.41 )
+
+[node name="ranged_enemy4" parent="." index="127" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2075.01, 3939.55 )
+
+[node name="ranged_enemy5" parent="." index="128" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2150.37, 3549.15 )
+
+[node name="ranged_enemy6" parent="." index="129" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2338.79, 3680.29 )
+
+[node name="ranged_enemy7" parent="." index="130" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2655.33, 3811.43 )
+
+[node name="ranged_enemy8" parent="." index="131" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2849.78, 3933.52 )
+
+[node name="ranged_enemy9" parent="." index="132" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3158.78, 4575.65 )
+
+[node name="ranged_enemy10" parent="." index="133" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3553.71, 4323.92 )
+
+[node name="ranged_enemy11" parent="." index="134" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2643.27, 4192.79 )
+
+[node name="ranged_enemy12" parent="." index="135" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2391.55, 4069.18 )
+
+[node name="ranged_enemy13" parent="." index="136" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3170.84, 3163.27 )
+
+[node name="ranged_enemy14" parent="." index="137" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2836.21, 3235.62 )
+
+[node name="ranged_enemy15" parent="." index="138" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2646.29, 3105.99 )
+
+[node name="ranged_enemy16" parent="." index="139" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2519.67, 2980.88 )
+
+[node name="ranged_enemy17" parent="." index="140" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2851.29, 2846.73 )
+
+[node name="ranged_enemy18" parent="." index="141" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2980.92, 2968.82 )
+
+[node name="ranged_enemy19" parent="." index="142" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3812.97, 3295.92 )
+
+[node name="ranged_enemy20" parent="." index="143" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4385.76, 3237.13 )
+
+[node name="ranged_enemy21" parent="." index="144" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3809.96, 3693.86 )
+
+[node name="ranged_enemy22" parent="." index="145" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3093.97, 3681.8 )
+
+[node name="ranged_enemy23" parent="." index="146" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5603.69, 3812.94 )
+
+[node name="ranged_enemy24" parent="." index="147" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5989.57, 3681.8 )
+
+[node name="ranged_enemy25" parent="." index="148" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5986.56, 3356.21 )
+
+[node name="ranged_enemy26" parent="." index="149" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5602.19, 3038.16 )
+
+[node name="ranged_enemy27" parent="." index="150" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5348.95, 2908.53 )
+
+[node name="ranged_enemy28" parent="." index="151" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5266.05, 3167.79 )
+
+[node name="ranged_enemy29" parent="." index="152" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5139.43, 3044.19 )
+
+[node name="ranged_enemy30" parent="." index="153" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5012.81, 2916.07 )
+
+[node name="ranged_enemy31" parent="." index="154" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5281.12, 2662.83 )
+
+[node name="ranged_enemy32" parent="." index="155" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4691.75, 2723.13 )
+
+[node name="ranged_enemy33" parent="." index="156" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4120.47, 2522.65 )
+
+[node name="ranged_enemy34" parent="." index="157" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4307.38, 2269.42 )
+
+[node name="ranged_enemy35" parent="." index="158" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4570.17, 2010.33 )
+
+[node name="ranged_enemy36" parent="." index="159" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5350.14, 2533.1 )
+
+[node name="ranged_enemy37" parent="." index="160" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5473.94, 2338.57 )
+
+[node name="ranged_enemy38" parent="." index="161" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5465.77, 2012.08 )
+
+[node name="ranged_enemy39" parent="." index="162" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5586.85, 1884.2 )
+
+[node name="ranged_enemy40" parent="." index="163" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5780.02, 1756.32 )
+
+[node name="ranged_enemy41" parent="." index="164" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5974.56, 1629.81 )
+
+[node name="ranged_enemy42" parent="." index="165" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 6181.33, 1959.02 )
+
+[node name="ranged_enemy43" parent="." index="166" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 6307.85, 1763.13 )
+
+[node name="ranged_enemy44" parent="." index="167" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5985.44, 2084.17 )
+
+[node name="ranged_enemy45" parent="." index="168" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5794.99, 2214.77 )
+
+[node name="ranged_enemy46" parent="." index="169" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 6167.73, 1497.85 )
+
+[node name="ranged_enemy47" parent="." index="170" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 6296.96, 1369.98 )
+
+[node name="ranged_enemy48" parent="." index="171" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4899.86, 1817.54 )
+
+[node name="ranged_enemy49" parent="." index="172" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5284.84, 2009.35 )
+
+[node name="ranged_enemy50" parent="." index="173" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4387, 1563.15 )
+
+[node name="ranged_enemy51" parent="." index="174" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4370.67, 1760.41 )
+
+[node name="ranged_enemy52" parent="." index="175" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3797.95, 1952.22 )
+
+[node name="ranged_enemy53" parent="." index="176" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3901.34, 1432.55 )
+
+[node name="ranged_enemy54" parent="." index="177" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3047.03, 2076.01 )
+
+[node name="ranged_enemy55" parent="." index="178" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2198.15, 2086.9 )
+
+[node name="ranged_enemy56" parent="." index="179" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2196.79, 1674.7 )
+
+[node name="ranged_enemy57" parent="." index="180" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2455.26, 1115.59 )
+
+[node name="ranged_enemy58" parent="." index="181" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2587.22, 987.711 )
+
+[node name="ranged_enemy59" parent="." index="182" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2713.73, 861.196 )
+
+[node name="ranged_enemy60" parent="." index="183" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2840.25, 730.6 )
+
+[node name="ranged_enemy61" parent="." index="184" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2852.49, 1187.69 )
+
+[node name="ranged_enemy62" parent="." index="185" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 2980.37, 997.234 )
+
+[node name="ranged_enemy63" parent="." index="186" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3109.6, 867.998 )
+
+[node name="ranged_enemy65" parent="." index="187" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4188.86, 350.98 )
+
+[node name="ranged_enemy66" parent="." index="188" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4316.98, 482.118 )
+
+[node name="ranged_enemy67" parent="." index="189" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3777.35, 236.422 )
+
+[node name="ranged_enemy68" parent="." index="190" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3358.31, 237.929 )
+
+[node name="ranged_enemy69" parent="." index="191" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 3676.36, 968.99 )
+
+[node name="ranged_enemy70" parent="." index="192" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 4084.85, 981.049 )
+
+[node name="ranged_enemy64" parent="." index="193" groups=[
+"enemy",
+] instance=ExtResource( 7 )]
+
+position = Vector2( 5143.36, 730.6 )
+
+

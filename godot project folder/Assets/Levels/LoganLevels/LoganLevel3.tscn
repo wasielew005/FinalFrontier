@@ -13,7 +13,7 @@ vertices = PoolVector2Array( 1994.24, 1804.01, 2000.67, 3600.72, 48.2283, 3599.0
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 0, 6 ), PoolIntArray( 2, 7, 3 ), PoolIntArray( 6, 0, 3 ) ]
 outlines = [ PoolVector2Array( 251.991, 2555.19, 253.661, 2852.48, 46.5582, 2854.15, 48.2283, 3599.05, 2000.67, 3600.72, 1994.24, 1804.01, 50.0835, 1804.01, 50.0835, 2542.73 ) ]
 
-[node name="LoganLevel3" groups=[
+[node name="LoganLevel3" index="0" groups=[
 "enemy",
 ] instance=ExtResource( 1 )]
 
@@ -243,7 +243,7 @@ position = Vector2( 1977.99, 3535.88 )
 
 position = Vector2( 820.654, 2775.17 )
 scale = Vector2( 2.48101, 0.807507 )
-level_scene = "res://Assets/Levels/LoganLevels/LoganBoss.tscn"
+level_scene = "res://hunter_level1.tscn"
 player = NodePath("../Player")
 
 
